@@ -10,6 +10,6 @@
 /*!*************************!*\
   !*** ./js_src/index.js ***!
   \*************************/
-eval("\n\n//# sourceURL=webpack://pomodoro/./js_src/index.js?");
+eval("const box = document.querySelector(\".box\");\n\nconst boxText = (num) => {\n  box.innerText = num;\n};\n\nvar i = 0;\n\nconst timer = setInterval(function () {\n  i++;\n  i == 5 ? (boxText(i), clearInterval(timer)) : boxText(i);\n}, 1000);\n\n\n//# sourceURL=webpack://pomodoro/./js_src/index.js?");
 /******/ })()
 ;
