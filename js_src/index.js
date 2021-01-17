@@ -1,15 +1,16 @@
-const box = document.querySelector(".box");
+const pomoBox = document.querySelector(".pomoBox");
 const start = document.querySelector(".startBtn");
 
 // timer divided into two blocks : secs and mins
 var pomoMin = 25;
 var pomoSec = 00;
+var multipleClicks = 0;
 
 // displays the initial output for the timer
-box.innerText = `${pomoMin} : 0${pomoSec}`;
+pomoBox.innerText = `${pomoMin} : 0${pomoSec}`;
 
 const boxText = (min, sec) => {
-  box.innerText = `${min} : ${sec}`;
+  pomoBox.innerText = `${min} : ${sec}`;
 };
 
 const timerSound = () => {
@@ -18,6 +19,11 @@ const timerSound = () => {
 };
 
 const startPomodoro = () => {
+  multipleClicks++;
+  if (multipleClicks >= 2) {
+    location.reload(); 
+  };
+
   (pomoSec = 60), pomoMin--;
   const timer = setInterval(function () {
     const checkk = () => {
