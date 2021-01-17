@@ -6,7 +6,7 @@ var pomoMin = 25;
 var pomoSec = 00;
 
 // displays the initial output for the timer
-box.innerText = `${pomoMin} : ${pomoSec}`;
+box.innerText = `${pomoMin} : 0${pomoSec}`;
 
 const boxText = (min, sec) => {
   box.innerText = `${min} : ${sec}`;
