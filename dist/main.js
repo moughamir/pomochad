@@ -10,6 +10,6 @@
 /*!*************************!*\
   !*** ./js_src/index.js ***!
   \*************************/
-eval("const box = document.querySelector(\".box\");\n\nconst boxText = (num) => {\n  box.innerText = num;\n};\n\nvar i = 0;\n\nconst timer = setInterval(function () {\n  i++;\n  i == 5 ? (boxText(i), clearInterval(timer)) : boxText(i);\n}, 1000);\n\n\n//# sourceURL=webpack://pomodoro/./js_src/index.js?");
+eval("const box = document.querySelector(\".box\");\n\n// timer divided into two blocks : secs and mins\nvar pomoMin = 25;\nvar pomoSec = 60;\n\n// displays the initial output for the timer\nbox.innerText = `${pomoMin} : ${pomoSec}`;\n\nconst boxText = (min, sec) => {\n  box.innerText = `${min} : ${sec}`;\n};\n\nconst startPomodoro = () => {\n  const timer = setInterval(function () {\n    if (pomoMin == 0) clearInterval(timer);\n\n    pomoSec--;\n    pomoSec == 0\n      ? (boxText(pomoMin, pomoSec), (pomoSec = 60), pomoMin--)\n      : boxText(pomoMin, pomoSec);\n  }, 1000);\n};\n\n//startPomodoro();\n//\ntimerSound = () => {\n  var audio = new Audio(\".../assets/cocGame.mp3\");\n  audio.play();\n};\n\n\n//# sourceURL=webpack://pomodoro/./js_src/index.js?");
 /******/ })()
 ;
