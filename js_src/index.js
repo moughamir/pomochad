@@ -11,17 +11,30 @@ const boxText = (min, sec) => {
   box.innerText = `${min} : ${sec}`;
 };
 
+const timerSound = () => {
+  var audio = new Audio("./assets/sounds/cocGame.mp3");
+  audio.play();
+};
+
+
 const startPomodoro = () => {
   const timer = setInterval(function () {
-    if (pomoMin == 0) clearInterval(timer);
-
+    const checkk = () => {
+      if (pomoMin == 25) {
+        if (pomoSec == 0) {
+          clearInterval(timer);
+          pomoSec = 0;
+          timerSound();
+        }
+      }
+    };
     pomoSec--;
     pomoSec == 0
-      ? (boxText(pomoMin, pomoSec), (pomoSec = 60), pomoMin--)
+      ? (boxText(pomoMin, pomoSec), checkk(), (pomoSec = 60), pomoMin--)
       : boxText(pomoMin, pomoSec);
   }, 1000);
 };
 
 startPomodoro();
-  
+
 
