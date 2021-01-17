@@ -22,9 +22,6 @@ const startPomodoro = () => {
   }, 1000);
 };
 
-//startPomodoro();
-//
-timerSound = () => {
-  var audio = new Audio(".../assets/cocGame.mp3");
-  audio.play();
-};
+startPomodoro();
+  
+
