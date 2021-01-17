@@ -1,8 +1,9 @@
 const box = document.querySelector(".box");
+const start = document.querySelector(".startBtn");
 
 // timer divided into two blocks : secs and mins
 var pomoMin = 25;
-var pomoSec = 60;
+var pomoSec = 00;
 
 // displays the initial output for the timer
 box.innerText = `${pomoMin} : ${pomoSec}`;
@@ -16,11 +17,11 @@ const timerSound = () => {
   audio.play();
 };
 
-
 const startPomodoro = () => {
+  (pomoSec = 60), pomoMin--;
   const timer = setInterval(function () {
     const checkk = () => {
-      if (pomoMin == 25) {
+      if (pomoMin == 0) {
         if (pomoSec == 0) {
           clearInterval(timer);
           pomoSec = 0;
@@ -35,6 +36,6 @@ const startPomodoro = () => {
   }, 1000);
 };
 
-startPomodoro();
-
-
+start.addEventListener("click", () => {
+  startPomodoro();
+});
