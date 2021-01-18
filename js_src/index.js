@@ -20,9 +20,7 @@ const timerSound = () => {
 
 const startPomodoro = () => {
   multipleClicks++;
-  if (multipleClicks >= 2) {
-    location.reload(); 
-  };
+  if (multipleClicks >= 2) startPomodoro();
 
   (pomoSec = 60), pomoMin--;
   const timer = setInterval(function () {
