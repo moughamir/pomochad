@@ -22,11 +22,9 @@ const timerSound = () => {
 };
 
 const checkTimer = (temp) => {
-  if (pomoMin == 0) {
-    if (pomoSec == 0) {
-      clearInterval(temp), (pomoSec = 0), timerSound();
-      return;
-    }
+  if (pomoMin == 0 && pomoSec == 0) {
+    clearInterval(temp), (pomoSec = 0), timerSound();
+    return;
   }
 };
 
