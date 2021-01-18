@@ -1,6 +1,6 @@
 body {
   background-color: #f6ecf0;
-  color: #433d3c;
+  color: #36404c;
   margin: 2% 36% 2% 36%;
   font-family: "Quicksand", sans-serif;
 }
@@ -43,8 +43,13 @@ h1 {
   border-radius: 0px 0px 6px 6px;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
+  background-color: #f6ecf0;
 }
 
+.startBtn:hover {
+  background-color: #36404c ;
+  color: #f6ecf0;
+}
 .squareBox {
   display: flex;
   justify-content: center;
