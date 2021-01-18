@@ -8,6 +8,7 @@ var pomoSec = 00;
 // displays the initial output for the timer
 pomoBox.innerText = `${pomoMin} : 0${pomoSec}`;
 
+// displays timer's text on the screen bruh
 const boxText = (min, sec) => {
   if (min < 10) pomoBox.innerText = `0${min} : ${sec}`;
   else if (sec < 10) pomoBox.innerText = `${min} : 0${sec}`;
