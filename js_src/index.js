@@ -36,7 +36,7 @@ const startPomodoro = () => {
     pomoSec == 0 ?
       ( boxText(pomoMin, pomoSec) , checkTimer(timer), pomoSec = 60, pomoMin-- ) :
         boxText(pomoMin, pomoSec);
-  }, 1000);
+  }, 1000);  // checks if secs turn up to 0 and decrements mins and also if the time's up.
 };
 
 // restart btn
