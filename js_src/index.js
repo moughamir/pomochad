@@ -19,6 +19,7 @@ const boxText = (min, sec) => {
 const timerSound = () => {
   const audio = new Audio("./assets/sounds/cocGame.mp3");
   audio.play();
+  console.log("time's up!")
 };
 
 const checkTimer = (temp) => {
@@ -31,14 +32,18 @@ const checkTimer = (temp) => {
 const startPomodoro = () => {
   pomoSec = 60 , pomoMin = 24;
 
-  const timer = setInterval(function () {
+  const timer = 
+    
+    setInterval(function () {
     pomoSec--;
     pomoSec == 0 ?
       ( boxText(pomoMin, pomoSec) , checkTimer(timer), pomoSec = 60, pomoMin-- ) :
         boxText(pomoMin, pomoSec);
-  }, 1000);  // checks if secs turn up to 0 and decrements mins and also if the time's up.
+  }, 1);  // checks if secs turn up to 0 and decrements mins and also if the time's up.
+
+
 };
 
-// restart btn
+// restart timer 
 start.addEventListener("click", () => startPomodoro());
 
