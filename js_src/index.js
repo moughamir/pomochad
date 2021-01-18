@@ -10,11 +10,15 @@ var multipleClicks = 0;
 pomoBox.innerText = `${pomoMin} : 0${pomoSec}`;
 
 const boxText = (min, sec) => {
-  pomoBox.innerText = `${min} : ${sec}`;
+  if (min < 10) pomoBox.innerText = `0${min} : ${sec}`;
+  else if (sec < 10) pomoBox.innerText = `${min} : 0${sec}`;
+  else {
+    pomoBox.innerText = `${min} : ${sec}`;
+  }
 };
 
 const timerSound = () => {
-  var audio = new Audio("./assets/sounds/cocGame.mp3");
+  const audio = new Audio("./assets/sounds/cocGame.mp3");
   audio.play();
 };
 
