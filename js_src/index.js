@@ -1,7 +1,7 @@
-const pomoBox = document.querySelector(".pomoBox");
-const start = document.querySelector(".startBtn");
+const pomoBox = document.querySelector(".pomoBox");   // inner circle 
+const start = document.querySelector(".startBtn");  
 
-// timer divided into two blocks : secs and mins
+// timer divided into two blocks : mins and secs
 var pomoMin = 25;
 var pomoSec = 00;
 var multipleClicks = 0;
@@ -37,6 +37,7 @@ const startPomodoro = () => {
   }, 1000);
 };
 
+// restart btn 
 start.addEventListener("click", () => {
   multipleClicks++;
   multipleClicks >= 2 ? startPomodoro() : startPomodoro();
