@@ -115,6 +115,8 @@ h1 {
   }
   .sessionBtns {
     margin: 0% 29% 0% 29%;
+    padding: 2.5%;
+    padding-left: 3%;
   }
 }
 
@@ -124,6 +126,8 @@ h1 {
   }
   .sessionBtns {
     margin: 0% 13% 0% 13%;
+     padding: 2.8%;
+    padding-left: 3.5%;
   }
 }
 @media screen and (max-width: 620px) {
@@ -132,6 +136,8 @@ h1 {
   }
   .sessionBtns {
     margin: 0% 17% 0% 17%;
+     padding: 2.8%;
+    padding-left: 4.5%;
   }
 }
 
@@ -141,5 +147,7 @@ h1 {
   }
   .sessionBtns {
     margin: 0% 2% 0% 2%;
+    padding: 2.8%;
+    padding-left: 6.5%
   }
 }
