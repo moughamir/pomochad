@@ -2,17 +2,37 @@
   <head>
     <title>siduck's pomodoro</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
+    <i class="fas fa-adjust fa-2x"></i>
+
     <div class="flexMain">
       <h1>Pomodoro</h1>
       <div class="squareBox">
         <div class="pomoBox">0</div>
       </div>
-      <button type="button" class="startBtn">restart</button>
+      <!--  <button type="button" class="startBtn">restart</button> --> 
+    </div>
+
+    <div class="sessionBtns">
+      <div class="redo">
+        <i class="fas fa-redo fa-lg"></i>
+      </div>
+
+      <div class="redo">
+        <i class="fas fa-pause-circle fa-lg"></i>
+      </div>
     </div>
 
     <script src="./dist/main.js"></script>

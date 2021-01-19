@@ -1,7 +1,7 @@
 body {
   background-color: #f6ecf0;
   color: #36404c;
-  margin: 2% 36% 2% 36%;
+
   font-family: "Quicksand", sans-serif;
 }
 
@@ -15,6 +15,7 @@ h1 {
 .flexMain {
   display: flexbox;
   justify-content: center;
+  margin: 2% 36% 2% 36%;
 }
 
 /* display time */
@@ -33,28 +34,35 @@ h1 {
   font-family: "Quicksand", sans-serif;
 }
 
-/* toggle timer */
-.startBtn {
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.13);
-  outline: none;
-  padding: 5% 10% 5% 10%;
-  border: none;
-  width: 100%;
-  border-radius: 0px 0px 6px 6px;
-  font-family: "Quicksand", sans-serif;
-  font-weight: bold;
-  background-color: #f6ecf0;
-}
-
-.startBtn:hover {
-  background-color: #36404c ;
-  color: #f6ecf0;
-}
 .squareBox {
   display: flex;
   justify-content: center;
   height: 260px;
-  border-radius: 6px 6px 0px 0px;
+  border-radius: 10px;
   background-color: #a7c5eb;
   padding: 5%;
+  padding-top: 6%;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.13);
+}
+
+.fa-adjust {
+  float: right;
+  padding: 1%;
+}
+
+.redo {
+  display: grid;
+  place-content: center;
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 12%;
+  border-radius: 50%;
+  background-color: #a7c5eb;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.13);
+}
+
+.sessionBtns {
+  margin: 0% 36% 0% 36%;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }

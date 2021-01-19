@@ -1,14 +1,13 @@
 const pomoBox = document.querySelector(".pomoBox"); // inner circle
-const start = document.querySelector(".startBtn");
+const start = document.querySelector(".fa-redo");
 
 // timer divided into two blocks : mins and secs
 var pomoMin = 25;
 var pomoSec = 00;
 
-// displays the initial output for the timer
-pomoBox.innerText = `${pomoMin} : 0${pomoSec}`;
+pomoBox.innerText = `${pomoMin} : 0${pomoSec}`;  // displays the initial output for the timer 
 
-// displays timer's text on the screen bruh
+// displays timer's text 
 const boxText = (min, sec) => {
   if (min < 10) pomoBox.innerText = `0${min} : ${sec}`;
   else if (sec < 10) pomoBox.innerText = `${min} : 0${sec}`;
