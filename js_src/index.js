@@ -46,7 +46,7 @@ const startPomodoro = () => {
         (pomoSec = 60),
         pomoMin--)
       : boxText(pomoMin, pomoSec);
-  }, 1);
+  }, 1000);
 };
 
 // stuffs to execute when buttons are clicked!
