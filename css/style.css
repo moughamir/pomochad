@@ -106,3 +106,40 @@ h1 {
     transform: rotateY(0deg);
   }
 }
+
+/* responsiveness */
+
+@media screen and (max-width: 1024px) {
+  .flexMain {
+    margin: 2% 29% 0% 29%;
+  }
+  .sessionBtns {
+    margin: 0% 29% 0% 29%;
+  }
+}
+
+@media screen and (max-width: 554px) {
+  .flexMain {
+    margin: 2% 13% 0% 13%;
+  }
+  .sessionBtns {
+    margin: 0% 13% 0% 13%;
+  }
+}
+@media screen and (max-width: 620px) {
+  .flexMain {
+    margin: 2% 17% 0% 17%;
+  }
+  .sessionBtns {
+    margin: 0% 17% 0% 17%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .flexMain {
+    margin: 2% 2% 0% 2%;
+  }
+  .sessionBtns {
+    margin: 0% 2% 0% 2%;
+  }
+}
