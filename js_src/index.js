@@ -1,6 +1,9 @@
 const pomoBox = document.querySelector(".pomoBox"); // inner circle
-const start = document.querySelector(".fa-redo");
-const pause = document.querySelector(".fa-stop");
+const restart = document.querySelector(".restart");
+const pause = document.querySelector(".pause");
+const resume = document.querySelector(".resume");
+const start = document.querySelector(".start");
+
 let isPaused = false;
 
 // timer divided into two blocks : mins and secs
@@ -49,13 +52,29 @@ const startPomodoro = () => {
       : boxText(pomoMin, pomoSec);
   }, 1000);
 };
-
+//
 // restart timer
+restart.addEventListener("click", () => {
+  isPaused = false;
+  clearInterval(timer), startPomodoro();
+});
+
 start.addEventListener("click", () => {
+  isPaused = false;
   clearInterval(timer), startPomodoro();
 });
 
 pause.addEventListener("click", () => {
+  saveMin = pomoMin;
+  saveSec = pomoSec;
+
+  isPaused = true;
+  boxText(saveMin, saveSec);
+  clearInterval(timer);
+  pomoSec, pomoMin;
+});
+
+resume.addEventListener("click", () => {
   saveMin = pomoMin;
   saveSec = pomoSec;
 
