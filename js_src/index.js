@@ -1,14 +1,10 @@
-const pomoBox = document.querySelector(".pomoBox"); // inner circle
-const restart = document.querySelector(".restart");
-const pause = document.querySelector(".pause");
-const resume = document.querySelector(".resume");
-const start = document.querySelector(".start");
+import { pomoBox, restart, pause, resume, start } from "./modules/divSelectors";
 
 let isPaused = false;
 
 // timer divided into two blocks : mins and secs
 let pomoMin = 25,
-  pomoSec = 00;
+  pomoSec = 0;
 
 let saveMin, saveSec;
 
@@ -50,10 +46,10 @@ const startPomodoro = () => {
         (pomoSec = 60),
         pomoMin--)
       : boxText(pomoMin, pomoSec);
-  }, 1000);
+  }, 1);
 };
-//
-// restart timer
+
+// stuffs to execute when buttons are clicked!
 restart.addEventListener("click", () => {
   isPaused = false;
   clearInterval(timer), startPomodoro();
