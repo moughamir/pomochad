@@ -1,14 +1,20 @@
 import { pause, pomoBox, restart, resume, start } from "./modules/divSelectors";
-import { boxText, timerSound } from "./modules/miscFuncs";
+import {
+  boxText,
+  timerSound,
+  displayError,
+  showWarnings,
+} from "./modules/miscFuncs";
 
 let isPaused = false;
-
 let wutsClicked,
   timesClicked = 0;
+
 // timer divided into two blocks : mins and secs
 let pomoMin = 25,
   pomoSec = 0;
 
+// saves values when timer paused .
 let saveMin, saveSec, timer;
 
 pomoBox.innerText = `${pomoMin} : 0${pomoSec}`; // displays the initial output for the timer
@@ -38,28 +44,22 @@ const startPomodoro = () => {
   return;
 };
 
-const displayError = (text) => (pomoBox.innerText = text);
+[restart, start].forEach(function (temp) {
+  temp.addEventListener("click", () => {
+    isPaused = false;
+    clearInterval(timer), startPomodoro();
 
-// stuffs to execute when buttons are clicked!
-restart.addEventListener("click", () => {
-  isPaused = false;
-  clearInterval(timer), startPomodoro();
-
-  if ((wutsClicked == undefined && timesClicked == 0) || wutsClicked == "pause")
-    (wutsClicked = "restart"), timesClicked++;
-});
-
-start.addEventListener("click", () => {
-  isPaused = false;
-  clearInterval(timer), startPomodoro();
-
-  if ((wutsClicked == undefined && timesClicked == 0) || wutsClicked == "pause")
-    (wutsClicked = "start"), timesClicked++;
+    if (
+      (wutsClicked == undefined && timesClicked == 0) ||
+      wutsClicked == "pause"
+    )
+      (wutsClicked = "restart"), timesClicked++;
+  });
 });
 
 pause.addEventListener("click", () => {
   if (pomoBox.innerText == "00 : 0") {
-    alert("press restart , start or reset :<");
+    showWarnings();
     return;
   } else if (wutsClicked == undefined || wutsClicked == "pause") {
     wutsClicked = "pause";
@@ -76,7 +76,10 @@ pause.addEventListener("click", () => {
 });
 
 resume.addEventListener("click", () => {
-  if (wutsClicked == "pause") {
+  if (pomoBox.innerText == "00 : 0") {
+    showWarnings();
+    return;
+  } else if (wutsClicked == "pause") {
     displayError("NO");
     return;
   } else if (isPaused == false) {

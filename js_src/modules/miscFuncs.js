@@ -14,4 +14,10 @@ const boxText = (min, sec) => {
   }
 };
 
-export { timerSound, boxText };
+const displayError = (text) => (pomoBox.innerText = text);
+
+const showWarnings = () => {
+  alert("press restart , start or reset :<");
+};
+
+export { timerSound, boxText, displayError, showWarnings };
