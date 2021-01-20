@@ -1,4 +1,12 @@
-import { pause, pomoBox, restart, resume, start } from "./modules/divSelectors";
+import {
+  pause,
+  pomoBox,
+  restart,
+  resume,
+  start,
+  reset,
+} from "./modules/divSelectors";
+
 import {
   boxText,
   timerSound,
@@ -39,7 +47,7 @@ const startPomodoro = () => {
         (pomoSec = 60),
         pomoMin--)
       : boxText(pomoMin, pomoSec);
-  }, 1000);
+  }, 0);
 
   return;
 };
@@ -93,4 +101,10 @@ resume.addEventListener("click", () => {
 
     clearInterval(timer), startPomodoro();
   }
+});
+
+reset.addEventListener("click", () => {
+  (pomoMin = 25), (pomoSec = 0);
+  clearInterval(timer);
+  boxText(pomoMin, pomoSec);
 });
