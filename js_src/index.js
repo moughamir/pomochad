@@ -1,5 +1,5 @@
-import { pomoBox, restart, pause, resume, start } from "./modules/divSelectors";
-import { timerSound, boxText } from "./modules/miscFuncs";
+import { pause, pomoBox, restart, resume, start } from "./modules/divSelectors";
+import { boxText, timerSound } from "./modules/miscFuncs";
 
 let isPaused = false;
 
@@ -38,9 +38,8 @@ const startPomodoro = () => {
   return;
 };
 
-const displayError = (text) => {
-  pomoBox.innerText = text;
-};
+const displayError = (text) => (pomoBox.innerText = text);
+
 // stuffs to execute when buttons are clicked!
 restart.addEventListener("click", () => {
   isPaused = false;
@@ -62,6 +61,7 @@ pause.addEventListener("click", () => {
   if (wutsClicked == undefined || wutsClicked == "pause") {
     wutsClicked = "pause";
     displayError("NO");
+    return;
   }
   saveMin = pomoMin;
   saveSec = pomoSec;
@@ -73,14 +73,20 @@ pause.addEventListener("click", () => {
 });
 
 resume.addEventListener("click", () => {
-  isPaused == false ? isPaused == false : (isPaused = true);
-
   if (wutsClicked == "pause") {
     displayError("NO");
     return;
   }
-  saveMin = pomoMin;
-  saveSec = pomoSec;
 
-  clearInterval(timer), startPomodoro();
+  if (isPaused == false) {
+    isPaused = false;
+    alert("press pause first !");
+    return;
+  } else {
+    isPaused = true;
+    saveMin = pomoMin;
+    saveSec = pomoSec;
+
+    clearInterval(timer), startPomodoro();
+  }
 });
