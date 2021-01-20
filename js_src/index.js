@@ -47,7 +47,7 @@ const startPomodoro = () => {
         (pomoSec = 60),
         pomoMin--)
       : boxText(pomoMin, pomoSec);
-  }, 0);
+  }, 1000);
 
   return;
 };
