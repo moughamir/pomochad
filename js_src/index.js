@@ -3,11 +3,13 @@ import { timerSound, boxText } from "./modules/miscFuncs";
 
 let isPaused = false;
 
+let wutsClicked,
+  timesClicked = 0;
 // timer divided into two blocks : mins and secs
 let pomoMin = 25,
   pomoSec = 0;
 
-let saveMin, saveSec;
+let saveMin, saveSec, timer;
 
 pomoBox.innerText = `${pomoMin} : 0${pomoSec}`; // displays the initial output for the timer
 
@@ -17,8 +19,6 @@ const checkTimer = (temp) => {
     return;
   }
 };
-
-let timer;
 
 const startPomodoro = () => {
   isPaused == false
@@ -33,22 +33,36 @@ const startPomodoro = () => {
         (pomoSec = 60),
         pomoMin--)
       : boxText(pomoMin, pomoSec);
-  }, 1000);
+  }, 0);
+
+  return;
 };
 
+const displayError = (text) => {
+  pomoBox.innerText = text;
+};
 // stuffs to execute when buttons are clicked!
-
 restart.addEventListener("click", () => {
   isPaused = false;
   clearInterval(timer), startPomodoro();
+
+  if ((wutsClicked == undefined && timesClicked == 0) || wutsClicked == "pause")
+    (wutsClicked = "restart"), timesClicked++;
 });
 
 start.addEventListener("click", () => {
   isPaused = false;
   clearInterval(timer), startPomodoro();
+
+  if ((wutsClicked == undefined && timesClicked == 0) || wutsClicked == "pause")
+    (wutsClicked = "start"), timesClicked++;
 });
 
 pause.addEventListener("click", () => {
+  if (wutsClicked == undefined || wutsClicked == "pause") {
+    wutsClicked = "pause";
+    displayError("NO");
+  }
   saveMin = pomoMin;
   saveSec = pomoSec;
 
@@ -60,6 +74,11 @@ pause.addEventListener("click", () => {
 
 resume.addEventListener("click", () => {
   isPaused == false ? isPaused == false : (isPaused = true);
+
+  if (wutsClicked == "pause") {
+    displayError("NO");
+    return;
+  }
   saveMin = pomoMin;
   saveSec = pomoSec;
 
