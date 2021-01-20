@@ -1,4 +1,5 @@
 import { pomoBox, restart, pause, resume, start } from "./modules/divSelectors";
+import { timerSound, boxText } from "./modules/miscFuncs";
 
 let isPaused = false;
 
@@ -9,20 +10,6 @@ let pomoMin = 25,
 let saveMin, saveSec;
 
 pomoBox.innerText = `${pomoMin} : 0${pomoSec}`; // displays the initial output for the timer
-
-// displays timer's text
-const boxText = (min, sec) => {
-  if (min < 10) pomoBox.innerText = `0${min} : ${sec}`;
-  else if (sec < 10) pomoBox.innerText = `${min} : 0${sec}`;
-  else {
-    pomoBox.innerText = `${min} : ${sec}`;
-  }
-};
-
-const timerSound = () => {
-  const audio = new Audio("./assets/sounds/cocGame.mp3");
-  audio.play();
-};
 
 const checkTimer = (temp) => {
   if (pomoMin == 0 && pomoSec == 0) {
@@ -46,10 +33,11 @@ const startPomodoro = () => {
         (pomoSec = 60),
         pomoMin--)
       : boxText(pomoMin, pomoSec);
-  }, 1000);
+  }, 0);
 };
 
 // stuffs to execute when buttons are clicked!
+
 restart.addEventListener("click", () => {
   isPaused = false;
   clearInterval(timer), startPomodoro();
@@ -71,9 +59,9 @@ pause.addEventListener("click", () => {
 });
 
 resume.addEventListener("click", () => {
+  isPaused == false ? isPaused == false : (isPaused = true);
   saveMin = pomoMin;
   saveSec = pomoSec;
 
-  isPaused = true;
   clearInterval(timer), startPomodoro();
 });
