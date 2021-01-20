@@ -58,7 +58,10 @@ start.addEventListener("click", () => {
 });
 
 pause.addEventListener("click", () => {
-  if (wutsClicked == undefined || wutsClicked == "pause") {
+  if (pomoBox.innerText == "00 : 0") {
+    alert("press restart , start or reset :<");
+    return;
+  } else if (wutsClicked == undefined || wutsClicked == "pause") {
     wutsClicked = "pause";
     displayError("NO");
     return;
@@ -76,9 +79,7 @@ resume.addEventListener("click", () => {
   if (wutsClicked == "pause") {
     displayError("NO");
     return;
-  }
-
-  if (isPaused == false) {
+  } else if (isPaused == false) {
     isPaused = false;
     alert("press pause first !");
     return;
