@@ -25,7 +25,7 @@ let pomoMin = 25,
 // saves values when timer paused .
 let saveMin, saveSec, timer;
 
-pomoBox.innerText = `${pomoMin} : 0${pomoSec}`; // displays the initial output for the timer
+pomoBox.innerText = `${pomoMin} : 0${pomoSec}`; // initial output
 
 const checkTimer = (temp) => {
   if (pomoMin == 0 && pomoSec == 0) {
