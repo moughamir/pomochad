@@ -13,6 +13,7 @@ h1 {
 .flexMain {
   display: flexbox;
   justify-content: center;
+  align-items: center;
   margin: 2% 36% 0% 36%;
 }
 
@@ -49,6 +50,19 @@ h1 {
   padding: 1%;
 }
 
+/* session btns */
+
+.sessionBtns {
+  margin: 0% 36% 0% 36%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  background-color: #f6f5f5;
+  padding: 1.5%;
+  padding-left: 3%;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.13);
+}
+
 .restart,
 .pause,
 .resume,
@@ -62,20 +76,9 @@ h1 {
   background-color: #a7c5eb;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.13);
   animation: loadUp 0.5s;
-  /*border: 2px solid #41444b; */
   position: relative;
-}
 
-/* session btns */
-.sessionBtns {
-  margin: 0% 36% 0% 36%;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  background-color: #f6f5f5;
-  padding: 1.5%;
-  padding-left: 3%;
-  border-radius: 0px 0px 10px 10px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.13);
+  /*border: 2px solid #41444b; */
 }
 
 .restart:hover,
@@ -101,7 +104,25 @@ h1 {
   border: 2px solid #41444b;
 }
 
-/* action keys status */
+.start:hover:after,
+.restart:hover:after,
+.pause:hover:after,
+.resume:hover:after {
+  font-weight: bold;
+  color: #36404c;
+  content: attr(title);
+  bottom: 120%;
+  position: absolute;
+  padding: 15%;
+  z-index: 100;
+  width: auto;
+  background-color: #f6f5f5;
+  text-align: center;
+  border: 2px solid #a7c5eb;
+  animation: smoothLoad 0.5s;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.09), 0px 1px 1px rgba(0, 0, 0, 0.06);
+}
 
 /* animations :D */
 
@@ -126,5 +147,3 @@ h1 {
     transform: rotateY(0deg);
   }
 }
-
-
