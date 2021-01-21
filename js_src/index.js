@@ -17,13 +17,14 @@ import {
 
 import { toggleTheme } from "./modules/themes";
 
+// start , pause etc btns
 makeSessionBtns();
 
 let isPaused = false;
 let wutsClicked,
   timesClicked = 0;
 
-// timer divided into two blocks : mins and secs
+// default time
 let pomoMin = 25,
   pomoSec = 0;
 
@@ -56,6 +57,8 @@ const startPomodoro = () => {
 
   return;
 };
+
+// Session button click actions
 
 [restart, start].forEach((temp) => {
   temp.addEventListener("click", () => {
@@ -108,11 +111,12 @@ resume.addEventListener("click", () => {
   }
 });
 
+// resets time to default ( doesnt start the timer )
 reset.addEventListener("click", () => {
   (pomoMin = 25), (pomoSec = 0);
   clearInterval(timer);
   boxText(pomoMin, pomoSec);
 });
 
-// toggles between dark and white theme
+// toggle between dark and white theme
 toggleTheme();

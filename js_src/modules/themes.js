@@ -17,6 +17,7 @@ const toggleTheme = () => {
   themeToggle.addEventListener("click", () => {
     whichTheme++;
 
+    //Dark theme
     if (whichTheme % 2 != 0) {
       body.style.backgroundColor = "#222831";
       body.style.color = "#f6ecf0";
@@ -51,7 +52,10 @@ const toggleTheme = () => {
       reset.addEventListener("mouseout", () => {
         reset.style.backgroundColor = "#f6ecf0";
       });
-    } else {
+    }
+
+    // Default theme ( light )
+    else {
       body.style.backgroundColor = "#f6ecf0";
       body.style.color = "#36404c";
 
