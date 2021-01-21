@@ -1,0 +1,63 @@
+/* responsiveness */
+
+@media screen and (max-width: 1024px) {
+  .flexMain {
+    margin: 2% 29% 0% 29%;
+  }
+  .sessionBtns {
+    margin: 0% 29% 0% 29%;
+    padding: 2.5%;
+    padding-left: 3%;
+  }
+}
+
+@media screen and (max-width: 554px) {
+  .flexMain {
+    margin: 2% 13% 0% 13%;
+  }
+  .sessionBtns {
+    margin: 0% 13% 0% 13%;
+    padding: 2.8%;
+    padding-left: 3.5%;
+  }
+}
+@media screen and (max-width: 620px) {
+  .flexMain {
+    margin: 2% 17% 0% 17%;
+  }
+  .sessionBtns {
+    margin: 0% 17% 0% 17%;
+    padding: 2.8%;
+    padding-left: 4.5%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .flexMain {
+    margin: 2% 2% 0% 2%;
+  }
+  .sessionBtns {
+    margin: 0% 2% 0% 2%;
+    padding: 2.8%;
+    padding-left: 6.5%;
+  }
+}
+
+@media only screen and (device-width: 1920px) and (device-height: 1080px) {
+  h1 {
+    margin-bottom: 10%;
+  }
+  .flexMain {
+    margin: 3% 39% 0% 39%;
+  }
+  .sessionBtns {
+    margin: 0% 39% 3% 39%;
+  }
+  .pomoBox {
+    font-size: 3.4em;
+    height: 265px;
+    width: 265px;
+    color: #f6ecf0;
+    font-family: "Quicksand", sans-serif;
+  }
+}
