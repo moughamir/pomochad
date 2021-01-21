@@ -13,7 +13,7 @@
 
 @media screen and (max-width: 554px) {
   .flexMain {
-    margin: 2% 13% 0% 13%;
+    margin: 2% 10% 0% 10%;
   }
   .sessionBtns {
     margin: 0% 13% 0% 13%;
@@ -23,7 +23,7 @@
 }
 @media screen and (max-width: 620px) {
   .flexMain {
-    margin: 2% 17% 0% 17%;
+    margin: 2% 15% 0% 15%;
   }
   .sessionBtns {
     margin: 0% 17% 0% 17%;
@@ -33,6 +33,17 @@
 }
 
 @media screen and (max-width: 350px) {
+  .flexMain {
+    margin: 2% 2% 0% 2%;
+  }
+  .sessionBtns {
+    margin: 0% 2% 0% 2%;
+    padding: 2.8%;
+    padding-left: 6.5%;
+  }
+}
+
+@media screen and (max-width: 480) {
   .flexMain {
     margin: 2% 2% 0% 2%;
   }
