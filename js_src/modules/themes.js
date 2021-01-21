@@ -27,16 +27,16 @@ const toggleTheme = () => {
       sessionBtns.style.backgroundColor = "#40464F";
 
       // session button colors , on hover etc
-      [restart, start, pause, resume].forEach(function (temp) {
+      [restart, start, pause, resume].forEach((temp) => {
         temp.style.backgroundColor = "#2C323B";
         temp.style.color = "#f6ecf0";
 
-        temp.addEventListener("mouseover", function () {
+        temp.addEventListener("mouseover", () => {
           temp.style.backgroundColor = "#a7c5eb";
           temp.style.color = "#2C323B";
         });
 
-        temp.addEventListener("mouseout", function () {
+        temp.addEventListener("mouseout", () => {
           temp.style.backgroundColor = "#2C323B";
           temp.style.color = "#f6ecf0";
         });
@@ -62,16 +62,16 @@ const toggleTheme = () => {
       sessionBtns.style.backgroundColor = "#f6ecf0";
 
       // session button colors , on hover etc
-      [restart, start, pause, resume, reset].forEach(function (temp) {
+      [restart, start, pause, resume, reset].forEach((temp) => {
         temp.style.backgroundColor = "#a7c5eb";
         temp.style.color = "#36404c";
 
-        temp.addEventListener("mouseover", function () {
+        temp.addEventListener("mouseover", () => {
           temp.style.backgroundColor = "#36404c";
           temp.style.color = "#f6ecf0";
         });
 
-        temp.addEventListener("mouseout", function () {
+        temp.addEventListener("mouseout", () => {
           temp.style.backgroundColor = "#a7c5eb";
           temp.style.color = "#36404c";
         });

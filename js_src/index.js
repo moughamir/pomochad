@@ -44,7 +44,7 @@ const startPomodoro = () => {
     ? ((pomoSec = 60), (pomoMin = 24))
     : ((pomoMin = saveMin), (pomoSec = saveSec));
 
-  timer = setInterval(function () {
+  timer = setInterval(() => {
     pomoSec--;
     pomoSec == 0
       ? (boxText(pomoMin, pomoSec),
@@ -57,7 +57,7 @@ const startPomodoro = () => {
   return;
 };
 
-[restart, start].forEach(function (temp) {
+[restart, start].forEach((temp) => {
   temp.addEventListener("click", () => {
     isPaused = false;
     clearInterval(timer), startPomodoro();
