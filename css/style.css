@@ -124,6 +124,26 @@ h1 {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.09), 0px 1px 1px rgba(0, 0, 0, 0.06);
 }
 
+/* beta ribbon */
+
+body:after {
+  content: "beta";
+  position: fixed;
+  width: 80px;
+  height: 25px;
+  background: #36404c;
+  top: 7px;
+  left: -20px;
+  text-align: center;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #fff;
+  line-height: 27px;
+  transform: rotate(-45deg);
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px rgba(0, 0, 0, 0.04);
+}
+
 /* animations :D */
 
 @keyframes loadUp {
