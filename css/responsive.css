@@ -13,10 +13,10 @@
 
 @media screen and (max-width: 554px) {
   .flexMain {
-    margin: 2% 6% 0% 6%;
+    margin: 2% 2% 0% 2%;
   }
   .sessionBtns {
-    margin: 0% 6% 0% 6%;
+    margin: 0% 2% 0% 2%;
     padding: 2.8%;
     padding-left: 3.5%;
   }
@@ -46,10 +46,10 @@
 
 @media screen and (max-width: 350px) and (max-width: 380px) {
   .flexMain {
-    margin: 2% 2% 0% 2%;
+    margin: 2% 0% 0% 0%;
   }
   .sessionBtns {
-    margin: 0% 2% 0% 2%;
+    margin: 0% 0% 0% 0%;
     padding: 2.8%;
     padding-left: 6.5%;
   }
@@ -63,10 +63,10 @@
 
 @media screen and (max-width: 480) {
   .flexMain {
-    margin: 2% 2% 0% 2%;
+    margin: 2% 0% 0% 0%;
   }
   .sessionBtns {
-    margin: 0% 2% 1% 2%;
+    margin: 0% 0% 1% 0%;
     padding: 2.8%;
     padding-left: 6.5%;
   }
