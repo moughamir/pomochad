@@ -6,15 +6,16 @@ import {
   resume,
   start,
   reset,
-  themeToggle
 } from "./modules/divSelectors";
 
 import {
   boxText,
   timerSound,
   displayError,
-  showWarnings
+  showWarnings,
 } from "./modules/miscFuncs";
+
+import { toggleTheme } from "./modules/themes";
 
 makeSessionBtns();
 
@@ -113,6 +114,5 @@ reset.addEventListener("click", () => {
   boxText(pomoMin, pomoSec);
 });
 
-themeToggle.addEventListener('click', () => {
-  alert('not yet ready!');
-});
+// toggles between dark and white theme
+toggleTheme();
