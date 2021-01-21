@@ -1,3 +1,4 @@
+import { makeSessionBtns } from "./modules/sessionButtons";
 import {
   pause,
   pomoBox,
@@ -13,6 +14,8 @@ import {
   displayError,
   showWarnings,
 } from "./modules/miscFuncs";
+
+makeSessionBtns();
 
 let isPaused = false;
 let wutsClicked,
