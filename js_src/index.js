@@ -6,13 +6,14 @@ import {
   resume,
   start,
   reset,
+  themeToggle
 } from "./modules/divSelectors";
 
 import {
   boxText,
   timerSound,
   displayError,
-  showWarnings,
+  showWarnings
 } from "./modules/miscFuncs";
 
 makeSessionBtns();
@@ -110,4 +111,8 @@ reset.addEventListener("click", () => {
   (pomoMin = 25), (pomoSec = 0);
   clearInterval(timer);
   boxText(pomoMin, pomoSec);
+});
+
+themeToggle.addEventListener('click', () => {
+  alert('not yet ready!');
 });
