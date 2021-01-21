@@ -1,3 +1,6 @@
 # pomodoro
-basic pomodoro timer made for my personal use<br>
-<a href="https://siduck76.github.io/pomodoro/">live (in-progress) </a>
+A very simple pomodoro web app for my personal use<br>
+<a href="https://siduck76.github.io/pomodoro/">Live(Beta)</a>
+<br>
+<br>
+![Pomodoro Layout Image](https://i.imgur.com/GO7lILk.jpg)
