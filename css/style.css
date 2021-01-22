@@ -43,7 +43,7 @@ h1 {
   padding: 5%;
   padding-top: 6%;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.13);
-  animation: smoothLoad 0.4s;
+ /* animation: smoothLoad 0.4s; */
 }
 
 .fa-adjust {
@@ -118,7 +118,7 @@ h1 {
   background-color: #f6f5f5;
   text-align: center;
   border: 2px solid #a7c5eb;
-  animation: smoothLoad 0.5s;
+  animation: smoothLoad 0.3s;
   border-radius: 5px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.09), 0px 1px 1px rgba(0, 0, 0, 0.06);
 }
