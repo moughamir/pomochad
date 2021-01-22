@@ -7,7 +7,7 @@ A very simple pomodoro web app for my personal use <br>
 - [X] Basic functionality 
 - [X] add a dark theme
 - [X] theme toggle 
-- [ ] responsive ( for phones )
+- [X] responsive ( for phones )
 - [ ] custom timer sound
 - [ ] add local storage 
 - [ ] break mode*
