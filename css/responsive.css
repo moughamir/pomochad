@@ -26,6 +26,9 @@
     padding: 1.6%;
     font-size: 1.1rem;
   }
+  .squareBox {
+    animation: none;
+  }
 }
 @media screen and (max-width: 620px) {
   .flexMain {
@@ -42,6 +45,12 @@
     padding: 1.6%;
     font-size: 1.1rem;
   }
+  .restart,
+  .pause,
+  .resume,
+  .start {
+    animation: none;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -55,9 +64,18 @@
   }
   .reset {
     background-color: #a7c5eb;
-    margin: 3% 15% 0% 15%;
+    margin: 10% 15% 0% 15%;
     padding: 1.6%;
     font-size: 1.1rem;
+  }
+  .squareBox {
+    animation: none;
+  }
+  .restart,
+  .pause,
+  .resume,
+  .start {
+    animation: none;
   }
 }
 
@@ -84,7 +102,7 @@
     padding-top: 6%;
   }
 }
-@media  (max-width: 480) {
+@media (max-width: 480) {
   .flexMain {
     margin: 2% 0% 0% 0%;
   }
@@ -94,12 +112,21 @@
     padding-left: 6.5%;
   }
   body {
-    color:pink;
+    color: pink;
   }
   .reset {
     background-color: #a7c5eb;
-    margin: 3% 15% 0% 15%;
+    margin: 7% 15% 0% 15%;
     padding: 1.6%;
     font-size: 1.1rem;
+  }
+  .squareBox {
+    animation: none;
+  }
+  .restart,
+  .pause,
+  .resume,
+  .start {
+    animation: none;
   }
 }
