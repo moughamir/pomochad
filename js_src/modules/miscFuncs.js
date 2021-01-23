@@ -1,7 +1,9 @@
 import { pomoBox } from "./divSelectors";
 
+let defaultSound = "./assets/sounds/cocGame.mp3";
+
 const timerSound = () => {
-  const audio = new Audio("./assets/sounds/cocGame.mp3");
+  const audio = new Audio(defaultSound);
   audio.play();
 };
 
@@ -14,7 +16,7 @@ const boxText = (min, sec) => {
   }
 };
 
-// for wrong btn click 
+// for wrong btn click
 const displayError = (text) => (pomoBox.innerText = text);
 
 const showWarnings = () => {
