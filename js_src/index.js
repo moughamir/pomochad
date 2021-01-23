@@ -14,11 +14,15 @@ import {
   timerSound,
   displayError,
   showWarnings,
+  saveLocalStorage,
+  checkLocalStorage,
 } from "./modules/miscFuncs";
 
 import { toggleTheme } from "./modules/themes";
 
-let userScore = 0;
+export let userScore = 0;
+
+checkLocalStorage();
 
 // start , pause etc btns
 makeSessionBtns();
@@ -42,6 +46,7 @@ const checkTimer = (temp) => {
 
     userScore += 100;
     score.innerText = "Score : " + userScore;
+    saveLocalStorage();
 
     return;
   }

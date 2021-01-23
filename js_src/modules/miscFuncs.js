@@ -1,4 +1,5 @@
-import { pomoBox } from "./divSelectors";
+import { pomoBox, score } from "./divSelectors";
+import { userScore } from "../index";
 
 let defaultSound = "./assets/sounds/cocGame.mp3";
 
@@ -18,9 +19,26 @@ const boxText = (min, sec) => {
 
 // for wrong btn click
 const displayError = (text) => (pomoBox.innerText = text);
-
 const showWarnings = () => {
   alert("press restart , start or reset :<");
 };
 
-export { timerSound, boxText, displayError, showWarnings };
+const saveLocalStorage = () => {
+  localStorage.setItem("savedScore", userScore);
+};
+
+const checkLocalStorage = () => {
+  if (localStorage.length > 0) {
+    userScore = localStorage.getItem("savedScore");
+    score.innerText = "Score : " + userScore;
+  }
+};
+
+export {
+  timerSound,
+  boxText,
+  displayError,
+  showWarnings,
+  saveLocalStorage,
+  checkLocalStorage,
+};
