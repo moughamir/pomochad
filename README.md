@@ -8,10 +8,9 @@ A very simple pomodoro web app for my personal use <br>
 - [X] add a dark theme
 - [X] theme toggle 
 - [X] responsive ( for phones )
-- [ ] custom timer sound
-- [ ] add local storage 
+- [ ] let user to have a custom timer sound
+- [X] add local storage 
 - [ ] add about/wiki
-- [ ] total time tracker
 - [ ] break mode*
 - [ ] add more themes
 
