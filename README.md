@@ -10,6 +10,8 @@ A very simple pomodoro web app for my personal use <br>
 - [X] responsive ( for phones )
 - [ ] custom timer sound
 - [ ] add local storage 
+- [ ] add about/wiki
+- [ ] total time tracker
 - [ ] break mode*
 - [ ] add more themes
 
