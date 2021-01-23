@@ -6,6 +6,7 @@ import {
   resume,
   start,
   reset,
+  score,
 } from "./modules/divSelectors";
 
 import {
@@ -16,6 +17,8 @@ import {
 } from "./modules/miscFuncs";
 
 import { toggleTheme } from "./modules/themes";
+
+let userScore = 0;
 
 // start , pause etc btns
 makeSessionBtns();
@@ -36,6 +39,10 @@ pomoBox.innerText = `${pomoMin} : 0${pomoSec}`; // initial output
 const checkTimer = (temp) => {
   if (pomoMin == 0 && pomoSec == 0) {
     clearInterval(temp), (pomoSec = 0), timerSound();
+
+    userScore += 100;
+    score.innerText = "Score : " + userScore;
+
     return;
   }
 };
@@ -53,7 +60,7 @@ const startPomodoro = () => {
         (pomoSec = 60),
         pomoMin--)
       : boxText(pomoMin, pomoSec);
-  }, 1000);
+  }, 0);
 
   return;
 };

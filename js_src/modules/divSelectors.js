@@ -8,6 +8,7 @@ const themeToggle = document.querySelector(".fa-adjust");
 const body = document.querySelector("body");
 const squareBox = document.querySelector(".squareBox");
 const sessionBtns = document.querySelector(".sessionBtns");
+const score = document.querySelector(".score");
 
 export {
   pomoBox,
@@ -20,4 +21,5 @@ export {
   body,
   squareBox,
   sessionBtns,
+  score,
 };
