@@ -9,8 +9,10 @@ A very simple pomodoro web app for my personal use <br>
 - [X] theme toggle 
 - [X] responsive ( for phones )
 - [ ] custom timer sound
+- [ ] better design
 - [X] add local storage 
 - [ ] add about/wiki
 - [ ] break mode*
 - [ ] add more themes
+
 
