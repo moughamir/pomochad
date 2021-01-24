@@ -44,6 +44,7 @@ const checkTimer = (temp) => {
   if (pomoMin == 0 && pomoSec == 0) {
     clearInterval(temp), (pomoSec = 0), timerSound();
 
+    userScore = parseInt(userScore);
     userScore += 100;
     score.innerText = "Score : " + userScore;
     saveLocalStorage();
@@ -65,7 +66,7 @@ const startPomodoro = () => {
         (pomoSec = 60),
         pomoMin--)
       : boxText(pomoMin, pomoSec);
-  }, 1000);
+  }, 0);
 
   return;
 };
