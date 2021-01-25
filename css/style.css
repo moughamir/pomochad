@@ -2,7 +2,7 @@ body {
   background-color: #f6ecf0;
   color: #36404c;
   font-family: "Quicksand", sans-serif;
-  transition: 0.1s;
+  transition: 0.2s;
 }
 
 h1 {
@@ -43,7 +43,7 @@ h1 {
   padding: 5%;
   padding-top: 6%;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.13);
- /* animation: smoothLoad 0.4s; */
+  /* animation: smoothLoad 0.4s; */
 }
 
 .fa-adjust {

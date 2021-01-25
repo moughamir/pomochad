@@ -9,13 +9,14 @@ import {
 } from "./modules/divSelectors";
 
 import {
+  addTortureAnimation,
   boxText,
   checkLocalStorage,
   displayError,
   saveLocalStorage,
   showWarnings,
+  stopTortureAnimation,
   timerSound,
-  // makeSettings,
 } from "./modules/miscFuncs";
 
 import { makeSessionBtns } from "./modules/sessionButtons";
@@ -69,7 +70,7 @@ const startPomodoro = () => {
         (pomoSec = 60),
         pomoMin--)
       : boxText(pomoMin, pomoSec);
-  }, 0);
+  }, 1000);
 
   return;
 };
@@ -78,6 +79,7 @@ const startPomodoro = () => {
 
 [restart, start, reset].forEach((temp) => {
   temp.addEventListener("click", () => {
+    stopTortureAnimation();
     // resets time to default ( doesnt start the timer )
 
     if (temp.className == "reset") {
@@ -107,10 +109,13 @@ const startPomodoro = () => {
     if (temp.className == "pause") {
       if (pomoBox.innerText == "00 : 0" || saveMin == 25 || pomoMin == 25) {
         showWarnings();
+        addTortureAnimation();
         return;
       } else if (wutsClicked == undefined || wutsClicked == "pause") {
         wutsClicked = "pause";
         showWarnings();
+        addTortureAnimation();
+
         return;
       }
 
@@ -127,6 +132,8 @@ const startPomodoro = () => {
     else {
       if (pomoBox.innerText == "00 : 0" || saveMin == 25 || pomoMin == 25) {
         showWarnings();
+        addTortureAnimation();
+
         return;
       } else if (wutsClicked == "pause" || isPaused == false) {
         displayError("NO");

@@ -15,7 +15,7 @@ import {
 
 let whichTheme = 0;
 
-const darkTheme = () => {
+const useDarkTheme = () => {
   userTheme = "dark";
   localStorage.savedTheme = "dark";
 
@@ -54,7 +54,7 @@ const darkTheme = () => {
   });
 };
 
-const lightTheme = () => {
+const useLightTheme = () => {
   userTheme = "light";
   localStorage.savedTheme = "light";
 
@@ -88,8 +88,8 @@ const toggleTheme = () => {
   themeToggle.addEventListener("click", () => {
     whichTheme++;
 
-    whichTheme % 2 != 0 ? darkTheme() : lightTheme();
+    whichTheme % 2 != 0 ? useDarkTheme() : useLightTheme();
   });
 };
 
-export { toggleTheme, darkTheme, lightTheme };
+export { toggleTheme, useDarkTheme, useLightTheme };
