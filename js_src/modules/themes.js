@@ -1,3 +1,5 @@
+import { userTheme } from "../index";
+
 import {
   pause,
   pomoBox,
@@ -14,6 +16,9 @@ import {
 let whichTheme = 0;
 
 const darkTheme = () => {
+  userTheme = "dark";
+  localStorage.savedTheme = "dark";
+
   body.style.backgroundColor = "#222831";
   body.style.color = "#f6ecf0";
 
@@ -50,6 +55,9 @@ const darkTheme = () => {
 };
 
 const lightTheme = () => {
+  userTheme = "light";
+  localStorage.savedTheme = "light";
+
   body.style.backgroundColor = "#f6ecf0";
   body.style.color = "#36404c";
 
@@ -84,4 +92,4 @@ const toggleTheme = () => {
   });
 };
 
-export { toggleTheme };
+export { toggleTheme, darkTheme, lightTheme };

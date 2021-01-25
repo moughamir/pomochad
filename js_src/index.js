@@ -7,6 +7,7 @@ import {
   score,
   start,
 } from "./modules/divSelectors";
+
 import {
   boxText,
   checkLocalStorage,
@@ -14,11 +15,15 @@ import {
   saveLocalStorage,
   showWarnings,
   timerSound,
+  // makeSettings,
 } from "./modules/miscFuncs";
+
 import { makeSessionBtns } from "./modules/sessionButtons";
 import { toggleTheme } from "./modules/themes";
 
+// user settings ( for localStorage )
 export let userScore = 0;
+export let userTheme = "lightTheme";
 
 checkLocalStorage();
 
@@ -64,7 +69,7 @@ const startPomodoro = () => {
         (pomoSec = 60),
         pomoMin--)
       : boxText(pomoMin, pomoSec);
-  }, 1000);
+  }, 0);
 
   return;
 };

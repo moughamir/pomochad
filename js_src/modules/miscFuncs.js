@@ -1,5 +1,6 @@
 import { pomoBox, score } from "./divSelectors";
-import { userScore } from "../index";
+import { userScore, userTheme } from "../index";
+import { darkTheme, lightTheme } from "./themes";
 
 let defaultSound = "./assets/sounds/cocGame.mp3";
 
@@ -25,14 +26,23 @@ const showWarnings = () => {
 
 const saveLocalStorage = () => {
   localStorage.setItem("savedScore", userScore);
+  localStorage.setItem("savedTheme", userTheme);
 };
 
 const checkLocalStorage = () => {
   if (localStorage.length > 0) {
     userScore = localStorage.getItem("savedScore");
+    userTheme = localStorage.getItem("savedTheme");
+
     score.innerText = "Score : " + userScore;
+    userTheme == "dark" ? darkTheme() : lightTheme();
   }
 };
+
+/*
+const makeSettings = function (theme, score) {
+  return { theme, score };
+}; */
 
 export {
   timerSound,
@@ -41,4 +51,5 @@ export {
   showWarnings,
   saveLocalStorage,
   checkLocalStorage,
+  // makeSettings,
 };
