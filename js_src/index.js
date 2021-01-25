@@ -1,23 +1,21 @@
-import { makeSessionBtns } from "./modules/sessionButtons";
 import {
   pause,
   pomoBox,
+  reset,
   restart,
   resume,
-  start,
-  reset,
   score,
+  start,
 } from "./modules/divSelectors";
-
 import {
   boxText,
-  timerSound,
-  displayError,
-  showWarnings,
-  saveLocalStorage,
   checkLocalStorage,
+  displayError,
+  saveLocalStorage,
+  showWarnings,
+  timerSound,
 } from "./modules/miscFuncs";
-
+import { makeSessionBtns } from "./modules/sessionButtons";
 import { toggleTheme } from "./modules/themes";
 
 export let userScore = 0;
@@ -73,62 +71,69 @@ const startPomodoro = () => {
 
 // Session button click actions
 
-[restart, start].forEach((temp) => {
+[restart, start, reset].forEach((temp) => {
   temp.addEventListener("click", () => {
-    isPaused = false;
-    clearInterval(timer), startPomodoro();
+    // resets time to default ( doesnt start the timer )
 
-    if (
-      (wutsClicked == undefined && timesClicked == 0) ||
-      wutsClicked == "pause"
-    )
-      (wutsClicked = "restart"), timesClicked++;
+    if (temp.className == "reset") {
+      isPaused = false;
+
+      (pomoMin = 25), (pomoSec = 0);
+      clearInterval(timer);
+      boxText(pomoMin, pomoSec);
+    }
+
+    // just restarts the time
+    else {
+      isPaused = false;
+      clearInterval(timer), startPomodoro();
+
+      if (
+        (wutsClicked == undefined && timesClicked == 0) ||
+        wutsClicked == "pause"
+      )
+        (wutsClicked = "restart"), timesClicked++;
+    }
   });
 });
 
-pause.addEventListener("click", () => {
-  if (pomoBox.innerText == "00 : 0") {
-    showWarnings();
-    return;
-  } else if (wutsClicked == undefined || wutsClicked == "pause") {
-    wutsClicked = "pause";
-    displayError("NO");
-    return;
-  }
-  saveMin = pomoMin;
-  saveSec = pomoSec;
+[pause, resume].forEach((temp) => {
+  temp.addEventListener("click", () => {
+    if (temp.className == "pause") {
+      if (pomoBox.innerText == "00 : 0" || saveMin == 25 || pomoMin == 25) {
+        showWarnings();
+        return;
+      } else if (wutsClicked == undefined || wutsClicked == "pause") {
+        wutsClicked = "pause";
+        showWarnings();
+        return;
+      }
 
-  isPaused = true;
-  boxText(saveMin, saveSec);
-  clearInterval(timer);
-  pomoSec, pomoMin;
-});
+      saveMin = pomoMin;
+      saveSec = pomoSec;
 
-resume.addEventListener("click", () => {
-  if (pomoBox.innerText == "00 : 0") {
-    showWarnings();
-    return;
-  } else if (wutsClicked == "pause") {
-    displayError("NO");
-    return;
-  } else if (isPaused == false) {
-    isPaused = false;
-    alert("press pause first !");
-    return;
-  } else {
-    isPaused = true;
-    saveMin = pomoMin;
-    saveSec = pomoSec;
+      isPaused = true;
+      boxText(saveMin, saveSec);
+      clearInterval(timer);
+      pomoSec, pomoMin;
+    }
 
-    clearInterval(timer), startPomodoro();
-  }
-});
+    // for resume
+    else {
+      if (pomoBox.innerText == "00 : 0" || saveMin == 25 || pomoMin == 25) {
+        showWarnings();
+        return;
+      } else if (wutsClicked == "pause" || isPaused == false) {
+        displayError("NO");
+        return;
+      }
+      isPaused = true;
+      saveMin = pomoMin;
+      saveSec = pomoSec;
 
-// resets time to default ( doesnt start the timer )
-reset.addEventListener("click", () => {
-  (pomoMin = 25), (pomoSec = 0);
-  clearInterval(timer);
-  boxText(pomoMin, pomoSec);
+      clearInterval(timer), startPomodoro();
+    }
+  });
 });
 
 // toggle between dark and white theme

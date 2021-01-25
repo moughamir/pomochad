@@ -20,7 +20,7 @@ const boxText = (min, sec) => {
 // for wrong btn click
 const displayError = (text) => (pomoBox.innerText = text);
 const showWarnings = () => {
-  alert("press restart , start or reset :(");
+  pomoBox.innerText = "Bruh dont";
 };
 
 const saveLocalStorage = () => {
