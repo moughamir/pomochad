@@ -121,4 +121,10 @@ resume.addEventListener("click", () => {
   currentClick = "resume";
 });
 
+let testBug = document.querySelector(".testBug");
+
+testBug.addEventListener("click", () => {
+  console.log(pomoMin + " " + pomoSec);
+});
+
 toggleTheme();
