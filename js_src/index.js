@@ -57,12 +57,14 @@ const startPomodoro = () => {
 
   timer = setInterval(() => {
     pomoSec--;
-    pomoSec === 0
-      ? (boxText(pomoMin, pomoSec),
-        checkTimer(timer),
-        (pomoSec = 60),
-        pomoMin--)
-      : boxText(pomoMin, pomoSec);
+    boxText(pomoMin, pomoSec);
+
+    if (pomoSec !== 0) return;
+
+    // if seconds turn to zero then decrement minute and check if time's up
+    checkTimer(timer);
+    pomoSec = 60;
+    pomoMin--;
   }, 0);
 };
 
