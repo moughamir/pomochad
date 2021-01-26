@@ -46,7 +46,6 @@ const checkTimer = (temp) => {
     userScore += 100;
     score.innerText = "Score : " + userScore;
     saveLocalStorage();
-    console.log(pomoMin + "  " + pomoSec);
   }
 };
 
@@ -63,8 +62,10 @@ const startPomodoro = () => {
 
     // if seconds turn to zero then decrement minute and check if time's up
     checkTimer(timer);
-    pomoSec = 60;
-    pomoMin--;
+    if (pomoSec !== 60 && pomoMin !== 0) {
+      pomoSec = 60;
+      pomoMin--;
+    }
   }, 0);
 };
 
@@ -96,13 +97,10 @@ const startPomodoro = () => {
 });
 
 pause.addEventListener("click", () => {
-  console.log(pomoMin + "  " + pomoSec);
-  if ((pomoMin === 0 && pomoSec === 0) || (pomoMin === 25 && pomoSec === 0)) {
+  if ((pomoMin === 0 && pomoSec === 0) || (pomoMin === 25 && pomoSec === 0))
     addTortureAnimation();
-  }
 
   currentClick = "pause";
-
   saveMin = pomoMin;
   saveSec = pomoSec;
 
@@ -111,19 +109,13 @@ pause.addEventListener("click", () => {
 });
 
 resume.addEventListener("click", () => {
-  console.log(pomoMin + "  " + pomoSec);
-  if ((pomoMin === 25 && pomoSec === 0) || (pomoMin === 0 && pomoSec === 0)) {
+  if ((pomoMin === 25 && pomoSec === 0) || (pomoMin === 0 && pomoSec === 0))
     addTortureAnimation();
-  } else if (currentClick == "pause" && pomoSec >= 1 && pomoMin >= 0) {
+  else if (currentClick == "pause" && pomoSec >= 1 && pomoMin >= 0) {
     clearInterval(timer);
     startPomodoro();
   }
   currentClick = "resume";
-});
-
-let testBug = document.querySelector('.testBug')
-testBug.addEventListener("click", () => {
-  console.log(pomoMin + " " + pomoSec);
 });
 
 toggleTheme();
