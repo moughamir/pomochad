@@ -35,7 +35,7 @@ const addTortureAnimation = () => {
 const stopTortureAnimation = () => {
   pomoBox.style.cssText = "animation: none; background-image: none;";
 
-  if (userTheme == "dark") useDarkTheme();
+  if (userTheme === "dark") useDarkTheme();
 };
 
 const saveLocalStorage = () => {
@@ -49,7 +49,7 @@ const checkLocalStorage = () => {
     userTheme = localStorage.getItem("savedTheme");
 
     score.innerText = "Score : " + userScore;
-    userTheme == "dark" ? useDarkTheme() : useLightTheme();
+    userTheme === "dark" ? useDarkTheme() : useLightTheme();
   }
 };
 
