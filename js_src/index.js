@@ -49,10 +49,8 @@ const startPomodoro = () => {
   let progressBarWidth = 0;
 
   timer = setInterval(() => {
-    if (progressBarWidth < 100) {
-      progressBarWidth++;
-      progressBar.value = progressBarWidth;
-    }
+    progressBarWidth++;
+    progressBar.value = progressBarWidth;
 
     pomoSec--;
     boxText(pomoMin, pomoSec);
