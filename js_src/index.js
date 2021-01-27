@@ -1,24 +1,15 @@
-import {
-  pause,
-  pomoBox,
-  reset,
-  restart,
-  resume,
-  score,
-  start,
-} from "./modules/divSelectors";
+import { pomoBox, score, progressBar } from "./modules/divSelectors";
 
 import {
-  addTortureAnimation,
   boxText,
   checkLocalStorage,
   saveLocalStorage,
-  stopTortureAnimation,
   timerSound,
 } from "./modules/miscFuncs";
 
 import { makeSessionBtns } from "./modules/sessionButtons";
 import { toggleTheme } from "./modules/themes";
+import {} from "./modules/buttonClickActions";
 
 // user settings ( for localStorage )
 export let userScore = 0;
@@ -31,10 +22,11 @@ makeSessionBtns();
 
 // default time
 let pomoMin = 25,
-  pomoSec = 0;
-
-// saves values when timer paused .
-let saveMin, saveSec, timer, currentClick;
+  pomoSec = 0,
+  saveMin, // saves values when timer paused .
+  saveSec,
+  timer,
+  currentClick;
 
 pomoBox.innerText = `${pomoMin} : 0${pomoSec}`; // initial output
 
@@ -54,68 +46,35 @@ const startPomodoro = () => {
     ? ((pomoMin = saveMin), (pomoSec = saveSec))
     : ((pomoSec = 60), (pomoMin = 24));
 
+  let progressBarWidth = 0;
+
   timer = setInterval(() => {
+    if (progressBarWidth < 100) {
+      progressBarWidth++;
+      progressBar.value = progressBarWidth;
+    }
+
     pomoSec--;
     boxText(pomoMin, pomoSec);
 
     if (pomoSec !== 0) return;
 
-    // if seconds turn to zero then decrement minute and check if time's up
-    checkTimer(timer);
+    checkTimer(timer); // if seconds turn to zero then decrement minute and check if time's up
     if (pomoSec !== 60 && pomoMin !== 0) {
       pomoSec = 60;
       pomoMin--;
     }
-  }, 1000);
+  }, 0);
 };
 
-// Session button click actions
-
-[restart, start, reset].forEach((temp) => {
-  temp.addEventListener("click", () => {
-    stopTortureAnimation();
-
-    // resets time to default ( freezes it )
-
-    if (temp.className === "reset") {
-      currentClick = "reset";
-      clearInterval(timer);
-      pomoMin = 25;
-      pomoSec = 0;
-      boxText(pomoMin, pomoSec);
-    }
-
-    // restarts time
-    else {
-      temp.className === "start"
-        ? (currentClick = "start")
-        : (currentClick = "restart");
-
-      clearInterval(timer), startPomodoro();
-    }
-  });
-});
-
-pause.addEventListener("click", () => {
-  if ((pomoMin === 0 && pomoSec === 0) || (pomoMin === 25 && pomoSec === 0))
-    addTortureAnimation();
-
-  currentClick = "pause";
-  saveMin = pomoMin;
-  saveSec = pomoSec;
-
-  clearInterval(timer);
-  boxText(saveMin, saveSec);
-});
-
-resume.addEventListener("click", () => {
-  if ((pomoMin === 25 && pomoSec === 0) || (pomoMin === 0 && pomoSec === 0))
-    addTortureAnimation();
-  else if (currentClick == "pause" && pomoSec >= 1 && pomoMin >= 0) {
-    clearInterval(timer);
-    startPomodoro();
-  }
-  currentClick = "resume";
-});
+export {
+  pomoMin,
+  pomoSec,
+  currentClick,
+  startPomodoro,
+  timer,
+  saveMin,
+  saveSec,
+};
 
 toggleTheme();

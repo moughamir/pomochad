@@ -9,8 +9,10 @@ const body = document.querySelector("body");
 const squareBox = document.querySelector(".squareBox");
 const sessionBtns = document.querySelector(".sessionBtns");
 const score = document.querySelector(".score");
+const progressBar = document.querySelector("#progressBar");
 
 export {
+  squareBox,
   pomoBox,
   restart,
   pause,
@@ -19,7 +21,7 @@ export {
   reset,
   themeToggle,
   body,
-  squareBox,
   sessionBtns,
   score,
+  progressBar,
 };
