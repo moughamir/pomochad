@@ -1,7 +1,12 @@
 import { userScore, userTheme } from "../index";
 
 import { pomoBox, score } from "./divSelectors";
-import { useDarkTheme, useLightTheme } from "./themes";
+import {
+  useDarkTheme,
+  useLightTheme,
+  useNordTheme,
+  useDraculaTheme,
+} from "./themes";
 
 let defaultSound = "./assets/sounds/cocGame.mp3";
 
@@ -29,7 +34,7 @@ const showWarnings = () => {
 const addTortureAnimation = () => {
   pomoBox.style.cssText =
     "background-image: url('https://media1.tenor.com/images/5fe35bec1c80a880bf59ae32a9716ace/tenor.gif?itemid=8953038'); ";
-  displayError('>:(');
+  displayError(">:(");
 };
 
 const stopTortureAnimation = () => {

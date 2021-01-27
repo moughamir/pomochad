@@ -24,7 +24,7 @@ const useDarkTheme = () => {
 
   squareBox.style.backgroundColor = "#2C323B";
   pomoBox.style.cssText =
-    "border: 4px solid #a7c5eb; background-color: #2C323B;";
+    "border: 6px solid #a7c5eb; background-color: #2C323B;";
   sessionBtns.style.backgroundColor = "#40464F";
 
   // session button colors , on hover etc
@@ -84,6 +84,84 @@ const useLightTheme = () => {
   });
 };
 
+const useNordTheme = () => {
+  userTheme = "nord";
+  localStorage.savedTheme = "nord";
+
+  body.style.backgroundColor = "#2E3440";
+  body.style.color = "#f6ecf0";
+
+  squareBox.style.backgroundColor = "#323846";
+  pomoBox.style.cssText =
+    "border: 6px solid #81A1C1; background-color: #323846;";
+  sessionBtns.style.backgroundColor = "#424854";
+
+  // session button colors , on hover etc
+  [restart, start, pause, resume].forEach((temp) => {
+    temp.style.backgroundColor = "#2E3440";
+    temp.style.color = "#f6ecf0";
+
+    temp.addEventListener("mouseover", () => {
+      temp.style.backgroundColor = "#81A1C1";
+      temp.style.color = "#2E3440";
+    });
+
+    temp.addEventListener("mouseout", () => {
+      temp.style.backgroundColor = "#2E3440";
+      temp.style.color = "#f6ecf0";
+    });
+  });
+
+  reset.style.backgroundColor = "#f6ecf0";
+
+  reset.addEventListener("mouseover", () => {
+    reset.style.backgroundColor = "#81A1C1";
+    reset.style.color = "#2E3440";
+  });
+  reset.addEventListener("mouseout", () => {
+    reset.style.backgroundColor = "#f6ecf0";
+  });
+};
+
+const useDraculaTheme = () => {
+  userTheme = "dracula";
+  localStorage.savedTheme = "dracula";
+
+  body.style.backgroundColor = "#282a36";
+  body.style.color = "#f6ecf0";
+
+  squareBox.style.backgroundColor = "#323440";
+  pomoBox.style.cssText =
+    "border: 6px solid  #bd93f9 ; background-color: #323440;";
+  sessionBtns.style.backgroundColor = "#464854";
+
+  // session button colors , on hover etc
+  [restart, start, pause, resume].forEach((temp) => {
+    temp.style.backgroundColor = "#282a36";
+    temp.style.color = "#f6ecf0";
+
+    temp.addEventListener("mouseover", () => {
+      temp.style.backgroundColor = "#bd93f9";
+      temp.style.color = "#282a36";
+    });
+
+    temp.addEventListener("mouseout", () => {
+      temp.style.backgroundColor = "#282a36";
+      temp.style.color = "#f6ecf0";
+    });
+  });
+
+  reset.style.backgroundColor = "#bd93f9";
+
+  reset.addEventListener("mouseover", () => {
+    reset.style.backgroundColor = "#f6ecf0";
+    reset.style.color = "#2E3440";
+  });
+  reset.addEventListener("mouseout", () => {
+    reset.style.backgroundColor = "#bd93f9";
+  });
+};
+
 const toggleTheme = () => {
   themeToggle.addEventListener("click", () => {
     whichTheme++;
@@ -92,4 +170,10 @@ const toggleTheme = () => {
   });
 };
 
-export { toggleTheme, useDarkTheme, useLightTheme };
+export {
+  toggleTheme,
+  useDarkTheme,
+  useLightTheme,
+  useNordTheme,
+  useDraculaTheme,
+};
