@@ -66,7 +66,7 @@ const startPomodoro = () => {
       pomoSec = 60;
       pomoMin--;
     }
-  }, 0);
+  }, 1000);
 };
 
 // Session button click actions
