@@ -58,26 +58,6 @@ h1 {
   font-family: "Quicksand", sans-serif;
 }
 
-/* progress bar */
-
-#progressBar {
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-}
-progress {
-  border-radius: 0px;
-  height: 12px;
-  transition: width 5s ease;
-}
-progress::-webkit-progress-bar {
-  background-color: #40464f;
-}
-progress::-webkit-progress-value {
-  background-color: #a7c5eb;
-}
-
 /* session btns */
 
 .sessionBtns {
@@ -173,4 +153,28 @@ body:after {
 .score {
   font-weight: bold;
   padding-left: 3%;
+}
+
+/* progress bar */
+
+#progressBar {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+}
+progress {
+  border-radius: 0px;
+  height: 12px;
+  transition: width 5s ease;
+}
+progress::-webkit-progress-bar {
+  background-color: #40464f;
+}
+progress::-webkit-progress-value {
+  background-color: #a7c5eb;
+}
+
+progress::-moz-progress-bar {
+  background-color: #a7c5eb;
 }
