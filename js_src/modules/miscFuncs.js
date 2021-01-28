@@ -27,7 +27,7 @@ const boxText = (min, sec) => {
 // for wrong btn click
 const displayError = (text) => (pomoBox.innerText = text);
 const showWarnings = () => {
-  //alert("wrong button")  will use this later 
+  //alert("wrong button")  will use this later
 };
 
 const addTortureAnimation = () => {
@@ -38,10 +38,12 @@ const addTortureAnimation = () => {
 
 const stopTortureAnimation = () => {
   pomoBox.style.cssText = "animation: none; background-image: none;";
-
   if (userTheme === "dark") useDarkTheme();
 };
 
+const addShakeAnimation = () => {
+  pomoBox.style.animation = "shake 3s";
+};
 const saveLocalStorage = () => {
   localStorage.setItem("savedScore", userScore);
   localStorage.setItem("savedTheme", userTheme);
@@ -69,7 +71,9 @@ export {
   showWarnings,
   addTortureAnimation,
   stopTortureAnimation,
+  addShakeAnimation,
   saveLocalStorage,
   checkLocalStorage,
+
   // makeSettings,
 };

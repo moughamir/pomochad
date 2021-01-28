@@ -1,10 +1,10 @@
 import { pomoBox, score } from "./modules/divSelectors";
-
 import {
   boxText,
   checkLocalStorage,
   saveLocalStorage,
   timerSound,
+  addShakeAnimation,
 } from "./modules/miscFuncs";
 
 import { makeSessionBtns } from "./modules/sessionButtons";
@@ -54,6 +54,7 @@ const updatePomodoro = () => {
 };
 
 const startPomodoro = () => {
+  addShakeAnimation();
   currentClick == "pause" ? (pomoTime = saveMin) : (pomoTime = totalTime * 60);
   timer = setInterval(updatePomodoro, 1000);
 };
