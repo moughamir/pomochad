@@ -65,10 +65,8 @@ pause.addEventListener("click", () => {
 
 resume.addEventListener("click", () => {
   if (pomoTime === totalTime * 60 || pomoTime === 0) addTortureAnimation();
-  else if (currentClick == "pause" && pomoTime > 0) {
-    clearInterval(timer);
-    startPomodoro();
-  }
+  else if (currentClick == "pause" && pomoTime > 0) startPomodoro();
+
   currentClick = "resume";
 });
 
