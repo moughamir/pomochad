@@ -8,7 +8,7 @@ import {
   useDraculaTheme,
 } from "./themes";
 
-let defaultSound = "./assets/sounds/cocGame.mp3";
+let defaultSound = "./assets/sounds/siren.mp3";
 
 const timerSound = () => {
   const audio = new Audio(defaultSound);
