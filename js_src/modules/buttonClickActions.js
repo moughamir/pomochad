@@ -20,6 +20,7 @@ import {
 import {
   addTortureAnimation,
   stopTortureAnimation,
+  playTickSound,
   boxText,
 } from "./miscFuncs";
 
@@ -41,6 +42,7 @@ import {
 
     // restarts time
     else {
+      playTickSound();
       temp.className === "start"
         ? (currentClick = "start")
         : (currentClick = "restart");

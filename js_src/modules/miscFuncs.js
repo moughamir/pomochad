@@ -9,9 +9,15 @@ import {
 } from "./themes";
 
 let defaultSound = "./assets/sounds/siren.mp3";
+let tickSound = "./assets/sounds/tick.mp3";
 
 const timerSound = () => {
   const audio = new Audio(defaultSound);
+  audio.play();
+};
+
+const playTickSound = () => {
+  const audio = new Audio(tickSound);
   audio.play();
 };
 
@@ -74,6 +80,6 @@ export {
   addShakeAnimation,
   saveLocalStorage,
   checkLocalStorage,
-
+  playTickSound,
   // makeSettings,
 };
