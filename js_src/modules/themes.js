@@ -58,14 +58,14 @@ const useLightTheme = () => {
   userTheme = "light";
   localStorage.savedTheme = "light";
 
-  body.style.backgroundColor = "#f6ecf0";
+  body.style.backgroundColor = "#fafafa";
   body.style.color = "#36404c";
 
   // timer's box and inner circle color
   squareBox.style.backgroundColor = "#a7c5eb";
   pomoBox.style.cssText =
     "border: 0px solid #36404c; background-color: #36404c;";
-  sessionBtns.style.backgroundColor = "#f6ecf0";
+  sessionBtns.style.backgroundColor = "#f9fcfb";
 
   // session button colors , on hover etc
   [restart, start, pause, resume, reset].forEach((temp) => {

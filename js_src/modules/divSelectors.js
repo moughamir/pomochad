@@ -9,7 +9,7 @@ const body = document.querySelector("body");
 const squareBox = document.querySelector(".squareBox");
 const sessionBtns = document.querySelector(".sessionBtns");
 const score = document.querySelector(".score");
-const progressBar = document.querySelector("#progressBar");
+const settingsBtn = document.querySelector(".settingsBtn");
 
 export {
   squareBox,
@@ -23,5 +23,5 @@ export {
   body,
   sessionBtns,
   score,
-  progressBar,
+  settingsBtn
 };

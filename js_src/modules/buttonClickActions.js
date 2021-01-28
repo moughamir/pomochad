@@ -1,13 +1,22 @@
 import {
-  pomoMin,
-  pomoSec,
   currentClick,
   startPomodoro,
   timer,
   saveMin,
-  saveSec,
+  totalTime,
+  pomoTime,
 } from "../index";
-import { restart, start, pause, resume, reset } from "./divSelectors";
+import {
+  restart,
+  start,
+  pause,
+  resume,
+  reset,
+  settingsBtn,
+  pomoBox,
+  squareBox,
+  sessionBtns,
+} from "./divSelectors";
 import {
   addTortureAnimation,
   stopTortureAnimation,
@@ -25,9 +34,9 @@ import {
     if (temp.className === "reset") {
       currentClick = "reset";
       clearInterval(timer);
-      pomoMin = 25;
-      pomoSec = 0;
-      boxText(pomoMin, pomoSec);
+
+      pomoTime = totalTime * 60;
+      boxText(25, 0);
     }
 
     // restarts time
@@ -42,23 +51,37 @@ import {
 });
 
 pause.addEventListener("click", () => {
-  if ((pomoMin === 0 && pomoSec === 0) || (pomoMin === 25 && pomoSec === 0))
-    addTortureAnimation();
+  if (pomoTime === totalTime * 60 || pomoTime === 0) addTortureAnimation();
 
   currentClick = "pause";
-  saveMin = pomoMin;
-  saveSec = pomoSec;
-
+  saveMin = pomoTime;
   clearInterval(timer);
-  boxText(saveMin, saveSec);
+
+  const min = Math.floor(saveMin / 60);
+  let sec = saveMin % 60;
+
+  boxText(min, sec);
 });
 
 resume.addEventListener("click", () => {
-  if ((pomoMin === 25 && pomoSec === 0) || (pomoMin === 0 && pomoSec === 0))
-    addTortureAnimation();
-  else if (currentClick == "pause" && pomoSec >= 1 && pomoMin >= 0) {
+  if (pomoTime === totalTime * 60 || pomoTime === 0) addTortureAnimation();
+  else if (currentClick == "pause" && pomoTime > 0) {
     clearInterval(timer);
     startPomodoro();
   }
   currentClick = "resume";
+});
+
+settingsBtn.addEventListener("mouseover", () => {
+  settingsBtn.style.background = "#4A5460";
+});
+
+settingsBtn.addEventListener("mouseout", () => {
+  settingsBtn.style.background = "#36404c";
+});
+
+settingsBtn.addEventListener("click", () => {
+  [squareBox, pomoBox, sessionBtns, reset].forEach((temp) => {
+    temp.style.display = "none";
+  });
 });

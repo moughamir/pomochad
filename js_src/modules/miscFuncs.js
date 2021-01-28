@@ -26,9 +26,8 @@ const boxText = (min, sec) => {
 
 // for wrong btn click
 const displayError = (text) => (pomoBox.innerText = text);
-
 const showWarnings = () => {
-  //
+  //alert("wrong button")  will use this later 
 };
 
 const addTortureAnimation = () => {
