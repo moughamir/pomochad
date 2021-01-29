@@ -206,17 +206,7 @@ const useGruvHardTheme = () => {
     reset.style.backgroundColor = "#83a598";
   });
 
-  settingsBtn.style.backgroundColor = "#242829";
-  settingsBtn.style.color = "#c8ccd4";
 
-  settingsBtn.addEventListener("mouseover", () => {
-    settingsBtn.style.backgroundColor = "#83a598";
-    settingsBtn.style.color = "#1D2021";
-  });
-  settingsBtn.addEventListener("mouseout", () => {
-    settingsBtn.style.backgroundColor = "#242829";
-    settingsBtn.style.color = "#f9fcfb";
-  });
 };
 
 const toggleTheme = () => {
