@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: #f9fcfb;
   color: #36404c;
   font-family: "Quicksand", sans-serif;
   transition: 0.2s;
@@ -8,50 +8,55 @@ body {
 }
 
 h1 {
-  text-align: center;
   margin-top: 2%;
   margin-bottom: 8%;
 }
 
 /* navbar */
 
-.topNavBar {
-  display: inline;
-  text-align: center;
+.brandLogo {
+  padding: 1.3rem;
+  padding-left: 4rem;
+  font-size: 1.2rem;
 }
-
-.navLink {
-  font-family: "Overpass", sans-serif;
-  font-size: 1.1rem;
-}
-.controls {
-  float: right;
-  display: grid;
-  grid-template-rows: 100%;
-  row-gap: 10px;
-  padding: 2%;
-  margin-top: 3%;
-}
-.settingsBtn {
+.navBar {
+  font-family: "Open Sans", sans-serif;
   display: flex;
-  justify-content: center;
-  background-color: #36404c;
-  color: #f6ecf0;
-  padding: 15%;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.09), 0px 1px 1px rgba(0, 0, 0, 0.13);
-  /*2c323b;*/
-  font-size: 0.5rem;
-  font-weight: lighter;
-  border-radius: 7px;
+  justify-content: space-between;
+  background-color: #f9fcfb;
+  color: #36404c;
   text-align: center;
-  align-items: center;
-  transition: 0.2s;
+  margin-bottom: 2rem;
+  font-size: 1rem;
 }
 
-.settingText {
+.navBarLinks ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navBarLinks li {
+  list-style: none;
+}
+.navBarLinks li a {
+  padding: 1.3rem;
+  font-family: "Open Sans", sans-serif;
+  display: block;
+}
+
+.link-toggle {
+  display: none;
+  padding: 1rem;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  flex-direction: column;
+}
+
+.settingtext {
   padding-left: 0.7rem;
   display: inline;
-  font-family: "Quicksand", sans-serif;
+  font-family: "quicksand", sans-serif;
 }
 /* main div to keep stuff centered */
 .flexMain {
@@ -196,6 +201,7 @@ body:after {
 
 .score {
   font-weight: bold;
+  display: none;
   padding-left: 3%;
 }
 

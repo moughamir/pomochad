@@ -10,6 +10,13 @@ const squareBox = document.querySelector(".squareBox");
 const sessionBtns = document.querySelector(".sessionBtns");
 const score = document.querySelector(".score");
 const settingsBtn = document.querySelector(".settingsBtn");
+const settingsPage = document.querySelector(".settingsPage");
+const dracula = document.querySelector(".dracula");
+const nord = document.querySelector(".nord");
+const gruvHard = document.querySelector(".gruvHard");
+const defaultDark = document.querySelector(".defaultDark");
+const defaultLight = document.querySelector(".defaultLight");
+const homePage = document.querySelector(".brandLogo");
 
 export {
   squareBox,
@@ -23,5 +30,12 @@ export {
   body,
   sessionBtns,
   score,
-  settingsBtn
+  settingsBtn,
+  settingsPage,
+  dracula,
+  nord,
+  gruvHard,
+  defaultDark,
+  defaultLight,
+  homePage,
 };

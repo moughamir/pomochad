@@ -12,6 +12,11 @@ import {
   squareBox,
   sessionBtns,
   settingsBtn,
+  dracula,
+  nord,
+  gruvHard,
+  defaultDark,
+  defaultLight,
 } from "./divSelectors";
 
 let whichTheme = 0;
@@ -21,7 +26,7 @@ const useDarkTheme = () => {
   localStorage.savedTheme = "dark";
 
   body.style.backgroundColor = "#222831";
-  body.style.color = "#f6ecf0";
+  body.style.color = "#f9fcfb";
 
   squareBox.style.backgroundColor = "#2C323B";
   pomoBox.style.cssText =
@@ -31,7 +36,7 @@ const useDarkTheme = () => {
   // session button colors , on hover etc
   [restart, start, pause, resume].forEach((temp) => {
     temp.style.backgroundColor = "#2C323B";
-    temp.style.color = "#f6ecf0";
+    temp.style.color = "#f9fcfb";
 
     temp.addEventListener("mouseover", () => {
       temp.style.backgroundColor = "#a7c5eb";
@@ -40,18 +45,18 @@ const useDarkTheme = () => {
 
     temp.addEventListener("mouseout", () => {
       temp.style.backgroundColor = "#2C323B";
-      temp.style.color = "#f6ecf0";
+      temp.style.color = "#f9fcfb";
     });
   });
 
-  reset.style.backgroundColor = "#f6ecf0";
+  reset.style.backgroundColor = "#f9fcfb";
 
   reset.addEventListener("mouseover", () => {
     reset.style.backgroundColor = "#a7c5eb";
     reset.style.color = "#2C323B";
   });
   reset.addEventListener("mouseout", () => {
-    reset.style.backgroundColor = "#f6ecf0";
+    reset.style.backgroundColor = "#f9fcfb";
   });
 };
 
@@ -75,7 +80,7 @@ const useLightTheme = () => {
 
     temp.addEventListener("mouseover", () => {
       temp.style.backgroundColor = "#36404c";
-      temp.style.color = "#f6ecf0";
+      temp.style.color = "#f9fcfb";
     });
 
     temp.addEventListener("mouseout", () => {
@@ -90,7 +95,7 @@ const useNordTheme = () => {
   localStorage.savedTheme = "nord";
 
   body.style.backgroundColor = "#2E3440";
-  body.style.color = "#f6ecf0";
+  body.style.color = "#f9fcfb";
 
   squareBox.style.backgroundColor = "#323846";
   pomoBox.style.cssText =
@@ -100,7 +105,7 @@ const useNordTheme = () => {
   // session button colors , on hover etc
   [restart, start, pause, resume].forEach((temp) => {
     temp.style.backgroundColor = "#2E3440";
-    temp.style.color = "#f6ecf0";
+    temp.style.color = "#f9fcfb";
 
     temp.addEventListener("mouseover", () => {
       temp.style.backgroundColor = "#81A1C1";
@@ -109,18 +114,18 @@ const useNordTheme = () => {
 
     temp.addEventListener("mouseout", () => {
       temp.style.backgroundColor = "#2E3440";
-      temp.style.color = "#f6ecf0";
+      temp.style.color = "#f9fcfb";
     });
   });
 
-  reset.style.backgroundColor = "#f6ecf0";
+  reset.style.backgroundColor = "#f9fcfb";
 
   reset.addEventListener("mouseover", () => {
     reset.style.backgroundColor = "#81A1C1";
     reset.style.color = "#2E3440";
   });
   reset.addEventListener("mouseout", () => {
-    reset.style.backgroundColor = "#f6ecf0";
+    reset.style.backgroundColor = "#f9fcfb";
   });
 };
 
@@ -129,7 +134,7 @@ const useDraculaTheme = () => {
   localStorage.savedTheme = "dracula";
 
   body.style.backgroundColor = "#282a36";
-  body.style.color = "#f6ecf0";
+  body.style.color = "#f9fcfb";
 
   squareBox.style.backgroundColor = "#323440";
   pomoBox.style.cssText =
@@ -139,7 +144,7 @@ const useDraculaTheme = () => {
   // session button colors , on hover etc
   [restart, start, pause, resume].forEach((temp) => {
     temp.style.backgroundColor = "#282a36";
-    temp.style.color = "#f6ecf0";
+    temp.style.color = "#f9fcfb";
 
     temp.addEventListener("mouseover", () => {
       temp.style.backgroundColor = "#bd93f9";
@@ -148,14 +153,14 @@ const useDraculaTheme = () => {
 
     temp.addEventListener("mouseout", () => {
       temp.style.backgroundColor = "#282a36";
-      temp.style.color = "#f6ecf0";
+      temp.style.color = "#f9fcfb";
     });
   });
 
   reset.style.backgroundColor = "#bd93f9";
 
   reset.addEventListener("mouseover", () => {
-    reset.style.backgroundColor = "#f6ecf0";
+    reset.style.backgroundColor = "#f9fcfb";
     reset.style.color = "#2E3440";
   });
   reset.addEventListener("mouseout", () => {
@@ -202,17 +207,16 @@ const useGruvHardTheme = () => {
   });
 
   settingsBtn.style.backgroundColor = "#242829";
-    settingsBtn.style.color = "#c8ccd4";
+  settingsBtn.style.color = "#c8ccd4";
 
   settingsBtn.addEventListener("mouseover", () => {
- settingsBtn.style.backgroundColor = "#83a598";
+    settingsBtn.style.backgroundColor = "#83a598";
     settingsBtn.style.color = "#1D2021";
   });
   settingsBtn.addEventListener("mouseout", () => {
     settingsBtn.style.backgroundColor = "#242829";
-    settingsBtn.style.color = "#f6ecf0";
+    settingsBtn.style.color = "#f9fcfb";
   });
-
 };
 
 const toggleTheme = () => {
@@ -222,6 +226,12 @@ const toggleTheme = () => {
     whichTheme % 2 != 0 ? useDarkTheme() : useLightTheme();
   });
 };
+
+defaultLight.addEventListener("click", useLightTheme);
+defaultDark.addEventListener("click", useDarkTheme);
+nord.addEventListener("click", useNordTheme);
+dracula.addEventListener("click", useDraculaTheme);
+gruvHard.addEventListener("click", useGruvHardTheme);
 
 export {
   toggleTheme,

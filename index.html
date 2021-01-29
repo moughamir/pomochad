@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>siduck's pomodoro</title>
+    <title>PomoReward</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
@@ -14,28 +14,50 @@
       href="https://fonts.googleapis.com/css2?family=Overpass&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
     <link rel="stylesheet" href="./css/animations.css" />
+    <link rel="stylesheet" href="./css/settingsPage.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
   <body>
-    <i class="fas fa-adjust fa-2x"></i>
+    <nav class="navBar">
+      <div class="brandLogo">PomoReward</div>
 
-    <!-- settings etc -->
-    <div class="controls">
-      <div class="settingsBtn">
-        <i class="fas fa-cog fa-2x"><p class="settingText">Settings</p></i>
+      <div class="navbarLinks">
+        <ul>
+          <li><a> Dashboard</a></li>
+          <li class="settingsBtn"><a> Settings</a></li>
+          <li><a> Rewards</a></li>
+          <li><a> About</a></li>
+        </ul>
+        <div class="link-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
       </div>
-    </div>
-    <br />
+    </nav>
 
     <div class="flexMain">
-      <h1>PomoReward</h1>
-
       <div class="squareBox">
         <div class="pomoBox"></div>
+      </div>
+
+      <div class="settingsPage">
+        <h2>Themes</h2>
+        <div class="Themes">
+          <p class="dracula">Dracula</p>
+          <p class="gruvHard">Gruvbox Hard</p>
+          <p class="nord">Nord</p>
+          <p class="defaultLight">Default Light</p>
+          <p class="defaultDark">Default Dark</p>
+        </div>
       </div>
     </div>
 
@@ -48,6 +70,8 @@
 
     <div class="reset">Reset timer</div>
     <div class="score">Coins : 0</div>
+
+    <i class="fas fa-adjust fa-2x"></i>
 
     <!-- <progress value="0" max="1500" id="progressBar"></progress> -->
     <script src="./dist/main.js"></script>

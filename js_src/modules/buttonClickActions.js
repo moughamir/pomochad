@@ -12,10 +12,12 @@ import {
   pause,
   resume,
   reset,
-  settingsBtn,
   pomoBox,
   squareBox,
   sessionBtns,
+  settingsBtn,
+  settingsPage,
+  homePage,
 } from "./divSelectors";
 import {
   addTortureAnimation,
@@ -73,15 +75,23 @@ resume.addEventListener("click", () => {
 });
 
 settingsBtn.addEventListener("mouseover", () => {
-  settingsBtn.style.background = "#4A5460";
+  settingsBtn.style.textDecoration = "underline";
 });
 
 settingsBtn.addEventListener("mouseout", () => {
-  settingsBtn.style.background = "#36404c";
+  settingsBtn.style.textDecoration = "none";
 });
 
 settingsBtn.addEventListener("click", () => {
   [squareBox, pomoBox, sessionBtns, reset].forEach((temp) => {
     temp.style.display = "none";
   });
+  settingsPage.style.display = "grid";
+});
+
+homePage.addEventListener("click", () => {
+  [squareBox, pomoBox, sessionBtns, reset].forEach((temp) => {
+    temp.style.display = "";
+  });
+  settingsPage.style.display = "none";
 });

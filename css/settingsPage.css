@@ -1,0 +1,61 @@
+.settingsPage {
+  display: none;
+}
+
+h2 {
+  text-align: center; 
+}
+.Themes {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+
+}
+
+.dracula {
+  background-color: #282a36;
+  color: #bd93f9;
+}
+
+.nord {
+  background-color: #2e3440;
+  color: #81a1c1;
+}
+
+.gruvHard {
+  background-color: #1d2021;
+  color: #83a598;
+}
+
+.defaultLight {
+  background-color: #fafafa;
+  color: #36404c;
+}
+
+.defaultDark {
+  background-color: #222831;
+  color: #a7c5eb;
+}
+
+.nord,
+.dracula,
+.defaultDark,
+.defaultLight,
+.gruvHard {
+  padding: 10%;
+  text-align: center;
+  font-weight: bolder;
+  margin: 0px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.09), 0px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.nord:hover,
+.dracula:hover,
+.defaultDark:hover,
+.defaultLight:hover,
+.gruvHard:hover {
+  background-color: #a7c5eb;
+  color: #21252a;
+  transition:  0.3s;
+}
