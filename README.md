@@ -17,6 +17,6 @@ A very simple pomodoro web app for my personal use <br>
 - [ ] dashboard*
 - [ ] rewards stuff* 
 - [ ] settings page 
-- [ ] add more themes
+- [X] add more themes
 
 
