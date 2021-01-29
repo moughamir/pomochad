@@ -38,18 +38,19 @@ const showWarnings = () => {
 };
 
 const addTortureAnimation = () => {
-  pomoBox.style.cssText =
-    "background-image: url('https://media1.tenor.com/images/5fe35bec1c80a880bf59ae32a9716ace/tenor.gif?itemid=8953038'); ";
+  pomoBox.style.backgroundImage =
+    "url('https://media1.tenor.com/images/5fe35bec1c80a880bf59ae32a9716ace/tenor.gif?itemid=8953038')";
+
   displayError(">:(");
 };
 
 const stopTortureAnimation = () => {
-  pomoBox.style.cssText = "animation: none; background-image: none;";
-  if (userTheme === "dark") useDarkTheme();
+  pomoBox.style.animation = " none";
+  pomoBox.style.backgroundImage = "none";
 };
 
 const addShakeAnimation = () => {
-  pomoBox.style.animation = "shake 3s";
+  pomoBox.style.animation = "shake 4s";
 };
 const saveLocalStorage = () => {
   localStorage.setItem("savedScore", userScore);
