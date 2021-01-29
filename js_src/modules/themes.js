@@ -205,8 +205,6 @@ const useGruvHardTheme = () => {
   reset.addEventListener("mouseout", () => {
     reset.style.backgroundColor = "#83a598";
   });
-
-
 };
 
 const toggleTheme = () => {
@@ -229,4 +227,5 @@ export {
   useLightTheme,
   useNordTheme,
   useDraculaTheme,
+  useGruvHardTheme,
 };

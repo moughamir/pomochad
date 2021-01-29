@@ -6,6 +6,7 @@ import {
   useLightTheme,
   useNordTheme,
   useDraculaTheme,
+  useGruvHardTheme,
 } from "./themes";
 
 let defaultSound = "./assets/sounds/siren.mp3";
@@ -61,7 +62,25 @@ const checkLocalStorage = () => {
     userTheme = localStorage.getItem("savedTheme");
 
     score.innerText = "Score : " + userScore;
-    userTheme === "dark" ? useDarkTheme() : useLightTheme();
+
+    switch (userTheme) {
+      case "dark":
+        useDarkTheme();
+        break;
+      case "light":
+        useLightTheme();
+        break;
+      case "dracula":
+        useDraculaTheme();
+        break;
+      case "nord":
+        useNordTheme();
+        break;
+
+      case "gruvHard":
+        useGruvHardTheme();
+        break;
+    }
   }
 };
 
