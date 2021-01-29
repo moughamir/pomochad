@@ -24,6 +24,7 @@ import {
   stopTortureAnimation,
   playTickSound,
   boxText,
+  addShakeAnimation,
 } from "./miscFuncs";
 
 // Session button click actions
