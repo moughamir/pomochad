@@ -18,6 +18,9 @@ const defaultDark = document.querySelector(".defaultDark");
 const defaultLight = document.querySelector(".defaultLight");
 const tomato = document.querySelector(".tomato");
 const homePage = document.querySelector(".brandLogo");
+const aboutPage = document.querySelector(".aboutPage");
+const aboutBtn = document.querySelector(".aboutBtn");
+
 const menuLink_toggle = document.querySelector(".menulink-toggle");
 /*const breakMode = document.querySelector(".breakMode");
 const defaultMode = document.querySelector(".defaultMode");
@@ -44,8 +47,10 @@ export {
   defaultLight,
   tomato,
   homePage,
+  aboutPage,
+  aboutBtn,
   menuLink_toggle,
- /* breakMode,
+  /* breakMode,
   automaticMode,
   defaultMode, */
 };

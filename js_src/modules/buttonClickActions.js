@@ -18,6 +18,8 @@ import {
   settingsBtn,
   settingsPage,
   homePage,
+  aboutPage,
+  aboutBtn,
   // menuLink_toggle,
 } from "./divSelectors";
 import {
@@ -95,6 +97,13 @@ homePage.addEventListener("click", () => {
     temp.style.display = "";
   });
   settingsPage.style.display = "none";
+});
+
+aboutBtn.addEventListener("click", () => {
+  [squareBox, pomoBox, sessionBtns, reset ,settingsPage].forEach((temp) => {
+    temp.style.display = "none";
+  });
+  aboutPage.style.display  = "block" ;
 });
 
 /*
