@@ -4,20 +4,22 @@
   justify-content: center;
 }
 
+h1 {
+  padding: 1.6rem;
+  border-radius: 1rem;
+  border: 2px solid #545e6a;
+
+}
+
 h2 {
   border-bottom: 2px solid #aeb8c4;
   padding-bottom: 1rem;
 }
+
 .aboutPage ul li,
 .aboutPara {
   font-size: 1.2rem;
   font-weight: bolder;
   color: #545e6a;
   padding: 1rem;
-}
-
-h1 {
-  padding: 1.6rem;
-  border-radius: 1rem;
-  border: 2px solid #545e6a;
 }
