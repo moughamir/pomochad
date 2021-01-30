@@ -16,8 +16,12 @@ const nord = document.querySelector(".nord");
 const gruvHard = document.querySelector(".gruvHard");
 const defaultDark = document.querySelector(".defaultDark");
 const defaultLight = document.querySelector(".defaultLight");
+const tomato = document.querySelector(".tomato");
 const homePage = document.querySelector(".brandLogo");
 const menuLink_toggle = document.querySelector(".menulink-toggle");
+/*const breakMode = document.querySelector(".breakMode");
+const defaultMode = document.querySelector(".defaultMode");
+const automaticMode = document.querySelector(".automaticMode"); */
 
 export {
   squareBox,
@@ -38,6 +42,10 @@ export {
   gruvHard,
   defaultDark,
   defaultLight,
+  tomato,
   homePage,
-  menuLink_toggle
+  menuLink_toggle,
+ /* breakMode,
+  automaticMode,
+  defaultMode, */
 };

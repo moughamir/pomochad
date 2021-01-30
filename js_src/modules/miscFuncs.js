@@ -7,6 +7,7 @@ import {
   useNordTheme,
   useDraculaTheme,
   useGruvHardTheme,
+  useTomatoTheme,
 } from "./themes";
 
 let defaultSound = "./assets/sounds/siren.mp3";
@@ -80,6 +81,9 @@ const checkLocalStorage = () => {
 
       case "gruvHard":
         useGruvHardTheme();
+        break;
+      case "tomato":
+        useTomatoTheme();
         break;
     }
   }

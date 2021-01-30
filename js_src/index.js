@@ -24,7 +24,7 @@ let saveMin, // saves values when timer paused
 
 pomoBox.innerText = `${25} : 0${0}`; // initial output
 
-const totalTime = 25;
+let totalTime = 25;
 let pomoTime = totalTime * 60;
 
 const checkTimer = (temp) => {

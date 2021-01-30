@@ -26,11 +26,17 @@ h2 {
   color: #a7c5eb;
 }
 
+.tomato {
+  background-color: #e5707e;
+  color: #f6ecf0;
+}
+
 .nord,
 .dracula,
 .defaultDark,
 .defaultLight,
-.gruvHard {
+.gruvHard,
+.tomato {
   padding: 10%;
   text-align: center;
   font-weight: bolder;
@@ -43,7 +49,8 @@ h2 {
 .dracula:hover,
 .defaultDark:hover,
 .defaultLight:hover,
-.gruvHard:hover {
+.gruvHard:hover,
+.tomato:hover {
   background-color: #a7c5eb;
   color: #21252a;
   transition: 0.3s;

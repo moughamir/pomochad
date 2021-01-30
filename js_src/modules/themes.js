@@ -17,6 +17,7 @@ import {
   gruvHard,
   defaultDark,
   defaultLight,
+  tomato,
 } from "./divSelectors";
 
 let whichTheme = 0;
@@ -133,6 +134,16 @@ const useDraculaTheme = () => {
   createTheme.resetCol("#282a36", "#bd93f9", "#D8DEE9");
 };
 
+const useTomatoTheme = () => {
+  createTheme.saveThisTheme("tomato");
+  createTheme.bodyCol("#623A3F", "#e5707e");
+  createTheme.squareBoxCol("#F98492");
+  createTheme.pomoBoxCol("#954952", "#F98492", "6px solid #D36774");
+  createTheme.sessionAreaBG("#D36774");
+  createTheme.sessionBtnCol("#954952", "#FF8E9C", "#a7c5eb");
+  createTheme.resetCol("#222831", "#D36774", "#f9fcfb");
+};
+
 const toggleTheme = () => {
   themeToggle.addEventListener("click", () => {
     whichTheme++;
@@ -146,6 +157,7 @@ defaultDark.addEventListener("click", useDarkTheme);
 nord.addEventListener("click", useNordTheme);
 dracula.addEventListener("click", useDraculaTheme);
 gruvHard.addEventListener("click", useGruvHardTheme);
+tomato.addEventListener("click", useTomatoTheme);
 
 export {
   toggleTheme,
@@ -154,4 +166,5 @@ export {
   useNordTheme,
   useDraculaTheme,
   useGruvHardTheme,
+  useTomatoTheme,
 };
