@@ -21,190 +21,116 @@ import {
 
 let whichTheme = 0;
 
+const createTheme = (() => {
+  const saveThisTheme = (name) => {
+    userTheme = name;
+    localStorage.savedTheme = name;
+  };
+
+  const bodyCol = (fg, bg) => {
+    body.style.backgroundColor = bg;
+    body.style.color = fg;
+  };
+
+  const squareBoxCol = (bg) => (squareBox.style.backgroundColor = bg);
+
+  const pomoBoxCol = (fg, bg, borders) => {
+    pomoBox.style.color = fg;
+    pomoBox.style.backgroundColor = bg;
+    pomoBox.style.border = borders;
+  };
+
+  const sessionAreaBG = (bg) => {
+    sessionBtns.style.backgroundColor = bg;
+  };
+
+  const sessionBtnCol = (fg, bg, hoverCol) => {
+    [restart, start, pause, resume].forEach((temp) => {
+      temp.style.backgroundColor = bg;
+      temp.style.color = fg;
+
+      temp.addEventListener("mouseover", () => {
+        temp.style.backgroundColor = hoverCol;
+        temp.style.color = bg;
+      });
+
+      temp.addEventListener("mouseout", () => {
+        temp.style.backgroundColor = bg;
+        temp.style.color = fg;
+      });
+    });
+  };
+
+  const resetCol = (fg, bg, hoverBg) => {
+    reset.style.backgroundColor = bg;
+
+    reset.addEventListener("mouseover", () => {
+      reset.style.backgroundColor = hoverBg;
+      reset.style.color = fg;
+    });
+    reset.addEventListener("mouseout", () => {
+      reset.style.backgroundColor = bg;
+    });
+  };
+  return {
+    saveThisTheme,
+    bodyCol,
+    squareBoxCol,
+    pomoBoxCol,
+    sessionAreaBG,
+    sessionBtnCol,
+    resetCol,
+  };
+})();
+
+const useGruvHardTheme = () => {
+  createTheme.saveThisTheme("gruvHard");
+  createTheme.bodyCol("#c8ccd4", "#1D2021");
+  createTheme.squareBoxCol("#242829");
+  createTheme.pomoBoxCol("c8ccd4", "#242829", "6px solid #83a598");
+  createTheme.sessionBtnCol("#c8ccd4", "#1D2021", "#83a598");
+  createTheme.resetCol("#242829", "#83a598", "#c8ccd4");
+  createTheme.sessionAreaBG("#2E3233");
+};
+
 const useDarkTheme = () => {
-  userTheme = "dark";
-  localStorage.savedTheme = "dark";
-
-  body.style.backgroundColor = "#222831";
-  body.style.color = "#f9fcfb";
-
-  squareBox.style.backgroundColor = "#2C323B";
-  pomoBox.style.cssText =
-    "border: 6px solid #a7c5eb; background-color: #2C323B;";
-  sessionBtns.style.backgroundColor = "#40464F";
-
-  // session button colors , on hover etc
-  [restart, start, pause, resume].forEach((temp) => {
-    temp.style.backgroundColor = "#2C323B";
-    temp.style.color = "#f9fcfb";
-
-    temp.addEventListener("mouseover", () => {
-      temp.style.backgroundColor = "#a7c5eb";
-      temp.style.color = "#2C323B";
-    });
-
-    temp.addEventListener("mouseout", () => {
-      temp.style.backgroundColor = "#2C323B";
-      temp.style.color = "#f9fcfb";
-    });
-  });
-
-  reset.style.backgroundColor = "#f9fcfb";
-
-  reset.addEventListener("mouseover", () => {
-    reset.style.backgroundColor = "#a7c5eb";
-    reset.style.color = "#2C323B";
-  });
-  reset.addEventListener("mouseout", () => {
-    reset.style.backgroundColor = "#f9fcfb";
-  });
+  createTheme.saveThisTheme("dark");
+  createTheme.bodyCol("#f9fcfb", "#222831");
+  createTheme.squareBoxCol("#2C323B");
+  createTheme.pomoBoxCol("#f9fcfb", "#2C323B", "6px solid #a7c5eb");
+  createTheme.sessionAreaBG("#40464F");
+  createTheme.sessionBtnCol("#f9fcfb", "#2C323B", "#a7c5eb");
+  createTheme.resetCol("#2C323B", "#a7c5eb", "#f9fcfb");
 };
 
 const useLightTheme = () => {
-  userTheme = "light";
-  localStorage.savedTheme = "light";
-
-  body.style.backgroundColor = "#fafafa";
-  body.style.color = "#36404c";
-
-  // timer's box and inner circle color
-  squareBox.style.backgroundColor = "#a7c5eb";
-  pomoBox.style.cssText =
-    "border: 0px solid #36404c; background-color: #36404c;";
-  sessionBtns.style.backgroundColor = "#f9fcfb";
-
-  // session button colors , on hover etc
-  [restart, start, pause, resume, reset].forEach((temp) => {
-    temp.style.backgroundColor = "#a7c5eb";
-    temp.style.color = "#36404c";
-
-    temp.addEventListener("mouseover", () => {
-      temp.style.backgroundColor = "#36404c";
-      temp.style.color = "#f9fcfb";
-    });
-
-    temp.addEventListener("mouseout", () => {
-      temp.style.backgroundColor = "#a7c5eb";
-      temp.style.color = "#36404c";
-    });
-  });
+  createTheme.saveThisTheme("light");
+  createTheme.bodyCol("#36404c", "#fafafa");
+  createTheme.squareBoxCol("#a7c5eb");
+  createTheme.pomoBoxCol("#f9fcfb", "#36404c", "0px solid #36404c");
+  createTheme.sessionAreaBG("#f9fcfb");
+  createTheme.sessionBtnCol("#f9fcfb", "#36404c", "#a7c5eb");
+  createTheme.resetCol("#36404c", "#a7c5eb", "#f9fcfb");
 };
 
 const useNordTheme = () => {
-  userTheme = "nord";
-  localStorage.savedTheme = "nord";
-
-  body.style.backgroundColor = "#2E3440";
-  body.style.color = "#f9fcfb";
-
-  squareBox.style.backgroundColor = "#323846";
-  pomoBox.style.cssText =
-    "border: 6px solid #81A1C1; background-color: #323846;";
-  sessionBtns.style.backgroundColor = "#424854";
-
-  // session button colors , on hover etc
-  [restart, start, pause, resume].forEach((temp) => {
-    temp.style.backgroundColor = "#2E3440";
-    temp.style.color = "#f9fcfb";
-
-    temp.addEventListener("mouseover", () => {
-      temp.style.backgroundColor = "#81A1C1";
-      temp.style.color = "#2E3440";
-    });
-
-    temp.addEventListener("mouseout", () => {
-      temp.style.backgroundColor = "#2E3440";
-      temp.style.color = "#f9fcfb";
-    });
-  });
-
-  reset.style.backgroundColor = "#f9fcfb";
-
-  reset.addEventListener("mouseover", () => {
-    reset.style.backgroundColor = "#81A1C1";
-    reset.style.color = "#2E3440";
-  });
-  reset.addEventListener("mouseout", () => {
-    reset.style.backgroundColor = "#f9fcfb";
-  });
+  createTheme.saveThisTheme("nord");
+  createTheme.bodyCol("#D8DEE9", "#2E3440");
+  createTheme.squareBoxCol("#323846");
+  createTheme.pomoBoxCol("#D8DEE9", "#323846", "6px solid #81A1C1");
+  createTheme.sessionAreaBG("#424854");
+  createTheme.sessionBtnCol("#D8DEE9", "#2E3440", "#81A1C1");
+  createTheme.resetCol("#2E3440", "#81A1C1", "#D8DEE9");
 };
 
 const useDraculaTheme = () => {
-  userTheme = "dracula";
-  localStorage.savedTheme = "dracula";
-
-  body.style.backgroundColor = "#282a36";
-  body.style.color = "#f9fcfb";
-
-  squareBox.style.backgroundColor = "#323440";
-  pomoBox.style.cssText =
-    "border: 6px solid  #bd93f9 ; background-color: #323440;";
-  sessionBtns.style.backgroundColor = "#464854";
-
-  // session button colors , on hover etc
-  [restart, start, pause, resume].forEach((temp) => {
-    temp.style.backgroundColor = "#282a36";
-    temp.style.color = "#f9fcfb";
-
-    temp.addEventListener("mouseover", () => {
-      temp.style.backgroundColor = "#bd93f9";
-      temp.style.color = "#282a36";
-    });
-
-    temp.addEventListener("mouseout", () => {
-      temp.style.backgroundColor = "#282a36";
-      temp.style.color = "#f9fcfb";
-    });
-  });
-
-  reset.style.backgroundColor = "#bd93f9";
-
-  reset.addEventListener("mouseover", () => {
-    reset.style.backgroundColor = "#f9fcfb";
-    reset.style.color = "#2E3440";
-  });
-  reset.addEventListener("mouseout", () => {
-    reset.style.backgroundColor = "#bd93f9";
-  });
-};
-
-const useGruvHardTheme = () => {
-  userTheme = "gruvHard";
-  localStorage.savedTheme = "gruvHard";
-
-  body.style.backgroundColor = "#1D2021";
-  body.style.color = "#c8ccd4";
-
-  squareBox.style.backgroundColor = "#242829";
-  pomoBox.style.cssText =
-    "border: 6px solid #83a598 ;color : #c8ccd4; background-color: #242829;";
-  sessionBtns.style.backgroundColor = "#2E3233";
-
-  // session button colors , on hover etc
-  [restart, start, pause, resume].forEach((temp) => {
-    temp.style.backgroundColor = "#1D2021";
-    temp.style.color = "#c8ccd4";
-
-    temp.addEventListener("mouseover", () => {
-      temp.style.backgroundColor = "#83a598";
-      temp.style.color = "#1D2021";
-    });
-
-    temp.addEventListener("mouseout", () => {
-      temp.style.backgroundColor = "#1D2021";
-      temp.style.color = "#c8ccd4";
-    });
-  });
-
-  reset.style.backgroundColor = "#83a598";
-
-  reset.addEventListener("mouseover", () => {
-    reset.style.backgroundColor = "#c8ccd4";
-    reset.style.color = "#2E3440";
-  });
-  reset.addEventListener("mouseout", () => {
-    reset.style.backgroundColor = "#83a598";
-  });
+  createTheme.saveThisTheme("dracula");
+  createTheme.bodyCol("#D8DEE9", "#282a36");
+  createTheme.squareBoxCol("#323440");
+  createTheme.pomoBoxCol("#D8DEE9", "#323440", "6px solid #bd93f9");
+  createTheme.sessionAreaBG("#464854");
+  createTheme.sessionBtnCol("#D8DEE9", "#282a36", "#bd93f9");
+  createTheme.resetCol("#282a36", "#bd93f9", "#D8DEE9");
 };
 
 const toggleTheme = () => {

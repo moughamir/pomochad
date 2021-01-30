@@ -55,6 +55,7 @@ const updatePomodoro = () => {
 
 const startPomodoro = () => {
   addShakeAnimation();
+
   currentClick == "pause" ? (pomoTime = saveMin) : (pomoTime = totalTime * 60);
   timer = setInterval(updatePomodoro, 1000);
 };
