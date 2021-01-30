@@ -1,5 +1,5 @@
 body {
-  background-color: #f9fcfb;
+  background-color: #fafafa;
   color: #36404c;
   font-family: "Quicksand", sans-serif;
   transition: 0.2s;
@@ -15,17 +15,18 @@ h1 {
 /* navbar */
 
 .brandLogo {
-  padding: 1.3rem;
+  padding: 0.5rem;
   padding-left: 4rem;
   font-size: 1.2rem;
+  font-weight: bolder;
 }
 .navBar {
   font-family: "Open Sans", sans-serif;
   display: flex;
   justify-content: space-between;
   text-align: center;
-  margin-bottom: 2rem;
   font-size: 1rem;
+  margin: 1rem 2rem 2.4rem 2rem;
 }
 
 .navBarLinks ul {
@@ -37,8 +38,14 @@ h1 {
 .navBarLinks li {
   list-style: none;
 }
+
+.settingsBtn {
+  background-color: #36404c;
+  border-radius: 6px;
+  color: #fafafa;
+}
 .navBarLinks li a {
-  padding: 1.3rem;
+  padding: 0.9rem;
   font-family: "Open Sans", sans-serif;
   display: block;
 }

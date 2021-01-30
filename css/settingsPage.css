@@ -3,13 +3,12 @@
 }
 
 h2 {
-  text-align: center; 
+  text-align: center;
 }
 .Themes {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-gap: 10px;
-
 }
 
 .dracula {
@@ -57,5 +56,5 @@ h2 {
 .gruvHard:hover {
   background-color: #a7c5eb;
   color: #21252a;
-  transition:  0.3s;
+  transition: 0.3s;
 }
