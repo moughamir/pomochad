@@ -18,14 +18,13 @@ import {
   settingsBtn,
   settingsPage,
   homePage,
-  menuLink_toggle,
+  // menuLink_toggle,
 } from "./divSelectors";
 import {
   addTortureAnimation,
   stopTortureAnimation,
   playTickSound,
   boxText,
-  addShakeAnimation,
 } from "./miscFuncs";
 
 // Session button click actions

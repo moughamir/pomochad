@@ -9,6 +9,10 @@
     padding: 2.5%;
     padding-left: 3%;
   }
+
+  .settingsPage {
+    margin: 0;
+  }
 }
 
 @media all and (max-width: 554px) {
@@ -229,5 +233,12 @@
 
   .navBar {
     margin-bottom: 2rem;
+  }
+
+  .settingsPage {
+    margin: 0rem;
+  }
+  .themes {
+    grid-template-columns: 50% 50%;
   }
 }

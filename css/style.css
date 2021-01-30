@@ -213,3 +213,19 @@ body:after {
   display: none;
   padding-left: 3%;
 }
+
+/* Settings page */
+.settingsPage {
+  display: none;
+  margin: 0rem 20rem 2rem 20rem;
+  border-radius: 1rem;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.Themes {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 10px;
+  padding: 1rem;
+  padding-bottom: 5rem;
+}
