@@ -29,11 +29,23 @@
   .squareBox {
     animation: none;
   }
-  .link-toggle {
+  .menuLink-toggle {
     display: flex;
   }
   .navBarLinks li a {
     display: none;
+  }
+  .navBarLinks {
+    display: none;
+    margin-top: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+    grid-template-rows: 33% 33% 33%;
+    padding: 10 rem;
+  }
+
+  .navBar {
+    margin-bottom: 2rem;
   }
 }
 @media screen and (max-width: 630px) {
@@ -58,7 +70,7 @@
     animation: none;
   }
 
-  .link-toggle {
+  .menuLink-toggle {
     display: flex;
   }
   .navBarLinks li a {
@@ -89,6 +101,30 @@
   .resume,
   .start {
     animation: none;
+  }
+  .navBarLinks {
+    display: none;
+    margin-top: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+    grid-template-rows: 33% 33% 33%;
+    padding: 10 rem;
+  }
+
+  .navBar {
+    margin-bottom: 2rem;
+  }
+  .navBarLinks {
+    display: none;
+    margin-top: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+    grid-template-rows: 33% 33% 33%;
+    padding: 10 rem;
+  }
+
+  .navBar {
+    margin-bottom: 2rem;
   }
 }
 
@@ -142,6 +178,18 @@
   .start {
     animation: none;
   }
+  .navBarLinks {
+    display: none;
+    margin-top: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+    grid-template-rows: 33% 33% 33%;
+    padding: 10 rem;
+  }
+
+  .navBar {
+    margin-bottom: 2rem;
+  }
 }
 
 @media screen and (max-width: 690px) {
@@ -165,15 +213,21 @@
   .start {
     animation: none;
   }
-  .link-toggle {
+  .menuLink-toggle {
     display: flex;
     float: right;
   }
 
-  .navBar {
-    flex-direction: column;
-  }
-  .navBarLinks ul {
+  .navBarLinks {
     display: none;
+    margin-top: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+    grid-template-rows: 33% 33% 33%;
+    padding: 10 rem;
+  }
+
+  .navBar {
+    margin-bottom: 2rem;
   }
 }

@@ -18,6 +18,7 @@ import {
   settingsBtn,
   settingsPage,
   homePage,
+  menuLink_toggle,
 } from "./divSelectors";
 import {
   addTortureAnimation,
@@ -96,3 +97,31 @@ homePage.addEventListener("click", () => {
   });
   settingsPage.style.display = "none";
 });
+
+/*
+let tempMenuClick = 0;
+
+
+const showMenu = () => {
+  let navbarlinks = document.querySelector(".navbarlinks");
+  navbarlinks.style.display = "grid";
+
+  let navbar = document.querySelector(".navBar");
+  navbar.style.marginBottom = "9rem";
+};
+
+const hideMenu = () => {
+  let navbarlinks = document.querySelector(".navbarlinks");
+  navbarlinks.style.display = "none";
+
+  let navbar = document.querySelector(".navBar");
+  navbar.style.marginBottom = "2rem";
+};
+
+menuLink_toggle.addEventListener("click", () => {
+  tempMenuClick++;
+
+  tempMenuClick % 2 == 0 ? hideMenu() : showMenu();
+});
+
+hideMenu(); */

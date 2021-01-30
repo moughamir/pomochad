@@ -17,6 +17,7 @@ const gruvHard = document.querySelector(".gruvHard");
 const defaultDark = document.querySelector(".defaultDark");
 const defaultLight = document.querySelector(".defaultLight");
 const homePage = document.querySelector(".brandLogo");
+const menuLink_toggle = document.querySelector(".menulink-toggle");
 
 export {
   squareBox,
@@ -38,4 +39,5 @@ export {
   defaultDark,
   defaultLight,
   homePage,
+  menuLink_toggle
 };
