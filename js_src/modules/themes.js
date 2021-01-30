@@ -73,6 +73,7 @@ const createTheme = (() => {
       reset.style.backgroundColor = bg;
     });
   };
+
   return {
     saveThisTheme,
     bodyCol,

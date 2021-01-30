@@ -1,6 +1,6 @@
 .aboutPage {
   padding: 2rem 15rem 2rem 15rem;
-  display: flex;
+  display: none;
   justify-content: center;
 }
 
