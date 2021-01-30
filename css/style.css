@@ -39,14 +39,21 @@ h1 {
   list-style: none;
 }
 
-.settingsBtn {
+.navBarLinks li a:hover,
+.brandLogo:hover {
+  text-decoration: underline;
+  transition: 0.5s;
+}
+
+.settingsbtn {
   background-color: #36404c;
-  border-radius: 6px;
+  border-radius: 35px;
   color: #fafafa;
 }
-.navBarLinks li a {
+
+.navbarlinks li a {
   padding: 0.9rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "open sans", sans-serif;
   display: block;
 }
 
@@ -64,7 +71,7 @@ h1 {
   font-family: "quicksand", sans-serif;
 }
 /* main div to keep stuff centered */
-.flexMain {
+.flexmain {
   display: flexbox;
   justify-content: center;
   align-items: center;
@@ -82,7 +89,7 @@ h1 {
 }
 
 /* display time */
-.squareBox {
+.squarebox {
   display: grid;
   justify-content: center;
   height: 280px;
@@ -94,10 +101,10 @@ h1 {
   padding-bottom: 10px;
   padding-left: 0px;
   padding-right: 0px;
-  /* animation: smoothLoad 0.4s; */
+  /* animation: smoothload 0.4s; */
 }
 
-.pomoBox {
+.pomobox {
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.09), 0px 3px 2px rgba(0, 0, 0, 0.13);
   display: grid;
   place-content: center;
@@ -109,12 +116,12 @@ h1 {
   height: 240px;
   width: 240px;
   color: #f6ecf0;
-  font-family: "Quicksand", sans-serif;
+  font-family: "quicksand", sans-serif;
 }
 
 /* session btns */
 
-.sessionBtns {
+.sessionbtns {
   margin: 0% 36% 0% 36%;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
