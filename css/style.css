@@ -242,11 +242,10 @@ body:after {
   display: flex;
   text-align: center;
   grid-gap: 1 rem;
-  background-color: #fafafa;
   background-color: #36404c;
   padding: 0.6rem;
-  border: 1px solid #36404c;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.09), 0px 3px 2px rgba(0, 0, 0, 0.13);
+  border-radius: 7px 7px 0px 0px;
 
   /*  border-radius: 6px; */
 }
@@ -268,6 +267,7 @@ body:after {
   display: flex;
   justify-content: center;
   padding: 3rem;
+  border-radius: 0px 0px 7px 7px;
 }
 
 .modesDiv {
@@ -300,8 +300,6 @@ body:after {
   padding-right: 0.4rem;
 }
 
-/* modes */
-
 .defaultMode {
   background-color: #4a5460;
 }
@@ -311,8 +309,7 @@ body:after {
   padding: 0.5rem;
   background-color: #fafafa;
   border-radius: 0.5rem;
-    transition: 0.2s;
-
+  transition: 0.2s;
 }
 
 .increaseTimeArrow:hover,
@@ -320,6 +317,3 @@ body:after {
   background-color: #36404c;
   color: #fafafa;
 }
-
-
-

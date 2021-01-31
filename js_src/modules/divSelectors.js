@@ -21,15 +21,18 @@ const homePage = document.querySelector(".brandLogo");
 const aboutPage = document.querySelector(".aboutPage");
 const aboutBtn = document.querySelector(".aboutBtn");
 const menuLink_toggle = document.querySelector(".menulink-toggle");
+
 const modesLink = document.querySelector(".modesLink");
 const modesDiv = document.querySelector(".modesDiv");
 const modeCurrentTime = document.querySelector(".modeCurrentTime");
 const increaseTimeArrow = document.querySelector(".increaseTimeArrow");
 const decreaseTimeArrow = document.querySelector(".decreaseTimeArrow");
-
 const breakMode = document.querySelector(".breakMode");
 const defaultMode = document.querySelector(".defaultMode");
 const automaticMode = document.querySelector(".automaticMode");
+const timerModes = document.querySelector(".timerModes");
+const modeSettings = document.querySelector(".modeSettings");
+const increaseTimeChevron = document.querySelector(".increaseTimeChevron");
 
 export {
   squareBox,
@@ -63,4 +66,7 @@ export {
   breakMode,
   automaticMode,
   defaultMode,
+  timerModes,
+  modeSettings,
+  increaseTimeChevron
 };

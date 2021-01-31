@@ -69,12 +69,15 @@ const checkLocalStorage = () => {
       case "dark":
         useDarkTheme();
         break;
+
       case "light":
         useLightTheme();
         break;
+
       case "dracula":
         useDraculaTheme();
         break;
+
       case "nord":
         useNordTheme();
         break;
@@ -82,6 +85,7 @@ const checkLocalStorage = () => {
       case "gruvHard":
         useGruvHardTheme();
         break;
+
       case "tomato":
         useTomatoTheme();
         break;
