@@ -20,8 +20,10 @@ const tomato = document.querySelector(".tomato");
 const homePage = document.querySelector(".brandLogo");
 const aboutPage = document.querySelector(".aboutPage");
 const aboutBtn = document.querySelector(".aboutBtn");
-
 const menuLink_toggle = document.querySelector(".menulink-toggle");
+const modesLink = document.querySelector(".modesLink");
+const modesDiv = document.querySelector(".modesDiv");
+
 /*const breakMode = document.querySelector(".breakMode");
 const defaultMode = document.querySelector(".defaultMode");
 const automaticMode = document.querySelector(".automaticMode"); */
@@ -50,6 +52,8 @@ export {
   aboutPage,
   aboutBtn,
   menuLink_toggle,
+  modesLink,
+  modesDiv,
   /* breakMode,
   automaticMode,
   defaultMode, */

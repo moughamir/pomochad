@@ -20,6 +20,8 @@ import {
   homePage,
   aboutPage,
   aboutBtn,
+  modesLink,
+  modesDiv,
   // menuLink_toggle,
 } from "./divSelectors";
 import {
@@ -85,8 +87,10 @@ settingsBtn.addEventListener("mouseout", () => {
   settingsBtn.style.textDecoration = "none";
 });
 
+/* navlinks actions*/
+
 settingsBtn.addEventListener("click", () => {
-  [squareBox, pomoBox, sessionBtns, reset , aboutPage].forEach((temp) => {
+  [squareBox, pomoBox, sessionBtns, reset, aboutPage].forEach((temp) => {
     temp.style.display = "none";
   });
   settingsPage.style.display = "grid";
@@ -96,16 +100,28 @@ homePage.addEventListener("click", () => {
   [squareBox, pomoBox, sessionBtns, reset].forEach((temp) => {
     temp.style.display = "";
   });
-  [settingsPage, aboutPage].forEach((temp) => {
+  [settingsPage, aboutPage, modesDiv].forEach((temp) => {
     temp.style.display = "none";
   });
 });
 
 aboutBtn.addEventListener("click", () => {
-  [squareBox, pomoBox, sessionBtns, reset, settingsPage].forEach((temp) => {
-    temp.style.display = "none";
-  });
+  [squareBox, pomoBox, sessionBtns, reset, settingsPage, modesDiv].forEach(
+    (temp) => {
+      temp.style.display = "none";
+    }
+  );
   aboutPage.style.display = "block";
+});
+
+modesLink.addEventListener("click", () => {
+  [settingsPage, aboutPage, squareBox, pomoBox, sessionBtns, reset].forEach(
+    (temp) => {
+      temp.style.display = "none";
+    }
+  );
+
+  modesDiv.style.display = "block";
 });
 
 /*
