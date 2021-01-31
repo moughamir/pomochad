@@ -265,7 +265,7 @@ body:after {
   background-color: #a7c5eb;
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .modesDiv {
@@ -294,6 +294,26 @@ body:after {
   align-items: center;
   justify-content: center;
   background-color: #fafafa;
-  padding: 1rem;
-  border-radius: 0px 0.5rem 0.5rem 0rem;
+      border-radius: 0px 0.5rem 0.5rem 0rem;
+padding-right: 0.4rem;
+}
+
+
+/* modes */
+
+.defaultMode {
+  background-color: #4a5460 ;
+}
+
+
+.increaseTimeArrow , .decreaseTimeArrow{
+    padding: 0.5rem;
+    background-color: #fafafa ;
+    border-radius: 0.5rem;
+}
+
+
+.increaseTimeArrow:hover , .decreaseTimeArrow:hover{
+  background-color: #36404c;
+  color: #fafafa;
 }
