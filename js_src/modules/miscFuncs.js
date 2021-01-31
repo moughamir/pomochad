@@ -1,7 +1,14 @@
 import { userScore, userTheme } from "../index";
 import { modeCurrentTime, pomoBox, score } from "./divSelectors";
 
-import {} from "./themes";
+import {
+  useDarkTheme,
+  useLightTheme,
+  useNordTheme,
+  useDraculaTheme,
+  useGruvHardTheme,
+  useTomatoTheme,
+} from "./themes";
 
 let defaultSound = "./assets/sounds/siren.mp3";
 let tickSound = "./assets/sounds/tick.mp3";
