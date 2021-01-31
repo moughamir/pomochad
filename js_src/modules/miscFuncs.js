@@ -1,6 +1,6 @@
 import { userScore, userTheme } from "../index";
 
-import { pomoBox, score } from "./divSelectors";
+import { modeCurrentTime, pomoBox, score } from "./divSelectors";
 import {
   useDarkTheme,
   useLightTheme,
@@ -89,6 +89,14 @@ const checkLocalStorage = () => {
   }
 };
 
+/* show mode's time value */
+
+const displayModeTime = (min) => {
+  min < 10
+    ? (modeCurrentTime.textContent = `0${min} : 00` )
+    : (modeCurrentTime.textContent = `${min} : 00` );
+};
+
 /*
 const makeSettings = function (theme, score) {
   return { theme, score };
@@ -105,5 +113,6 @@ export {
   saveLocalStorage,
   checkLocalStorage,
   playTickSound,
+  displayModeTime,
   // makeSettings,
 };

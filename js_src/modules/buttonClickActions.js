@@ -1,34 +1,42 @@
 import {
   currentClick,
+  pomoTime,
+  saveMin,
   startPomodoro,
   timer,
-  saveMin,
   totalTime,
-  pomoTime,
 } from "../index";
+
 import {
-  restart,
-  start,
+  aboutBtn,
+  aboutPage,
+  automaticMode,
+  breakMode,
+  decreaseTimeArrow,
+  defaultMode,
+  homePage,
+  increaseTimeArrow,
+  modesDiv,
+  modesLink,
   pause,
-  resume,
-  reset,
   pomoBox,
-  squareBox,
+  reset,
+  restart,
+  resume,
   sessionBtns,
   settingsBtn,
   settingsPage,
-  homePage,
-  aboutPage,
-  aboutBtn,
-  modesLink,
-  modesDiv,
+  squareBox,
+  start,
+
   // menuLink_toggle,
 } from "./divSelectors";
 import {
   addTortureAnimation,
-  stopTortureAnimation,
-  playTickSound,
   boxText,
+  displayModeTime,
+  playTickSound,
+  stopTortureAnimation,
 } from "./miscFuncs";
 
 // Session button click actions
@@ -44,7 +52,7 @@ import {
       clearInterval(timer);
 
       pomoTime = totalTime * 60;
-      boxText(25, 0);
+      boxText(totalTime, 0);
     }
 
     // restarts time
@@ -96,6 +104,8 @@ settingsBtn.addEventListener("click", () => {
   settingsPage.style.display = "grid";
 });
 
+/* Home Page */
+
 homePage.addEventListener("click", () => {
   [squareBox, pomoBox, sessionBtns, reset].forEach((temp) => {
     temp.style.display = "";
@@ -105,6 +115,7 @@ homePage.addEventListener("click", () => {
   });
 });
 
+/* About Page */
 aboutBtn.addEventListener("click", () => {
   [squareBox, pomoBox, sessionBtns, reset, settingsPage, modesDiv].forEach(
     (temp) => {
@@ -113,6 +124,8 @@ aboutBtn.addEventListener("click", () => {
   );
   aboutPage.style.display = "block";
 });
+
+/* Modes Page*/
 
 modesLink.addEventListener("click", () => {
   [settingsPage, aboutPage, squareBox, pomoBox, sessionBtns, reset].forEach(
@@ -124,30 +137,47 @@ modesLink.addEventListener("click", () => {
   modesDiv.style.display = "block";
 });
 
-/*
-let tempMenuClick = 0;
-
-
-const showMenu = () => {
-  let navbarlinks = document.querySelector(".navbarlinks");
-  navbarlinks.style.display = "grid";
-
-  let navbar = document.querySelector(".navBar");
-  navbar.style.marginBottom = "9rem";
-};
-
-const hideMenu = () => {
-  let navbarlinks = document.querySelector(".navbarlinks");
-  navbarlinks.style.display = "none";
-
-  let navbar = document.querySelector(".navBar");
-  navbar.style.marginBottom = "2rem";
-};
-
-menuLink_toggle.addEventListener("click", () => {
-  tempMenuClick++;
-
-  tempMenuClick % 2 == 0 ? hideMenu() : showMenu();
+increaseTimeArrow.addEventListener("click", () => {
+  totalTime++;
+  displayModeTime(totalTime);
+  boxText(totalTime, 0);
 });
 
-hideMenu(); */
+decreaseTimeArrow.addEventListener("click", () => {
+  if (totalTime > 1) {
+    totalTime--;
+    displayModeTime(totalTime);
+    boxText(totalTime, 0);
+  }
+});
+
+defaultMode.addEventListener("click", () => {
+  [breakMode, automaticMode].forEach((temp) => {
+    temp.style.backgroundColor = "#36404c";
+  });
+
+  totalTime = 25;
+  displayModeTime(25);
+
+  defaultMode.style.backgroundColor = "#4a5460";
+});
+
+breakMode.addEventListener("click", () => {
+  [defaultMode, automaticMode].forEach((temp) => {
+    temp.style.backgroundColor = "#36404c";
+  });
+
+  totalTime = 5;
+  displayModeTime(totalTime);
+  breakMode.style.backgroundColor = "#4a5460";
+});
+
+automaticMode.addEventListener("click", () => {
+  [breakMode, defaultMode].forEach((temp) => {
+    temp.style.backgroundColor = "#36404c";
+  });
+
+  totalTime = 25;
+  displayModeTime(totalTime);
+  automaticMode.style.backgroundColor = "#4a5460";
+});

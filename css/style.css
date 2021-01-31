@@ -259,6 +259,8 @@ body:after {
   font-family: "Open Sans", sans-serif;
   padding: 1rem 2rem 1rem 2rem;
   border-radius: 6px;
+
+  transition: 0.2s;
 }
 
 .modeSettings {
@@ -285,7 +287,7 @@ body:after {
   padding: 1rem;
   font-size: 3rem;
   background-color: #fafafa;
-    border-radius: 0.5rem 0rem 0rem 0.5rem;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
 }
 
 .increaseTimeChevron {
@@ -294,26 +296,27 @@ body:after {
   align-items: center;
   justify-content: center;
   background-color: #fafafa;
-      border-radius: 0px 0.5rem 0.5rem 0rem;
-padding-right: 0.4rem;
+  border-radius: 0px 0.5rem 0.5rem 0rem;
+  padding-right: 0.4rem;
 }
-
 
 /* modes */
 
 .defaultMode {
-  background-color: #4a5460 ;
+  background-color: #4a5460;
 }
 
+.increaseTimeArrow,
+.decreaseTimeArrow {
+  padding: 0.5rem;
+  background-color: #fafafa;
+  border-radius: 0.5rem;
+    transition: 0.2s;
 
-.increaseTimeArrow , .decreaseTimeArrow{
-    padding: 0.5rem;
-    background-color: #fafafa ;
-    border-radius: 0.5rem;
 }
 
-
-.increaseTimeArrow:hover , .decreaseTimeArrow:hover{
+.increaseTimeArrow:hover,
+.decreaseTimeArrow:hover {
   background-color: #36404c;
   color: #fafafa;
 }

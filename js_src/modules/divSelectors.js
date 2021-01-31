@@ -23,10 +23,13 @@ const aboutBtn = document.querySelector(".aboutBtn");
 const menuLink_toggle = document.querySelector(".menulink-toggle");
 const modesLink = document.querySelector(".modesLink");
 const modesDiv = document.querySelector(".modesDiv");
+const modeCurrentTime = document.querySelector(".modeCurrentTime");
+const increaseTimeArrow = document.querySelector(".increaseTimeArrow");
+const decreaseTimeArrow = document.querySelector(".decreaseTimeArrow");
 
-/*const breakMode = document.querySelector(".breakMode");
+const breakMode = document.querySelector(".breakMode");
 const defaultMode = document.querySelector(".defaultMode");
-const automaticMode = document.querySelector(".automaticMode"); */
+const automaticMode = document.querySelector(".automaticMode");
 
 export {
   squareBox,
@@ -54,7 +57,10 @@ export {
   menuLink_toggle,
   modesLink,
   modesDiv,
-  /* breakMode,
+  modeCurrentTime,
+  increaseTimeArrow,
+  decreaseTimeArrow,
+  breakMode,
   automaticMode,
-  defaultMode, */
+  defaultMode,
 };
