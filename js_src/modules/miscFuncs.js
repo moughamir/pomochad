@@ -1,14 +1,7 @@
 import { userScore, userTheme } from "../index";
-
 import { modeCurrentTime, pomoBox, score } from "./divSelectors";
-import {
-  useDarkTheme,
-  useLightTheme,
-  useNordTheme,
-  useDraculaTheme,
-  useGruvHardTheme,
-  useTomatoTheme,
-} from "./themes";
+
+import {} from "./themes";
 
 let defaultSound = "./assets/sounds/siren.mp3";
 let tickSound = "./assets/sounds/tick.mp3";
@@ -93,8 +86,8 @@ const checkLocalStorage = () => {
 
 const displayModeTime = (min) => {
   min < 10
-    ? (modeCurrentTime.textContent = `0${min} : 00` )
-    : (modeCurrentTime.textContent = `${min} : 00` );
+    ? (modeCurrentTime.textContent = `0${min} : 00`)
+    : (modeCurrentTime.textContent = `${min} : 00`);
 };
 
 /*

@@ -1,24 +1,6 @@
 import { userTheme } from "../index";
 
-import {
-  pause,
-  pomoBox,
-  restart,
-  resume,
-  start,
-  reset,
-  themeToggle,
-  body,
-  squareBox,
-  sessionBtns,
-  settingsBtn,
-  dracula,
-  nord,
-  gruvHard,
-  defaultDark,
-  defaultLight,
-  tomato,
-} from "./divSelectors";
+import {} from "./divSelectors";
 
 let whichTheme = 0;
 

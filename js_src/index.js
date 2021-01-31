@@ -12,8 +12,8 @@ import { toggleTheme } from "./modules/themes";
 import {} from "./modules/buttonClickActions";
 
 // localStorage stuffs , save some defaults
-export let userScore = 0;
-export let userTheme = "lightTheme";
+let userScore = 0;
+let userTheme = "lightTheme";
 checkLocalStorage();
 
 makeSessionBtns();
@@ -60,6 +60,15 @@ const startPomodoro = () => {
   timer = setInterval(updatePomodoro, 1000);
 };
 
-export { currentClick, startPomodoro, timer, saveMin, totalTime, pomoTime };
+export {
+  currentClick,
+  startPomodoro,
+  timer,
+  saveMin,
+  totalTime,
+  pomoTime,
+  userScore,
+  userTheme,
+};
 
 toggleTheme();
