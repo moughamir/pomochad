@@ -140,6 +140,20 @@ const createTheme = (() => {
     );
   };
 
+  const aboutContext = (fg) => {
+    let temps = document.querySelectorAll("li");
+
+    temps.forEach((temps) => {
+      temps.style.color = fg;
+    });
+
+    let heading_underline = document.querySelectorAll("h2");
+
+    heading_underline.forEach((heading_underline) => {
+      heading_underline.style.borderColor = fg;
+    });
+  };
+
   return {
     saveThisTheme,
     bodyCol,
@@ -149,6 +163,7 @@ const createTheme = (() => {
     sessionBtnCol,
     resetCol,
     modesPageCol,
+    aboutContext,
   };
 })();
 
@@ -170,6 +185,7 @@ const useDraculaTheme = () => {
     "#282a36",
     "#D8DEE9"
   );
+  createTheme.aboutContext("#AEB4D5");
 };
 
 const useGruvHardTheme = () => {
@@ -189,6 +205,8 @@ const useGruvHardTheme = () => {
     "#242829",
     "#c8ccd4"
   );
+
+  createTheme.aboutContext("#C3C7CF");
 };
 
 const useDarkTheme = () => {
@@ -208,6 +226,8 @@ const useDarkTheme = () => {
     "#f9fcfb",
     "#2C323B"
   );
+
+  createTheme.aboutContext("#C3C7CF");
 };
 
 const useLightTheme = () => {
@@ -227,6 +247,8 @@ const useLightTheme = () => {
     "#36404c",
     "#fafafa"
   );
+
+  createTheme.aboutContext("#545e6a");
 };
 
 const useNordTheme = () => {
@@ -246,6 +268,8 @@ const useNordTheme = () => {
     "#2E3440",
     "#D8DEE9"
   );
+
+  createTheme.aboutContext("#c8ccd4");
 };
 
 const useTomatoTheme = () => {
@@ -254,7 +278,7 @@ const useTomatoTheme = () => {
   createTheme.squareBoxCol("#F98492");
   createTheme.pomoBoxCol("#954952", "#F98492", "6px solid #D36774");
   createTheme.sessionAreaBG("#D36774");
-  createTheme.sessionBtnCol("#954952", "#FF8E9C", "#a7c5eb");
+  createTheme.sessionBtnCol("#954952", "#FF8E9C", "#623A3F");
   createTheme.resetCol("#222831", "#D36774", "#f9fcfb");
 
   createTheme.modesPageCol(
@@ -265,6 +289,8 @@ const useTomatoTheme = () => {
     "#623A3F",
     "#FF8E9C"
   );
+
+  createTheme.aboutContext("#623A3F");
 };
 
 const toggleTheme = () => {
