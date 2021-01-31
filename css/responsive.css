@@ -10,8 +10,16 @@
     padding-left: 3%;
   }
 
+  .modesDiv {
+    margin: 6% 29% 0% 29%;
+  }
+
   .settingsPage {
-    margin: 0;
+    margin: 0rem 10rem 2rem 10rem;
+  }
+
+  .aboutPage {
+    padding: 2rem 10rem 2rem 10rem;
   }
 }
 
@@ -51,6 +59,18 @@
   .navBar {
     margin-bottom: 2rem;
   }
+
+  .modesDiv {
+    margin: 3% 2% 0% 2%;
+  }
+
+  .settingsPage {
+    margin: 0rem 1rem 2rem 1rem;
+  }
+
+  .aboutPage {
+    padding: 2rem 1rem 2rem 1rem;
+  }
 }
 @media screen and (max-width: 630px) {
   .flexMain {
@@ -79,6 +99,18 @@
   }
   .navBarLinks li a {
     display: none;
+  }
+
+  .modesDiv {
+    margin: 4% 8% 0% 8%;
+  }
+
+  .settingsPage {
+    margin: 0rem 4rem 2rem 4rem;
+  }
+
+  .aboutPage {
+    padding: 2rem 4rem 2rem 4rem;
   }
 }
 
@@ -129,6 +161,18 @@
 
   .navBar {
     margin-bottom: 2rem;
+  }
+
+  .modesDiv {
+    margin: 0%;
+  }
+
+  .settingsPage {
+    margin: 1rem 0rem 0rem 1rem;
+  }
+
+  .aboutPage {
+    padding: 2rem 0rem 2rem 0rem;
   }
 }
 
@@ -194,6 +238,17 @@
   .navBar {
     margin-bottom: 2rem;
   }
+  .modesDiv {
+    margin: 2% 0% 0% 0%;
+  }
+
+  .settingsPage {
+    margin: 1rem;
+  }
+
+  .aboutPage {
+    padding: 2rem 0rem 0rem 0rem;
+  }
 }
 
 @media screen and (max-width: 690px) {
@@ -240,5 +295,18 @@
   }
   .themes {
     grid-template-columns: 50% 50%;
+  }
+
+  .modesDiv {
+    margin: 2% 21% 0% 21%;
+  }
+
+  .settingsPage {
+    margin: 2% 18% 0% 18%;
+  }
+
+  .aboutPage {
+    padding: 0rem ;
+
   }
 }
