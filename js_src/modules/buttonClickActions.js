@@ -86,7 +86,7 @@ settingsBtn.addEventListener("mouseout", () => {
 });
 
 settingsBtn.addEventListener("click", () => {
-  [squareBox, pomoBox, sessionBtns, reset].forEach((temp) => {
+  [squareBox, pomoBox, sessionBtns, reset , aboutPage].forEach((temp) => {
     temp.style.display = "none";
   });
   settingsPage.style.display = "grid";
