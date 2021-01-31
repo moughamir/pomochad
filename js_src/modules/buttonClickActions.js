@@ -98,7 +98,7 @@ settingsBtn.addEventListener("mouseout", () => {
 /* navlinks actions*/
 
 settingsBtn.addEventListener("click", () => {
-  [squareBox, pomoBox, sessionBtns, reset, aboutPage].forEach((temp) => {
+  [squareBox, pomoBox, sessionBtns, reset, aboutPage , modesDiv].forEach((temp) => {
     temp.style.display = "none";
   });
   settingsPage.style.display = "grid";
@@ -171,6 +171,13 @@ breakMode.addEventListener("click", () => {
   displayModeTime(totalTime);
   breakMode.style.backgroundColor = "#4a5460";
 });
+
+
+/*  
+const startAutomaticMode = () => {
+
+}
+*/ 
 
 automaticMode.addEventListener("click", () => {
   [breakMode, defaultMode].forEach((temp) => {
