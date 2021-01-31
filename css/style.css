@@ -284,6 +284,16 @@ body:after {
 .modeCurrentTime {
   padding: 1rem;
   font-size: 3rem;
-  background-color: white;
-  border-radius: 6px;
+  background-color: #fafafa;
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+}
+
+.increaseTimeChevron {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+  padding: 1rem;
+  border-radius: 0px 0.5rem 0.5rem 0rem;
 }
