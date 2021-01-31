@@ -20,4 +20,4 @@ A very simple pomodoro web app for my personal use <br>
 - [X] add more themes
 
 
-This is still in alpha stage so the themes might not look well ( except default light theme ).
+This is still in alpha stage so the themes might not look well ( except default light theme ) and dashboard/rewards wont work.
