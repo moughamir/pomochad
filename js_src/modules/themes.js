@@ -14,6 +14,7 @@ import {
   increaseTimeChevron,
   increaseTimeArrow,
   decreaseTimeArrow,
+  saveBtnFLex,
   nord,
   pause,
   pomoBox,
@@ -145,6 +146,19 @@ const createTheme = (() => {
     let scoreBox = document.querySelector(".score");
     scoreBox.style.color = headingFg;
     scoreBox.style.backgroundColor = headingBg;
+
+    // save timer mode
+    saveBtnFLex.style.backgroundColor = headingBg;
+    saveBtnFLex.style.color = headingFg;
+
+    saveBtnFLex.addEventListener("mouseover", () => {
+      saveBtnFLex.style.backgroundColor = activeModeBg;
+      saveBtnFLex.style.color = headingFg;
+    });
+    saveBtnFLex.addEventListener("mouseout", () => {
+      saveBtnFLex.style.backgroundColor = headingBg;
+      saveBtnFLex.style.color = headingFg;
+    });
   };
 
   const aboutContext = (fg) => {
