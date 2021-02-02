@@ -71,6 +71,9 @@
   .aboutPage {
     padding: 2rem 1rem 2rem 1rem;
   }
+  .score {
+    margin: 0rem;
+  }
 }
 @media screen and (max-width: 630px) {
   .flexMain {
@@ -111,6 +114,9 @@
 
   .aboutPage {
     padding: 2rem 4rem 2rem 4rem;
+  }
+  .score {
+    margin: 0rem;
   }
 }
 
@@ -173,6 +179,9 @@
 
   .aboutPage {
     padding: 2rem 0rem 2rem 0rem;
+  }
+  .score {
+    margin: 0rem;
   }
 }
 
@@ -249,6 +258,13 @@
   .aboutPage {
     padding: 2rem 0rem 0rem 0rem;
   }
+
+  .settingsPage {
+    display: none;
+    margin: 0rem 25rem 2rem 25rem;
+    border-radius: 1rem;
+    padding: 3rem;
+  }
 }
 
 @media screen and (max-width: 690px) {
@@ -306,7 +322,9 @@
   }
 
   .aboutPage {
-    padding: 0rem ;
-
+    padding: 0rem;
+  }
+  .score {
+    margin: 1rem;
   }
 }

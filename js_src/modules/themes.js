@@ -93,8 +93,8 @@ const createTheme = (() => {
   ) => {
     timerModes.style.backgroundColor = headingBg;
 
-    // timer modes
-    //  let timer_Modes = [defaultMode, breakMode, automaticMode];
+    /* timer modes
+     let timer_Modes = [defaultMode, breakMode, automaticMode]; */
 
     [defaultMode, breakMode, automaticMode].forEach((temp) => {
       temp.style.color = headingFg;
@@ -140,6 +140,11 @@ const createTheme = (() => {
     );
 
     defaultMode.style.backgroundColor = activeModeBg;
+
+    // score
+    let scoreBox = document.querySelector(".score");
+    scoreBox.style.color = headingFg;
+    scoreBox.style.backgroundColor = headingBg;
   };
 
   const aboutContext = (fg) => {
