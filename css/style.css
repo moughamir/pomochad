@@ -274,10 +274,9 @@ body:after {
 
 .modeSettings {
   background-color: #a7c5eb;
-  display: flex;
   justify-content: center;
   padding: 2rem;
-  border-radius: 0px 0px 7px 7px;
+  display: flex;
 }
 
 .modesDiv {
@@ -328,4 +327,20 @@ body:after {
   background-color: #36404c;
   color: #fafafa;
   cursor: default;
+}
+
+.saveBtnFLex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  background-color: #36404c;
+  color: #fafafa;
+}
+
+.saveBtnFLex:hover {
+  cursor: default;
+  background-color: #4a5460;
+  transition: 0.3s;
 }

@@ -33,6 +33,7 @@ const automaticMode = document.querySelector(".automaticMode");
 const timerModes = document.querySelector(".timerModes");
 const modeSettings = document.querySelector(".modeSettings");
 const increaseTimeChevron = document.querySelector(".increaseTimeChevron");
+const saveBtnFLex = document.querySelector(".saveBtnFLex");
 
 export {
   squareBox,
@@ -69,4 +70,5 @@ export {
   timerModes,
   modeSettings,
   increaseTimeChevron,
+  saveBtnFLex,
 };

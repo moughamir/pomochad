@@ -23,6 +23,7 @@ import {
   reset,
   restart,
   resume,
+  saveBtnFLex,
   sessionBtns,
   settingsBtn,
   settingsPage,
@@ -98,36 +99,36 @@ settingsBtn.addEventListener("mouseout", () => {
 /* navlinks actions*/
 
 settingsBtn.addEventListener("click", () => {
-  [squareBox, pomoBox, sessionBtns, reset, aboutPage , modesDiv].forEach((temp) => {
-    temp.style.display = "none";
-  });
+  [squareBox, pomoBox, sessionBtns, reset, aboutPage, modesDiv].forEach(
+    (temp) => {
+      temp.style.display = "none";
+    }
+  );
   settingsPage.style.display = "grid";
 });
 
 /* Home Page */
-
-homePage.addEventListener("click", () => {
+const jumpToHomePage = () => {
   [squareBox, pomoBox, sessionBtns, reset].forEach((temp) => {
     temp.style.display = "";
   });
   [settingsPage, aboutPage, modesDiv].forEach((temp) => {
     temp.style.display = "none";
   });
-});
+};
 
 /* About Page */
-aboutBtn.addEventListener("click", () => {
+const jumptoAboutPage = () => {
   [squareBox, pomoBox, sessionBtns, reset, settingsPage, modesDiv].forEach(
     (temp) => {
       temp.style.display = "none";
     }
   );
   aboutPage.style.display = "block";
-});
+};
 
 /* Modes Page*/
-
-modesLink.addEventListener("click", () => {
+const jumptoModesPage = () => {
   [settingsPage, aboutPage, squareBox, pomoBox, sessionBtns, reset].forEach(
     (temp) => {
       temp.style.display = "none";
@@ -135,7 +136,11 @@ modesLink.addEventListener("click", () => {
   );
 
   modesDiv.style.display = "block";
-});
+};
+
+homePage.addEventListener("click", () => jumpToHomePage());
+aboutBtn.addEventListener("click", () => jumptoAboutPage());
+modesLink.addEventListener("click", () => jumptoModesPage());
 
 increaseTimeArrow.addEventListener("click", () => {
   totalTime++;
@@ -157,7 +162,7 @@ defaultMode.addEventListener("click", () => {
   });
 
   totalTime = 25;
-  displayModeTime(25);
+  displayModeTime(totalTime);
 
   defaultMode.style.backgroundColor = "#4a5460";
 });
@@ -169,15 +174,9 @@ breakMode.addEventListener("click", () => {
 
   totalTime = 5;
   displayModeTime(totalTime);
+
   breakMode.style.backgroundColor = "#4a5460";
 });
-
-
-/*  
-const startAutomaticMode = () => {
-
-}
-*/ 
 
 automaticMode.addEventListener("click", () => {
   [breakMode, defaultMode].forEach((temp) => {
@@ -187,4 +186,8 @@ automaticMode.addEventListener("click", () => {
   totalTime = 25;
   displayModeTime(totalTime);
   automaticMode.style.backgroundColor = "#4a5460";
+});
+
+saveBtnFLex.addEventListener("click", () => {
+  jumpToHomePage();
 });
