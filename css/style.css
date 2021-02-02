@@ -46,6 +46,7 @@ h1 {
 .brandLogo:hover {
   text-decoration: underline;
   transition: 0.5s;
+  cursor: default;
 }
 
 .settingsbtn {
@@ -154,6 +155,7 @@ h1 {
   background-color: #36404c;
   color: #f6ecf0;
   transition: 0.4s;
+  cursor: default;
 }
 
 .reset {
@@ -274,7 +276,7 @@ body:after {
   background-color: #a7c5eb;
   display: flex;
   justify-content: center;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 0px 0px 7px 7px;
 }
 
@@ -289,11 +291,12 @@ body:after {
 .automaticMode:hover {
   background-color: #4a5460;
   color: #fafafa;
+  cursor: default;
 }
 
 .modeCurrentTime {
-  padding: 1rem;
-  font-size: 3rem;
+  padding: 1.6rem;
+  font-size: 4rem;
   background-color: #fafafa;
   border-radius: 0.5rem 0rem 0rem 0.5rem;
 }
@@ -324,4 +327,5 @@ body:after {
 .decreaseTimeArrow:hover {
   background-color: #36404c;
   color: #fafafa;
+  cursor: default;
 }

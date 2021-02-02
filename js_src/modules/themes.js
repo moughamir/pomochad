@@ -138,6 +138,8 @@ const createTheme = (() => {
         temp.style.color = innerTimeFg;
       }
     );
+
+    defaultMode.style.backgroundColor = activeModeBg;
   };
 
   const aboutContext = (fg) => {
@@ -182,8 +184,8 @@ const useDraculaTheme = () => {
     "#21232C",
     "#282a36",
     "#3C3E4A",
-    "#282a36",
-    "#D8DEE9"
+    "#5AF78E",
+    "#282a36"
   );
   createTheme.aboutContext("#AEB4D5");
 };
@@ -256,7 +258,7 @@ const useNordTheme = () => {
   createTheme.bodyCol("#D8DEE9", "#2E3440");
   createTheme.squareBoxCol("#323846");
   createTheme.pomoBoxCol("#D8DEE9", "#323846", "6px solid #81A1C1");
-  createTheme.sessionAreaBG("#424854");
+  createTheme.sessionAreaBG("#40464F");
   createTheme.sessionBtnCol("#D8DEE9", "#2E3440", "#81A1C1");
   createTheme.resetCol("#2E3440", "#81A1C1", "#D8DEE9");
 
