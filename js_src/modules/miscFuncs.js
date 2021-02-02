@@ -10,12 +10,10 @@ import {
   useTomatoTheme,
 } from "./themes";
 
-let defaultSound = "./assets/sounds/siren.mp3";
 let tickSound = "./assets/sounds/tick.mp3";
 
 const timerSound = () => {
-  const audio = new Audio(defaultSound);
-  audio.play();
+  document.getElementById("dingding").play();
 };
 
 const playTickSound = () => {
