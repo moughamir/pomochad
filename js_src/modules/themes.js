@@ -137,6 +137,18 @@ const createTheme = (() => {
       (temp) => {
         temp.style.backgroundColor = innerTimeBg;
         temp.style.color = innerTimeFg;
+
+        if (temp != increaseTimeChevron) {
+          temp.addEventListener("mouseover", () => {
+            temp.style.backgroundColor = innerTimeFg;
+            temp.style.color = innerTimeBg;
+          });
+
+          temp.addEventListener("mouseout", () => {
+            temp.style.backgroundColor = innerTimeBg;
+            temp.style.color = innerTimeFg;
+          });
+        }
       }
     );
 
@@ -219,12 +231,12 @@ const useGruvHardTheme = () => {
   createTheme.sessionAreaBG("#2E3233");
 
   createTheme.modesPageCol(
-    "#c8ccd4",
+    "#83a598",
     "#2E3233",
     "#242829",
     "#83a598",
-    "#242829",
-    "#c8ccd4"
+    "#83a598",
+    "#242829"
   );
 
   createTheme.aboutContext("#C3C7CF");
@@ -286,8 +298,8 @@ const useNordTheme = () => {
     "#2C313D",
     "#2E3440",
     "#81A1C1",
-    "#2E3440",
-    "#D8DEE9"
+    "#D8DEE9",
+    "#2C313D"
   );
 
   createTheme.aboutContext("#c8ccd4");
