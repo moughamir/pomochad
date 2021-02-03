@@ -29,12 +29,11 @@ import {
   settingsPage,
   squareBox,
   start,
-
   // menuLink_toggle,
 } from "./divSelectors";
 import {
   addTortureAnimation,
-  boxText,
+  getBoxText,
   displayModeTime,
   playTickSound,
   stopTortureAnimation,
@@ -53,7 +52,7 @@ import {
       clearInterval(timer);
 
       pomoTime = totalTime * 60;
-      boxText(totalTime, 0);
+      getBoxText(totalTime, 0);
     }
 
     // restarts time
@@ -78,7 +77,7 @@ pause.addEventListener("click", () => {
   const min = Math.floor(saveMin / 60);
   let sec = saveMin % 60;
 
-  boxText(min, sec);
+  getBoxText(min, sec);
 });
 
 resume.addEventListener("click", () => {
@@ -100,9 +99,7 @@ settingsBtn.addEventListener("mouseout", () => {
 
 settingsBtn.addEventListener("click", () => {
   [squareBox, pomoBox, sessionBtns, reset, aboutPage, modesDiv].forEach(
-    (temp) => {
-      temp.style.display = "none";
-    }
+    (temp) => (temp.style.display = "none")
   );
   settingsPage.style.display = "grid";
 });
@@ -145,14 +142,14 @@ modesLink.addEventListener("click", () => jumptoModesPage());
 increaseTimeArrow.addEventListener("click", () => {
   totalTime++;
   displayModeTime(totalTime);
-  boxText(totalTime, 0);
+  getBoxText(totalTime, 0);
 });
 
 decreaseTimeArrow.addEventListener("click", () => {
   if (totalTime > 1) {
     totalTime--;
     displayModeTime(totalTime);
-    boxText(totalTime, 0);
+    getBoxText(totalTime, 0);
   }
 });
 

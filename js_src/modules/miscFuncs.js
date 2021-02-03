@@ -12,9 +12,7 @@ import {
 
 let tickSound = "./assets/sounds/tick.mp3";
 
-const timerSound = () => {
-  document.getElementById("dingding").play();
-};
+const timerSound = () => document.getElementById("dingding").play();
 
 const playTickSound = () => {
   const audio = new Audio(tickSound);
@@ -22,12 +20,14 @@ const playTickSound = () => {
 };
 
 // displays timer's text ( the actual time going on )
-const boxText = (min, sec) => {
-  if (min < 10) pomoBox.innerText = `0${min} : ${sec}`;
-  else if (sec < 10) pomoBox.innerText = `${min} : 0${sec}`;
-  else {
-    pomoBox.innerText = `${min} : ${sec}`;
-  }
+const getBoxText = (min, sec) => {
+  let temp;
+
+  if (min < 10) temp = `0${min} : ${sec}`;
+  else if (sec < 10) temp = `${min} : 0${sec}`;
+
+  temp = `${min} : ${sec}`;
+  pomoBox.innerText = temp;
 };
 
 // for wrong btn click
@@ -106,7 +106,7 @@ const makeSettings = function (theme, score) {
 
 export {
   timerSound,
-  boxText,
+  getBoxText,
   displayError,
   showWarnings,
   addTortureAnimation,

@@ -1,6 +1,6 @@
 import { pomoBox, score } from "./modules/divSelectors";
 import {
-  boxText,
+  getBoxText,
   checkLocalStorage,
   saveLocalStorage,
   timerSound,
@@ -45,11 +45,11 @@ const updatePomodoro = () => {
   let sec = pomoTime % 60;
 
   if (pomoTime === 0) {
-    boxText(min, sec);
+    getBoxText(min, sec);
     return;
   }
 
-  boxText(min, sec);
+  getBoxText(min, sec);
   pomoTime--;
 };
 

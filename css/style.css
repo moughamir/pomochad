@@ -47,6 +47,7 @@ h1 {
 .brandLogo:hover {
   text-decoration: underline;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .settingsbtn {
