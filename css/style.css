@@ -34,6 +34,7 @@ h1 {
   display: flex;
   margin: 0;
   padding: 0;
+  cursor: pointer;
 }
 
 .navbarlinks a {
@@ -46,7 +47,6 @@ h1 {
 .brandLogo:hover {
   text-decoration: underline;
   transition: 0.5s;
-  cursor: default;
 }
 
 .settingsbtn {
