@@ -99,11 +99,6 @@ const displayModeTime = (min) => {
     : (modeCurrentTime.textContent = `${min} : 00`);
 };
 
-/*
-const makeSettings = function (theme, score) {
-  return { theme, score };
-}; */
-
 export {
   timerSound,
   getBoxText,
@@ -116,5 +111,4 @@ export {
   checkLocalStorage,
   playTickSound,
   displayModeTime,
-  // makeSettings,
 };

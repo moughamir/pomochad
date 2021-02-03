@@ -12,20 +12,20 @@ import { toggleTheme } from "./modules/themes";
 import {} from "./modules/buttonClickActions";
 
 // localStorage stuffs , save some defaults
-let userScore = 0;
-let userTheme = "lightTheme";
+export let userScore = 0;
+export let userTheme = "lightTheme";
 checkLocalStorage();
 
 makeSessionBtns();
 
-let saveMin, // saves values when timer paused
-  timer,
-  currentClick;
+export let saveMin; // saves values when timer paused
+export let timer;
+export let currentClick;
 
 pomoBox.innerText = `${25} : 0${0}`; // initial output
 
-let totalTime = 25;
-let pomoTime = totalTime * 60;
+export let totalTime = 25;
+export let pomoTime = totalTime * 60;
 
 const checkTimer = (temp) => {
   if (pomoTime == 0) {
@@ -53,22 +53,11 @@ const updatePomodoro = () => {
   pomoTime--;
 };
 
-const startPomodoro = () => {
+export const startPomodoro = () => {
   addShakeAnimation();
 
   currentClick == "pause" ? (pomoTime = saveMin) : (pomoTime = totalTime * 60);
-  timer = setInterval(updatePomodoro, 1000);
-};
-
-export {
-  currentClick,
-  startPomodoro,
-  timer,
-  saveMin,
-  totalTime,
-  pomoTime,
-  userScore,
-  userTheme,
+  timer = setInterval(updatePomodoro, 0);
 };
 
 toggleTheme();

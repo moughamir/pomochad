@@ -1,74 +1,35 @@
-const pomoBox = document.querySelector(".pomoBox"); // inner circle
-const restart = document.querySelector(".restart");
-const pause = document.querySelector(".pause");
-const resume = document.querySelector(".resume");
-const start = document.querySelector(".start");
-const reset = document.querySelector(".reset");
-const themeToggle = document.querySelector(".fa-adjust");
-const body = document.querySelector("body");
-const squareBox = document.querySelector(".squareBox");
-const sessionBtns = document.querySelector(".sessionBtns");
-const score = document.querySelector(".score");
-const settingsBtn = document.querySelector(".settingsBtn");
-const settingsPage = document.querySelector(".settingsPage");
-const dracula = document.querySelector(".dracula");
-const nord = document.querySelector(".nord");
-const gruvHard = document.querySelector(".gruvHard");
-const defaultDark = document.querySelector(".defaultDark");
-const defaultLight = document.querySelector(".defaultLight");
-const tomato = document.querySelector(".tomato");
-const homePage = document.querySelector(".brandLogo");
-const aboutPage = document.querySelector(".aboutPage");
-const aboutBtn = document.querySelector(".aboutBtn");
-const menuLink_toggle = document.querySelector(".menulink-toggle");
-
-const modesLink = document.querySelector(".modesLink");
-const modesDiv = document.querySelector(".modesDiv");
-const modeCurrentTime = document.querySelector(".modeCurrentTime");
-const increaseTimeArrow = document.querySelector(".increaseTimeArrow");
-const decreaseTimeArrow = document.querySelector(".decreaseTimeArrow");
-const breakMode = document.querySelector(".breakMode");
-const defaultMode = document.querySelector(".defaultMode");
-const automaticMode = document.querySelector(".automaticMode");
-const timerModes = document.querySelector(".timerModes");
-const modeSettings = document.querySelector(".modeSettings");
-const increaseTimeChevron = document.querySelector(".increaseTimeChevron");
-const saveBtnFLex = document.querySelector(".saveBtnFLex");
-
-export {
-  squareBox,
-  pomoBox,
-  restart,
-  pause,
-  resume,
-  start,
-  reset,
-  themeToggle,
-  body,
-  sessionBtns,
-  score,
-  settingsBtn,
-  settingsPage,
-  dracula,
-  nord,
-  gruvHard,
-  defaultDark,
-  defaultLight,
-  tomato,
-  homePage,
-  aboutPage,
-  aboutBtn,
-  menuLink_toggle,
-  modesLink,
-  modesDiv,
-  modeCurrentTime,
-  increaseTimeArrow,
-  decreaseTimeArrow,
-  breakMode,
-  automaticMode,
-  defaultMode,
-  timerModes,
-  modeSettings,
-  increaseTimeChevron,
-  saveBtnFLex,
-};
+export const pomoBox = document.querySelector(".pomoBox"); // inner circle
+export const restart = document.querySelector(".restart");
+export const pause = document.querySelector(".pause");
+export const resume = document.querySelector(".resume");
+export const start = document.querySelector(".start");
+export const reset = document.querySelector(".reset");
+export const themeToggle = document.querySelector(".fa-adjust");
+export const body = document.querySelector("body");
+export const squareBox = document.querySelector(".squareBox");
+export const sessionBtns = document.querySelector(".sessionBtns");
+export const score = document.querySelector(".score");
+export const settingsBtn = document.querySelector(".settingsBtn");
+export const settingsPage = document.querySelector(".settingsPage");
+export const dracula = document.querySelector(".dracula");
+export const nord = document.querySelector(".nord");
+export const gruvHard = document.querySelector(".gruvHard");
+export const defaultDark = document.querySelector(".defaultDark");
+export const defaultLight = document.querySelector(".defaultLight");
+export const tomato = document.querySelector(".tomato");
+export const homePage = document.querySelector(".brandLogo");
+export const aboutPage = document.querySelector(".aboutPage");
+export const aboutBtn = document.querySelector(".aboutBtn");
+export const menuLink_toggle = document.querySelector(".menulink-toggle");
+export const modesLink = document.querySelector(".modesLink");
+export const modesDiv = document.querySelector(".modesDiv");
+export const modeCurrentTime = document.querySelector(".modeCurrentTime");
+export const increaseTimeArrow = document.querySelector(".increaseTimeArrow");
+export const decreaseTimeArrow = document.querySelector(".decreaseTimeArrow");
+export const breakMode = document.querySelector(".breakMode");
+export const defaultMode = document.querySelector(".defaultMode");
+export const automaticMode = document.querySelector(".automaticMode");
+export const timerModes = document.querySelector(".timerModes");
+export const modeSettings = document.querySelector(".modeSettings");
+export const increaseTimeChevron = document.querySelector(".increaseTimeChevron");
+export const saveBtnFLex = document.querySelector(".saveBtnFLex");

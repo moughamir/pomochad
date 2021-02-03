@@ -202,7 +202,7 @@ const createTheme = (() => {
 
 /*  headingFg, headingBg, activeModeBg, boxBg, innerTimeFg, innerTimeBg */
 
-const useDraculaTheme = () => {
+export const useDraculaTheme = () => {
   createTheme.saveThisTheme("dracula");
   createTheme.bodyCol("#D8DEE9", "#282a36");
   createTheme.squareBoxCol("#323440");
@@ -221,7 +221,7 @@ const useDraculaTheme = () => {
   createTheme.aboutContext("#AEB4D5");
 };
 
-const useGruvHardTheme = () => {
+export const useGruvHardTheme = () => {
   createTheme.saveThisTheme("gruvHard");
   createTheme.bodyCol("#c8ccd4", "#1D2021");
   createTheme.squareBoxCol("#242829");
@@ -242,7 +242,7 @@ const useGruvHardTheme = () => {
   createTheme.aboutContext("#C3C7CF");
 };
 
-const useDarkTheme = () => {
+export const useDarkTheme = () => {
   createTheme.saveThisTheme("dark");
   createTheme.bodyCol("#f9fcfb", "#222831");
   createTheme.squareBoxCol("#2C323B");
@@ -263,7 +263,7 @@ const useDarkTheme = () => {
   createTheme.aboutContext("#C3C7CF");
 };
 
-const useLightTheme = () => {
+export const useLightTheme = () => {
   createTheme.saveThisTheme("light");
   createTheme.bodyCol("#36404c", "#fafafa");
   createTheme.squareBoxCol("#a7c5eb");
@@ -284,7 +284,7 @@ const useLightTheme = () => {
   createTheme.aboutContext("#545e6a");
 };
 
-const useNordTheme = () => {
+export const useNordTheme = () => {
   createTheme.saveThisTheme("nord");
   createTheme.bodyCol("#D8DEE9", "#2E3440");
   createTheme.squareBoxCol("#323846");
@@ -305,7 +305,7 @@ const useNordTheme = () => {
   createTheme.aboutContext("#c8ccd4");
 };
 
-const useTomatoTheme = () => {
+export const useTomatoTheme = () => {
   createTheme.saveThisTheme("tomato");
   createTheme.bodyCol("#623A3F", "#e5707e");
   createTheme.squareBoxCol("#F98492");
@@ -326,7 +326,7 @@ const useTomatoTheme = () => {
   createTheme.aboutContext("#623A3F");
 };
 
-const toggleTheme = () => {
+export const toggleTheme = () => {
   themeToggle.addEventListener("click", () => {
     whichTheme++;
 
@@ -341,12 +341,4 @@ dracula.addEventListener("click", useDraculaTheme);
 gruvHard.addEventListener("click", useGruvHardTheme);
 tomato.addEventListener("click", useTomatoTheme);
 
-export {
-  toggleTheme,
-  useDarkTheme,
-  useLightTheme,
-  useNordTheme,
-  useDraculaTheme,
-  useGruvHardTheme,
-  useTomatoTheme,
-};
+
