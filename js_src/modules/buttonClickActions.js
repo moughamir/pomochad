@@ -53,14 +53,13 @@ import {
 
       pomoTime = totalTime * 60;
       getBoxText(totalTime, 0);
+      return;
     }
 
     // restarts time
     else {
       playTickSound();
-      temp.className === "start"
-        ? (currentClick = "start")
-        : (currentClick = "restart");
+      currentClick = temp.className === "start" ? "start" : "restart";
 
       clearInterval(timer), startPomodoro();
     }
