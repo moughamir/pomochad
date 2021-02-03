@@ -13,11 +13,9 @@ A very simple pomodoro web app for my personal use <br>
 - [X] add local storage 
 - [ ] add about/wiki page
 - [ ] break mode*
-- [ ] add about page
 - [ ] dashboard*
 - [ ] rewards stuff* 
 - [X] settings page 
 - [X] add more themes
 
-
-This is still in alpha stage so the themes might not look well ( except default light theme ) and dashboard/rewards wont work.
+This is still in alpha stage so somethings like about page (needs some things to be added yet) and dashboard page wont work!.
