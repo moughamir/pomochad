@@ -19,10 +19,7 @@ import {
   pause,
   pomoBox,
   reset,
-  restart,
-  resume,
   sessionBtns,
-  settingsBtn,
   squareBox,
   start,
   themeToggle,
@@ -56,7 +53,7 @@ const createTheme = (() => {
   };
 
   const sessionBtnCol = (fg, bg, hoverCol) => {
-    [restart, start, pause, resume].forEach((temp) => {
+    [start, pause].forEach((temp) => {
       temp.style.backgroundColor = bg;
       temp.style.color = fg;
 

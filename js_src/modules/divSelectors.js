@@ -1,7 +1,5 @@
 export const pomoBox = document.querySelector(".pomoBox"); // inner circle
-export const restart = document.querySelector(".restart");
 export const pause = document.querySelector(".pause");
-export const resume = document.querySelector(".resume");
 export const start = document.querySelector(".start");
 export const reset = document.querySelector(".reset");
 export const themeToggle = document.querySelector(".fa-adjust");

@@ -10,10 +10,8 @@ const createIcon = (btnClass, hoverTitle, iconClass) => {
 };
 
 const makeSessionBtns = () => {
-  createIcon("start", "start", "fa-rocket");
-  createIcon("restart", "restart", "fa-redo");
+  createIcon("start", "start", "fa-play");
   createIcon("pause", "pause", "fa-stop");
-  createIcon("resume", "resume", "fa-play");
 };
 
 export { makeSessionBtns };

@@ -21,8 +21,6 @@ import {
   pause,
   pomoBox,
   reset,
-  restart,
-  resume,
   saveBtnFLex,
   sessionBtns,
   settingsBtn,
@@ -41,7 +39,7 @@ import {
 
 // Session button click actions
 
-[restart, start, reset].forEach((temp) => {
+[start, reset].forEach((temp) => {
   temp.addEventListener("click", () => {
     stopTortureAnimation();
 
@@ -59,14 +57,16 @@ import {
     // restarts time
     else {
       playTickSound();
-      currentClick = temp.className === "start" ? "start" : "restart";
+      currentClick = "start";
 
       clearInterval(timer), startPomodoro();
     }
   });
 });
 
-pause.addEventListener("click", () => {
+let pauseOrResume = 0;
+
+const pauseTimer = () => {
   if (pomoTime === totalTime * 60 || pomoTime === 0) addTortureAnimation();
 
   currentClick = "pause";
@@ -77,15 +77,22 @@ pause.addEventListener("click", () => {
   let sec = saveMin % 60;
 
   getBoxText(min, sec);
-});
+};
 
-resume.addEventListener("click", () => {
+const resumeTimer = () => {
   if (pomoTime === totalTime * 60 || pomoTime === 0) addTortureAnimation();
-  else if (currentClick == "pause" && pomoTime > 0) startPomodoro();
+  currentClick = "pause";
 
-  currentClick = "resume";
+  if (pomoTime != totalTime * 60) startPomodoro();
+};
+
+pause.addEventListener("click", () => {
+  pauseOrResume++;
+  currentClick = pauseOrResume % 2 == 0 ? "resume" : "pause";
+  currentClick == "pause" ? pauseTimer() : resumeTimer();
 });
 
+/* settings */
 settingsBtn.addEventListener("mouseover", () => {
   settingsBtn.style.textDecoration = "underline";
 });

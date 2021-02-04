@@ -124,22 +124,19 @@ h1 {
 .sessionbtns {
   margin: 0% 36% 0% 36%;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 20% 60% 20%;
   background-color: #f6f5f5;
-  padding: 1.5%;
-  padding-left: 3%;
+  padding: 1rem 0.4rem 1rem 0.4rem;
   border-radius: 0px 0px 10px 10px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.13);
 }
 
-.restart,
 .pause,
-.resume,
 .start {
   display: grid;
   place-content: center;
-  width: 1.9rem;
-  height: 1.9rem;
+  width: 2rem;
+  height: 2rem;
   padding: 12%;
   border-radius: 50%;
   background-color: #a7c5eb;
@@ -148,15 +145,35 @@ h1 {
   position: relative;
 }
 
-.restart:hover,
+.centerStartBtn,
+.centerPauseBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start {
+  margin: 0;
+}
+
 .pause:hover,
 .start:hover,
-.resume:hover,
 .reset:hover {
   background-color: #36404c;
   color: #f6ecf0;
   transition: 0.4s;
   cursor: default;
+}
+
+.timerProgressBar {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.13);
+  border: 2px solid #36404c;
 }
 
 .reset {
@@ -173,9 +190,7 @@ h1 {
 }
 
 .start:hover:after,
-.restart:hover:after,
-.pause:hover:after,
-.resume:hover:after {
+.pause:hover:after {
   font-weight: bold;
   color: #36404c;
   content: attr(title);
