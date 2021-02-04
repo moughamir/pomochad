@@ -87,7 +87,6 @@ const checkLocalStorage = () => {
         useTomatoTheme();
         break;
     }
-  }
 };
 
 /* show mode's time value */
