@@ -57,36 +57,37 @@ const saveLocalStorage = () => {
 };
 
 const checkLocalStorage = () => {
-    userScore = localStorage.getItem("savedScore");
-    userTheme = localStorage.getItem("savedTheme");
+  userScore = localStorage.getItem("savedScore");
+  userTheme = localStorage.getItem("savedTheme");
 
-    score.innerText = "Score : " + userScore;
+  if(localStorage.length == 0) userScore = 0 ;
+  score.innerText = `score : ${userScore}`;
 
-    switch (userTheme) {
-      case "dark":
-        useDarkTheme();
-        break;
+  switch (userTheme) {
+    case "dark":
+      useDarkTheme();
+      break;
 
-      case "light":
-        useLightTheme();
-        break;
+    case "light":
+      useLightTheme();
+      break;
 
-      case "dracula":
-        useDraculaTheme();
-        break;
+    case "dracula":
+      useDraculaTheme();
+      break;
 
-      case "nord":
-        useNordTheme();
-        break;
+    case "nord":
+      useNordTheme();
+      break;
 
-      case "gruvHard":
-        useGruvHardTheme();
-        break;
+    case "gruvHard":
+      useGruvHardTheme();
+      break;
 
-      case "tomato":
-        useTomatoTheme();
-        break;
-    }
+    case "tomato":
+      useTomatoTheme();
+      break;
+  }
 };
 
 /* show mode's time value */

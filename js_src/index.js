@@ -41,7 +41,7 @@ const checkTimer = (temp) => {
 
 const updatePomodoro = () => {
   checkTimer(timer);
-  
+
   const min = Math.floor(pomoTime / 60);
   let sec = pomoTime % 60;
 
@@ -58,7 +58,7 @@ export const startPomodoro = () => {
   addShakeAnimation();
 
   currentClick == "pause" ? (pomoTime = saveMin) : (pomoTime = totalTime * 60);
-  timer = setInterval(updatePomodoro,1000);
+  timer = setInterval(updatePomodoro, 0);
 };
 
 toggleTheme();
