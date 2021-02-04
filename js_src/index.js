@@ -27,15 +27,6 @@ pomoBox.innerText = `${25} : 0${0}`; // initial output
 export let totalTime = 25;
 export let pomoTime = totalTime * 60;
 
-/*
-const addBarVolume = () => {
-  barWidth =  (totalTime / pomoTime) % (100); 
-
-  let progressbar = document.querySelector(".bar");
-  let tmp = barWidth + "%";
-  progressbar.style.width = tmp;
-};
- */
 const checkTimer = (temp) => {
   if (pomoTime == 0) {
     clearInterval(temp), timerSound();
@@ -67,7 +58,7 @@ export const startPomodoro = () => {
   addShakeAnimation();
 
   currentClick == "pause" ? (pomoTime = saveMin) : (pomoTime = totalTime * 60);
-  timer = setInterval(updatePomodoro, 1000);
+  timer = setInterval(updatePomodoro,0);
 };
 
 toggleTheme();

@@ -57,7 +57,6 @@ const saveLocalStorage = () => {
 };
 
 const checkLocalStorage = () => {
-  if (localStorage.length > 0) {
     userScore = localStorage.getItem("savedScore");
     userTheme = localStorage.getItem("savedTheme");
 

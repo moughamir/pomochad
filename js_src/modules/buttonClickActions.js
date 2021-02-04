@@ -56,10 +56,13 @@ import {
 
     // restarts time
     else {
-      playTickSound();
       currentClick = "start";
 
-      clearInterval(timer), startPomodoro();
+      playTickSound();
+      clearInterval(timer);
+
+      startPomodoro();
+      return;
     }
   });
 });

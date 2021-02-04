@@ -40,7 +40,15 @@ const createTheme = (() => {
     body.style.color = fg;
   };
 
-  const squareBoxCol = (bg) => (squareBox.style.backgroundColor = bg);
+  const squareBoxCol = (bg) => {
+    squareBox.style.backgroundColor = bg;
+  };
+
+  const progressBarCol = (bg, innerBarbg) => {
+    let progressBar = document.querySelector(".timerProgressBar");
+
+    progressBar.style.backgroundColor = bg;
+  };
 
   const pomoBoxCol = (fg, bg, borders) => {
     pomoBox.style.color = fg;
@@ -194,6 +202,7 @@ const createTheme = (() => {
     resetCol,
     modesPageCol,
     aboutContext,
+    progressBarCol,
   };
 })();
 
@@ -216,6 +225,7 @@ export const useDraculaTheme = () => {
     "#282a36"
   );
   createTheme.aboutContext("#AEB4D5");
+  createTheme.progressBarCol("#323440");
 };
 
 export const useGruvHardTheme = () => {
@@ -226,6 +236,7 @@ export const useGruvHardTheme = () => {
   createTheme.sessionBtnCol("#c8ccd4", "#1D2021", "#83a598");
   createTheme.resetCol("#242829", "#83a598", "#c8ccd4");
   createTheme.sessionAreaBG("#2E3233");
+  createTheme.progressBarCol("#242829");
 
   createTheme.modesPageCol(
     "#83a598",
@@ -247,6 +258,7 @@ export const useDarkTheme = () => {
   createTheme.sessionAreaBG("#40464F");
   createTheme.sessionBtnCol("#f9fcfb", "#2C323B", "#a7c5eb");
   createTheme.resetCol("#2C323B", "#a7c5eb", "#f9fcfb");
+  createTheme.progressBarCol("#2C323B");
 
   createTheme.modesPageCol(
     "#f9fcfb",
@@ -266,8 +278,9 @@ export const useLightTheme = () => {
   createTheme.squareBoxCol("#a7c5eb");
   createTheme.pomoBoxCol("#f9fcfb", "#36404c", "0px solid #36404c");
   createTheme.sessionAreaBG("#f9fcfb");
-  createTheme.sessionBtnCol("#f9fcfb", "#36404c", "#a7c5eb");
+  createTheme.sessionBtnCol("#36404c", "#a7c5eb", "#36404c");
   createTheme.resetCol("#36404c", "#a7c5eb", "#f9fcfb");
+  createTheme.progressBarCol("#ecebeb");
 
   createTheme.modesPageCol(
     "#fafafa",
@@ -289,6 +302,7 @@ export const useNordTheme = () => {
   createTheme.sessionAreaBG("#40464F");
   createTheme.sessionBtnCol("#D8DEE9", "#2E3440", "#81A1C1");
   createTheme.resetCol("#2E3440", "#81A1C1", "#D8DEE9");
+  createTheme.progressBarCol("#323846");
 
   createTheme.modesPageCol(
     "#D8DEE9",
@@ -310,6 +324,7 @@ export const useTomatoTheme = () => {
   createTheme.sessionAreaBG("#D36774");
   createTheme.sessionBtnCol("#954952", "#FF8E9C", "#623A3F");
   createTheme.resetCol("#222831", "#D36774", "#f9fcfb");
+  createTheme.progressBarCol("#FF8E9C");
 
   createTheme.modesPageCol(
     "#623A3F",
@@ -337,5 +352,3 @@ nord.addEventListener("click", useNordTheme);
 dracula.addEventListener("click", useDraculaTheme);
 gruvHard.addEventListener("click", useGruvHardTheme);
 tomato.addEventListener("click", useTomatoTheme);
-
-
