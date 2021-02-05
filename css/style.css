@@ -166,10 +166,20 @@ h1 {
 }
 
 .timerProgressBar {
-  height: 100%;
+  height: 1.5rem;
   width: 100%;
   border-radius: 0.5rem;
   background-color: #ecebeb;
+   margin-top: 1rem;
+  margin-bottom: 1rem
+}
+
+.niga {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: pink;
+ ;
 }
 
 .bar {

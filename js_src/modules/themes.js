@@ -46,7 +46,9 @@ const createTheme = (() => {
 
   const progressBarCol = (bg, innerBarbg) => {
     let progressBar = document.querySelector(".timerProgressBar");
+    let pro_bar = document.querySelector(".bar");
 
+    pro_bar.style.backgroundColor = innerBarbg;
     progressBar.style.backgroundColor = bg;
   };
 
@@ -225,7 +227,7 @@ export const useDraculaTheme = () => {
     "#282a36"
   );
   createTheme.aboutContext("#AEB4D5");
-  createTheme.progressBarCol("#323440");
+  createTheme.progressBarCol("#323440","#5AF78E");
 };
 
 export const useGruvHardTheme = () => {
@@ -236,7 +238,7 @@ export const useGruvHardTheme = () => {
   createTheme.sessionBtnCol("#c8ccd4", "#1D2021", "#83a598");
   createTheme.resetCol("#242829", "#83a598", "#c8ccd4");
   createTheme.sessionAreaBG("#2E3233");
-  createTheme.progressBarCol("#242829");
+  createTheme.progressBarCol("#242829","#c8ccd4");
 
   createTheme.modesPageCol(
     "#83a598",
@@ -258,7 +260,7 @@ export const useDarkTheme = () => {
   createTheme.sessionAreaBG("#40464F");
   createTheme.sessionBtnCol("#f9fcfb", "#2C323B", "#a7c5eb");
   createTheme.resetCol("#2C323B", "#a7c5eb", "#f9fcfb");
-  createTheme.progressBarCol("#2C323B");
+  createTheme.progressBarCol("#2C323B", "#81A1C1");
 
   createTheme.modesPageCol(
     "#f9fcfb",
@@ -280,7 +282,7 @@ export const useLightTheme = () => {
   createTheme.sessionAreaBG("#f9fcfb");
   createTheme.sessionBtnCol("#36404c", "#a7c5eb", "#36404c");
   createTheme.resetCol("#36404c", "#a7c5eb", "#f9fcfb");
-  createTheme.progressBarCol("#ecebeb");
+  createTheme.progressBarCol("#ecebeb","#c9cbff");
 
   createTheme.modesPageCol(
     "#fafafa",
@@ -324,7 +326,7 @@ export const useTomatoTheme = () => {
   createTheme.sessionAreaBG("#D36774");
   createTheme.sessionBtnCol("#954952", "#FF8E9C", "#623A3F");
   createTheme.resetCol("#222831", "#D36774", "#f9fcfb");
-  createTheme.progressBarCol("#FF8E9C");
+  createTheme.progressBarCol("#FF8E9C", "#954952");
 
   createTheme.modesPageCol(
     "#623A3F",

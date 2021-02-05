@@ -1,4 +1,4 @@
-import { userScore, userTheme } from "../index";
+import { userScore, userTheme, totalTime, pomoTime } from "../index";
 import { modeCurrentTime, pomoBox, score } from "./divSelectors";
 
 import {
@@ -60,7 +60,7 @@ const checkLocalStorage = () => {
   userScore = localStorage.getItem("savedScore");
   userTheme = localStorage.getItem("savedTheme");
 
-  if(localStorage.length == 0) userScore = 0 ;
+  if (localStorage.length == 0) userScore = 0;
   score.innerText = `score : ${userScore}`;
 
   switch (userTheme) {
@@ -96,6 +96,13 @@ const displayModeTime = (min) => {
   min < 10
     ? (modeCurrentTime.textContent = `0${min} : 00`)
     : (modeCurrentTime.textContent = `${min} : 00`);
+};
+
+export const update_ProBar = () => {
+  let cuupdate_ProBarent_Time = pomoTime / 60;
+  let pro_Bar = document.querySelector(".bar");
+  pro_Bar.style.width =
+    ((totalTime - cuupdate_ProBarent_Time) / totalTime) * 100 + "%";
 };
 
 export {

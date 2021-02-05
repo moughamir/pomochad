@@ -1,15 +1,15 @@
+import {} from "./modules/buttonClickActions";
 import { pomoBox, score } from "./modules/divSelectors";
 import {
-  getBoxText,
+  addShakeAnimation,
   checkLocalStorage,
+  getBoxText,
   saveLocalStorage,
   timerSound,
-  addShakeAnimation,
+  update_ProBar,
 } from "./modules/miscFuncs";
-
 import { makeSessionBtns } from "./modules/sessionButtons";
 import { toggleTheme } from "./modules/themes";
-import {} from "./modules/buttonClickActions";
 
 // localStorage stuffs , save some defaults
 export let userScore = 0;
@@ -20,7 +20,7 @@ makeSessionBtns();
 
 export let saveMin; // saves values when timer paused
 export let timer;
-export let currentClick;
+export let cuupdate_ProBarentClick;
 
 pomoBox.innerText = `${25} : 0${0}`; // initial output
 
@@ -52,13 +52,16 @@ const updatePomodoro = () => {
 
   getBoxText(min, sec);
   pomoTime--;
+  update_ProBar();
 };
 
 export const startPomodoro = () => {
   addShakeAnimation();
 
-  currentClick == "pause" ? (pomoTime = saveMin) : (pomoTime = totalTime * 60);
-  timer = setInterval(updatePomodoro, 1000);
+  cuupdate_ProBarentClick == "pause"
+    ? (pomoTime = saveMin)
+    : (pomoTime = totalTime * 60);
+  timer = setInterval(updatePomodoro, 0);
 };
 
 toggleTheme();
