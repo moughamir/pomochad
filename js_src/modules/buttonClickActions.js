@@ -51,6 +51,9 @@ import {
 
       pomoTime = totalTime * 60;
       getBoxText(totalTime, 0);
+      let bar = document.querySelector('.bar');
+      bar.style.width =  0;
+
       return;
     }
 

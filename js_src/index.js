@@ -20,7 +20,8 @@ makeSessionBtns();
 
 export let saveMin; // saves values when timer paused
 export let timer;
-export let cuupdate_ProBarentClick;
+export let currentClick;
+
 
 pomoBox.innerText = `${25} : 0${0}`; // initial output
 
@@ -58,10 +59,10 @@ const updatePomodoro = () => {
 export const startPomodoro = () => {
   addShakeAnimation();
 
-  cuupdate_ProBarentClick == "pause"
+  currentClick == "pause"
     ? (pomoTime = saveMin)
     : (pomoTime = totalTime * 60);
-  timer = setInterval(updatePomodoro, 0);
+  timer = setInterval(updatePomodoro, 1000);
 };
 
 toggleTheme();
