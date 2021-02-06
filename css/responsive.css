@@ -294,7 +294,8 @@
   }
 
   .navBarLinks {
-    display: none;
+    display: flex;
+    flex-direction: column;
     margin-top: 5rem;
     margin-right: 5rem;
     text-align: center;

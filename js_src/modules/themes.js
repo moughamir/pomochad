@@ -162,9 +162,6 @@ const createTheme = (() => {
     defaultMode.style.backgroundColor = activeModeBg;
 
     // score
-    let scoreBox = document.querySelector(".score");
-    scoreBox.style.color = headingFg;
-    scoreBox.style.backgroundColor = headingBg;
 
     // save timer mode
     saveBtnFLex.style.backgroundColor = headingBg;
@@ -194,6 +191,20 @@ const createTheme = (() => {
     });
   };
 
+  const start_Pause = (sfg, sbg, pfg, pbg) => {
+    start.style.backgroundColor = sbg;
+    start.style.color = sfg;
+
+    pause.style.color = pfg;
+    pause.style.backgroundColor = pbg;
+  };
+
+  const scoreCol = (fg, bg) => {
+    let scoreBox = document.querySelector(".score");
+    scoreBox.style.color = fg;
+    scoreBox.style.backgroundColor = bg;
+  };
+
   return {
     saveThisTheme,
     bodyCol,
@@ -205,6 +216,8 @@ const createTheme = (() => {
     modesPageCol,
     aboutContext,
     progressBarCol,
+    start_Pause,
+    scoreCol,
   };
 })();
 
@@ -227,7 +240,7 @@ export const useDraculaTheme = () => {
     "#282a36"
   );
   createTheme.aboutContext("#AEB4D5");
-  createTheme.progressBarCol("#323440","#5AF78E");
+  createTheme.progressBarCol("#323440", "#5AF78E");
 };
 
 export const useGruvHardTheme = () => {
@@ -238,7 +251,7 @@ export const useGruvHardTheme = () => {
   createTheme.sessionBtnCol("#c8ccd4", "#1D2021", "#83a598");
   createTheme.resetCol("#242829", "#83a598", "#c8ccd4");
   createTheme.sessionAreaBG("#2E3233");
-  createTheme.progressBarCol("#242829","#c8ccd4");
+  createTheme.progressBarCol("#242829", "#c8ccd4");
 
   createTheme.modesPageCol(
     "#83a598",
@@ -256,10 +269,10 @@ export const useDarkTheme = () => {
   createTheme.saveThisTheme("dark");
   createTheme.bodyCol("#f9fcfb", "#222831");
   createTheme.squareBoxCol("#2C323B");
-  createTheme.pomoBoxCol("#f9fcfb", "#2C323B", "6px solid #a7c5eb");
+  createTheme.pomoBoxCol("#f9fcfb", "#2C323B", "6px solid #B1CFF5");
   createTheme.sessionAreaBG("#40464F");
-  createTheme.sessionBtnCol("#f9fcfb", "#2C323B", "#a7c5eb");
-  createTheme.resetCol("#2C323B", "#a7c5eb", "#f9fcfb");
+  createTheme.sessionBtnCol("#f9fcfb", "#2C323B", "#B1CFF5");
+  createTheme.resetCol("#2C323B", "#B1CFF5", "#f9fcfb");
   createTheme.progressBarCol("#2C323B", "#81A1C1");
 
   createTheme.modesPageCol(
@@ -276,24 +289,25 @@ export const useDarkTheme = () => {
 
 export const useLightTheme = () => {
   createTheme.saveThisTheme("light");
-  createTheme.bodyCol("#36404c", "#fafafa");
-  createTheme.squareBoxCol("#a7c5eb");
-  createTheme.pomoBoxCol("#f9fcfb", "#36404c", "0px solid #36404c");
-  createTheme.sessionAreaBG("#f9fcfb");
-  createTheme.sessionBtnCol("#36404c", "#a7c5eb", "#36404c");
-  createTheme.resetCol("#36404c", "#a7c5eb", "#f9fcfb");
-  createTheme.progressBarCol("#ecebeb","#c9cbff");
+  createTheme.bodyCol("#545E6A", "white");
+  createTheme.squareBoxCol("#B1CFF5");
+  createTheme.pomoBoxCol("white", "#545E6A", "0px solid #36404c");
+  createTheme.sessionAreaBG("white");
+  createTheme.sessionBtnCol("#545E6A", "#B1CFF5", "#36404c");
+  createTheme.resetCol("#545E6A", "#B1CFF5", "white");
+  createTheme.progressBarCol("#ecebeb", "#B1CFF5");
 
   createTheme.modesPageCol(
-    "#fafafa",
-    "#36404c",
+    "white",
+    "#545E6A",
     "#4a5460",
-    "#a7c5eb",
-    "#36404c",
-    "#fafafa"
+    "#B1CFF5",
+    "#545E6A",
+    "white"
   );
 
   createTheme.aboutContext("#545e6a");
+  createTheme.scoreCol("#494975", "#D5D4F4");
 };
 
 export const useNordTheme = () => {
