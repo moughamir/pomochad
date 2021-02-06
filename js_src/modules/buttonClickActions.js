@@ -31,7 +31,7 @@ import {
 } from "./divSelectors";
 import {
   addTortureAnimation,
-  getBoxText,
+  setBoxText,
   displayModeTime,
   playTickSound,
   stopTortureAnimation,
@@ -50,7 +50,7 @@ import {
       clearInterval(timer);
 
       pomoTime = totalTime * 60;
-      getBoxText(totalTime, 0);
+      setBoxText(totalTime, 0);
       let bar = document.querySelector('.bar');
       bar.style.width =  0;
 
@@ -82,7 +82,7 @@ const pauseTimer = () => {
   const min = Math.floor(saveMin / 60);
   let sec = saveMin % 60;
 
-  getBoxText(min, sec);
+  setBoxText(min, sec);
 };
 
 const resumeTimer = () => {
@@ -154,14 +154,14 @@ modesLink.addEventListener("click", () => jumptoModesPage());
 increaseTimeArrow.addEventListener("click", () => {
   totalTime++;
   displayModeTime(totalTime);
-  getBoxText(totalTime, 0);
+  setBoxText(totalTime, 0);
 });
 
 decreaseTimeArrow.addEventListener("click", () => {
   if (totalTime > 1) {
     totalTime--;
     displayModeTime(totalTime);
-    getBoxText(totalTime, 0);
+    setBoxText(totalTime, 0);
   }
 });
 
