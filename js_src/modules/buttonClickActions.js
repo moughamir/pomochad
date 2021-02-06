@@ -51,7 +51,7 @@ import {
 
       pomoTime = totalTime * 60;
       setBoxText(totalTime, 0);
-      let bar = document.querySelector('.bar');
+      let bar = document.querySelector(".bar");
       bar.style.width = 0;
 
       return;
@@ -73,8 +73,7 @@ import {
 let pauseOrResume = 0;
 
 const pauseTimer = () => {
-  if (pomoTime === totalTime * 60 || pomoTime === 0)
-    addTortureAnimation();
+  if (pomoTime === totalTime * 60 || pomoTime === 0) addTortureAnimation();
 
   currentClick = "pause";
   saveMin = pomoTime;
@@ -87,12 +86,10 @@ const pauseTimer = () => {
 };
 
 const resumeTimer = () => {
-  if (pomoTime === totalTime * 60 || pomoTime === 0)
-    addTortureAnimation();
+  if (pomoTime === totalTime * 60 || pomoTime === 0) addTortureAnimation();
   currentClick = "pause";
 
-  if (pomoTime != totalTime * 60)
-    startPomodoro();
+  if (pomoTime != totalTime * 60) startPomodoro();
 };
 
 pause.addEventListener("click", () => {
@@ -102,39 +99,50 @@ pause.addEventListener("click", () => {
 });
 
 /* settings */
-settingsBtn.addEventListener(
-    "mouseover", () => { settingsBtn.style.textDecoration = "underline"; });
+settingsBtn.addEventListener("mouseover", () => {
+  settingsBtn.style.textDecoration = "underline";
+});
 
-settingsBtn.addEventListener(
-    "mouseout", () => { settingsBtn.style.textDecoration = "none"; });
+settingsBtn.addEventListener("mouseout", () => {
+  settingsBtn.style.textDecoration = "none";
+});
 
 /* navlinks actions*/
 
 settingsBtn.addEventListener("click", () => {
   [squareBox, pomoBox, sessionBtns, reset, aboutPage, modesDiv].forEach(
-      (temp) => (temp.style.display = "none"));
+    (temp) => (temp.style.display = "none")
+  );
   settingsPage.style.display = "grid";
 });
 
 /* Home Page */
 const jumpToHomePage = () => {
-  [squareBox, pomoBox, sessionBtns, reset].forEach(
-      (temp) => { temp.style.display = ""; });
-  [settingsPage, aboutPage, modesDiv].forEach(
-      (temp) => { temp.style.display = "none"; });
+  [squareBox, pomoBox, sessionBtns, reset].forEach((temp) => {
+    temp.style.display = "";
+  });
+  [settingsPage, aboutPage, modesDiv].forEach((temp) => {
+    temp.style.display = "none";
+  });
 };
 
 /* About Page */
 const jumptoAboutPage = () => {
   [squareBox, pomoBox, sessionBtns, reset, settingsPage, modesDiv].forEach(
-      (temp) => { temp.style.display = "none"; });
+    (temp) => {
+      temp.style.display = "none";
+    }
+  );
   aboutPage.style.display = "block";
 };
 
 /* Modes Page*/
 const jumptoModesPage = () => {
   [settingsPage, aboutPage, squareBox, pomoBox, sessionBtns, reset].forEach(
-      (temp) => { temp.style.display = "none"; });
+    (temp) => {
+      temp.style.display = "none";
+    }
+  );
 
   modesDiv.style.display = "block";
 };
@@ -158,8 +166,9 @@ decreaseTimeArrow.addEventListener("click", () => {
 });
 
 defaultMode.addEventListener("click", () => {
-  [breakMode, automaticMode].forEach(
-      (temp) => { temp.style.backgroundColor = "#36404c"; });
+  [breakMode, automaticMode].forEach((temp) => {
+    temp.style.backgroundColor = "#36404c";
+  });
 
   totalTime = 25;
   displayModeTime(totalTime);
@@ -168,8 +177,9 @@ defaultMode.addEventListener("click", () => {
 });
 
 breakMode.addEventListener("click", () => {
-  [defaultMode, automaticMode].forEach(
-      (temp) => { temp.style.backgroundColor = "#36404c"; });
+  [defaultMode, automaticMode].forEach((temp) => {
+    temp.style.backgroundColor = "#36404c";
+  });
 
   totalTime = 5;
   displayModeTime(totalTime);
@@ -178,8 +188,9 @@ breakMode.addEventListener("click", () => {
 });
 
 automaticMode.addEventListener("click", () => {
-  [breakMode, defaultMode].forEach(
-      (temp) => { temp.style.backgroundColor = "#36404c"; });
+  [breakMode, defaultMode].forEach((temp) => {
+    temp.style.backgroundColor = "#36404c";
+  });
 
   totalTime = 25;
   displayModeTime(totalTime);
@@ -187,6 +198,3 @@ automaticMode.addEventListener("click", () => {
 });
 
 saveBtnFLex.addEventListener("click", () => jumpToHomePage());
-
-menuLink_toggle.addEventListener("click", () => {
-})
