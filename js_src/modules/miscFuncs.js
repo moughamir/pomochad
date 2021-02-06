@@ -1,4 +1,4 @@
-import { userScore, userTheme, totalTime, pomoTime } from "../index";
+ import { userScore, userTheme, totalTime, pomoTime } from "../index";
 import { modeCurrentTime, pomoBox, score } from "./divSelectors";
 
 import {
