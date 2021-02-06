@@ -99,13 +99,8 @@ pause.addEventListener("click", () => {
 });
 
 /* settings */
-settingsBtn.addEventListener("mouseover", () => {
-  settingsBtn.style.textDecoration = "underline";
-});
-
-settingsBtn.addEventListener("mouseout", () => {
-  settingsBtn.style.textDecoration = "none";
-});
+settingsBtn.addEventListener("mouseover", () => settingsBtn.style.textDecoration = "underline");
+settingsBtn.addEventListener("mouseout", () => settingsBtn.style.textDecoration = "none");
 
 /* navlinks actions*/
 
