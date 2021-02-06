@@ -3,7 +3,7 @@ import { pomoBox, score } from "./modules/divSelectors";
 import {
   addShakeAnimation,
   checkLocalStorage,
-  getBoxText,
+  setBoxText,
   saveLocalStorage,
   timerSound,
   update_ProBar,
@@ -47,11 +47,11 @@ const updatePomodoro = () => {
   let sec = pomoTime % 60;
 
   if (pomoTime === 0) {
-    getBoxText(min, sec);
+    setBoxText(min, sec);
     return;
   }
 
-  getBoxText(min, sec);
+  setBoxText(min, sec);
   pomoTime--;
   update_ProBar();
 };
