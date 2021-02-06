@@ -1,4 +1,4 @@
-import { userScore, userTheme, totalTime, pomoTime } from "../index";
+ import { userScore, userTheme, totalTime, pomoTime } from "../index";
 import { modeCurrentTime, pomoBox, score } from "./divSelectors";
 
 import {
@@ -20,7 +20,7 @@ const playTickSound = () => {
 };
 
 // displays timer's text ( the actual time going on )
-const getBoxText = (min, sec) => {
+const setBoxText = (min, sec) => {
   let temp;
 
   if (min < 10) temp = `0${min} : ${sec}`;
@@ -107,7 +107,7 @@ export const update_ProBar = () => {
 
 export {
   timerSound,
-  getBoxText,
+  setBoxText,
   displayError,
   showWarnings,
   addTortureAnimation,
