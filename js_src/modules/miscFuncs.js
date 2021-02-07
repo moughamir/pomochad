@@ -1,6 +1,5 @@
- import { userScore, userTheme, totalTime, pomoTime } from "../index";
-import { modeCurrentTime, pomoBox, score } from "./divSelectors";
-
+import { userScore, userTheme, totalTime, pomoTime } from "../index";
+import { modeCurrentTime, score } from "./divSelectors";
 import {
   useDarkTheme,
   useLightTheme,
@@ -10,10 +9,11 @@ import {
   useTomatoTheme,
 } from "./themes";
 
+let innerCircle = document.querySelector(".timerText");
+
+// timer sound stuff
 let tickSound = "./assets/sounds/tick.mp3";
-
 const timerSound = () => document.getElementById("dingding").play();
-
 const playTickSound = () => {
   const audio = new Audio(tickSound);
   audio.play();
@@ -27,29 +27,29 @@ const setBoxText = (min, sec) => {
   else if (sec < 10) temp = `${min} : 0${sec}`;
 
   temp = `${min} : ${sec}`;
-  pomoBox.innerText = temp;
+  innerCircle.textContent = temp;
 };
 
 // for wrong btn click
-const displayError = (text) => (pomoBox.innerText = text);
+const displayError = (text) => (innerCircle.textContent = text);
 const showWarnings = () => {
   //alert("wrong button")  will use this later
 };
 
 const addTortureAnimation = () => {
-  pomoBox.style.backgroundImage =
+  innerCircle.style.backgroundImage =
     "url('https://media1.tenor.com/images/5fe35bec1c80a880bf59ae32a9716ace/tenor.gif?itemid=8953038')";
 
   displayError(">:(");
 };
 
 const stopTortureAnimation = () => {
-  pomoBox.style.animation = " none";
-  pomoBox.style.backgroundImage = "none";
+  innerCircle.style.animation = " none";
+  innerCircle.style.backgroundImage = "none";
 };
 
 const addShakeAnimation = () => {
-  pomoBox.style.animation = "shake 4s";
+  // later use
 };
 const saveLocalStorage = () => {
   localStorage.setItem("savedScore", userScore);
@@ -98,11 +98,17 @@ const displayModeTime = (min) => {
     : (modeCurrentTime.textContent = `${min} : 00`);
 };
 
-export const update_ProBar = () => {
-  let cuupdate_ProBarent_Time = pomoTime / 60;
-  let pro_Bar = document.querySelector(".bar");
-  pro_Bar.style.width =
-    ((totalTime - cuupdate_ProBarent_Time) / totalTime) * 100 + "%";
+export const setCircleProgress = () => {
+  // get current Time progress in %
+  let pro_Time = pomoTime / 60;
+  let percent = ((totalTime - pro_Time) / totalTime) * 100;
+
+  let progressCircle = document.querySelector(".innerC");
+  let radius = progressCircle.r.baseVal.value;
+
+  let circum = radius * 2 * Math.PI;
+  progressCircle.style.strokeDasharray = circum;
+  progressCircle.style.strokeDashoffset = circum - (percent / 100) * circum;
 };
 
 export {

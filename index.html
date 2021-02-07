@@ -57,9 +57,42 @@
 
     <div class="flexMain">
       <div class="squareBox">
-        <div class="pomoBox"></div>
+        <!-- radial progress bar -->
+
+        <svg width="320" height="320">
+          <circle r="140" cx="165" cy="165" class="outerC"></circle>
+          <text
+            x="50%"
+            y="50%"
+            text-anchor="middle"
+            dy=".5em"
+            class="timerText"
+          >
+            25 : 00
+          </text>
+
+          <circle r="140" cx="165" cy="165" class="innerC"></circle>
+        </svg>
       </div>
     </div>
+
+    <!-- buttons needed to function-->
+
+    <div class="sessionBtns">
+      <div class="centerStartBtn">
+        <div class="start"></div>
+      </div>
+
+      <div class="centerPauseBtn">
+        <div class="reset"></div>
+      </div>
+
+      <div class="centerPauseBtn">
+        <div class="pause"></div>
+      </div>
+    </div>
+
+    <div class="score"></div>
 
     <!-- settingsPage -->
 
@@ -74,22 +107,6 @@
         <p class="tomato">Tomato</p>
       </div>
     </div>
-
-    <!-- buttons needed to function-->
-    <div class="sessionBtns">
-      <div class="centerStartBtn">
-        <div class="start"></div>
-      </div>
-
-      <div class="timerProgressBar"><div class="bar"></div></div>
-
-      <div class="centerPauseBtn">
-        <div class="pause"></div>
-      </div>
-    </div>
-
-    <div class="reset">Reset timer</div>
-    <div class="score"></div>
 
     <!-- theme toggle -->
     <i class="fas fa-adjust fa-2x"></i>
@@ -170,6 +187,7 @@
         </ul>
       </div>
     </div>
+
     <script src="./dist/main.js"></script>
   </body>
 </html>

@@ -17,7 +17,6 @@ import {
   saveBtnFLex,
   nord,
   pause,
-  pomoBox,
   reset,
   sessionBtns,
   squareBox,
@@ -40,26 +39,14 @@ const createTheme = (() => {
     body.style.color = fg;
   };
 
-  const squareBoxCol = (bg) => {
+  const squareBoxCol = (bg, borderBg) => {
     squareBox.style.backgroundColor = bg;
+    squareBox.style.borderColor = borderBg;
   };
 
-  const progressBarCol = (bg, innerBarbg) => {
-    let progressBar = document.querySelector(".timerProgressBar");
-    let pro_bar = document.querySelector(".bar");
-
-    pro_bar.style.backgroundColor = innerBarbg;
-    progressBar.style.backgroundColor = bg;
-  };
-
-  const pomoBoxCol = (fg, bg, borders) => {
-    pomoBox.style.color = fg;
-    pomoBox.style.backgroundColor = bg;
-    pomoBox.style.border = borders;
-  };
-
-  const sessionAreaBG = (bg) => {
+  const sessionAreaBG = (bg, borderBg) => {
     sessionBtns.style.backgroundColor = bg;
+    sessionBtns.style.borderColor = borderBg;
   };
 
   const sessionBtnCol = (fg, bg, hoverCol) => {
@@ -81,10 +68,10 @@ const createTheme = (() => {
 
   const resetCol = (fg, bg, hoverBg) => {
     reset.style.backgroundColor = bg;
+    reset.style.color = fg;
 
     reset.addEventListener("mouseover", () => {
       reset.style.backgroundColor = hoverBg;
-      reset.style.color = fg;
     });
     reset.addEventListener("mouseout", () => {
       reset.style.backgroundColor = bg;
@@ -205,19 +192,35 @@ const createTheme = (() => {
     scoreBox.style.backgroundColor = bg;
   };
 
+  const circularStrokes = (outerCBG, innerCBG, svgText) => {
+    let innerC = document.querySelector(".innerC");
+    let outerC = document.querySelector(".outerC");
+    let textTmp = document.querySelector("svg");
+
+    outerC.style.stroke = outerCBG;
+    innerC.style.stroke = innerCBG;
+    textTmp.style.fill = svgText;
+  };
+
+  const settingsbtnCol = (fg, bg) => {
+    let btn = document.querySelector(".settingsbtn");
+    btn.style.color = fg;
+    btn.style.backgroundColor = bg;
+  };
+
   return {
     saveThisTheme,
     bodyCol,
     squareBoxCol,
-    pomoBoxCol,
+    circularStrokes,
     sessionAreaBG,
     sessionBtnCol,
     resetCol,
     modesPageCol,
     aboutContext,
-    progressBarCol,
     start_Pause,
     scoreCol,
+    settingsbtnCol,
   };
 })();
 
@@ -225,12 +228,12 @@ const createTheme = (() => {
 
 export const useDraculaTheme = () => {
   createTheme.saveThisTheme("dracula");
-  createTheme.bodyCol("#D8DEE9", "#282a36");
-  createTheme.squareBoxCol("#323440");
-  createTheme.pomoBoxCol("#D8DEE9", "#323440", "6px solid #bd93f9");
-  createTheme.sessionAreaBG("#464854");
-  createTheme.sessionBtnCol("#D8DEE9", "#282a36", "#bd93f9");
-  createTheme.resetCol("#282a36", "#bd93f9", "#D8DEE9");
+  createTheme.bodyCol("#D8DEE9", "#1e1f29");
+  createTheme.squareBoxCol("#282a36", "282a36");
+  createTheme.sessionAreaBG("#31333f", "#31333f");
+  createTheme.sessionBtnCol("#D8DEE9", "#1e1f29", "#FF6E67");
+  createTheme.resetCol("#1e1f29", "#FF6E67", "#D8DEE9");
+
   createTheme.modesPageCol(
     "#D8DEE9",
     "#21232C",
@@ -240,18 +243,19 @@ export const useDraculaTheme = () => {
     "#282a36"
   );
   createTheme.aboutContext("#AEB4D5");
-  createTheme.progressBarCol("#323440", "#5AF78E");
+  createTheme.circularStrokes("#1e1f29", "#5AF78E", "#5AF78E");
+  createTheme.settingsbtnCol("#FF6E67", "#242829");
+
+  createTheme.scoreCol("#AEB4D5", "#282a36");
 };
 
 export const useGruvHardTheme = () => {
   createTheme.saveThisTheme("gruvHard");
   createTheme.bodyCol("#c8ccd4", "#1D2021");
-  createTheme.squareBoxCol("#242829");
-  createTheme.pomoBoxCol("c8ccd4", "#242829", "6px solid #83a598");
+  createTheme.squareBoxCol("#242829", "#242829");
   createTheme.sessionBtnCol("#c8ccd4", "#1D2021", "#83a598");
   createTheme.resetCol("#242829", "#83a598", "#c8ccd4");
-  createTheme.sessionAreaBG("#2E3233");
-  createTheme.progressBarCol("#242829", "#c8ccd4");
+  createTheme.sessionAreaBG("#2E3233", "#2E3233");
 
   createTheme.modesPageCol(
     "#83a598",
@@ -263,62 +267,65 @@ export const useGruvHardTheme = () => {
   );
 
   createTheme.aboutContext("#C3C7CF");
+  createTheme.settingsbtnCol("#242829", "#A3BE8C");
+  createTheme.circularStrokes("#1D2021", "#83a598", "#83a598");
+  createTheme.scoreCol("#C3C7CF", "#242829");
 };
 
 export const useDarkTheme = () => {
   createTheme.saveThisTheme("dark");
-  createTheme.bodyCol("#f9fcfb", "#222831");
-  createTheme.squareBoxCol("#2C323B");
-  createTheme.pomoBoxCol("#f9fcfb", "#2C323B", "6px solid #B1CFF5");
-  createTheme.sessionAreaBG("#40464F");
-  createTheme.sessionBtnCol("#f9fcfb", "#2C323B", "#B1CFF5");
-  createTheme.resetCol("#2C323B", "#B1CFF5", "#f9fcfb");
-  createTheme.progressBarCol("#2C323B", "#81A1C1");
+  createTheme.bodyCol("#f9fcfb", "#1E222A");
+  createTheme.squareBoxCol("#23272f", "#23272f");
+  createTheme.sessionAreaBG("#2a2e36", "#2a2e36");
+  createTheme.sessionBtnCol("#E78992", "#1E222A", "#E78992");
+  createTheme.resetCol("#f9fcfb", "#1E222A", "#61afef");
+  createTheme.settingsbtnCol("#1E222A", "#61afef");
 
   createTheme.modesPageCol(
     "#f9fcfb",
     "#2C323B",
     "#4a5460",
     "#40464F",
-    "#f9fcfb",
+    "#61afef",
     "#2C323B"
   );
 
   createTheme.aboutContext("#C3C7CF");
+  createTheme.circularStrokes("#1E222A", "#61afef", "#61afef");
+  createTheme.scoreCol("#f6ecf0", "#2a2e36");
 };
 
 export const useLightTheme = () => {
   createTheme.saveThisTheme("light");
   createTheme.bodyCol("#545E6A", "white");
-  createTheme.squareBoxCol("#B1CFF5");
-  createTheme.pomoBoxCol("white", "#545E6A", "0px solid #36404c");
-  createTheme.sessionAreaBG("white");
-  createTheme.sessionBtnCol("#545E6A", "#B1CFF5", "#36404c");
-  createTheme.resetCol("#545E6A", "#B1CFF5", "white");
-  createTheme.progressBarCol("#ecebeb", "#B1CFF5");
+  createTheme.squareBoxCol("white", "#fafafa");
+  createTheme.sessionAreaBG("white", "#fafafa");
+  createTheme.sessionBtnCol("#545E6A", "#C0E4FE", "#545e6a");
+  createTheme.resetCol("#FD8A89", "#FFD9D8", "white");
+  createTheme.settingsbtnCol("#545e6a", "#C0E4FE");
 
   createTheme.modesPageCol(
     "white",
     "#545E6A",
     "#4a5460",
-    "#B1CFF5",
+    "#C0E4FE",
     "#545E6A",
     "white"
   );
 
   createTheme.aboutContext("#545e6a");
+  createTheme.circularStrokes("#f0f0f0", "#C0E4FE", "#545e6a");
+
   createTheme.scoreCol("#494975", "#D5D4F4");
 };
 
 export const useNordTheme = () => {
   createTheme.saveThisTheme("nord");
-  createTheme.bodyCol("#D8DEE9", "#2E3440");
-  createTheme.squareBoxCol("#323846");
-  createTheme.pomoBoxCol("#D8DEE9", "#323846", "6px solid #81A1C1");
-  createTheme.sessionAreaBG("#40464F");
-  createTheme.sessionBtnCol("#D8DEE9", "#2E3440", "#81A1C1");
-  createTheme.resetCol("#2E3440", "#81A1C1", "#D8DEE9");
-  createTheme.progressBarCol("#323846");
+  createTheme.bodyCol("#D8DEE9", "#282E3A");
+  createTheme.squareBoxCol("#2E3440", "#2E3440");
+  createTheme.sessionAreaBG("#434C5E", "#434C5E");
+  createTheme.sessionBtnCol("#D8DEE9", "#282E3A", "#81A1C1");
+  createTheme.resetCol("#2E3440", "#A3BE8C", "#D8DEE9");
 
   createTheme.modesPageCol(
     "#D8DEE9",
@@ -330,17 +337,18 @@ export const useNordTheme = () => {
   );
 
   createTheme.aboutContext("#c8ccd4");
+  createTheme.settingsbtnCol("#EBCB8B", "#3C3E4A");
+  createTheme.circularStrokes("#1D2021", "#81A1C1", "#81A1C1");
+  createTheme.scoreCol("#C3C7CF", "#2E3440");
 };
 
 export const useTomatoTheme = () => {
   createTheme.saveThisTheme("tomato");
   createTheme.bodyCol("#623A3F", "#e5707e");
-  createTheme.squareBoxCol("#F98492");
-  createTheme.pomoBoxCol("#954952", "#F98492", "6px solid #D36774");
-  createTheme.sessionAreaBG("#D36774");
+  createTheme.squareBoxCol("#F98492", "#F98492");
+  createTheme.sessionAreaBG("#D36774", "#D36774");
   createTheme.sessionBtnCol("#954952", "#FF8E9C", "#623A3F");
-  createTheme.resetCol("#222831", "#D36774", "#f9fcfb");
-  createTheme.progressBarCol("#FF8E9C", "#954952");
+  createTheme.resetCol("#FF8E9C", "#954952", "#f9fcfb");
 
   createTheme.modesPageCol(
     "#623A3F",
@@ -352,6 +360,9 @@ export const useTomatoTheme = () => {
   );
 
   createTheme.aboutContext("#623A3F");
+  createTheme.settingsbtnCol("#FF8E9C", "#623A3F");
+  createTheme.circularStrokes("#623A3F", "#f9fcfb", "#623A3F");
+  createTheme.scoreCol("#C3C7CF", "#623A3F");
 };
 
 export const toggleTheme = () => {

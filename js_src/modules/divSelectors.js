@@ -1,4 +1,3 @@
-export const pomoBox = document.querySelector(".pomoBox"); // inner circle
 export const pause = document.querySelector(".pause");
 export const start = document.querySelector(".start");
 export const reset = document.querySelector(".reset");

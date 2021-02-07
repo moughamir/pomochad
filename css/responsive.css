@@ -10,13 +10,6 @@
   .sessionBtns {
     margin: 0% 37% 3% 37%;
   }
-  .pomoBox {
-    font-size: 4.5em;
-    height: 350px;
-    width: 350px;
-    color: #f6ecf0;
-    font-family: "Quicksand", sans-serif;
-  }
   .squareBox {
     height: 360px;
     padding: 5%;
@@ -58,13 +51,7 @@
     padding: 2.8%;
     padding-left: 4.5%;
   }
-  .reset {
-    background-color: #a7c5eb;
-    margin: 3% 22% 0% 22%;
-    padding: 1.6%;
-    font-size: 1.1rem;
-  }
-  .restart,
+
   .pause,
   .resume,
   .start {
@@ -121,13 +108,7 @@
     padding: 2.8%;
     padding-left: 4.5%;
   }
-  .reset {
-    background-color: #a7c5eb;
-    margin: 6% 29% 0% 29%;
-    padding: 1.6%;
-    font-size: 1.1rem;
-  }
-  .restart,
+
   .pause,
   .resume,
   .start {
@@ -167,12 +148,7 @@
     padding: 2.8%;
     padding-left: 3.5%;
   }
-  .reset {
-    background-color: #a7c5eb;
-    margin: 3% 19% 0% 19%;
-    padding: 1.6%;
-    font-size: 1.1rem;
-  }
+
   .squareBox {
     animation: none;
   }
@@ -218,16 +194,10 @@
     padding: 2.8%;
     padding-left: 6.5%;
   }
-  .reset {
-    background-color: #a7c5eb;
-    margin: 7% 15% 0% 15%;
-    padding: 1.6%;
-    font-size: 1.1rem;
-  }
+
   .squareBox {
     animation: none;
   }
-  .restart,
   .pause,
   .resume,
   .start {
@@ -272,16 +242,10 @@
     padding: 2.8%;
     padding-left: 6.5%;
   }
-  .reset {
-    background-color: #a7c5eb;
-    margin: 10% 15% 0% 15%;
-    padding: 1.6%;
-    font-size: 1.1rem;
-  }
+ 
   .squareBox {
     animation: none;
   }
-  .restart,
   .pause,
   .resume,
   .start {

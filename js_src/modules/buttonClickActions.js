@@ -20,7 +20,6 @@ import {
   modesDiv,
   modesLink,
   pause,
-  pomoBox,
   reset,
   saveBtnFLex,
   sessionBtns,
@@ -35,6 +34,7 @@ import {
   playTickSound,
   setBoxText,
   stopTortureAnimation,
+  setCircleProgress,
 } from "./miscFuncs";
 
 // Session button click actions
@@ -51,8 +51,7 @@ import {
 
       pomoTime = totalTime * 60;
       setBoxText(totalTime, 0);
-      let bar = document.querySelector(".bar");
-      bar.style.width = 0;
+      setCircleProgress(0);
 
       return;
     }
@@ -111,7 +110,7 @@ settingsBtn.addEventListener(
 /* navlinks actions*/
 
 settingsBtn.addEventListener("click", () => {
-  [squareBox, pomoBox, sessionBtns, reset, aboutPage, modesDiv].forEach(
+  [squareBox, sessionBtns, reset, aboutPage, modesDiv].forEach(
     (temp) => (temp.style.display = "none")
   );
   settingsPage.style.display = "grid";
@@ -119,7 +118,7 @@ settingsBtn.addEventListener("click", () => {
 
 /* Home Page */
 const jumpToHomePage = () => {
-  [squareBox, pomoBox, sessionBtns, reset].forEach((temp) => {
+  [squareBox, sessionBtns, reset].forEach((temp) => {
     temp.style.display = "";
   });
   [settingsPage, aboutPage, modesDiv].forEach((temp) => {
@@ -129,21 +128,17 @@ const jumpToHomePage = () => {
 
 /* About Page */
 const jumptoAboutPage = () => {
-  [squareBox, pomoBox, sessionBtns, reset, settingsPage, modesDiv].forEach(
-    (temp) => {
-      temp.style.display = "none";
-    }
-  );
+  [squareBox, sessionBtns, reset, settingsPage, modesDiv].forEach((temp) => {
+    temp.style.display = "none";
+  });
   aboutPage.style.display = "block";
 };
 
 /* Modes Page*/
 const jumptoModesPage = () => {
-  [settingsPage, aboutPage, squareBox, pomoBox, sessionBtns, reset].forEach(
-    (temp) => {
-      temp.style.display = "none";
-    }
-  );
+  [settingsPage, aboutPage, squareBox, sessionBtns, reset].forEach((temp) => {
+    temp.style.display = "none";
+  });
 
   modesDiv.style.display = "block";
 };

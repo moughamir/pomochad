@@ -11,6 +11,7 @@ const createIcon = (btnClass, hoverTitle, iconClass) => {
 
 const makeSessionBtns = () => {
   createIcon("start", "start", "fa-play");
+  createIcon("reset", "reset", "fa-redo");
   createIcon("pause", "pause", "fa-stop");
 };
 
