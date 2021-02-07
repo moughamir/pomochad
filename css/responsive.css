@@ -114,16 +114,16 @@
 
 @media screen and (max-width: 630px) {
   .flexMain {
-    margin: 2% 8% 0% 8%;
+    margin: 2% 15% 0% 15%;
   }
   .sessionBtns {
-    margin: 0% 8% 0% 8%;
+    margin: 0% 15% 0% 15%;
     padding: 2.8%;
     padding-left: 4.5%;
   }
   .reset {
     background-color: #a7c5eb;
-    margin: 3% 12% 0% 12%;
+    margin: 6% 29% 0% 29%;
     padding: 1.6%;
     font-size: 1.1rem;
   }
@@ -190,7 +190,7 @@
   }
 
   .navBar {
-    margin-bottom: 2rem;
+    margin: 2rem;
   }
 
   .modesDiv {
@@ -244,7 +244,7 @@
   }
 
   .navBar {
-    margin-bottom: 2rem;
+    margin: 2rem;
   }
 
   .modesDiv {
