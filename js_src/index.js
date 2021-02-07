@@ -22,7 +22,6 @@ export let saveMin; // saves values when timer paused
 export let timer;
 export let currentClick;
 
-
 pomoBox.innerText = `${25} : 0${0}`; // initial output
 
 export let totalTime = 25;
@@ -33,9 +32,9 @@ const checkTimer = (temp) => {
     clearInterval(temp), timerSound();
 
     userScore = parseInt(userScore);
-    userScore += 100;
+    userScore += totalTime * 4;
 
-    score.innerText = "Score : " + userScore;
+    score.innerText = `Score : ${userScore}`;
     saveLocalStorage();
   }
 };
@@ -59,10 +58,8 @@ const updatePomodoro = () => {
 export const startPomodoro = () => {
   addShakeAnimation();
 
-  currentClick == "pause"
-    ? (pomoTime = saveMin)
-    : (pomoTime = totalTime * 60);
-  timer = setInterval(updatePomodoro, 1000);
+  currentClick == "pause" ? (pomoTime = saveMin) : (pomoTime = totalTime * 60);
+  timer = setInterval(updatePomodoro, 0);
 };
 
 toggleTheme();
