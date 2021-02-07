@@ -1,178 +1,5 @@
 /* responsiveness */
 
-@media screen and (max-width: 1024px) {
-  .flexMain {
-    margin: 2% 29% 0% 29%;
-  }
-  .sessionBtns {
-    margin: 0% 29% 0% 29%;
-    padding: 2.5%;
-    padding-left: 3%;
-  }
-
-  .modesDiv {
-    margin: 6% 29% 0% 29%;
-  }
-
-  .settingsPage {
-    margin: 0rem 10rem 2rem 10rem;
-  }
-
-  .aboutPage {
-    padding: 2rem 10rem 2rem 10rem;
-  }
-}
-
-@media all and (max-width: 554px) {
-  .flexMain {
-    margin: 2% 2% 0% 2%;
-  }
-  .sessionBtns {
-    margin: 0% 2% 0% 2%;
-    padding: 2.8%;
-    padding-left: 3.5%;
-  }
-  .reset {
-    background-color: #a7c5eb;
-    margin: 3% 15% 0% 10%;
-    padding: 1.6%;
-    font-size: 1.1rem;
-  }
-  .squareBox {
-    animation: none;
-  }
-  .menuLink-toggle {
-    display: flex;
-  }
-  .navBarLinks {
-    display: none;
-    flex-direction: column;
-
-    margin-top: 5rem;
-    margin-right: 5rem;
-    text-align: center;
-    grid-template-rows: 33% 33% 33%;
-    padding: 10 rem;
-  }
-
-  .navBar {
-    margin-bottom: 2rem;
-  }
-
-  .modesDiv {
-    margin: 3% 2% 0% 2%;
-  }
-
-  .settingsPage {
-    margin: 0rem 1rem 2rem 1rem;
-  }
-
-  .aboutPage {
-    padding: 2rem 1rem 2rem 1rem;
-  }
-  .score {
-    margin: 0rem;
-  }
-}
-@media screen and (max-width: 630px) {
-  .flexMain {
-    margin: 2% 8% 0% 8%;
-  }
-  .sessionBtns {
-    margin: 0% 8% 0% 8%;
-    padding: 2.8%;
-    padding-left: 4.5%;
-  }
-  .reset {
-    background-color: #a7c5eb;
-    margin: 3% 12% 0% 12%;
-    padding: 1.6%;
-    font-size: 1.1rem;
-  }
-  .restart,
-  .pause,
-  .resume,
-  .start {
-    animation: none;
-  }
-
-  .menuLink-toggle {
-    display: flex;
-  }
-  .navBarLinks {
-    display: none;
-    flex-direction: column;
-  }
-
-  .modesDiv {
-    margin: 4% 8% 0% 8%;
-  }
-
-  .settingsPage {
-    margin: 0rem 4rem 2rem 4rem;
-  }
-
-  .aboutPage {
-    padding: 2rem 4rem 2rem 4rem;
-  }
-  .score {
-    margin: 0rem;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .flexMain {
-    margin: 2% 0% 0% 0%;
-  }
-  .sessionBtns {
-    margin: 0% 0% 0% 0%;
-    padding: 2.8%;
-    padding-left: 6.5%;
-  }
-  .reset {
-    background-color: #a7c5eb;
-    margin: 10% 15% 0% 15%;
-    padding: 1.6%;
-    font-size: 1.1rem;
-  }
-  .squareBox {
-    animation: none;
-  }
-  .restart,
-  .pause,
-  .resume,
-  .start {
-    animation: none;
-  }
-  .navBarLinks {
-    display: none;
-    margin-top: 5rem;
-    margin-right: 5rem;
-    text-align: center;
-    grid-template-rows: 33% 33% 33%;
-    padding: 10 rem;
-  }
-
-  .navBar {
-    margin-bottom: 2rem;
-  }
-
-  .modesDiv {
-    margin: 0%;
-  }
-
-  .settingsPage {
-    margin: 1rem 0rem 0rem 1rem;
-  }
-
-  .aboutPage {
-    padding: 2rem 0rem 2rem 0rem;
-  }
-  .score {
-    margin: 0rem;
-  }
-}
-
 @media only screen and (device-width: 1920px) and (device-height: 1080px) {
   h1 {
     margin-bottom: 10%;
@@ -196,64 +23,29 @@
     padding-top: 6%;
   }
 }
-@media (max-width: 480) {
+
+@media screen and (min-width: 900px) and (max-width: 5000px) {
+  .aboutPage {
+    padding: 2rem 15rem 2rem 15rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
   .flexMain {
-    margin: 2% 0% 0% 0%;
+    margin: 2% 29% 0% 29%;
   }
   .sessionBtns {
-    margin: 0% 0% 1% 0%;
-    padding: 2.8%;
-    padding-left: 6.5%;
-  }
-  body {
-    color: pink;
-  }
-  .reset {
-    background-color: #a7c5eb;
-    margin: 7% 15% 0% 15%;
-    padding: 1.6%;
-    font-size: 1.1rem;
-  }
-  .squareBox {
-    animation: none;
-  }
-  .restart,
-  .pause,
-  .resume,
-  .start {
-    animation: none;
-  }
-  .navBarLinks {
-    display: none;
-    flex-direction: column;
-
-    margin-top: 5rem;
-    margin-right: 5rem;
-    text-align: center;
-    grid-template-rows: 33% 33% 33%;
-    padding: 10 rem;
+    margin: 0% 29% 0% 29%;
+    padding: 2.5%;
+    padding-left: 3%;
   }
 
-  .navBar {
-    margin-bottom: 2rem;
-  }
   .modesDiv {
-    margin: 2% 0% 0% 0%;
+    margin: 6% 29% 0% 29%;
   }
 
   .settingsPage {
-    margin: 1rem;
-  }
-
-  .aboutPage {
-    padding: 2rem 0rem 0rem 0rem;
-  }
-
-  .settingsPage {
-    display: none;
-    margin: 0rem 25rem 2rem 25rem;
-    border-radius: 1rem;
-    padding: 3rem;
+    margin: 0rem 10rem 2rem 10rem;
   }
 }
 
@@ -301,7 +93,7 @@
     margin: 0rem;
   }
   .themes {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
   }
 
   .modesDiv {
@@ -320,8 +112,207 @@
   }
 }
 
-@media only screen and (min-width: 692px) and (max-height: 10580px) {
-  .navBarLinks {
+@media screen and (max-width: 630px) {
+  .flexMain {
+    margin: 2% 8% 0% 8%;
+  }
+  .sessionBtns {
+    margin: 0% 8% 0% 8%;
+    padding: 2.8%;
+    padding-left: 4.5%;
+  }
+  .reset {
+    background-color: #a7c5eb;
+    margin: 3% 12% 0% 12%;
+    padding: 1.6%;
+    font-size: 1.1rem;
+  }
+  .restart,
+  .pause,
+  .resume,
+  .start {
+    animation: none;
+  }
+
+  .menuLink-toggle {
     display: flex;
+  }
+  .navBarLinks {
+    display: none;
+    flex-direction: column;
+  }
+
+  .modesDiv {
+    margin: 4% 8% 0% 8%;
+  }
+
+  .settingsPage {
+    margin: 4rem;
+  }
+
+  .aboutPage {
+    padding: 3rem;
+  }
+  .score {
+    margin: 0rem;
+  }
+}
+
+@media all and (max-width: 554px) {
+  .flexMain {
+    margin: 2% 2% 0% 2%;
+  }
+  .sessionBtns {
+    margin: 0% 2% 0% 2%;
+    padding: 2.8%;
+    padding-left: 3.5%;
+  }
+  .reset {
+    background-color: #a7c5eb;
+    margin: 3% 15% 0% 10%;
+    padding: 1.6%;
+    font-size: 1.1rem;
+  }
+  .squareBox {
+    animation: none;
+  }
+  .menuLink-toggle {
+    display: flex;
+  }
+  .navBarLinks {
+    display: none;
+    flex-direction: column;
+    margin-top: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+    grid-template-rows: 33% 33% 33%;
+    padding: 10 rem;
+  }
+
+  .navBar {
+    margin-bottom: 2rem;
+  }
+
+  .modesDiv {
+    margin: 3% 2% 0% 2%;
+  }
+
+  .settingsPage {
+    margin: 5rem;
+  }
+
+  .aboutPage {
+    padding: 2rem;
+  }
+  .score {
+    margin: 0rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .flexMain {
+    margin: 2% 0% 0% 0%;
+  }
+  .sessionBtns {
+    margin: 0% 0% 1% 0%;
+    padding: 2.8%;
+    padding-left: 6.5%;
+  }
+  .reset {
+    background-color: #a7c5eb;
+    margin: 7% 15% 0% 15%;
+    padding: 1.6%;
+    font-size: 1.1rem;
+  }
+  .squareBox {
+    animation: none;
+  }
+  .restart,
+  .pause,
+  .resume,
+  .start {
+    animation: none;
+  }
+  .navBarLinks {
+    display: none;
+    flex-direction: column;
+    margin-top: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+    grid-template-rows: 33% 33% 33%;
+    padding: 10 rem;
+  }
+
+  .navBar {
+    margin-bottom: 2rem;
+  }
+
+  .modesDiv {
+    margin: 2% 0% 0% 0%;
+  }
+
+  .aboutPage {
+    padding: 1rem;
+  }
+
+  .settingsPage {
+    display: none;
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .flexMain {
+    margin: 2% 0% 0% 0%;
+  }
+  .sessionBtns {
+    margin: 0% 0% 0% 0%;
+    padding: 2.8%;
+    padding-left: 6.5%;
+  }
+  .reset {
+    background-color: #a7c5eb;
+    margin: 10% 15% 0% 15%;
+    padding: 1.6%;
+    font-size: 1.1rem;
+  }
+  .squareBox {
+    animation: none;
+  }
+  .restart,
+  .pause,
+  .resume,
+  .start {
+    animation: none;
+  }
+  .navBarLinks {
+    display: none;
+    flex-direction: column;
+    margin-top: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+    grid-template-rows: 33% 33% 33%;
+    padding: 10 rem;
+  }
+
+  .navBar {
+    margin-bottom: 2rem;
+  }
+
+  .modesDiv {
+    margin: 0%;
+  }
+
+  .settingsPage {
+    margin: 0rem;
+  }
+
+  .aboutPage {
+    padding: 0.5rem;
+  }
+  .score {
+    margin: 0rem;
   }
 }
