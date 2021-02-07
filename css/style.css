@@ -46,6 +46,10 @@ h1 {
   display: inline;
 }
 
+.navBarLinks.show {
+  display: flex;
+}
+
 .navBarLinks a:hover,
 .brandLogo:hover {
   text-decoration: underline;
