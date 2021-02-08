@@ -9,9 +9,16 @@ h1 {
   border: 2px solid #545e6a;
 }
 
-h2 {
+.aboutHeaders {
   border-bottom: 2px solid #aeb8c4;
   padding-bottom: 1rem;
+  margin: 2rem 10rem 2rem 10rem;
+}
+h2 {
+  border-bottom: 2px solid #aeb8c4;
+  margin: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .aboutPage ul li,
@@ -20,4 +27,14 @@ h2 {
   font-weight: bolder;
   color: #545e6a;
   padding: 1rem;
+}
+
+.aboutIcons {
+  width: 10rem;
+}
+
+.uwu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

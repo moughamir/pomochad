@@ -97,6 +97,10 @@
   .score {
     margin: 1rem;
   }
+
+  .aboutHeaders {
+    margin: 2rem;
+  }
 }
 
 @media screen and (max-width: 630px) {
@@ -136,6 +140,10 @@
   }
   .score {
     margin: 0rem;
+  }
+  h2,
+  aboutHeaders {
+    margin: 2rem 0rem 2rem 0rem;
   }
 }
 
@@ -182,6 +190,10 @@
   }
   .score {
     margin: 0rem;
+  }
+  h2,
+  aboutHeaders {
+    margin: 2rem 0rem 2rem 0rem;
   }
 }
 
@@ -231,6 +243,11 @@
     border-radius: 1rem;
     padding: 3rem;
   }
+
+  h2,
+  aboutHeaders {
+    margin: 2rem 0rem 2rem 0rem;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -242,7 +259,7 @@
     padding: 2.8%;
     padding-left: 6.5%;
   }
- 
+
   .squareBox {
     animation: none;
   }
@@ -278,5 +295,9 @@
   }
   .score {
     margin: 0rem;
+  }
+  h2,
+  aboutHeaders {
+    margin: 2rem 0rem 2rem 0rem;
   }
 }
