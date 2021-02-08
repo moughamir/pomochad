@@ -49,7 +49,8 @@ const stopTortureAnimation = () => {
 };
 
 const addShakeAnimation = () => {
-  // later use
+  let svgCirc = document.querySelector("svg");
+  svgCirc.style.animation = "wobble 5s";
 };
 const saveLocalStorage = () => {
   localStorage.setItem("savedScore", userScore);
@@ -93,9 +94,7 @@ const checkLocalStorage = () => {
 /* show mode's time value */
 
 const displayModeTime = (min) => {
-  min < 10
-    ? (modeCurrentTime.textContent = `0${min} : 00`)
-    : (modeCurrentTime.textContent = `${min} : 00`);
+  modeCurrentTime.textContent = min < 10 ? `0${min} : 00` : `${min} : 00`;
 };
 
 export const setCircleProgress = () => {

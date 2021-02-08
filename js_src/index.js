@@ -1,7 +1,6 @@
 import {} from "./modules/buttonClickActions";
 import { score } from "./modules/divSelectors";
 import {
-  addShakeAnimation,
   checkLocalStorage,
   setBoxText,
   saveLocalStorage,
@@ -13,17 +12,16 @@ import { makeSessionBtns } from "./modules/sessionButtons";
 import { toggleTheme } from "./modules/themes";
 
 // localStorage stuffs , save some defaults
-export let userScore = 0;
-export let userTheme = "lightTheme";
+export let userScore = 0,
+  userTheme = "lightTheme";
 checkLocalStorage();
 
 makeSessionBtns();
 
-export let saveMin; // saves values when timer paused
-export let timer;
-export let currentClick;
-export let totalTime = 25;
-export let pomoTime = totalTime * 60;
+// saveMin saves values when timer paused
+export let saveMin, timer, currentClick;
+export let totalTime = 25,
+  pomoTime = totalTime * 60;
 
 const checkTimer = (temp) => {
   if (pomoTime == 0) {
@@ -41,7 +39,7 @@ const updatePomodoro = () => {
   checkTimer(timer);
 
   const min = Math.floor(pomoTime / 60);
-  let sec = pomoTime % 60;
+  const sec = pomoTime % 60;
 
   if (pomoTime === 0) {
     setBoxText(min, sec);
@@ -54,8 +52,6 @@ const updatePomodoro = () => {
 };
 
 export const startPomodoro = () => {
-  addShakeAnimation();
-
   currentClick == "pause" ? (pomoTime = saveMin) : (pomoTime = totalTime * 60);
   timer = setInterval(updatePomodoro, 1000);
 };

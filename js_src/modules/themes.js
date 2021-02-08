@@ -324,7 +324,7 @@ export const useNordTheme = () => {
   createTheme.bodyCol("#D8DEE9", "#282E3A");
   createTheme.squareBoxCol("#2E3440", "#2E3440");
   createTheme.sessionAreaBG("#434C5E", "#434C5E");
-  createTheme.sessionBtnCol("#D8DEE9", "#282E3A", "#81A1C1");
+  createTheme.sessionBtnCol("#81A1C1", "#282E3A", "#81A1C1");
   createTheme.resetCol("#2E3440", "#A3BE8C", "#D8DEE9");
 
   createTheme.modesPageCol(
@@ -338,7 +338,7 @@ export const useNordTheme = () => {
 
   createTheme.aboutContext("#c8ccd4");
   createTheme.settingsbtnCol("#EBCB8B", "#3C3E4A");
-  createTheme.circularStrokes("#1D2021", "#81A1C1", "#81A1C1");
+  createTheme.circularStrokes("#282E3A", "#81A1C1", "#81A1C1");
   createTheme.scoreCol("#C3C7CF", "#2E3440");
 };
 

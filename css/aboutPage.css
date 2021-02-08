@@ -1,8 +1,7 @@
 .aboutPage {
   display: none;
   justify-content: center;
-            animation: smoothLoad .3s;
-
+  animation: smoothLoad 0.3s;
 }
 
 h1 {
