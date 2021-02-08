@@ -112,13 +112,13 @@ h1 {
 .outerC {
   stroke: #f0f0f0;
   fill: none;
-  stroke-width: 7px;
+  stroke-width: 6px;
 }
 
 .innerC {
   fill: none;
   stroke: #c0e4fe;
-  stroke-width: 7px;
+  stroke-width: 9px;
   display: flex;
   justify-content: center;
   align-items: center;
