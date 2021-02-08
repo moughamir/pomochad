@@ -142,7 +142,7 @@
     margin: 0rem;
   }
   h2,
-  aboutHeaders {
+  .aboutHeaders {
     margin: 2rem 0rem 2rem 0rem;
   }
 }
@@ -192,7 +192,7 @@
     margin: 0rem;
   }
   h2,
-  aboutHeaders {
+  .aboutHeaders {
     margin: 2rem 0rem 2rem 0rem;
   }
 }
@@ -245,7 +245,7 @@
   }
 
   h2,
-  aboutHeaders {
+  .aboutHeaders {
     margin: 2rem 0rem 2rem 0rem;
   }
 }
@@ -297,7 +297,7 @@
     margin: 0rem;
   }
   h2,
-  aboutHeaders {
+  .aboutHeaders {
     margin: 2rem 0rem 2rem 0rem;
   }
 }
