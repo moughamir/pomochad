@@ -38,6 +38,7 @@ h1 {
   margin: 0;
   padding: 0;
   cursor: pointer;
+  animation: smoothLoad 0.4s 
 }
 
 .navbarlinks a {
