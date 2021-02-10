@@ -29,7 +29,7 @@ h1 {
   justify-content: space-between;
   text-align: center;
   font-size: 1.05rem;
-  margin: 1rem 5rem 3.4rem 5rem;
+  margin: 1rem 5rem 1.4rem 5rem;
   padding-bottom: 1rem;
 }
 
@@ -38,7 +38,7 @@ h1 {
   margin: 0;
   padding: 0;
   cursor: pointer;
-  animation: smoothLoad 0.4s 
+  animation: smoothLoad 0.4s;
 }
 
 .navbarlinks a {
@@ -93,7 +93,7 @@ h1 {
   font-family: "quicksand", sans-serif;
 }
 /* main div to keep stuff centered */
-.flexmain {
+.flexMain {
   display: flexbox;
   justify-content: center;
   align-items: center;

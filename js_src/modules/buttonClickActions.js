@@ -27,6 +27,9 @@ import {
   settingsPage,
   squareBox,
   start,
+  dashboardLink,
+  dashboardPage,
+  mainFlex,
 } from "./divSelectors";
 import {
   addTortureAnimation,
@@ -110,42 +113,77 @@ settingsBtn.addEventListener(
 /* navlinks actions*/
 
 settingsBtn.addEventListener("click", () => {
-  [squareBox, sessionBtns, reset, aboutPage, modesDiv].forEach(
-    (temp) => (temp.style.display = "none")
-  );
+  [
+    squareBox,
+    sessionBtns,
+    reset,
+    aboutPage,
+    modesDiv,
+    dashboardPage,
+    mainFlex,
+  ].forEach((temp) => (temp.style.display = "none"));
   settingsPage.style.display = "grid";
 });
 
 /* Home Page */
 const jumpToHomePage = () => {
-  [squareBox, sessionBtns, reset].forEach((temp) => {
+  [squareBox, sessionBtns, reset, mainFlex].forEach((temp) => {
     temp.style.display = "";
   });
-  [settingsPage, aboutPage, modesDiv].forEach((temp) => {
+  [settingsPage, aboutPage, modesDiv, dashboardPage].forEach((temp) => {
     temp.style.display = "none";
   });
 };
 
-/* About Page */
 const jumptoAboutPage = () => {
-  [squareBox, sessionBtns, reset, settingsPage, modesDiv].forEach((temp) => {
+  [
+    squareBox,
+    sessionBtns,
+    reset,
+    settingsPage,
+    modesDiv,
+    dashboardPage,
+    mainFlex,
+  ].forEach((temp) => {
     temp.style.display = "none";
   });
   aboutPage.style.display = "block";
 };
 
-/* Modes Page*/
 const jumptoModesPage = () => {
-  [settingsPage, aboutPage, squareBox, sessionBtns, reset].forEach((temp) => {
+  [
+    settingsPage,
+    aboutPage,
+    squareBox,
+    sessionBtns,
+    reset,
+    dashboardPage,
+    mainFlex,
+  ].forEach((temp) => {
     temp.style.display = "none";
   });
-
   modesDiv.style.display = "block";
+};
+
+const jumptoDashBoard = () => {
+  [
+    squareBox,
+    sessionBtns,
+    reset,
+    settingsPage,
+    modesDiv,
+    aboutPage,
+    mainFlex,
+  ].forEach((temp) => {
+    temp.style.display = "none";
+  });
+  dashboardPage.style.display = "grid";
 };
 
 homePage.addEventListener("click", () => jumpToHomePage());
 aboutBtn.addEventListener("click", () => jumptoAboutPage());
 modesLink.addEventListener("click", () => jumptoModesPage());
+dashboardLink.addEventListener("click", () => jumptoDashBoard());
 
 increaseTimeArrow.addEventListener("click", () => {
   totalTime++;
