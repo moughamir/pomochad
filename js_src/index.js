@@ -6,6 +6,7 @@ import {
   saveLocalStorage,
   timerSound,
   setCircleProgress,
+  setLevel_Progress,
 } from "./modules/miscFuncs";
 
 import { makeSessionBtns } from "./modules/sessionButtons";
@@ -29,6 +30,7 @@ const checkTimer = (temp) => {
 
     userScore = parseInt(userScore);
     userScore += totalTime * 4;
+    setLevel_Progress();
 
     score.innerText = `Score : ${userScore}`;
     saveLocalStorage();
@@ -56,4 +58,5 @@ export const startPomodoro = () => {
   timer = setInterval(updatePomodoro, 1000);
 };
 
+setLevel_Progress();
 toggleTheme();

@@ -1,6 +1,81 @@
 .dashboardPage {
   display: none;
-  height: 70%;
-  background-color: pink;
-  margin: 2rem 6rem 10rem 6rem;
+  padding: 2rem;
+  margin: 1rem 5rem 3rem 5rem;
+  border-radius: 0.9rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1rem;
+  background-color: #fafafa;
+
+  animation: smoothLoad 0.3s;
+}
+
+.currentScore {
+  display: grid;
+  border-radius: 0.7rem;
+  text-align: center;
+  grid-template-rows: 1fr 1fr;
+  font-family: "Dosis", sans-serif;
+  padding: 1rem;
+  font-weight: bolder;
+  background-color: white;
+}
+
+.scoreTitle {
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  background-color: #36404c;
+  border-radius: 0.6rem;
+  color: white;
+  font-weight: lighter;
+}
+
+.fa-bullseye {
+  padding-right: 2rem;
+  font-size: 2.3rem;
+}
+
+.levelInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.scoreProgress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.7rem;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.scoreOuterCircle {
+  stroke: #f0f0f0;
+  fill: none;
+  stroke-width: 0.5rem;
+}
+
+.scoreInnerCircle {
+  fill: none;
+  stroke: #8deeb9;
+  stroke-width: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

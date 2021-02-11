@@ -17,7 +17,6 @@ export const nord = document.querySelector(".nord");
 export const gruvHard = document.querySelector(".gruvHard");
 export const defaultDark = document.querySelector(".defaultDark");
 export const defaultLight = document.querySelector(".defaultLight");
-export const tomato = document.querySelector(".tomato");
 
 export const homePage = document.querySelector(".brandLogo");
 export const aboutPage = document.querySelector(".aboutPage");

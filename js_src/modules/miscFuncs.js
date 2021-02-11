@@ -62,7 +62,7 @@ const checkLocalStorage = () => {
   userTheme = localStorage.getItem("savedTheme");
 
   if (localStorage.length == 0) userScore = 0;
-  score.innerText = `score : ${userScore}`;
+  score.innerText = `${userScore}`;
 
   switch (userTheme) {
     case "dark":
@@ -84,11 +84,20 @@ const checkLocalStorage = () => {
     case "gruvHard":
       useGruvHardTheme();
       break;
-
-    case "tomato":
-      useTomatoTheme();
-      break;
   }
+};
+
+export const setLevel_Progress = () => {
+  let score = document.querySelector(".score");
+
+  let usrScore = parseInt(score.textContent);
+  let percent = (usrScore / 50000) * 100;
+  let progressCircle = document.querySelector(".scoreInnerCircle");
+  let radius = progressCircle.r.baseVal.value;
+
+  let circum = radius * 2 * Math.PI;
+  progressCircle.style.strokeDasharray = circum;
+  progressCircle.style.strokeDashoffset = circum - (percent / 100) * circum;
 };
 
 /* show mode's time value */

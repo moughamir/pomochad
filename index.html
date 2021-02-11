@@ -20,6 +20,10 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis&display=swap"
+      rel="stylesheet"
+    />
     <link rel="shortcut icon" href="assets/images/favicon.ico" />
 
     <link rel="stylesheet" href="./css/style.css" />
@@ -96,8 +100,6 @@
       </div>
     </div>
 
-    <div class="score"></div>
-
     <!-- settingsPage -->
 
     <div class="settingsPage">
@@ -108,7 +110,6 @@
         <p class="nord">Nord</p>
         <p class="defaultLight">Default Light</p>
         <p class="defaultDark">Default Dark</p>
-        <p class="tomato">Tomato</p>
       </div>
     </div>
 
@@ -147,7 +148,35 @@
       <div class="saveBtnFLex">save</div>
     </div>
 
-    <div class="dashboardPage"> In progress!</div>
+    <!-- dashboard page -->
+
+    <div class="dashboardPage">
+      <div class="currentScore">
+        <div class="scoreTitle">
+          <i class="fas fa-bullseye"></i>
+          <p class="lel">Current Score</p>
+        </div>
+
+        <div class="score"></div>
+      </div>
+
+      <div class="scoreProgress">
+        <svg width="290" height="290" class="scoreCircle">
+          <circle r="110" cx="145" cy="145" class="scoreOuterCircle"></circle>
+          <text
+            x="50%"
+            y="50%"
+            text-anchor="middle"
+            dy=".5em"
+            class="scoreText"
+          >
+            LEVEL 1 &nbsp &nbsp PLEB
+          </text>
+
+          <circle r="110" cx="145" cy="145" class="scoreInnerCircle"></circle>
+        </svg>
+      </div>
+    </div>
     <!-- About Page -->
 
     <div class="aboutPage">
