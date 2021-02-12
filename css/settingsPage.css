@@ -79,7 +79,12 @@ h2 {
   column-gap: 2rem;
   background-color: #fafafa;
   margin: 4rem;
+  margin-top: 2rem;
   padding: 0rem 3rem 0rem 3rem;
   border-radius: 0.6rem;
   box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.09), 0px 3px 3px rgba(0, 0, 0, 0.13);
+}
+
+p {
+  font-size: 1.2rem;
 }

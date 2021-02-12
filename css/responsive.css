@@ -20,6 +20,11 @@
     height: 2.6rem;
     padding: 0.7rem;
   }
+
+  .settingsPage {
+
+  margin: 2% 26% 2% 26%;
+}
 }
 
 @media screen and (min-width: 900px) and (max-width: 5000px) {

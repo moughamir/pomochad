@@ -162,17 +162,18 @@ const createTheme = (() => {
     });
   };
 
-  const aboutContext = (fg) => {
+  const aboutContext = (fg, headingFg) => {
     let temps = document.querySelectorAll("li");
 
     temps.forEach((temps) => {
       temps.style.color = fg;
     });
 
-    let heading_underline = document.querySelectorAll("h2");
+    let headers = document.querySelectorAll("h2");
 
-    heading_underline.forEach((heading_underline) => {
-      heading_underline.style.borderColor = fg;
+    headers.forEach((temp) => {
+      temp.style.color = headingFg;
+      temp.style.borderColor = headingFg;
     });
   };
 
@@ -310,7 +311,8 @@ export const useDraculaTheme = () => {
     "#5AF78E",
     "#282a36"
   );
-  createTheme.aboutContext("#AEB4D5");
+
+  createTheme.aboutContext("#AEB4D5", "#82838D");
   createTheme.circularStrokes("#1e1f29", "#5AF78E", "#5AF78E");
   createTheme.settingsbtnCol("#FF6E67", "#242829");
 
@@ -343,7 +345,7 @@ export const useGruvHardTheme = () => {
     "#242829"
   );
 
-  createTheme.aboutContext("#C3C7CF");
+  createTheme.aboutContext("#C3C7CF", "#A9ACAD");
   createTheme.settingsbtnCol("#242829", "#A3BE8C");
   createTheme.circularStrokes("#1D2021", "#83a598", "#83a598");
 
@@ -378,7 +380,7 @@ export const useDarkTheme = () => {
     "#2C323B"
   );
 
-  createTheme.aboutContext("#C3C7CF");
+  createTheme.aboutContext("#C3C7CF", "#AAAEB6");
   createTheme.circularStrokes("#1E222A", "#61afef", "#61afef");
 
   createTheme.dashScore("#787C84", "#1E222A", "#FF6E67", "#1E222A", "#23272f");
@@ -412,7 +414,7 @@ export const useLightTheme = () => {
     "white"
   );
 
-  createTheme.aboutContext("#545e6a");
+  createTheme.aboutContext("#545e6a", "#3C3E4A");
   createTheme.circularStrokes("#f0f0f0", "#C0E4FE", "#545e6a");
   createTheme.dashScore("#82868E", "white", "#545e6a", "white", "#fafafa");
   createTheme.levelProgress("#8deeb9", "#f0f0f0", "#82868E", "white");
@@ -443,7 +445,7 @@ export const useNordTheme = () => {
     "#2C313D"
   );
 
-  createTheme.aboutContext("#c8ccd4");
+  createTheme.aboutContext("#c8ccd4", "#8C929E");
   createTheme.settingsbtnCol("#EBCB8B", "#3C3E4A");
   createTheme.circularStrokes("#282E3A", "#81A1C1", "#81A1C1");
 
