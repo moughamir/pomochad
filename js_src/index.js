@@ -13,8 +13,10 @@ import { makeSessionBtns } from "./modules/sessionButtons";
 import { toggleTheme } from "./modules/themes";
 
 // localStorage stuffs , save some defaults
-export let userScore = 0,
-  userTheme = "lightTheme";
+export let userScore = 0;
+export let userTheme = "lightTheme";
+export let userSound = "yooo";
+
 checkLocalStorage();
 
 makeSessionBtns();
@@ -32,7 +34,7 @@ const checkTimer = (temp) => {
     userScore += totalTime * 4;
     setLevel_Progress();
 
-    score.innerText = `Score : ${userScore}`;
+    score.innerText = `${userScore}`;
     saveLocalStorage();
   }
 };

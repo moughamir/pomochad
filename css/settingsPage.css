@@ -26,11 +26,6 @@ h2 {
   color: #c0e4fe;
 }
 
-.tomato {
-  background-color: #e5707e;
-  color: #f6ecf0;
-}
-
 .nord,
 .dracula,
 .defaultDark,
@@ -54,4 +49,36 @@ h2 {
   background-color: #a7c5eb;
   color: #21252a;
   transition: 0.3s;
+}
+
+/* timer sounds stuff */
+
+.timerSoundsDiv {
+  padding-top: 2rem;
+}
+
+.timer_audio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  transition: all 0.3s;
+  font-weight: bolder;
+}
+
+.timer_audio:hover {
+  cursor: "pointer";
+}
+
+.sound_Settings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  background-color: #fafafa;
+  margin: 4rem;
+  padding: 0rem 3rem 0rem 3rem;
+  border-radius: 0.6rem;
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.09), 0px 3px 3px rgba(0, 0, 0, 0.13);
 }

@@ -1,4 +1,4 @@
-import { userScore, userTheme, totalTime, pomoTime } from "../index";
+import { userScore, userTheme, userSound, totalTime, pomoTime } from "../index";
 import { modeCurrentTime, score } from "./divSelectors";
 import {
   useDarkTheme,
@@ -6,14 +6,27 @@ import {
   useNordTheme,
   useDraculaTheme,
   useGruvHardTheme,
-  useTomatoTheme,
 } from "./themes";
+
+import {} from "./settings";
 
 let innerCircle = document.querySelector(".timerText");
 
 // timer sound stuff
 let tickSound = "./assets/sounds/tick.mp3";
-const timerSound = () => document.getElementById("dingding").play();
+
+//userSound = "cocGame";
+
+const timerSound = () => {
+  let b = document.querySelector("#dingding");
+
+  if (localStorage.savedSound != null) {
+    b.setAttribute("src", `./assets/sounds/${localStorage.savedSound}.mp3`);
+    b.play();
+  }
+  b.play();
+};
+
 const playTickSound = () => {
   const audio = new Audio(tickSound);
   audio.play();
@@ -33,7 +46,7 @@ const setBoxText = (min, sec) => {
 // for wrong btn click
 const displayError = (text) => (innerCircle.textContent = text);
 const showWarnings = () => {
-  //alert("wrong button")  will use this later
+  /* use later */
 };
 
 const addTortureAnimation = () => {
@@ -52,16 +65,26 @@ const addShakeAnimation = () => {
   let svgCirc = document.querySelector("svg");
   svgCirc.style.animation = "wobble 5s";
 };
+
 const saveLocalStorage = () => {
   localStorage.setItem("savedScore", userScore);
   localStorage.setItem("savedTheme", userTheme);
+  localStorage.setItem("savedSound", userSound);
 };
 
 const checkLocalStorage = () => {
   userScore = localStorage.getItem("savedScore");
   userTheme = localStorage.getItem("savedTheme");
+  userSound = localStorage.getItem("savedSound");
 
-  if (localStorage.length == 0) userScore = 0;
+  if (localStorage.length == 0) {
+    userScore = 0;
+    localStorage.savedScore = 0;
+  } else if (localStorage.length == 3) {
+    let ding = document.querySelector("#dingding");
+    ding.setAttribute("src", `./assets/sounds/${userSound}.mp3`);
+  }
+
   score.innerText = `${userScore}`;
 
   switch (userTheme) {

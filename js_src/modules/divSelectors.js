@@ -40,3 +40,9 @@ export const increaseTimeChevron = document.querySelector(
   ".increaseTimeChevron"
 );
 export const saveBtnFLex = document.querySelector(".saveBtnFLex");
+
+// dashboard 
+
+export const timerSoundsDiv = document.querySelector('.timerSoundsDiv');
+
+

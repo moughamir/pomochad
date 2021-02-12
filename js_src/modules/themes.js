@@ -146,7 +146,6 @@ const createTheme = (() => {
     );
 
     defaultMode.style.backgroundColor = activeModeBg;
-
     // score
 
     // save timer mode
@@ -195,12 +194,6 @@ const createTheme = (() => {
     textTmp.style.fill = svgText;
   };
 
-  const settingsbtnCol = (fg, bg) => {
-    let btn = document.querySelector(".settingsbtn");
-    btn.style.color = fg;
-    btn.style.backgroundColor = bg;
-  };
-
   // dashboard stuff!
 
   const dashScore = (fg, bg, scorebg, scorefg, wholeBG) => {
@@ -231,6 +224,56 @@ const createTheme = (() => {
     scoreProgress.style.backgroundColor = wholeDivBg;
   };
 
+  // settings stuff
+
+  const settingsbtnCol = (fg, bg) => {
+    let btn = document.querySelector(".settingsbtn");
+    btn.style.color = fg;
+    btn.style.backgroundColor = bg;
+  };
+
+  const soundsSection = (
+    activefg,
+    activebg,
+    inactivefg,
+    inactivebg,
+    parentDivBg
+  ) => {
+    let parentDiv = document.querySelector(".sound_Settings");
+
+    parentDiv.style.backgroundColor = parentDivBg;
+    parentDiv.style.color = inactivefg;
+
+    let mp3files = document.querySelectorAll(".timer_audio");
+
+    mp3files.forEach((temp) => {
+      temp.style.backgroundColor = inactivebg;
+
+      temp.addEventListener("mouseover", () => {
+        temp.style.backgroundColor = activebg;
+        temp.style.color = activefg;
+      });
+
+      temp.addEventListener("mouseout", () => {
+        temp.style.backgroundColor = inactivebg;
+        temp.style.color = inactivefg;
+      });
+
+      temp.addEventListener("click", () => {
+        for (let i = 0; i < all_sounds.length; i++) {
+          mp3files[i].style.color = inactivefg;
+          mp3files[i].style.textDecoration = "line-through";
+          mp3files[i].style.backgroundColor = inactivebg;
+          mp3files[i].style.border = "none";
+        }
+
+        temp.style.textDecoration = "none";
+        temp.style.backgroundColor = "red";
+        temp.style.color = "blue";
+      });
+    });
+  };
+
   return {
     saveThisTheme,
     bodyCol,
@@ -245,6 +288,7 @@ const createTheme = (() => {
     settingsbtnCol,
     dashScore,
     levelProgress,
+    soundsSection,
   };
 })();
 
@@ -272,6 +316,14 @@ export const useDraculaTheme = () => {
 
   createTheme.dashScore("#8C8E9A", "#1e1f29", "#6272a4", "#282a36", "#282a36");
   createTheme.levelProgress("#5AF78E", "#282a36", "#646672", "#1e1f29");
+
+  createTheme.soundsSection(
+    "#5AF78E",
+    "#1e1f29",
+    "#8C8E9A",
+    "#282a36",
+    "#282a36"
+  );
 };
 
 export const useGruvHardTheme = () => {
@@ -297,6 +349,15 @@ export const useGruvHardTheme = () => {
 
   createTheme.dashScore("#6D7071", "#1D2021", "#665c54", "#1D2021", "#242829");
   createTheme.levelProgress("#EBCB8B", "#242829", "#6D7071", "#1D2021");
+
+  createTheme.soundsSection(
+    "#83a598",
+    "#1D2021",
+    "#6D7071",
+    "#242829",
+    "#242829",
+    "#1D2021"
+  );
 };
 
 export const useDarkTheme = () => {
@@ -322,6 +383,15 @@ export const useDarkTheme = () => {
 
   createTheme.dashScore("#787C84", "#1E222A", "#FF6E67", "#1E222A", "#23272f");
   createTheme.levelProgress("#A3BE8C", "#23272f", "#787C84", "#1E222A");
+
+  createTheme.soundsSection(
+    "#FF6E67",
+    "#1E222A",
+    "#787C84",
+    "#2a2e36",
+    "#2a2e36",
+    "#1E222A"
+  );
 };
 
 export const useLightTheme = () => {
@@ -344,9 +414,16 @@ export const useLightTheme = () => {
 
   createTheme.aboutContext("#545e6a");
   createTheme.circularStrokes("#f0f0f0", "#C0E4FE", "#545e6a");
-
   createTheme.dashScore("#82868E", "white", "#545e6a", "white", "#fafafa");
   createTheme.levelProgress("#8deeb9", "#f0f0f0", "#82868E", "white");
+
+  createTheme.soundsSection(
+    "#545e6a",
+    "white",
+    "#545e6a",
+    "#8deeb9",
+    "#8deeb9"
+  );
 };
 
 export const useNordTheme = () => {
@@ -372,6 +449,15 @@ export const useNordTheme = () => {
 
   createTheme.dashScore("#8C929E", "#282E3A", "#81A1C1", "#2E3440", "#2E3440");
   createTheme.levelProgress("#BF616A", "#2E3440", "#8C929E", "#282E3A");
+
+  createTheme.soundsSection(
+    "#EBCB8B",
+    "#282E3A",
+    "#8C929E",
+    "#2E3440",
+    "#2E3440",
+    "#282E3A"
+  );
 };
 
 export const toggleTheme = () => {

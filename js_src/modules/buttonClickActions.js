@@ -122,7 +122,7 @@ settingsBtn.addEventListener("click", () => {
     dashboardPage,
     mainFlex,
   ].forEach((temp) => (temp.style.display = "none"));
-  settingsPage.style.display = "grid";
+  settingsPage.style.display = "flex";
 });
 
 /* Home Page */
@@ -130,9 +130,9 @@ const jumpToHomePage = () => {
   [squareBox, sessionBtns, reset, mainFlex].forEach((temp) => {
     temp.style.display = "";
   });
-  [settingsPage, aboutPage, modesDiv, dashboardPage].forEach((temp) => {
-    temp.style.display = "none";
-  });
+  [settingsPage, aboutPage, modesDiv, dashboardPage].forEach(
+    (temp) => (temp.style.display = "none")
+  );
 };
 
 const jumptoAboutPage = () => {
