@@ -14,7 +14,7 @@ const add_TimerSound = (audio_file) => {
   sound_Settings.appendChild(bee);
 };
 
-let all_sounds = [
+const all_sounds = [
   "cocGame",
   "siren",
   "yooo",
@@ -55,7 +55,7 @@ mp3files.forEach((temp) => {
     temp.style.textDecoration = "none";
     temp.style.color = "#545E6A";
     temp.style.border = `5px dotted ${activebg}`;
-    temp.style.backgroundColor = "pink"
+    temp.style.backgroundColor = "pink";
 
     // save sound
 

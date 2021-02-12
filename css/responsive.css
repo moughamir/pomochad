@@ -43,68 +43,29 @@
   }
 
   .settingsPage {
-    margin: 0rem 10rem 2rem 10rem;
-  }
-}
-
-@media screen and (max-width: 690px) {
-  .flexMain {
-    margin: 2% 18% 0% 18%;
-  }
-  .sessionBtns {
-    margin: 0% 18% 0% 18%;
-    padding: 2.8%;
-    padding-left: 4.5%;
+    margin: 0rem 0rem 2rem 0rem;
   }
 
-  .pause,
-  .resume,
-  .start {
-    animation: none;
+  .timerSoundsDiv {
+    grid-template-columns: 1fr;
+    margin: 0rem;
   }
-  .menuLink-toggle {
-    display: flex;
-    float: right;
+
+  .sound_Settings {
+    grid-template-columns: 1fr;
+  }
+
+  .settingsPage {
+    margin: 2% 3% 2% 3%;
   }
 
   .navBarLinks {
     display: none;
     flex-direction: column;
-    margin-top: 5rem;
-    margin-right: 5rem;
-    text-align: center;
-    grid-template-rows: 33% 33% 33%;
-    padding: 10 rem;
   }
 
-  .navBar {
-    margin-bottom: 2rem;
-  }
-
-  .settingsPage {
-    margin: 0rem;
-  }
-  .themes {
-    grid-template-columns: 100%;
-  }
-
-  .modesDiv {
-    margin: 2% 21% 0% 21%;
-  }
-
-  .settingsPage {
-    margin: 2% 18% 0% 18%;
-  }
-
-  .aboutPage {
-    padding: 0rem;
-  }
-  .score {
-    margin: 1rem;
-  }
-
-  .aboutHeaders {
-    margin: 2rem;
+  .menuLink-toggle {
+    display: flex;
   }
 }
 
@@ -150,6 +111,10 @@
   .aboutHeaders {
     margin: 2rem 0rem 2rem 0rem;
   }
+
+  .settingsPage {
+    margin: 2% 0% 0% 0%;
+  }
 }
 
 @media all and (max-width: 554px) {
@@ -186,10 +151,6 @@
     margin: 3% 2% 0% 2%;
   }
 
-  .settingsPage {
-    margin: 5rem;
-  }
-
   .aboutPage {
     padding: 2rem;
   }
@@ -199,6 +160,13 @@
   h2,
   .aboutHeaders {
     margin: 2rem 0rem 2rem 0rem;
+  }
+
+  .settingsPage {
+    margin: 2% 0% 0% 0%;
+  }
+  .sound_Settings {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -253,6 +221,13 @@
   .aboutHeaders {
     margin: 2rem 0rem 2rem 0rem;
   }
+
+  .settingsPage {
+    margin: 2% 0% 0% 0%;
+  }
+  .sound_Settings {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -298,11 +273,20 @@
   .aboutPage {
     padding: 0.5rem;
   }
+
   .score {
     margin: 0rem;
   }
+
   h2,
   .aboutHeaders {
     margin: 2rem 0rem 2rem 0rem;
+  }
+
+  .settingsPage {
+    margin: 2% 0% 0% 0%;
+  }
+  .sound_Settings {
+    grid-template-columns: 1fr;
   }
 }

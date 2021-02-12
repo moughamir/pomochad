@@ -72,6 +72,7 @@ h2 {
   cursor: "pointer";
 }
 
+/* main sounds div */
 .sound_Settings {
   display: grid;
   grid-template-columns: 1fr 1fr;
