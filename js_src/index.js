@@ -57,7 +57,7 @@ const updatePomodoro = () => {
 
 export const startPomodoro = () => {
   currentClick == "pause" ? (pomoTime = saveMin) : (pomoTime = totalTime * 60);
-  timer = setInterval(updatePomodoro, 1000);
+  timer = setInterval(updatePomodoro, 0);
 };
 
 setLevel_Progress();
