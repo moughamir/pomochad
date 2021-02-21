@@ -14,7 +14,7 @@ const add_TimerSound = (audio_file) => {
   sound_Settings.appendChild(bee);
 };
 
-const all_sounds = [
+export const all_sounds = [
   "cocGame",
   "siren",
   "yooo",

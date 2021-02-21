@@ -1,4 +1,5 @@
 import { userTheme } from "../index";
+import { all_sounds } from "./settings";
 
 import {
   automaticMode,
