@@ -15,8 +15,6 @@ let innerCircle = document.querySelector(".timerText");
 // timer sound stuff
 let tickSound = "./assets/sounds/tick.mp3";
 
-//userSound = "cocGame";
-
 const timerSound = () => {
   let b = document.querySelector("#dingding");
 
@@ -77,10 +75,13 @@ const checkLocalStorage = () => {
   userTheme = localStorage.getItem("savedTheme");
   userSound = localStorage.getItem("savedSound");
 
-  if (localStorage.length == 0) {
+  if (localStorage.length == 0 || localStorage.savedScore == null) {
     userScore = 0;
     localStorage.savedScore = 0;
-  } else if (localStorage.length == 3) {
+    saveLocalStorage()
+  } 
+
+  else if (localStorage.length == 3) {
     let ding = document.querySelector("#dingding");
     ding.setAttribute("src", `./assets/sounds/${userSound}.mp3`);
   }
