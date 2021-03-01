@@ -49,6 +49,7 @@ h2 {
   background-color: #a7c5eb;
   color: #21252a;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 /* timer sounds stuff */
