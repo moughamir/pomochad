@@ -20,4 +20,4 @@ A very simple pomodoro web app made in plain HTML/CSS/JS for my personal use. <b
 - [x] settings page
 - [x] add more themes
 
-This is still in alpha stage so somethings like about page (needs some things to be added yet) and dashboard page wont work!.
+This is in Beta stage so some stuffs are still incomplete but its still more than enough for being usable .
