@@ -143,6 +143,26 @@ export const setCircleProgress = () => {
   progressCircle.style.strokeDashoffset = circum - (percent / 100) * circum;
 };
 
+function adjustColor(color, amount) {
+    return '#' + color.replace(/^#/, '').replace(/../g, color => ('0'+Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2));
+}
+
+export const create_LighterShade = () => {
+  let b = document.querySelector('body')
+  let tmpBg = b.style.backgroundColor ; 
+
+  let rgb2hex= c=> '#'+c.match(/\d+/g).map(x=>(+x).toString(16).padStart(2,0)).join``
+  let finalCol = rgb2hex(tmpBg);
+
+  let aboutCaption = document.querySelector('.aboutCaption')
+
+  if(userTheme == 'light') {
+     aboutCaption.style.backgroundColor = adjustColor(finalCol,-6) ; 
+    return ;
+  };
+
+  aboutCaption.style.backgroundColor = adjustColor(finalCol,7)
+}
 export {
   timerSound,
   setBoxText,

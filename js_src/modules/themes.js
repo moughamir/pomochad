@@ -1,5 +1,6 @@
 import { userTheme } from "../index";
 import { all_sounds } from "./settings";
+import { create_LighterShade } from "./miscFuncs";
 
 import {
   automaticMode,
@@ -327,6 +328,8 @@ export const useDraculaTheme = () => {
     "#282a36",
     "#282a36"
   );
+
+  create_LighterShade();
 };
 
 export const useGruvHardTheme = () => {
@@ -361,6 +364,8 @@ export const useGruvHardTheme = () => {
     "#242829",
     "#1D2021"
   );
+
+    create_LighterShade();
 };
 
 export const useDarkTheme = () => {
@@ -395,38 +400,42 @@ export const useDarkTheme = () => {
     "#2a2e36",
     "#1E222A"
   );
+
+    create_LighterShade();
 };
 
 export const useLightTheme = () => {
   createTheme.saveThisTheme("light");
-  createTheme.bodyCol("#545E6A", "white");
-  createTheme.squareBoxCol("white", "#fafafa");
-  createTheme.sessionAreaBG("white", "#fafafa");
+  createTheme.bodyCol("#545E6A", "#ffffff");
+  createTheme.squareBoxCol("#ffffff", "#fafafa");
+  createTheme.sessionAreaBG("#ffffff", "#fafafa");
   createTheme.sessionBtnCol("#545E6A", "#C0E4FE", "#545e6a");
-  createTheme.resetCol("#FD8A89", "#FFD9D8", "white");
+  createTheme.resetCol("#FD8A89", "#FFD9D8", "#ffffff");
   createTheme.settingsbtnCol("#545e6a", "#C0E4FE");
 
   createTheme.modesPageCol(
-    "white",
+    "#ffffff",
     "#545E6A",
     "#4a5460",
     "#C0E4FE",
     "#545E6A",
-    "white"
+    "#ffffff"
   );
 
   createTheme.aboutContext("#545e6a", "#3C3E4A");
   createTheme.circularStrokes("#f0f0f0", "#C0E4FE", "#545e6a");
-  createTheme.dashScore("#82868E", "white", "#545e6a", "white", "#fafafa");
-  createTheme.levelProgress("#8deeb9", "#f0f0f0", "#82868E", "white");
+  createTheme.dashScore("#82868E", "#ffffff", "#545e6a", "#ffffff", "#fafafa");
+  createTheme.levelProgress("#8deeb9", "#f0f0f0", "#82868E", "#ffffff");
 
   createTheme.soundsSection(
     "#545e6a",
-    "white",
+    "#ffffff",
     "#545e6a",
     "#8deeb9",
     "#8deeb9"
   );
+
+    create_LighterShade();
 };
 
 export const useNordTheme = () => {
@@ -461,6 +470,8 @@ export const useNordTheme = () => {
     "#2E3440",
     "#282E3A"
   );
+
+    create_LighterShade();
 };
 
 export const toggleTheme = () => {
