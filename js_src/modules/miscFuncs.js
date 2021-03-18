@@ -78,10 +78,8 @@ const checkLocalStorage = () => {
   if (localStorage.length == 0 || localStorage.savedScore == null) {
     userScore = 0;
     localStorage.savedScore = 0;
-    saveLocalStorage()
-  } 
-
-  else if (localStorage.length == 3) {
+    saveLocalStorage();
+  } else if (localStorage.length == 3) {
     let ding = document.querySelector("#dingding");
     ding.setAttribute("src", `./assets/sounds/${userSound}.mp3`);
   }
@@ -144,25 +142,36 @@ export const setCircleProgress = () => {
 };
 
 function adjustColor(color, amount) {
-    return '#' + color.replace(/^#/, '').replace(/../g, color => ('0'+Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2));
+  return (
+    "#" +
+    color
+      .replace(/^#/, "")
+      .replace(/../g, (color) =>
+        (
+          "0" +
+          Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)
+        ).substr(-2)
+      )
+  );
 }
 
 export const create_LighterShade = () => {
-  let b = document.querySelector('body')
-  let tmpBg = b.style.backgroundColor ; 
+  let b = document.querySelector("body");
+  let tmpBg = b.style.backgroundColor;
 
-  let rgb2hex= c=> '#'+c.match(/\d+/g).map(x=>(+x).toString(16).padStart(2,0)).join``
+  let rgb2hex = (c) =>
+    "#" + c.match(/\d+/g).map((x) => (+x).toString(16).padStart(2, 0)).join``;
   let finalCol = rgb2hex(tmpBg);
 
-  let aboutCaption = document.querySelector('.aboutCaption')
+  let aboutCaption = document.querySelector(".aboutCaption");
 
-  if(userTheme == 'light') {
-     aboutCaption.style.backgroundColor = adjustColor(finalCol,-6) ; 
-    return ;
-  };
+  if (userTheme == "light") {
+    aboutCaption.style.backgroundColor = adjustColor(finalCol, -6);
+    return;
+  }
 
-  aboutCaption.style.backgroundColor = adjustColor(finalCol,7)
-}
+  aboutCaption.style.backgroundColor = adjustColor(finalCol, 7);
+};
 export {
   timerSound,
   setBoxText,
