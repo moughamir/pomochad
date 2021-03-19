@@ -31,12 +31,14 @@ const checkTimer = (temp) => {
   if (pomoTime == 0) {
     clearInterval(temp), timerSound();
 
-    userScore = parseInt(userScore);
-    userScore += totalTime * 4;
-    setLevel_Progress();
+    if (userMode == "default") {
+      userScore = parseInt(userScore);
+      userScore += totalTime * 4;
+      setLevel_Progress();
 
-    score.innerText = `${userScore}`;
-    saveLocalStorage();
+      score.innerText = `${userScore}`;
+      saveLocalStorage();
+    }
   }
 };
 

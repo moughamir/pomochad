@@ -5,6 +5,7 @@ import {
   startPomodoro,
   timer,
   totalTime,
+  userMode,
 } from "../index";
 
 import {
@@ -208,6 +209,8 @@ defaultMode.addEventListener("click", () => {
   displayModeTime(totalTime);
 
   defaultMode.style.backgroundColor = "#4a5460";
+
+  userMode = "default";
 });
 
 breakMode.addEventListener("click", () => {
@@ -219,6 +222,8 @@ breakMode.addEventListener("click", () => {
   displayModeTime(totalTime);
 
   breakMode.style.backgroundColor = "#4a5460";
+
+  userMode = "break";
 });
 
 automaticMode.addEventListener("click", () => {
@@ -229,6 +234,8 @@ automaticMode.addEventListener("click", () => {
   totalTime = 25;
   displayModeTime(totalTime);
   automaticMode.style.backgroundColor = "#4a5460";
+
+  userMode = "automatic";
 });
 
 saveBtnFLex.addEventListener("click", () => jumpToHomePage());
