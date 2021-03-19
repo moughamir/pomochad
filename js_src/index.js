@@ -13,9 +13,10 @@ import { makeSessionBtns } from "./modules/sessionButtons";
 import { toggleTheme } from "./modules/themes";
 
 // localStorage stuffs , save some defaults
-export let userScore = 0;
-export let userTheme = "lightTheme";
-export let userSound = "yooo";
+export let userScore = 0,
+  userTheme = "lightTheme",
+  userSound = "yooo",
+  userMode = "default";
 
 checkLocalStorage();
 
@@ -57,7 +58,7 @@ const updatePomodoro = () => {
 
 export const startPomodoro = () => {
   currentClick == "pause" ? (pomoTime = saveMin) : (pomoTime = totalTime * 60);
-  timer = setInterval(updatePomodoro, 1000);
+  timer = setInterval(updatePomodoro, 0);
 };
 
 setLevel_Progress();
