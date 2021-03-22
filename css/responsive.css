@@ -78,6 +78,7 @@
   .flexMain {
     margin: 2% 23% 0% 23%;
   }
+
   .sessionBtns {
     margin: 0% 23% 0% 23%;
     padding: 2.8%;
@@ -100,6 +101,8 @@
     flex-direction: column;
   }
 
+ 
+
   .modesDiv {
     margin: 4% 8% 0% 8%;
   }
@@ -111,9 +114,11 @@
   .aboutPage {
     padding: 3rem;
   }
+
   .score {
     margin: 0rem;
   }
+
   h2,
   .aboutHeaders {
     margin: 2rem 0rem 2rem 0rem;
@@ -128,6 +133,7 @@
   .flexMain {
     margin: 2% 6% 0% 6%;
   }
+
   .sessionBtns {
     margin: 0% 6% 0% 6%;
     padding: 2.8%;
@@ -137,21 +143,20 @@
   .squareBox {
     animation: none;
   }
+
   .menuLink-toggle {
     display: flex;
   }
+
+
   .navBarLinks {
     display: none;
     flex-direction: column;
     margin-top: 5rem;
-    margin-right: 5rem;
+    margin-right: 15rem;
     text-align: center;
     grid-template-rows: 33% 33% 33%;
     padding: 10 rem;
-  }
-
-  .navBar {
-    margin: 2rem;
   }
 
   .modesDiv {
@@ -161,9 +166,11 @@
   .aboutPage {
     padding: 2rem;
   }
+
   .score {
     margin: 0rem;
   }
+
   h2,
   .aboutHeaders {
     margin: 2rem 0rem 2rem 0rem;
@@ -172,6 +179,7 @@
   .settingsPage {
     margin: 2% 0% 0% 0%;
   }
+
   .sound_Settings {
     grid-template-columns: 1fr;
   }
@@ -190,11 +198,13 @@
   .squareBox {
     animation: none;
   }
+  
   .pause,
   .resume,
   .start {
     animation: none;
   }
+
   .navBarLinks {
     display: none;
     flex-direction: column;
@@ -207,6 +217,7 @@
 
   .navBar {
     margin: 2rem;
+    justify-content: center;
   }
 
   .modesDiv {
@@ -232,6 +243,7 @@
   .settingsPage {
     margin: 2% 0% 0% 0%;
   }
+
   .sound_Settings {
     grid-template-columns: 1fr;
   }
@@ -241,6 +253,7 @@
   .flexMain {
     margin: 2% 0% 0% 0%;
   }
+
   .sessionBtns {
     margin: 0% 0% 0% 0%;
     padding: 2.8%;
@@ -250,11 +263,13 @@
   .squareBox {
     animation: none;
   }
+
   .pause,
   .resume,
   .start {
     animation: none;
   }
+
   .navBarLinks {
     display: none;
     flex-direction: column;
@@ -267,6 +282,7 @@
 
   .navBar {
     margin-bottom: 2rem;
+    justify-content: center;
   }
 
   .modesDiv {
