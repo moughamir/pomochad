@@ -177,9 +177,7 @@
     grid-template-columns: 1fr;
   }
 
-  .Themes {
-    grid-template-columns: 1fr 1fr;
-  }
+
 }
 
 @media (max-width: 480px) {
@@ -246,6 +244,7 @@
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 0rem;
+    margin: 0px;
   }
 
   .Themes {
@@ -316,5 +315,6 @@
 
   .sound_Settings {
     grid-template-columns: 1fr;
+    margin: 0px;
   }
 }
