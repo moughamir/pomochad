@@ -44,7 +44,7 @@
   }
 
   .modesDiv {
-    margin: 6% 29% 0% 29%;
+    margin: 6% 25% 0% 25%;
   }
 
   .settingsPage {
@@ -70,7 +70,7 @@
   }
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 890px) {
   .flexMain {
     margin: 2% 23% 0% 23%;
   }
@@ -98,7 +98,7 @@
   }
 
   .modesDiv {
-    margin: 4% 8% 0% 8%;
+    margin: 4% 26% 0% 26%;
   }
 
   .settingsPage {
@@ -127,7 +127,7 @@
   }
 }
 
-@media all and (max-width: 554px) {
+@media all and (max-width: 564px) {
   .flexMain {
     margin: 2% 6% 0% 6%;
   }
@@ -157,7 +157,7 @@
   }
 
   .modesDiv {
-    margin: 3% 2% 0% 2%;
+    margin: 3% 15% 0% 15%;
   }
 
   .aboutPage {
@@ -224,7 +224,7 @@
   }
 
   .modesDiv {
-    margin: 2% 0% 0% 0%;
+    margin: 2% 4% 0% 4%;
   }
 
   .aboutPage {
@@ -301,7 +301,7 @@
   }
 
   .modesDiv {
-    margin: 0%;
+    margin: 2% 4% 0% 4%;
   }
 
   .settingsPage {
