@@ -22,9 +22,8 @@
   }
 
   .settingsPage {
-
-  margin: 2% 26% 2% 26%;
-}
+    margin: 2% 26% 2% 26%;
+  }
 }
 
 @media screen and (min-width: 900px) and (max-width: 5000px) {
@@ -33,10 +32,11 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199) {
   .flexMain {
     margin: 2% 29% 0% 29%;
   }
+
   .sessionBtns {
     margin: 0% 29% 0% 29%;
     padding: 2.5%;
@@ -74,12 +74,12 @@
   }
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 790px) {
   .flexMain {
-    margin: 2% 15% 0% 15%;
+    margin: 2% 23% 0% 23%;
   }
   .sessionBtns {
-    margin: 0% 15% 0% 15%;
+    margin: 0% 23% 0% 23%;
     padding: 2.8%;
     padding-left: 4.5%;
   }
@@ -93,7 +93,9 @@
   .menuLink-toggle {
     display: flex;
   }
+
   .navBarLinks {
+    margin-top: 5rem;
     display: none;
     flex-direction: column;
   }
