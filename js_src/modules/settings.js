@@ -21,7 +21,9 @@ export const all_sounds = [
   "pikachuu",
   "angryBird",
   "gnuReload",
-  "piano"
+  "piano",
+  "vasco_shot",
+  "pizzaro",
 ];
 
 export const add_Audios = () => {
