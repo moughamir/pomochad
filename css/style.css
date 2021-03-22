@@ -54,6 +54,7 @@ h1 {
 .navBarLinks.show {
   display: flex;
 }
+
 .settingsbtn {
   background-color: #36404c;
   border-radius: 1.8rem;
