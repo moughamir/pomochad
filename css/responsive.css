@@ -217,7 +217,7 @@
 
   .navBar {
     margin: 2rem;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .modesDiv {
@@ -249,6 +249,7 @@
   }
 }
 
+/*
 @media screen and (max-width: 360px) {
   .flexMain {
     margin: 2% 0% 0% 0%;
@@ -309,7 +310,8 @@
   .settingsPage {
     margin: 2% 0% 0% 0%;
   }
+
   .sound_Settings {
     grid-template-columns: 1fr;
   }
-}
+} */
