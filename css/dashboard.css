@@ -7,7 +7,6 @@
   grid-template-rows: 1fr 1fr;
   grid-gap: 1rem;
   background-color: #fafafa;
-
   animation: smoothLoad 0.3s;
 }
 

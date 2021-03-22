@@ -121,6 +121,10 @@
   .settingsPage {
     margin: 2% 0% 0% 0%;
   }
+
+  .dashboardPage {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media all and (max-width: 554px) {
@@ -177,7 +181,10 @@
     grid-template-columns: 1fr;
   }
 
-
+  .dashboardPage {
+    grid-template-columns: 1fr;
+    margin: 1rem 2rem 3rem 2rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -250,6 +257,11 @@
   .Themes {
     grid-template-columns: 1fr;
   }
+
+  .dashboardPage {
+    grid-template-columns: 1fr;
+    margin: 1rem 2rem 3rem 2rem;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -316,5 +328,10 @@
   .sound_Settings {
     grid-template-columns: 1fr;
     margin: 0px;
+  }
+
+  .dashboardPage {
+    grid-template-columns: 1fr;
+    margin: 1rem 2rem 3rem 2rem;
   }
 }
