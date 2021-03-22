@@ -56,10 +56,6 @@
     margin: 0rem;
   }
 
-  .sound_Settings {
-    grid-template-columns: 1fr;
-  }
-
   .settingsPage {
     margin: 2% 3% 2% 3%;
   }
@@ -124,11 +120,6 @@
 
   .settingsPage {
     margin: 2% 0% 0% 0%;
-  }
-
-  .sound_Settings {
-    grid-template-columns: 1fr;
-    column-gap: 0rem;
   }
 }
 
@@ -252,7 +243,9 @@
   }
 
   .sound_Settings {
+    display: grid;
     grid-template-columns: 1fr;
+    column-gap: 0rem;
   }
 
   .Themes {
