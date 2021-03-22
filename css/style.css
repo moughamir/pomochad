@@ -96,6 +96,7 @@ h1 {
   display: inline;
   font-family: "quicksand", sans-serif;
 }
+
 /* main div to keep stuff centered */
 .flexMain {
   display: flexbox;

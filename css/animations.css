@@ -14,11 +14,11 @@
 @keyframes smoothLoad {
   from {
     opacity: 0;
-    transform: rotateY(-17deg);
+    transform: rotateX(-17deg);
   }
   to {
     opacity: 1;
-    transform: rotateY(0deg);
+    transform: rotateX(0deg);
   }
 }
 
