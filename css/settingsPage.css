@@ -19,21 +19,6 @@ h2 {
   text-align: center;
 }
 
-.dracula {
-  background-color: #282a36;
-  color: #bd93f9;
-}
-
-.nord {
-  background-color: #2e3440;
-  color: #81a1c1;
-}
-
-.gruvHard {
-  background-color: #1d2021;
-  color: #83a598;
-}
-
 .defaultLight {
   background-color: #fafafa;
   color: #36404c;
@@ -44,12 +29,8 @@ h2 {
   color: #c0e4fe;
 }
 
-.nord,
-.dracula,
 .defaultDark,
-.defaultLight,
-.gruvHard,
-.tomato {
+.defaultLight {
   padding: 10%;
   text-align: center;
   font-weight: bolder;
@@ -58,12 +39,8 @@ h2 {
   box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.09), 0px 3px 3px rgba(0, 0, 0, 0.13);
 }
 
-.nord:hover,
-.dracula:hover,
 .defaultDark:hover,
-.defaultLight:hover,
-.gruvHard:hover,
-.tomato:hover {
+.defaultLight:hover {
   background-color: #a7c5eb;
   color: #21252a;
   transition: 0.3s;

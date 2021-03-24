@@ -9,15 +9,12 @@ import {
   defaultDark,
   defaultLight,
   defaultMode,
-  dracula,
-  gruvHard,
   modeCurrentTime,
   modeSettings,
   increaseTimeChevron,
   increaseTimeArrow,
   decreaseTimeArrow,
   saveBtnFLex,
-  nord,
   pause,
   reset,
   sessionBtns,
@@ -297,77 +294,6 @@ const createTheme = (() => {
 
 /*  headingFg, headingBg, activeModeBg, boxBg, innerTimeFg, innerTimeBg */
 
-export const useDraculaTheme = () => {
-  createTheme.saveThisTheme("dracula");
-  createTheme.bodyCol("#D8DEE9", "#1e1f29");
-  createTheme.squareBoxCol("#282a36", "282a36");
-  createTheme.sessionAreaBG("#31333f", "#31333f");
-  createTheme.sessionBtnCol("#D8DEE9", "#1e1f29", "#FF6E67");
-  createTheme.resetCol("#1e1f29", "#FF6E67", "#D8DEE9");
-
-  createTheme.modesPageCol(
-    "#D8DEE9",
-    "#21232C",
-    "#282a36",
-    "#3C3E4A",
-    "#5AF78E",
-    "#282a36"
-  );
-
-  createTheme.aboutContext("#AEB4D5", "#82838D");
-  createTheme.circularStrokes("#1e1f29", "#5AF78E", "#5AF78E");
-  createTheme.settingsbtnCol("#FF6E67", "#242829");
-
-  createTheme.dashScore("#8C8E9A", "#1e1f29", "#6272a4", "#282a36", "#282a36");
-  createTheme.levelProgress("#5AF78E", "#282a36", "#646672", "#1e1f29");
-
-  createTheme.soundsSection(
-    "#5AF78E",
-    "#1e1f29",
-    "#8C8E9A",
-    "#282a36",
-    "#282a36"
-  );
-
-  create_LighterShade();
-};
-
-export const useGruvHardTheme = () => {
-  createTheme.saveThisTheme("gruvHard");
-  createTheme.bodyCol("#c8ccd4", "#1D2021");
-  createTheme.squareBoxCol("#242829", "#242829");
-  createTheme.sessionBtnCol("#c8ccd4", "#1D2021", "#83a598");
-  createTheme.resetCol("#242829", "#83a598", "#c8ccd4");
-  createTheme.sessionAreaBG("#2E3233", "#2E3233");
-
-  createTheme.modesPageCol(
-    "#83a598",
-    "#2E3233",
-    "#242829",
-    "#83a598",
-    "#83a598",
-    "#242829"
-  );
-
-  createTheme.aboutContext("#C3C7CF", "#A9ACAD");
-  createTheme.settingsbtnCol("#242829", "#A3BE8C");
-  createTheme.circularStrokes("#1D2021", "#83a598", "#83a598");
-
-  createTheme.dashScore("#6D7071", "#1D2021", "#665c54", "#1D2021", "#242829");
-  createTheme.levelProgress("#EBCB8B", "#242829", "#6D7071", "#1D2021");
-
-  createTheme.soundsSection(
-    "#83a598",
-    "#1D2021",
-    "#6D7071",
-    "#242829",
-    "#242829",
-    "#1D2021"
-  );
-
-    create_LighterShade();
-};
-
 export const useDarkTheme = () => {
   createTheme.saveThisTheme("dark");
   createTheme.bodyCol("#f9fcfb", "#1E222A");
@@ -401,7 +327,7 @@ export const useDarkTheme = () => {
     "#1E222A"
   );
 
-    create_LighterShade();
+  create_LighterShade();
 };
 
 export const useLightTheme = () => {
@@ -435,43 +361,7 @@ export const useLightTheme = () => {
     "#8deeb9"
   );
 
-    create_LighterShade();
-};
-
-export const useNordTheme = () => {
-  createTheme.saveThisTheme("nord");
-  createTheme.bodyCol("#D8DEE9", "#282E3A");
-  createTheme.squareBoxCol("#2E3440", "#2E3440");
-  createTheme.sessionAreaBG("#434C5E", "#434C5E");
-  createTheme.sessionBtnCol("#81A1C1", "#282E3A", "#81A1C1");
-  createTheme.resetCol("#2E3440", "#A3BE8C", "#D8DEE9");
-
-  createTheme.modesPageCol(
-    "#D8DEE9",
-    "#2C313D",
-    "#2E3440",
-    "#81A1C1",
-    "#D8DEE9",
-    "#2C313D"
-  );
-
-  createTheme.aboutContext("#c8ccd4", "#8C929E");
-  createTheme.settingsbtnCol("#EBCB8B", "#3C3E4A");
-  createTheme.circularStrokes("#282E3A", "#81A1C1", "#81A1C1");
-
-  createTheme.dashScore("#8C929E", "#282E3A", "#81A1C1", "#2E3440", "#2E3440");
-  createTheme.levelProgress("#BF616A", "#2E3440", "#8C929E", "#282E3A");
-
-  createTheme.soundsSection(
-    "#EBCB8B",
-    "#282E3A",
-    "#8C929E",
-    "#2E3440",
-    "#2E3440",
-    "#282E3A"
-  );
-
-    create_LighterShade();
+  create_LighterShade();
 };
 
 export const toggleTheme = () => {
@@ -484,6 +374,3 @@ export const toggleTheme = () => {
 
 defaultLight.addEventListener("click", useLightTheme);
 defaultDark.addEventListener("click", useDarkTheme);
-nord.addEventListener("click", useNordTheme);
-dracula.addEventListener("click", useDraculaTheme);
-gruvHard.addEventListener("click", useGruvHardTheme);

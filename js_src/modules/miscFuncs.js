@@ -3,9 +3,6 @@ import { modeCurrentTime, score } from "./divSelectors";
 import {
   useDarkTheme,
   useLightTheme,
-  useNordTheme,
-  useDraculaTheme,
-  useGruvHardTheme,
 } from "./themes";
 
 import {} from "./settings";
@@ -95,17 +92,7 @@ const checkLocalStorage = () => {
       useLightTheme();
       break;
 
-    case "dracula":
-      useDraculaTheme();
-      break;
-
-    case "nord":
-      useNordTheme();
-      break;
-
-    case "gruvHard":
-      useGruvHardTheme();
-      break;
+   
   }
 };
 
