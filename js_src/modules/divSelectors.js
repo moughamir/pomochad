@@ -12,9 +12,6 @@ export const score = document.querySelector(".score");
 export const settingsBtn = document.querySelector(".settingsBtn");
 export const settingsPage = document.querySelector(".settingsPage");
 
-export const dracula = document.querySelector(".dracula");
-export const nord = document.querySelector(".nord");
-export const gruvHard = document.querySelector(".gruvHard");
 export const defaultDark = document.querySelector(".defaultDark");
 export const defaultLight = document.querySelector(".defaultLight");
 
