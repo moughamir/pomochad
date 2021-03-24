@@ -10,7 +10,7 @@
 
 .Themes {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 1fr 1fr ;
   grid-gap: 10px;
   padding: 1rem;
 }
