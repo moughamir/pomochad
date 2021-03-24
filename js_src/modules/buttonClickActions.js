@@ -41,6 +41,8 @@ import {
   setCircleProgress,
 } from "./miscFuncs";
 
+let auth_Div = document.querySelector(".auth_Div");  // to hide auth_div when other navlinks are clicked
+
 // Session button click actions
 
 [start, reset].forEach((temp) => {
@@ -122,6 +124,7 @@ settingsBtn.addEventListener("click", () => {
     modesDiv,
     dashboardPage,
     mainFlex,
+    auth_Div,
   ].forEach((temp) => (temp.style.display = "none"));
   settingsPage.style.display = "flex";
 });
@@ -131,7 +134,7 @@ const jumpToHomePage = () => {
   [squareBox, sessionBtns, reset, mainFlex].forEach((temp) => {
     temp.style.display = "";
   });
-  [settingsPage, aboutPage, modesDiv, dashboardPage].forEach(
+  [settingsPage, aboutPage, modesDiv, dashboardPage, auth_Div].forEach(
     (temp) => (temp.style.display = "none")
   );
 };
@@ -145,6 +148,7 @@ const jumptoAboutPage = () => {
     modesDiv,
     dashboardPage,
     mainFlex,
+    auth_Div
   ].forEach((temp) => {
     temp.style.display = "none";
   });
@@ -160,6 +164,7 @@ const jumptoModesPage = () => {
     reset,
     dashboardPage,
     mainFlex,
+    auth_Div,
   ].forEach((temp) => {
     temp.style.display = "none";
   });
@@ -175,6 +180,7 @@ const jumptoDashBoard = () => {
     modesDiv,
     aboutPage,
     mainFlex,
+    auth_Div,
   ].forEach((temp) => {
     temp.style.display = "none";
   });

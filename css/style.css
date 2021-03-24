@@ -57,8 +57,11 @@ h1 {
 
 .settingsbtn {
   background-color: #36404c;
-  border-radius: 1.8rem;
+  border-radius: 2.9rem;
   color: #fafafa;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 .brandLogo::after,
@@ -96,6 +99,11 @@ h1 {
   padding-left: 0.7rem;
   display: inline;
   font-family: "quicksand", sans-serif;
+}
+
+.userStatus {
+  margin-top: 0.1rem;
+  font-size: 1rem;
 }
 
 /* main div to keep stuff centered */
@@ -341,4 +349,8 @@ body:after {
   cursor: default;
   background-color: #4a5460;
   transition: 0.3s;
+}
+
+.auth_Div {
+  display: none;
 }

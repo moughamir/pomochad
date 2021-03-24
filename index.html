@@ -33,6 +33,9 @@
     <link rel="stylesheet" href="./css/responsive.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
   </head>
 
   <body>
@@ -52,7 +55,9 @@
         <a class="dashboardLink"> Dashboard</a>
         <a> Rewards</a>
         <a class="aboutBtn"> About</a>
-        <a class="settingsBtn">Settings</a>
+
+        <a class="userStatus"><i class="fas fa-user"></i> </a>
+        <a class="settingsBtn"><i class="fas fa-cog"></i> Settings</a>
       </div>
 
       <div class="menuLink-toggle">
@@ -114,6 +119,23 @@
       <div class="timerSoundsDiv">
         <h2 class="settingsHs">Timer Sounds</h2>
         <div class="sound_Settings"></div>
+      </div>
+    </div>
+
+    <!-- signup / login -->
+
+    <div class="auth_Div">
+      <div class="divHeader">
+        <h3>signup or signin</h3>
+      </div>
+
+      <div class="content">
+        <input type="email" placeholder="email" id="userEmail" />
+        <input type="password" placeholder="password" id="userPassword" />
+
+        <button type="button" id="signUpBtn">signup</button>
+        <button type="button" id="signInBtn">signin</button>
+        <button type="button" id="signOutBtn">signOut</button>
       </div>
     </div>
 
@@ -246,5 +268,6 @@
     </div>
 
     <script src="./dist/main.js"></script>
+    <!-- <script src="./js_src/modules/userAuth.js"></script> -->
   </body>
 </html>

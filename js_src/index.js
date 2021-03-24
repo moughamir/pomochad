@@ -12,6 +12,8 @@ import {
 import { makeSessionBtns } from "./modules/sessionButtons";
 import { toggleTheme } from "./modules/themes";
 
+import "./modules/userAuth.js";
+
 // localStorage stuffs , save some defaults
 export let userScore = 0,
   userTheme = "lightTheme",
