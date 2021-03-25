@@ -6,6 +6,7 @@ import {
   timer,
   totalTime,
   userMode,
+  update_CurrentMode,
 } from "../index";
 
 import {
@@ -41,7 +42,7 @@ import {
   setCircleProgress,
 } from "./miscFuncs";
 
-let auth_Div = document.querySelector(".auth_Div");  // to hide auth_div when other navlinks are clicked
+let auth_Div = document.querySelector(".auth_Div"); // to hide auth_div when other navlinks are clicked
 
 // Session button click actions
 
@@ -148,7 +149,7 @@ const jumptoAboutPage = () => {
     modesDiv,
     dashboardPage,
     mainFlex,
-    auth_Div
+    auth_Div,
   ].forEach((temp) => {
     temp.style.display = "none";
   });
@@ -217,6 +218,7 @@ defaultMode.addEventListener("click", () => {
   defaultMode.style.backgroundColor = "#4a5460";
 
   userMode = "default";
+  update_CurrentMode();
 });
 
 breakMode.addEventListener("click", () => {
@@ -230,6 +232,7 @@ breakMode.addEventListener("click", () => {
   breakMode.style.backgroundColor = "#4a5460";
 
   userMode = "break";
+  update_CurrentMode();
 });
 
 automaticMode.addEventListener("click", () => {
@@ -242,6 +245,8 @@ automaticMode.addEventListener("click", () => {
   automaticMode.style.backgroundColor = "#4a5460";
 
   userMode = "automatic";
+  alert("in progress!")
+  update_CurrentMode();
 });
 
 saveBtnFLex.addEventListener("click", () => jumpToHomePage());

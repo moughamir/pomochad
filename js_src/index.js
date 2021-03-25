@@ -67,3 +67,10 @@ export const startPomodoro = () => {
 
 setLevel_Progress();
 toggleTheme();
+
+export const update_CurrentMode = () => {
+  let c = document.querySelector(".current_Mode");
+  c.textContent = `${userMode} mode`;
+};
+
+update_CurrentMode();
