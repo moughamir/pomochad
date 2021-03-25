@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="./css/aboutPage.css" />
     <link rel="stylesheet" href="./css/dashboard.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/userAccountPage.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -119,16 +120,27 @@
 
     <div class="auth_Div">
       <div class="divHeader">
-        <h3>signup or signin</h3>
+        <h3>Sign In</h3>
       </div>
 
-      <div class="content">
-        <input type="email" placeholder="email" id="userEmail" />
-        <input type="password" placeholder="password" id="userPassword" />
+      <div class="auth_content">
+        <div class="email_InputDiv">
+          <i class="ph-at"></i>
+          <input type="email" placeholder="email" id="userEmail" />
+        </div>
 
-        <button type="button" id="signUpBtn">signup</button>
-        <button type="button" id="signInBtn">signin</button>
-        <button type="button" id="signOutBtn">signOut</button>
+        <div class="pass_InputDiv">
+          <i class="ph-key"></i>
+          <input type="password" placeholder="password" id="userPassword" />
+        </div>
+
+        <div class="login_logout_btns">
+          <button type="button" id="signUpBtn">Sign up</button>
+          <button type="button" id="signInBtn">Sign In</button>
+          <button type="button" id="signOutBtn">
+            <i class="ph-sign-out"></i>
+          </button>
+        </div>
       </div>
     </div>
 

@@ -87,7 +87,7 @@ const jumpto_UserStatusPage = () => {
     temp.style.display = "none";
   });
 
-  auth_Div.style.display = "grid";
+  auth_Div.style.display = "flex";
 };
 
 userStatus.addEventListener("click", () => {

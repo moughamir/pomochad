@@ -1,0 +1,74 @@
+.auth_Div {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  margin: 6% 35% 0% 35%;
+  font-size: 1.6rem;
+  padding: 2rem;
+  padding-top: 0rem;
+  background-color: #caf7e3;
+  border-radius: 0.6rem;
+}
+
+.divHeader h3 {
+  text-align: center;
+}
+
+#userEmail,
+#userPassword {
+  border: none;
+  outline: none;
+  padding: 2rem;
+  width: 100%;
+  background-color: white;
+}
+
+#userEmail {
+  border-radius: 0 0.4rem 0 0;
+}
+
+#userPassword {
+  border-radius: 0 0 0.4rem 0;
+}
+
+.email_InputDiv,
+.pass_InputDiv {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+}
+
+.ph-key,
+.ph-at {
+  background-color: white;
+  display: grid;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.ph-at {
+  border-radius: 0.5rem 0 0 0;
+}
+
+.ph-key {
+  border-radius: 0 0 0 0.4rem;
+}
+
+.login_logout_btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.3fr;
+  margin-top: 0.5rem;
+}
+
+#signUpBtn,
+#signInBtn,
+#signOutBtn {
+  width: 1fr;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  margin: 0.6rem;
+  background-color: white;
+  border-radius: 1rem;
+}

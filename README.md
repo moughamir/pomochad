@@ -1,6 +1,6 @@
 # Minimal Pomodoro timer
 
-A very simple pomodoro web app made in plain HTML/CSS/JS for my personal use. <br>
+A very simple pomodoro web app made with vanilla HTML/CSS/JS ( using webpack for only code minification ) for my personal use. <br>
 <a href="https://siduck76.github.io/pomoReward/">Live</a>
 <br>
 
