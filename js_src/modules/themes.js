@@ -301,7 +301,7 @@ export const useLightTheme = () => {
   createTheme.sessionAreaBG("#ffffff", "#fafafa");
   createTheme.sessionBtnCol("#545E6A", "#C0E4FE", "#545e6a");
   createTheme.resetCol("#FD8A89", "#FFD9D8", "#ffffff");
-  createTheme.settingsbtnCol("white", "#545E6A");
+   // createTheme.settingsbtnCol("white", "#545E6A");
 
   createTheme.modesPageCol(
     "#ffffff",

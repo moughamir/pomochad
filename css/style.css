@@ -56,12 +56,14 @@ h1 {
 }
 
 .settingsbtn {
-  background-color: #36404c;
-  border-radius: 2.9rem;
-  color: #fafafa;
   display: grid;
   justify-content: center;
   align-items: center;
+  font-size: 1.6rem;
+  background-color: #f0f0ff;
+  color: #8c8c9b;
+  border-radius: 0.7rem;
+  margin-left: 0.6rem;
 }
 
 .brandLogo::after,
@@ -101,12 +103,9 @@ h1 {
   font-family: "quicksand", sans-serif;
 }
 
-.userStatus {
-  font-size: 1.6rem;
-}
-
 .aboutBtn,
-.rewardsLink {
+.rewardsLink,
+.userStatus {
   font-size: 1.6rem;
   margin-right: -0.7rem;
 }
