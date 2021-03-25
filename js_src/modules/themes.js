@@ -299,7 +299,7 @@ export const useLightTheme = () => {
   createTheme.bodyCol("#545E6A", "#ffffff");
   createTheme.squareBoxCol("#ffffff", "#fafafa");
   createTheme.sessionAreaBG("#ffffff", "#fafafa");
-  createTheme.sessionBtnCol("#545E6A", "#C0E4FE", "#545e6a");
+  createTheme.sessionBtnCol("#668aa4", "#C0E4FE", "#668aa4");
   createTheme.resetCol("#FD8A89", "#FFD9D8", "#ffffff");
    // createTheme.settingsbtnCol("white", "#545E6A");
 
