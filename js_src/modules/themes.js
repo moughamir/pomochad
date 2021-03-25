@@ -294,6 +294,40 @@ const createTheme = (() => {
 
 /*  headingFg, headingBg, activeModeBg, boxBg, innerTimeFg, innerTimeBg */
 
+export const useLightTheme = () => {
+  createTheme.saveThisTheme("light");
+  createTheme.bodyCol("#545E6A", "#ffffff");
+  createTheme.squareBoxCol("#ffffff", "#fafafa");
+  createTheme.sessionAreaBG("#ffffff", "#fafafa");
+  createTheme.sessionBtnCol("#545E6A", "#C0E4FE", "#545e6a");
+  createTheme.resetCol("#FD8A89", "#FFD9D8", "#ffffff");
+  createTheme.settingsbtnCol("white", "#545E6A");
+
+  createTheme.modesPageCol(
+    "#ffffff",
+    "#545E6A",
+    "#4a5460",
+    "#C0E4FE",
+    "#545E6A",
+    "#ffffff"
+  );
+
+  createTheme.aboutContext("#545e6a", "#3C3E4A");
+  createTheme.circularStrokes("#f0f0f0", "#C0E4FE", "#545e6a");
+  createTheme.dashScore("#82868E", "#ffffff", "#545e6a", "#ffffff", "#fafafa");
+  createTheme.levelProgress("#8deeb9", "#f0f0f0", "#82868E", "#ffffff");
+
+  createTheme.soundsSection(
+    "#545e6a",
+    "#ffffff",
+    "#545e6a",
+    "#8deeb9",
+    "#8deeb9"
+  );
+
+  create_LighterShade();
+};
+
 export const useDarkTheme = () => {
   createTheme.saveThisTheme("dark");
   createTheme.bodyCol("#f9fcfb", "#1E222A");
@@ -325,40 +359,6 @@ export const useDarkTheme = () => {
     "#2a2e36",
     "#2a2e36",
     "#1E222A"
-  );
-
-  create_LighterShade();
-};
-
-export const useLightTheme = () => {
-  createTheme.saveThisTheme("light");
-  createTheme.bodyCol("#545E6A", "#ffffff");
-  createTheme.squareBoxCol("#ffffff", "#fafafa");
-  createTheme.sessionAreaBG("#ffffff", "#fafafa");
-  createTheme.sessionBtnCol("#545E6A", "#C0E4FE", "#545e6a");
-  createTheme.resetCol("#FD8A89", "#FFD9D8", "#ffffff");
-  createTheme.settingsbtnCol("#545e6a", "#C0E4FE");
-
-  createTheme.modesPageCol(
-    "#ffffff",
-    "#545E6A",
-    "#4a5460",
-    "#C0E4FE",
-    "#545E6A",
-    "#ffffff"
-  );
-
-  createTheme.aboutContext("#545e6a", "#3C3E4A");
-  createTheme.circularStrokes("#f0f0f0", "#C0E4FE", "#545e6a");
-  createTheme.dashScore("#82868E", "#ffffff", "#545e6a", "#ffffff", "#fafafa");
-  createTheme.levelProgress("#8deeb9", "#f0f0f0", "#82868E", "#ffffff");
-
-  createTheme.soundsSection(
-    "#545e6a",
-    "#ffffff",
-    "#545e6a",
-    "#8deeb9",
-    "#8deeb9"
   );
 
   create_LighterShade();

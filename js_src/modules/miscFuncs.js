@@ -1,9 +1,6 @@
 import { userScore, userTheme, userSound, totalTime, pomoTime } from "../index";
 import { modeCurrentTime, score } from "./divSelectors";
-import {
-  useDarkTheme,
-  useLightTheme,
-} from "./themes";
+import { useDarkTheme, useLightTheme } from "./themes";
 
 import {} from "./settings";
 
@@ -91,8 +88,6 @@ const checkLocalStorage = () => {
     case "light":
       useLightTheme();
       break;
-
-   
   }
 };
 
@@ -153,12 +148,13 @@ export const create_LighterShade = () => {
   let aboutCaption = document.querySelector(".aboutCaption");
 
   if (userTheme == "light") {
-    aboutCaption.style.backgroundColor = adjustColor(finalCol, -6);
+    aboutCaption.style.backgroundColor = adjustColor(finalCol, -7);
     return;
   }
 
-  aboutCaption.style.backgroundColor = adjustColor(finalCol, 7);
+  aboutCaption.style.backgroundColor = adjustColor(finalCol, 10);
 };
+
 export {
   timerSound,
   setBoxText,
