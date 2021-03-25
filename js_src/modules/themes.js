@@ -312,7 +312,7 @@ export const useLightTheme = () => {
     "#ffffff"
   );
 
-  createTheme.aboutContext("#545e6a", "#3C3E4A");
+  createTheme.aboutContext("#545e6a", "#545e6a");
   createTheme.circularStrokes("#f0f0f0", "#C0E4FE", "#545e6a");
   createTheme.dashScore("#82868E", "#ffffff", "#545e6a", "#ffffff", "#fafafa");
   createTheme.levelProgress("#8deeb9", "#f0f0f0", "#82868E", "#ffffff");

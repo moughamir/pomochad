@@ -11,6 +11,7 @@
 
   .squareBox {
     padding: 2.6rem;
+    padding-top: 0;
   }
 
   .pause,

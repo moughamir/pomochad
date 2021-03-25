@@ -23,7 +23,6 @@ h2 {
 
 .defaultLight {
   background-color: #fafafa;
-  color: #36404c;
 }
 
 .defaultDark {
@@ -44,7 +43,6 @@ h2 {
 .defaultDark:hover,
 .defaultLight:hover {
   background-color: #a7c5eb;
-  color: #21252a;
   transition: 0.3s;
   cursor: pointer;
 }
