@@ -4,7 +4,7 @@ export const pause = document.querySelector(".pause");
 export const start = document.querySelector(".start");
 export const reset = document.querySelector(".reset");
 
-export const themeToggle = document.querySelector(".fa-adjust");
+export const themeToggle = document.querySelector(".themeToggle_btn");
 export const body = document.querySelector("body");
 export const squareBox = document.querySelector(".squareBox");
 export const sessionBtns = document.querySelector(".sessionBtns");
@@ -38,8 +38,6 @@ export const increaseTimeChevron = document.querySelector(
 );
 export const saveBtnFLex = document.querySelector(".saveBtnFLex");
 
-// dashboard 
+// dashboard
 
-export const timerSoundsDiv = document.querySelector('.timerSoundsDiv');
-
-
+export const timerSoundsDiv = document.querySelector(".timerSoundsDiv");

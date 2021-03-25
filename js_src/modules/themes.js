@@ -274,9 +274,17 @@ const createTheme = (() => {
     });
   };
 
+  const currentMode_Div = (fg, bg) => {
+    let tempDiv = document.querySelector(".current_Mode");
+
+    tempDiv.style.color = fg;
+    tempDiv.style.backgroundColor = bg;
+  };
+
   return {
     saveThisTheme,
     bodyCol,
+    currentMode_Div,
     squareBoxCol,
     circularStrokes,
     sessionAreaBG,
@@ -298,10 +306,11 @@ export const useLightTheme = () => {
   createTheme.saveThisTheme("light");
   createTheme.bodyCol("#545E6A", "#ffffff");
   createTheme.squareBoxCol("#ffffff", "#fafafa");
+  createTheme.currentMode_Div("#527f6b", "#caf7e3");
   createTheme.sessionAreaBG("#ffffff", "#fafafa");
   createTheme.sessionBtnCol("#668aa4", "#C0E4FE", "#668aa4");
   createTheme.resetCol("#FD8A89", "#FFD9D8", "#ffffff");
-   // createTheme.settingsbtnCol("white", "#545E6A");
+  createTheme.settingsbtnCol("white", "#545E6A");
 
   createTheme.modesPageCol(
     "#ffffff",
@@ -330,15 +339,16 @@ export const useLightTheme = () => {
 
 export const useDarkTheme = () => {
   createTheme.saveThisTheme("dark");
-  createTheme.bodyCol("#f9fcfb", "#1E222A");
+  createTheme.bodyCol("#a4aeba", "#1E222A");
   createTheme.squareBoxCol("#23272f", "#23272f");
+  createTheme.currentMode_Div("#878b93", "#2d3139");
   createTheme.sessionAreaBG("#2a2e36", "#2a2e36");
   createTheme.sessionBtnCol("#E78992", "#1E222A", "#E78992");
-  createTheme.resetCol("#f9fcfb", "#1E222A", "#61afef");
-  createTheme.settingsbtnCol("#1E222A", "#61afef");
+  createTheme.resetCol("#a4aeba", "#1E222A", "#61afef");
+  createTheme.settingsbtnCol("#8deeb9", "#23272f");
 
   createTheme.modesPageCol(
-    "#f9fcfb",
+    "#a4aeba",
     "#2C323B",
     "#4a5460",
     "#40464F",

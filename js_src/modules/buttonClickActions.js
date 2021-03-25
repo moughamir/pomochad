@@ -32,7 +32,9 @@ import {
   dashboardLink,
   dashboardPage,
   mainFlex,
+  themeToggle,
 } from "./divSelectors";
+
 import {
   addTortureAnimation,
   displayModeTime,
@@ -245,7 +247,7 @@ automaticMode.addEventListener("click", () => {
   automaticMode.style.backgroundColor = "#4a5460";
 
   userMode = "automatic";
-  alert("in progress!")
+  alert("in progress!");
   update_CurrentMode();
 });
 
@@ -257,3 +259,7 @@ let navBarLinks = document.querySelector(".navBarLinks");
 menuLink_toggle.addEventListener("click", () =>
   navBarLinks.classList.toggle("show")
 );
+
+themeToggle.addEventListener("click", () => {
+  themeToggle.classList.toggle("ph-toggle-right");
+});
