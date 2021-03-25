@@ -2,6 +2,8 @@
   display: none;
   justify-content: center;
   animation: smoothLoad 0.5s;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
 }
 
 h1 {

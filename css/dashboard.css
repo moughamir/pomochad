@@ -15,9 +15,12 @@
   border-radius: 0.7rem;
   text-align: center;
   grid-template-rows: 1fr 1fr;
-  font-family: "Dosis", sans-serif;
+  font-family: "Open Sans", sans-serif;
+
+  font-weight: lighter;
   padding: 1rem;
   font-weight: bolder;
+  font-size: 0.7rem;
   background-color: white;
 }
 
@@ -59,8 +62,9 @@
   align-items: center;
   background-color: white;
   border-radius: 0.7rem;
-  font-family: "Dosis", sans-serif;
-  font-size: 1.4rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
