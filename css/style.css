@@ -113,6 +113,7 @@ h1 {
 .userStatus {
   font-size: 1.6rem;
   margin-right: -0.7rem;
+  animation: rotateFull 0.3s;
 }
 
 /* main div to keep stuff centered */
@@ -136,7 +137,7 @@ h1 {
 
 .themeToggle_btn:hover {
   cursor: pointer;
-  color: #668AA4;
+  color: #668aa4;
 }
 
 /* display time */

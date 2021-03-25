@@ -259,7 +259,3 @@ let navBarLinks = document.querySelector(".navBarLinks");
 menuLink_toggle.addEventListener("click", () =>
   navBarLinks.classList.toggle("show")
 );
-
-themeToggle.addEventListener("click", () => {
-  themeToggle.classList.toggle("ph-toggle-right");
-});

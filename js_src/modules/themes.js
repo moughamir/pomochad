@@ -376,6 +376,7 @@ export const useDarkTheme = () => {
 
 export const toggleTheme = () => {
   themeToggle.addEventListener("click", () => {
+    themeToggle.classList.toggle("ph-toggle-right");
     whichTheme++;
 
     whichTheme % 2 != 0 ? useDarkTheme() : useLightTheme();
