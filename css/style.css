@@ -102,8 +102,13 @@ h1 {
 }
 
 .userStatus {
-  margin-top: 0.1rem;
-  font-size: 1rem;
+  font-size: 1.6rem;
+}
+
+.aboutBtn,
+.rewardsLink {
+  font-size: 1.6rem;
+  margin-right: -0.7rem;
 }
 
 /* main div to keep stuff centered */
