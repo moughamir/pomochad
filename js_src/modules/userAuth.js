@@ -9,43 +9,51 @@ let firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-const auth = firebase.auth();
+let auth = firebase.auth();
 
 const signUp = () => {
-  let email = document.querySelector("#userEmail");
-  let pass = document.querySelector("#userPassword");
+  let email = document.getElementById("userEmail");
+  let password = document.getElementById("userPassword");
 
-  const promise = auth.createUserWithEmailAndPassword(email.value, pass.value);
+  const promise = auth.createUserWithEmailAndPassword(
+    email.value,
+    password.value
+  );
+
   promise.catch((e) => alert(e.message));
+
+  alert("Signed Up");
 };
 
 const signIn = () => {
-  let email = document.querySelector("#userEmail");
-  let pass = document.querySelector("#userPassword");
+  let email = document.getElementById("userEmail");
+  let password = document.getElementById("userPassword");
 
-  const promise = auth.signInWithEmailAndPassword(email.value, pass.value);
+  const promise = auth.signInWithEmailAndPassword(email.value, password.value);
   promise.catch((e) => alert(e.message));
-
-  console.log("signed in! " + email.value);
 };
 
 const signOut = () => {
-  auth.signOut;
-  alert("Signed out :<");
+  auth.signOut();
+  alert("Signed Out");
 };
 
-auth.onAuthStateChanged((user) => {
+auth.onAuthStateChanged(function (user) {
   if (user) {
     let email = user.email;
-    console.log(email);
+    console.log("Active User " + email);
+
+    //Take user to a different or home page
+    //is signed in
   } else {
-    //alert("no active user!");
+    alert("No Active User");
+    //no user is signed in
   }
 });
 
+let signUpBtn = document.getElementById("signUpBtn");
 let signInBtn = document.getElementById("signInBtn");
 let signOutBtn = document.getElementById("signOutBtn");
-let signUpBtn = document.getElementById("signUpBtn");
 
 signUpBtn.addEventListener("click", () => {
   signUp();
