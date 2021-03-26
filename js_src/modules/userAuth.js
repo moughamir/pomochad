@@ -9,7 +9,7 @@ let firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-let auth = firebase.auth();
+const auth = firebase.auth();
 
 const signUp = () => {
   let email = document.getElementById("userEmail");
