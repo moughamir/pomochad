@@ -1,17 +1,22 @@
 .auth_Div {
   display: none;
   justify-content: center;
+  align-items: center;
+  align-content: center;
   flex-direction: column;
   margin: 6% 35% 0% 35%;
   font-size: 1.6rem;
-  padding: 2rem;
+  padding: 1rem;
   padding-top: 0rem;
-  background-color: #caf7e3;
+  background-color: #caeeff;
   border-radius: 0.6rem;
+  animation: smoothLoad 0.5s;
 }
 
-.divHeader h3 {
+.authDiv_Header {
   text-align: center;
+  font-weight: bolder;
+  margin: 1.7rem;
 }
 
 #userEmail,
@@ -33,8 +38,7 @@
 
 .email_InputDiv,
 .pass_InputDiv {
-  display: grid;
-  grid-template-columns: 1fr 7fr;
+  display: flex;
 }
 
 .ph-key,
@@ -71,4 +75,27 @@
   margin: 0.6rem;
   background-color: white;
   border-radius: 1rem;
+  display: flex;
+  animation: smoothLoad 0.5s;
+}
+
+#signUpBtn:hover,
+#signInBtn:hover,
+#signOutBtn:hover {
+  cursor: pointer;
+}
+
+.userAvatar_Div {
+  display: none;
+  width: 10rem;
+  height: 10rem;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  animation: smoothLoad 0.5s;
+}
+
+.userAvatar {
+  width: 5rem;
 }

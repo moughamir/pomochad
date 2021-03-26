@@ -34,26 +34,67 @@ const signIn = () => {
 };
 
 const signOut = () => {
+  let email = document.getElementById("userEmail");
+  let password = document.getElementById("userPassword");
+
+  email.value = "";
+  password.value = "";
+
   auth.signOut();
-  alert("Signed Out");
+  //  alert("Signed Out");
+};
+
+const user_Avatar = (action) => {
+  let avatarDiv = document.querySelector(".userAvatar_Div");
+  let emailInputDiv = document.querySelector(".email_InputDiv");
+  let passInputDiv = document.querySelector(".pass_InputDiv");
+
+  if (action == "show") {
+    emailInputDiv.style.display = "none";
+    passInputDiv.style.display = "none";
+
+    avatarDiv.style.display = "flex";
+  } else {
+    avatarDiv.style.display = "none";
+
+    emailInputDiv.style.display = "flex";
+    passInputDiv.style.display = "flex";
+  }
+};
+
+let signUpBtn = document.getElementById("signUpBtn");
+let signInBtn = document.getElementById("signInBtn");
+let signOutBtn = document.getElementById("signOutBtn");
+let usrname_Div = document.querySelector(".authDiv_Header");
+
+const createUserName_fromEmail = (email) => {
+  let result = "";
+
+  for (let i = 0; i < email.length; i++) {
+    if (email[i] == "@") break;
+
+    result += email[i];
+  }
+  return result;
 };
 
 auth.onAuthStateChanged(function (user) {
   if (user) {
     let email = user.email;
-    console.log("Active User " + email);
+    usrname_Div.innerText = createUserName_fromEmail(email);
 
-    //Take user to a different or home page
-    //is signed in
+    signInBtn.style.display = "none";
+    signUpBtn.style.display = "none";
+
+    user_Avatar("show");
   } else {
-    alert("No Active User");
-    //no user is signed in
+    user_Avatar("hide");
+    usrname_Div.innerText = "Account";
+
+    signInBtn.style.display = "flex";
+    signUpBtn.style.display = "flex";
   }
 });
-
-let signUpBtn = document.getElementById("signUpBtn");
-let signInBtn = document.getElementById("signInBtn");
-let signOutBtn = document.getElementById("signOutBtn");
 
 signUpBtn.addEventListener("click", () => {
   signUp();
