@@ -1,4 +1,4 @@
-var firebaseConfig = {
+let firebaseConfig = {
   apiKey: "AIzaSyAk8kebOX8MDqtYYyy7sAdd4fsZa4R8M0s",
   authDomain: "pomoreward.firebaseapp.com",
   projectId: "pomoreward",
@@ -36,7 +36,7 @@ const signOut = () => {
 
 auth.onAuthStateChanged((user) => {
   if (user) {
-    var email = user.email;
+    let email = user.email;
     console.log(email);
   } else {
     //alert("no active user!");
