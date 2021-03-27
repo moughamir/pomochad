@@ -142,3 +142,21 @@ const jumpto_UserStatusPage = () => {
 userStatus.addEventListener("click", () => {
   jumpto_UserStatusPage();
 });
+
+import { userScore, userTheme, userSound } from "../index.js";
+
+export const saveUserData_todatabase = () => {
+  auth.onAuthStateChanged(function (user) {
+    if (user) {
+      let user_Name = createUserName_fromEmail(user.email);
+      firebase
+        .database()
+        .ref(`users/${user_Name}`)
+        .set({
+          score: `${userScore}`,
+          theme: `${userTheme}`,
+          sound: `${userSound}`,
+        });
+    }
+  });
+};

@@ -12,8 +12,6 @@ import {
 import { makeSessionBtns } from "./modules/sessionButtons";
 import { toggleTheme } from "./modules/themes";
 
-import "./modules/userAuth.js";
-
 // localStorage stuffs , save some defaults
 export let userScore = 0,
   userTheme = "lightTheme",
@@ -21,8 +19,9 @@ export let userScore = 0,
   userMode = "default";
 
 checkLocalStorage();
-
 makeSessionBtns();
+
+import "./modules/userAuth.js";
 
 // saveMin saves values when timer paused
 export let saveMin, timer, currentClick;
@@ -74,3 +73,7 @@ export const update_CurrentMode = () => {
 };
 
 update_CurrentMode();
+
+import { saveUserData_todatabase } from "./modules/userAuth.js";
+
+saveUserData_todatabase();
