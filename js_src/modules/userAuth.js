@@ -149,6 +149,7 @@ export const saveUserData_todatabase = () => {
   auth.onAuthStateChanged(function (user) {
     if (user) {
       let user_Name = createUserName_fromEmail(user.email);
+
       firebase
         .database()
         .ref(`users/${user_Name}`)
@@ -157,6 +158,18 @@ export const saveUserData_todatabase = () => {
           theme: `${userTheme}`,
           sound: `${userSound}`,
         });
+    }
+  });
+
+  // initial learning how to retrieve stuff from db :O
+  auth.onAuthStateChanged(function (user) {
+    if (user) {
+      let user_Name = createUserName_fromEmail(user.email);
+
+      let ref = firebase.database().ref("users");
+      ref.child(user_Name).on("value", function (snapshot) {
+        console.log(snapshot.val().score);
+      });
     }
   });
 };
