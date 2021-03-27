@@ -17,7 +17,7 @@ import "./modules/userAuth.js";
 // localStorage stuffs , save some defaults
 export let userScore = 0,
   userTheme = "lightTheme",
-  userSound = "yooo",
+  userSound = "piano",
   userMode = "default";
 
 checkLocalStorage();
