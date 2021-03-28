@@ -80,6 +80,7 @@
   margin-top: 2rem;
 }
 
+
 #signUpBtn:hover,
 #signInBtn:hover,
 #signOutBtn:hover {
@@ -89,6 +90,7 @@
 #signOutBtn {
   color: white;
   background-color: #545e6a;
+  font-weight: bolder;
 }
 
 .userAvatar_Div {

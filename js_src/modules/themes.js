@@ -318,15 +318,13 @@ const createTheme = (() => {
     let signInBtn = document.querySelector("#signInBtn");
     let signOutBtn = document.querySelector("#signOutBtn");
 
-    [signUpBtn, signInBtn, signOutBtn].forEach((t) => {
-      if (t == signOutBtn) {
-        t.style.backgroundColor = signOutBtnBG;
-        t.style.color = signOutBtnFG;
-      }
-
+    [signUpBtn, signInBtn].forEach((t) => {
       t.style.backgroundColor = authIconsBG;
       t.style.color = authBtnsFG;
     });
+
+    signOutBtn.style.backgroundColor = signOutBtnBG;
+    signOutBtn.style.color = signOutBtnFG;
   };
 
   return {
@@ -388,8 +386,8 @@ export const useLightTheme = () => {
     "white",
     "#545e6a",
     "#545e6a",
-    "white",
-    "pink"
+    "#FF6E67",
+    "#545e6a"
   );
 
   create_LighterShade();
@@ -434,8 +432,8 @@ export const useDarkTheme = () => {
     "#2D3139",
     "#C3C7CF",
     "#C3C7CF",
-    "#2D3139",
-    "pink"
+    "#FF6E67",
+    "#2D3139"
   );
 
   create_LighterShade();
