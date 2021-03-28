@@ -45,6 +45,8 @@ import {
 } from "./miscFuncs";
 
 let auth_Div = document.querySelector(".auth_Div"); // to hide auth_div when other navlinks are clicked
+let rewardsLink = document.querySelector(".rewardsLink");
+let rewardsPage = document.querySelector(".rewardsPage");
 
 // Session button click actions
 
@@ -137,9 +139,14 @@ const jumpToHomePage = () => {
   [squareBox, sessionBtns, reset, mainFlex].forEach((temp) => {
     temp.style.display = "";
   });
-  [settingsPage, aboutPage, modesDiv, dashboardPage, auth_Div].forEach(
-    (temp) => (temp.style.display = "none")
-  );
+  [
+    settingsPage,
+    aboutPage,
+    modesDiv,
+    dashboardPage,
+    auth_Div,
+    rewardsPage,
+  ].forEach((temp) => (temp.style.display = "none"));
 };
 
 const jumptoAboutPage = () => {
@@ -152,6 +159,7 @@ const jumptoAboutPage = () => {
     dashboardPage,
     mainFlex,
     auth_Div,
+    rewardsPage,
   ].forEach((temp) => {
     temp.style.display = "none";
   });
@@ -168,6 +176,7 @@ const jumptoModesPage = () => {
     dashboardPage,
     mainFlex,
     auth_Div,
+    rewardsPage,
   ].forEach((temp) => {
     temp.style.display = "none";
   });
@@ -184,16 +193,35 @@ const jumptoDashBoard = () => {
     aboutPage,
     mainFlex,
     auth_Div,
+    rewardsPage,
   ].forEach((temp) => {
     temp.style.display = "none";
   });
   dashboardPage.style.display = "grid";
 };
 
+const jumptoRewardsPage = () => {
+  [
+    squareBox,
+    sessionBtns,
+    reset,
+    settingsPage,
+    modesDiv,
+    aboutPage,
+    mainFlex,
+    auth_Div,
+    dashboardPage,
+  ].forEach((temp) => {
+    temp.style.display = "none";
+  });
+  rewardsPage.style.display = "grid";
+};
+
 homePage.addEventListener("click", () => jumpToHomePage());
 aboutBtn.addEventListener("click", () => jumptoAboutPage());
 modesLink.addEventListener("click", () => jumptoModesPage());
 dashboardLink.addEventListener("click", () => jumptoDashBoard());
+rewardsLink.addEventListener("click", () => jumptoRewardsPage());
 
 increaseTimeArrow.addEventListener("click", () => {
   totalTime++;

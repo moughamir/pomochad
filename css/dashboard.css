@@ -34,10 +34,11 @@
 }
 
 .score {
+  font-family: "Quicksand", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 5rem;
   background-color: #36404c;
   border-radius: 0.6rem;
   color: white;
