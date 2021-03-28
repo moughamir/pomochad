@@ -45,10 +45,6 @@ const signOut = () => {
   password.value = "";
 
   auth.signOut();
-
-  // clear previous score
-  userScore = 0;
-  score.innerText = `${userScore}`;
 };
 
 const user_Avatar = (action) => {
@@ -113,6 +109,10 @@ signInBtn.addEventListener("click", () => {
 
 signOutBtn.addEventListener("click", () => {
   signOut();
+
+  // clear previous score
+  //  userScore = 0;
+  score.innerText = 0;
 });
 
 // button click actions userstatus button
