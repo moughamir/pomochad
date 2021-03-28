@@ -386,7 +386,7 @@ export const useLightTheme = () => {
     "white",
     "#545e6a",
     "#545e6a",
-    "#FF6E67",
+    "white",
     "#545e6a"
   );
 
@@ -398,6 +398,8 @@ export const useDarkTheme = () => {
   createTheme.bodyCol("#a4aeba", "#1E222A");
   createTheme.squareBoxCol("#23272f", "#23272f");
   createTheme.currentMode_Div("#878b93", "#2d3139");
+  createTheme.sessionAreaBG("#2a2e36", "#2a2e36");
+  createTheme.sessionBtnCol("#E78992", "#1E222A", "#E78992");
   createTheme.sessionAreaBG("#2a2e36", "#2a2e36");
   createTheme.sessionBtnCol("#E78992", "#1E222A", "#E78992");
   createTheme.resetCol("#a4aeba", "#1E222A", "#61afef");
@@ -432,8 +434,8 @@ export const useDarkTheme = () => {
     "#2D3139",
     "#C3C7CF",
     "#C3C7CF",
-    "#FF6E67",
-    "#2D3139"
+    "#2D3139",
+    "pink"
   );
 
   create_LighterShade();
