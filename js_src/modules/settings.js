@@ -34,6 +34,8 @@ add_Audios();
 
 let mp3files = document.querySelectorAll(".timer_audio");
 
+import { saveUserData_toDB } from "./userAuth.js";
+
 mp3files.forEach((temp) => {
   temp.addEventListener("mouseover", () => {
     temp.style.backgroundColor = "#545E6A";
@@ -62,12 +64,13 @@ mp3files.forEach((temp) => {
 
     // save sound
 
-    let ding = document.querySelector("#dingding");
-
     userSound = temp.innerText;
-    localStorage.savedSound = userSound;
+    // localStorage.savedSound = userSound;
+    saveUserData_toDB();
 
+    let ding = document.querySelector("#dingding");
     ding.setAttribute("src", `./assets/sounds/${userSound}.mp3`);
+
     timerSound();
   });
 });

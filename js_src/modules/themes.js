@@ -24,12 +24,15 @@ import {
   timerModes,
 } from "./divSelectors";
 
+import { saveUserData_toDB } from "./userAuth.js";
+
 let whichTheme = 0;
 
 const createTheme = (() => {
   const saveThisTheme = (name) => {
     userTheme = name;
-    localStorage.savedTheme = name;
+    //    localStorage.savedTheme = name;
+    saveUserData_toDB();
   };
 
   const bodyCol = (fg, bg) => {

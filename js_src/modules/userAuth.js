@@ -145,7 +145,9 @@ userStatus.addEventListener("click", () => {
 
 import { userScore, userTheme, userSound } from "../index.js";
 
-export const saveUserData_todatabase = () => {
+let score = document.querySelector(".score");
+
+export const saveUserData_toDB = () => {
   auth.onAuthStateChanged(function (user) {
     if (user) {
       let user_Name = createUserName_fromEmail(user.email);
@@ -160,15 +162,30 @@ export const saveUserData_todatabase = () => {
         });
     }
   });
+};
 
-  // initial learning how to retrieve stuff from db :O
+import { setLevel_Progress } from "./miscFuncs";
+
+import { useLightTheme, useDarkTheme } from "./themes.js";
+
+export const getUserData_fromDB = () => {
   auth.onAuthStateChanged(function (user) {
     if (user) {
       let user_Name = createUserName_fromEmail(user.email);
 
       let ref = firebase.database().ref("users");
       ref.child(user_Name).on("value", function (snapshot) {
-        console.log(snapshot.val().score);
+        // sync theme
+        userTheme = snapshot.val().theme;
+        userTheme == "light" ? useLightTheme() : useDarkTheme();
+
+        // sync score and lvl
+        userScore = snapshot.val().score;
+        score.innerText = `${userScore}`;
+        setLevel_Progress();
+
+        // sync saved usersound!
+        userSound = snapshot.val().sound;
       });
     }
   });

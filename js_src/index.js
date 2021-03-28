@@ -1,9 +1,9 @@
 import {} from "./modules/buttonClickActions";
 import { score } from "./modules/divSelectors";
 import {
-  checkLocalStorage,
+  //  checkLocalStorage,
   setBoxText,
-  saveLocalStorage,
+  // saveLocalStorage,
   timerSound,
   setCircleProgress,
   setLevel_Progress,
@@ -11,17 +11,17 @@ import {
 
 import { makeSessionBtns } from "./modules/sessionButtons";
 import { toggleTheme } from "./modules/themes";
+import { saveUserData_toDB, getUserData_fromDB } from "./modules/userAuth.js";
 
 // localStorage stuffs , save some defaults
 export let userScore = 0,
-  userTheme = "lightTheme",
+  userTheme = "light",
   userSound = "piano",
   userMode = "default";
 
-checkLocalStorage();
+//checkLocalStorage();
+getUserData_fromDB();
 makeSessionBtns();
-
-import "./modules/userAuth.js";
 
 // saveMin saves values when timer paused
 export let saveMin, timer, currentClick;
@@ -38,7 +38,8 @@ const checkTimer = (temp) => {
       setLevel_Progress();
 
       score.innerText = `${userScore}`;
-      saveLocalStorage();
+      // saveLocalStorage();
+      saveUserData_toDB();
     }
   }
 };
@@ -61,7 +62,7 @@ const updatePomodoro = () => {
 
 export const startPomodoro = () => {
   currentClick == "pause" ? (pomoTime = saveMin) : (pomoTime = totalTime * 60);
-  timer = setInterval(updatePomodoro, 1000);
+  timer = setInterval(updatePomodoro, -1000);
 };
 
 setLevel_Progress();
@@ -73,7 +74,4 @@ export const update_CurrentMode = () => {
 };
 
 update_CurrentMode();
-
-import { saveUserData_todatabase } from "./modules/userAuth.js";
-
-saveUserData_todatabase();
+score.innerText = `${userScore}`;

@@ -4,18 +4,19 @@ import { useDarkTheme, useLightTheme } from "./themes";
 
 import {} from "./settings";
 
+import { saveUserData_toDB } from "./userAuth.js";
+
 let innerCircle = document.querySelector(".timerText");
 
 // timer sound stuff
 let tickSound = "./assets/sounds/tick.mp3";
 
 const timerSound = () => {
-  let b = document.querySelector("#dingding");
+  saveUserData_toDB();
 
-  if (localStorage.savedSound != null) {
-    b.setAttribute("src", `./assets/sounds/${localStorage.savedSound}.mp3`);
-    b.play();
-  }
+  let b = document.querySelector("#dingding");
+  b.setAttribute("src", `./assets/sounds/${userSound}.mp3`);
+
   b.play();
 };
 
