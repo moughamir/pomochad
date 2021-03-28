@@ -1,5 +1,26 @@
 .rewardsPage {
   display: none;
   padding: 5rem;
-  background-color: gainsboro;
+  border: 2px solid black;
+  grid-template-columns: 1fr 5fr;
+  width: 1fr;
+  margin: 1rem 5rem 1rem 5rem;
+  grid-column-gap: 4rem;
+}
+
+.sidebar_RewardUnlockStuff {
+  width: 1fr;
+  height: 1fr;
+  padding: 2rem;
+
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-row-gap: 1rem;
+  border: 2px solid black;
+}
+
+.imagePreviewer {
+  display: grid;
+  padding: 2rem;
+  border: 2px solid black;
 }
