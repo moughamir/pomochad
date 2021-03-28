@@ -26,6 +26,7 @@
   padding: 2rem;
   width: 100%;
   background-color: white;
+  font-size: 0.9rem;
 }
 
 #userEmail {
@@ -61,28 +62,33 @@
 
 .login_logout_btns {
   display: grid;
-  grid-template-columns: 1fr 1fr 0.3fr;
+  grid-template-columns: 1fr 1fr 0.5fr;
   margin-top: 0.5rem;
 }
 
 #signUpBtn,
 #signInBtn,
 #signOutBtn {
-  width: 1fr;
   border: none;
   outline: none;
   padding: 1rem;
   margin: 0.6rem;
   background-color: white;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   display: flex;
   animation: smoothLoad 0.5s;
+  margin-top: 2rem;
 }
 
 #signUpBtn:hover,
 #signInBtn:hover,
 #signOutBtn:hover {
   cursor: pointer;
+}
+
+#signOutBtn {
+  color: white;
+  background-color: #545e6a;
 }
 
 .userAvatar_Div {

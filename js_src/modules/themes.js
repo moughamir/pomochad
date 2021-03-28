@@ -284,6 +284,51 @@ const createTheme = (() => {
     tempDiv.style.backgroundColor = bg;
   };
 
+  const auth_Section = (
+    bg,
+    authIconsBG,
+    inputDivsFG,
+    authBtnsFG,
+    signOutBtnFG,
+    signOutBtnBG
+  ) => {
+    let authDiv = document.querySelector(".auth_Div");
+    authDiv.style.backgroundColor = bg;
+
+    let passwdIcon = document.querySelector(".ph-key");
+    let emailIcon = document.querySelector(".ph-at");
+
+    let emailInputDiv = document.querySelector("#userEmail");
+    let passInputDiv = document.querySelector("#userPassword");
+
+    let userAvatarDiv = document.querySelector(".userAvatar_Div");
+
+    [passwdIcon, emailIcon, emailInputDiv, passInputDiv, userAvatarDiv].forEach(
+      (t) => {
+        t.style.backgroundColor = authIconsBG;
+
+        if (t == emailInputDiv || t == passInputDiv)
+          t.style.color = inputDivsFG;
+      }
+    );
+
+    // auth buttons
+
+    let signUpBtn = document.querySelector("#signUpBtn");
+    let signInBtn = document.querySelector("#signInBtn");
+    let signOutBtn = document.querySelector("#signOutBtn");
+
+    [signUpBtn, signInBtn, signOutBtn].forEach((t) => {
+      if (t == signOutBtn) {
+        t.style.backgroundColor = signOutBtnBG;
+        t.style.color = signOutBtnFG;
+      }
+
+      t.style.backgroundColor = authIconsBG;
+      t.style.color = authBtnsFG;
+    });
+  };
+
   return {
     saveThisTheme,
     bodyCol,
@@ -300,6 +345,7 @@ const createTheme = (() => {
     dashScore,
     levelProgress,
     soundsSection,
+    auth_Section,
   };
 })();
 
@@ -337,6 +383,15 @@ export const useLightTheme = () => {
     "#8deeb9"
   );
 
+  createTheme.auth_Section(
+    "#CAEEFF",
+    "white",
+    "#545e6a",
+    "#545e6a",
+    "white",
+    "pink"
+  );
+
   create_LighterShade();
 };
 
@@ -372,6 +427,15 @@ export const useDarkTheme = () => {
     "#2a2e36",
     "#2a2e36",
     "#1E222A"
+  );
+
+  createTheme.auth_Section(
+    "#23272F",
+    "#2D3139",
+    "#C3C7CF",
+    "#C3C7CF",
+    "#2D3139",
+    "pink"
   );
 
   create_LighterShade();
