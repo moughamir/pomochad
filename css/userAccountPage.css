@@ -78,6 +78,7 @@
   display: flex;
   animation: smoothLoad 0.5s;
   margin-top: 2rem;
+  justify-content: center;
 }
 
 
