@@ -38,13 +38,15 @@ const signIn = () => {
 };
 
 const signOut = () => {
+  auth.signOut();
+
   let email = document.getElementById("userEmail");
   let password = document.getElementById("userPassword");
 
   email.value = "";
   password.value = "";
 
-  auth.signOut();
+  location.reload();
 };
 
 const user_Avatar = (action) => {
@@ -111,7 +113,6 @@ signOutBtn.addEventListener("click", () => {
   signOut();
 
   // clear previous score
-  //  userScore = 0;
   score.innerText = 0;
 });
 
