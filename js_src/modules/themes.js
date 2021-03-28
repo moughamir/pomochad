@@ -434,8 +434,8 @@ export const useDarkTheme = () => {
     "#2D3139",
     "#C3C7CF",
     "#C3C7CF",
-    "#2D3139",
-    "pink"
+    "#FF6E67",
+    "#2D3139"
   );
 
   create_LighterShade();
