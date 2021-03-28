@@ -12,9 +12,9 @@ A very simple pomodoro web app made with vanilla HTML/CSS/JS ( using webpack for
 - [ ] responsive
 - [ ] custom timer sound
 - [ ] better design
-- [x] add local storage
+- [x] save user data to firebase rdb
 - [ ] add about/wiki page
-- [ ] break mode\*
+- [x] break mode\*
 - [ ] dashboard\*
 - [ ] rewards stuff\*
 - [x] settings page
