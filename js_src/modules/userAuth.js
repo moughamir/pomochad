@@ -1,3 +1,7 @@
+import { userScore, userTheme, userSound } from "../index.js";
+
+let score = document.querySelector(".score"); // score div in dashboard page
+
 let firebaseConfig = {
   apiKey: "AIzaSyAk8kebOX8MDqtYYyy7sAdd4fsZa4R8M0s",
   authDomain: "pomoreward.firebaseapp.com",
@@ -41,7 +45,10 @@ const signOut = () => {
   password.value = "";
 
   auth.signOut();
-  //  alert("Signed Out");
+
+  // clear previous score
+  userScore = 0;
+  score.innerText = `${userScore}`;
 };
 
 const user_Avatar = (action) => {
@@ -142,10 +149,6 @@ const jumpto_UserStatusPage = () => {
 userStatus.addEventListener("click", () => {
   jumpto_UserStatusPage();
 });
-
-import { userScore, userTheme, userSound } from "../index.js";
-
-let score = document.querySelector(".score");
 
 export const saveUserData_toDB = () => {
   auth.onAuthStateChanged(function (user) {
