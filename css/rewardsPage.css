@@ -1,11 +1,12 @@
 .rewardsPage {
   display: none;
-  padding: 5rem;
+  padding: 2rem;
   border: 2px solid black;
   grid-template-columns: 1fr 5fr;
   width: 1fr;
   margin: 1rem 5rem 1rem 5rem;
   grid-column-gap: 4rem;
+  height: 66vh;
 }
 
 .sidebar_RewardUnlockStuff {
