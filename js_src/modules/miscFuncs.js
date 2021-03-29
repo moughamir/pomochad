@@ -130,8 +130,6 @@ export {
   addTortureAnimation,
   stopTortureAnimation,
   addShakeAnimation,
-  saveLocalStorage,
-  checkLocalStorage,
   playTickSound,
   displayModeTime,
 };
