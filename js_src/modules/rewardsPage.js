@@ -15,6 +15,12 @@ unlockRewardsDiv.addEventListener("click", () => {
   imagePreviewer.style.display = "flex";
   default_WaifuCard_Div.style.display = "grid";
 
+  let sampleWaifuCard = document.querySelectorAll(".sampleWaifuCard");
+
+  sampleWaifuCard.forEach((t) => {
+    t.remove();
+  });
+
   if (userScore >= 2000) {
     userCards = parseInt(userCards) + 1;
     userScore -= 2000;
@@ -31,11 +37,6 @@ let galleryBtn = document.querySelector(".showCollection");
 let imagePreviewer = document.querySelector(".imagePreviewer");
 let default_WaifuCard_Div = document.querySelector(".default_WaifuCard_Div");
 
-galleryBtn.addEventListener("click", () => {
-  imagePreviewer.style.display = "grid";
-  default_WaifuCard_Div.style.display = "none";
-});
-
 let dbUrl =
   "https://media.githubusercontent.com/media/eek13/mywaifus/master/sfw/";
 
@@ -51,3 +52,9 @@ export const create_WaifuCard = (n) => {
 export const update_Gallery = (n) => {
   for (let i = 1; i <= n; i++) create_WaifuCard(i);
 };
+
+galleryBtn.addEventListener("click", () => {
+  imagePreviewer.style.display = "grid";
+  default_WaifuCard_Div.style.display = "none";
+  update_Gallery(userCards);
+});
