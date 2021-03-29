@@ -1,4 +1,5 @@
 import { userScore, userTheme, userSound } from "../index.js";
+import { showRemaining_Gems } from "./rewardsPage.js";
 
 let score = document.querySelector(".score"); // score div in dashboard page
 
@@ -114,6 +115,7 @@ signOutBtn.addEventListener("click", () => {
 
   // clear previous score
   score.innerText = 0;
+  showRemaining_Gems(0);
 });
 
 // button click actions userstatus button
@@ -186,6 +188,7 @@ export const getUserData_fromDB = () => {
         // sync score and lvl
         userScore = snapshot.val().score;
         score.innerText = `${userScore}`;
+        showRemaining_Gems(userScore);
         setLevel_Progress();
 
         // sync saved usersound!

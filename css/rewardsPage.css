@@ -4,24 +4,23 @@
   border: 2px solid black;
   grid-template-columns: 1fr 5fr;
   width: 1fr;
-  margin: 1rem 5rem 1rem 5rem;
+  margin: 1rem 10rem 1rem 10rem;
   grid-column-gap: 1rem;
   height: 70vh;
 }
 
 .sidebar_RewardUnlockStuff {
   width: 1fr;
-  height: 1fr;
-
   display: grid;
   grid-auto-rows: 1fr;
   grid-row-gap: 1rem;
+  height: 70vh;
 }
 
 .imagePreviewer {
-  display: grid;
   padding: 2rem;
   border: 2px solid black;
+  height: 60vh;
 }
 
 /* available  Gems stuff */
@@ -36,26 +35,50 @@
 }
 
 .available_Gems_Div {
-  padding: 1rem;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .available_Gems_Title {
-  padding: 1rem;
   text-align: center;
   background-color: black;
   color: white;
   border-radius: 0.6rem 0.6rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .gem {
   height: 1em;
   width: 1em;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
 }
 
 .unlockRewardsDiv {
   display: grid;
   grid-template-rows: 1fr 1fr;
+  background-color: lavenderblush;
+  border-radius: 0.6rem;
+  font-size: 1.4rem;
+}
+
+.unlockRewards_title {
+  background-color: blue;
+  border-radius: 0.6rem 0.6rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buyWaifusBtn {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showCollection {
+  margin: 1rem;
 }

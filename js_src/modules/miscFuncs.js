@@ -1,6 +1,5 @@
 import { userScore, userTheme, userSound, totalTime, pomoTime } from "../index";
 import { modeCurrentTime, score } from "./divSelectors";
-import { useDarkTheme, useLightTheme } from "./themes";
 
 import {} from "./settings";
 
@@ -57,39 +56,6 @@ const stopTortureAnimation = () => {
 const addShakeAnimation = () => {
   let svgCirc = document.querySelector("svg");
   svgCirc.style.animation = "wobble 5s";
-};
-
-const saveLocalStorage = () => {
-  localStorage.setItem("savedScore", userScore);
-  localStorage.setItem("savedTheme", userTheme);
-  localStorage.setItem("savedSound", userSound);
-};
-
-const checkLocalStorage = () => {
-  userScore = localStorage.getItem("savedScore");
-  userTheme = localStorage.getItem("savedTheme");
-  userSound = localStorage.getItem("savedSound");
-
-  if (localStorage.length == 0 || localStorage.savedScore == null) {
-    userScore = 0;
-    localStorage.savedScore = 0;
-    saveLocalStorage();
-  } else if (localStorage.length == 3) {
-    let ding = document.querySelector("#dingding");
-    ding.setAttribute("src", `./assets/sounds/${userSound}.mp3`);
-  }
-
-  score.innerText = `${userScore}`;
-
-  switch (userTheme) {
-    case "dark":
-      useDarkTheme();
-      break;
-
-    case "light":
-      useLightTheme();
-      break;
-  }
 };
 
 export const setLevel_Progress = () => {

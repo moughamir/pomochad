@@ -1,9 +1,7 @@
 import {} from "./modules/buttonClickActions";
 import { score } from "./modules/divSelectors";
 import {
-  //  checkLocalStorage,
   setBoxText,
-  // saveLocalStorage,
   timerSound,
   setCircleProgress,
   setLevel_Progress,
@@ -12,6 +10,8 @@ import {
 import { makeSessionBtns } from "./modules/sessionButtons";
 import { toggleTheme } from "./modules/themes";
 import { saveUserData_toDB, getUserData_fromDB } from "./modules/userAuth.js";
+
+import { showRemaining_Gems } from "./modules/rewardsPage.js";
 
 // localStorage stuffs , save some defaults
 export let userScore = 0,
@@ -38,7 +38,7 @@ const checkTimer = (temp) => {
       setLevel_Progress();
 
       score.innerText = `${userScore}`;
-      // saveLocalStorage();
+      showRemaining_Gems(userScore);
       saveUserData_toDB();
     }
   }
@@ -75,3 +75,5 @@ export const update_CurrentMode = () => {
 
 update_CurrentMode();
 score.innerText = `${userScore}`;
+
+showRemaining_Gems(userScore);
