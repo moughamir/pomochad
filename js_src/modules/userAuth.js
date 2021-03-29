@@ -1,4 +1,4 @@
-import { userScore, userTheme, userSound } from "../index.js";
+import { userScore, userTheme, userSound, userCards } from "../index.js";
 import { showRemaining_Gems } from "./rewardsPage.js";
 
 let score = document.querySelector(".score"); // score div in dashboard page
@@ -165,6 +165,7 @@ export const saveUserData_toDB = () => {
           score: `${userScore}`,
           theme: `${userTheme}`,
           sound: `${userSound}`,
+          cards: `${userCards}`,
         });
     }
   });
@@ -193,6 +194,10 @@ export const getUserData_fromDB = () => {
 
         // sync saved usersound!
         userSound = snapshot.val().sound;
+
+        // sync n.o of purchased user cards
+
+        userCards = snapshot.val().cards ? snapshot.val().cards : 0;
       });
     }
   });

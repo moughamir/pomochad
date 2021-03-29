@@ -79,6 +79,10 @@
   align-items: center;
 }
 
+.unlockRewardsDiv:hover {
+  cursor: pointer;
+}
+
 .showCollection {
   margin: 1rem;
 }

@@ -65,7 +65,6 @@ mp3files.forEach((temp) => {
     // save sound
 
     userSound = temp.innerText;
-    // localStorage.savedSound = userSound;
     saveUserData_toDB();
 
     let ding = document.querySelector("#dingding");

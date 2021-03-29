@@ -17,7 +17,8 @@ import { showRemaining_Gems } from "./modules/rewardsPage.js";
 export let userScore = 0,
   userTheme = "light",
   userSound = "piano",
-  userMode = "default";
+  userMode = "default",
+  userCards = 0 ;
 
 //checkLocalStorage();
 getUserData_fromDB();
