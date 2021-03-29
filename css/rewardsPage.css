@@ -17,12 +17,6 @@
   height: 70vh;
 }
 
-.imagePreviewer {
-  padding: 2rem;
-  border: 2px solid black;
-  height: 60vh;
-}
-
 /* available  Gems stuff */
 
 .remainingGems_Div {
@@ -84,5 +78,27 @@
 }
 
 .showCollection {
-  margin: 1rem;
+  margin: 2rem;
+}
+
+.imagePreviewer {
+  padding: 2rem;
+  border: 2px solid black;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.default_WaifuCard_Div {
+  background-color: lavender;
+
+  width: 15vw;
+  height: 15wh;
+}
+
+.default_WaifuCard {
+  width: 15vw;
+  height: 15wh;
+  border-radius: 0.4rem;
 }

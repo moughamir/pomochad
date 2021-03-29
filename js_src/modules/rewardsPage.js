@@ -12,10 +12,14 @@ export const showRemaining_Gems = (gems) => {
 let unlockRewardsDiv = document.querySelector(".unlockRewardsDiv");
 
 unlockRewardsDiv.addEventListener("click", () => {
-  userCards = parseInt(userCards) + 1;
-  userScore -= 2000;
+  if (userScore >= 2000) {
+    userCards = parseInt(userCards) + 1;
+    userScore -= 2000;
 
-  // sync scores
-  showRemaining_Gems(userScore);
-  saveUserData_toDB();
+    // sync scores
+    showRemaining_Gems(userScore);
+    saveUserData_toDB();
+  } else {
+    alert("not enough gems!");
+  }
 });
