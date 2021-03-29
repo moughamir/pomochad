@@ -84,8 +84,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
   overflow: auto;
+  grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+  grid-gap: 1rem;
 }
 
 .unlockRewardsDiv:hover,
