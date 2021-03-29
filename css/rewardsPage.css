@@ -73,10 +73,6 @@
   align-items: center;
 }
 
-.unlockRewardsDiv:hover {
-  cursor: pointer;
-}
-
 .showCollection {
   margin: 2rem;
 }
@@ -90,9 +86,13 @@
   align-items: center;
 }
 
-.default_WaifuCard_Div {
-  background-color: lavender;
+.unlockRewardsDiv:hover,
+.showCollection:hover {
+  cursor: pointer;
+}
 
+.default_WaifuCard_Div {
+  display: flex;
   width: 15vw;
   height: 15wh;
 }
