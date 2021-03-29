@@ -35,3 +35,19 @@ galleryBtn.addEventListener("click", () => {
   imagePreviewer.style.display = "grid";
   default_WaifuCard_Div.style.display = "none";
 });
+
+let dbUrl =
+  "https://media.githubusercontent.com/media/eek13/mywaifus/master/sfw/";
+
+export const create_WaifuCard = (n) => {
+  let cardImg = document.createElement("img");
+  cardImg.classList.add("sampleWaifuCard");
+
+  cardImg.setAttribute("src", `${dbUrl}${n}.jpg`);
+
+  imagePreviewer.appendChild(cardImg);
+};
+
+export const update_Gallery = (n) => {
+  for (let i = 1; i <= n; i++) create_WaifuCard(i);
+};

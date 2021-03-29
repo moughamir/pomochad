@@ -84,6 +84,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .unlockRewardsDiv:hover,
@@ -101,4 +102,8 @@
   width: 15vw;
   height: 15wh;
   border-radius: 0.4rem;
+}
+
+.sampleWaifuCard {
+  width: 8vw;
 }

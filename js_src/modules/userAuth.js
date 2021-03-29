@@ -1,5 +1,5 @@
 import { userScore, userTheme, userSound, userCards } from "../index.js";
-import { showRemaining_Gems } from "./rewardsPage.js";
+import { showRemaining_Gems ,update_Gallery } from "./rewardsPage.js";
 
 let score = document.querySelector(".score"); // score div in dashboard page
 
@@ -198,6 +198,7 @@ export const getUserData_fromDB = () => {
         // sync n.o of purchased user cards
 
         userCards = snapshot.val().cards ? snapshot.val().cards : 0;
+        update_Gallery(userCards);
       });
     }
   });
