@@ -1,5 +1,5 @@
 import { userScore, userTheme, userSound, userCards } from "../index.js";
-import { showRemaining_Gems  } from "./rewardsPage.js";
+import { showRemaining_Gems } from "./rewardsPage.js";
 
 let score = document.querySelector(".score"); // score div in dashboard page
 
@@ -188,7 +188,7 @@ export const getUserData_fromDB = () => {
 
         // sync score and lvl
         userScore = snapshot.val().score;
-        score.innerText = `${userScore}`;
+
         showRemaining_Gems(userScore);
         setLevel_Progress();
 
@@ -198,6 +198,8 @@ export const getUserData_fromDB = () => {
         // sync n.o of purchased user cards
 
         userCards = snapshot.val().cards ? snapshot.val().cards : 0;
+        score.innerText =
+          parseInt(`${userScore}`) + parseInt(`${userCards}` * 2000);
       });
     }
   });
