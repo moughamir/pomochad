@@ -14,7 +14,6 @@ import { saveUserData_toDB, getUserData_fromDB } from "./modules/userAuth.js";
 
 import { showRemaining_Gems } from "./modules/rewardsPage.js";
 
-// localStorage stuffs , save some defaults
 export let userScore = 0,
   userTheme = "light",
   userSound = "piano",
