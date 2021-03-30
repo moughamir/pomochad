@@ -13,7 +13,7 @@ import { saveUserData_toDB, getUserData_fromDB } from "./modules/userAuth.js";
 
 import { showRemaining_Gems } from "./modules/rewardsPage.js";
 
-// user info 
+// user info
 export let userScore = 0,
   userTheme = "light",
   userSound = "piano",
@@ -68,7 +68,6 @@ export const startPomodoro = () => {
   timer = setInterval(updatePomodoro, 1000);
 };
 
-setLevel_Progress();
 toggleTheme();
 
 export const update_CurrentMode = () => {

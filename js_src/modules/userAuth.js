@@ -188,9 +188,7 @@ export const getUserData_fromDB = () => {
 
         // sync score and lvl
         userScore = snapshot.val().score;
-
         showRemaining_Gems(userScore);
-        setLevel_Progress();
 
         // sync saved usersound!
         userSound = snapshot.val().sound;
@@ -200,6 +198,7 @@ export const getUserData_fromDB = () => {
         userCards = snapshot.val().cards ? snapshot.val().cards : 0;
         score.innerText =
           parseInt(`${userScore}`) + parseInt(`${userCards}` * 2000);
+        setLevel_Progress();
       });
     }
   });
