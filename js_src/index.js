@@ -5,7 +5,6 @@ import {
   timerSound,
   setCircleProgress,
   setLevel_Progress,
-  checkLocalStorage,
 } from "./modules/miscFuncs";
 
 import { makeSessionBtns } from "./modules/sessionButtons";
@@ -14,15 +13,15 @@ import { saveUserData_toDB, getUserData_fromDB } from "./modules/userAuth.js";
 
 import { showRemaining_Gems } from "./modules/rewardsPage.js";
 
+// user info 
 export let userScore = 0,
   userTheme = "light",
   userSound = "piano",
   userMode = "default",
-  userCards = 0 ;
+  userCards = 0;
 
+//sync user data
 getUserData_fromDB();
-checkLocalStorage();
-
 makeSessionBtns();
 
 // saveMin saves values when timer paused
@@ -39,7 +38,9 @@ const checkTimer = (temp) => {
       userScore += totalTime * 4;
       setLevel_Progress();
 
-      score.innerText = `${userScore}`;
+      score.innerText =
+        parseInt(`${userScore}`) + parseInt(`${userCards}` * 2000);
+
       showRemaining_Gems(userScore);
       saveUserData_toDB();
     }
@@ -76,11 +77,7 @@ export const update_CurrentMode = () => {
 };
 
 update_CurrentMode();
-<<<<<<< HEAD
-score.innerText = `${userScore}`;
-=======
 
 score.innerText = parseInt(`${userScore}`) + parseInt(`${userCards}` * 2000);
->>>>>>> 5305ae337876b8e2e6827dcae45af6a2055ba83d
 
 showRemaining_Gems(userScore);

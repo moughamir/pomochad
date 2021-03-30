@@ -1,6 +1,6 @@
 import { userTheme } from "../index";
 import { all_sounds } from "./settings";
-import { create_LighterShade, saveto_LocalStorage } from "./miscFuncs";
+import { create_LighterShade } from "./miscFuncs";
 
 import {
   automaticMode,
@@ -31,7 +31,7 @@ let whichTheme = 0;
 const createTheme = (() => {
   const saveThisTheme = (name) => {
     userTheme = name;
-    localStorage.savedTheme = name;
+    //    localStorage.savedTheme = name;
     saveUserData_toDB();
   };
 
