@@ -18,7 +18,7 @@ export let userScore = 0,
   userTheme = "light",
   userSound = "piano",
   userMode = "default",
-  userCards = 0;
+  userCards = 0 ;
 
 //checkLocalStorage();
 getUserData_fromDB();
@@ -38,9 +38,7 @@ const checkTimer = (temp) => {
       userScore += totalTime * 4;
       setLevel_Progress();
 
-      score.innerText =
-        parseInt(`${userScore}`) + parseInt(`${userCards}` * 2000);
-
+      score.innerText = `${userScore}`;
       showRemaining_Gems(userScore);
       saveUserData_toDB();
     }
@@ -77,8 +75,6 @@ export const update_CurrentMode = () => {
 };
 
 update_CurrentMode();
-
-score.innerText = parseInt(`${userScore}`) + parseInt(`${userCards}` * 2000);
-
+score.innerText = `${userScore}`;
 
 showRemaining_Gems(userScore);

@@ -86,6 +86,8 @@
   align-items: center;
   overflow: auto;
   grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+  grid-template-rows: masonry;
+
   grid-gap: 1rem;
 }
 
@@ -103,10 +105,37 @@
 .default_WaifuCard {
   width: 15vw;
   height: 15wh;
-  border-radius: 0.4rem;
+  border-radius: 0.5rem;
 }
 
 .sampleWaifuCard {
   width: 10vw;
   height: auto;
+  border-radius: 0.5rem;
+}
+
+/*! Firefox */
+html {
+  scrollbar-color: #353b45 white;
+}
+
+/*! Other Browser */
+html {
+  --scrollbarBG: white;
+  --thumbBG:  lavenderblush ;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
 }
