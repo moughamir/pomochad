@@ -5,6 +5,7 @@ import {
   timerSound,
   setCircleProgress,
   setLevel_Progress,
+  checkLocalStorage,
 } from "./modules/miscFuncs";
 
 import { makeSessionBtns } from "./modules/sessionButtons";
@@ -20,6 +21,8 @@ export let userScore = 0,
   userCards = 0;
 
 getUserData_fromDB();
+checkLocalStorage();
+
 makeSessionBtns();
 
 // saveMin saves values when timer paused

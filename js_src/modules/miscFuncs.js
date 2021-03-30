@@ -2,8 +2,8 @@ import { userScore, userTheme, userSound, totalTime, pomoTime } from "../index";
 import { modeCurrentTime, score } from "./divSelectors";
 
 import {} from "./settings";
-
 import { saveUserData_toDB } from "./userAuth.js";
+import { useLightTheme, useDarkTheme } from "./themes.js";
 
 let innerCircle = document.querySelector(".timerText");
 
@@ -120,6 +120,15 @@ export const create_LighterShade = () => {
   }
 
   aboutCaption.style.backgroundColor = adjustColor(finalCol, 10);
+};
+
+export const saveto_LocalStorage = () => {
+  localStorage.setItem("savedTheme", userTheme);
+};
+
+export const checkLocalStorage = () => {
+  if (localStorage.length != 0)
+    localStorage.savedTheme == "light" ? useLightTheme() : useDarkTheme();
 };
 
 export {
