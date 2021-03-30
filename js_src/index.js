@@ -5,6 +5,7 @@ import {
   timerSound,
   setCircleProgress,
   setLevel_Progress,
+  checkLocalStorage,
 } from "./modules/miscFuncs";
 
 import { makeSessionBtns } from "./modules/sessionButtons";
@@ -20,8 +21,9 @@ export let userScore = 0,
   userMode = "default",
   userCards = 0;
 
-//checkLocalStorage();
 getUserData_fromDB();
+checkLocalStorage();
+
 makeSessionBtns();
 
 // saveMin saves values when timer paused
@@ -79,6 +81,5 @@ export const update_CurrentMode = () => {
 update_CurrentMode();
 
 score.innerText = parseInt(`${userScore}`) + parseInt(`${userCards}` * 2000);
-
 
 showRemaining_Gems(userScore);
