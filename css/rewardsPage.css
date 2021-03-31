@@ -37,10 +37,12 @@
   justify-content: center;
   align-items: center;
   color: #82c3f9;
-  padding: 1rem;
-  margin: 1rem;
-  background-color: pink;
+  border: 1px solid pink;
   border-radius: 0.5rem;
+
+  padding: 0.7rem;
+  margin: 1.2rem;
+  margin-bottom: 0rem;
 }
 
 .gemsAvailable {
@@ -55,17 +57,21 @@
 .unlockRewardsDiv {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  background-color: lavenderblush;
+  background-color: white;
   border-radius: 0.6rem;
   font-size: 1.4rem;
 }
 
 .unlockRewards_title {
-  background-color: #82c3f9;
+  background-color: #f1ffd0;
   border-radius: 0.6rem 0.6rem 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.7rem;
+  margin: 1.2rem;
+  margin-bottom: 0rem;
+  border-radius: 0.3rem;
 }
 
 .buyWaifusBtn {
@@ -75,13 +81,22 @@
   align-items: center;
 }
 
+.ph-diamond-fill {
+  padding-left: 1rem;
+}
+
 .showCollection {
-  margin: 2rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  border-radius: 0.5rem;
+  color: #ffaec0;
 }
 
 .imagePreviewer {
   padding: 2rem;
-  border: 2px solid black;
   height: 60vh;
   display: flex;
   justify-content: center;
@@ -89,6 +104,8 @@
   overflow: auto;
   grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
   grid-gap: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
 }
 
 .unlockRewardsDiv:hover,
