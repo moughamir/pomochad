@@ -2,7 +2,7 @@
   display: none;
   font-family: "Open Sans", sans-serif;
   padding: 1.5rem;
-  background-color: #f9f9f9;
+  background-color: #fafafa;
   grid-template-columns: 1fr 5fr;
   width: 1fr;
   margin: 1rem 5rem 1rem 5rem;
@@ -21,36 +21,32 @@
 
 /* available  Gems stuff */
 
-.available_Gems_Div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.available_Gems_Title {
-  text-align: center;
-  background-color: #82C3F9;
-  color: white;
-  border-radius: 0.6rem 0.6rem 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .remainingGems_Div {
   display: grid;
   grid-template-rows: 1fr 1fr;
   background-color: #bcdcf7;
-  grid-row-gap: 1rem;
   font-size: 1.4rem;
   border-radius: 0.6rem;
 }
 
-.gem {
-  height: 1em;
-  width: 1em;
-  margin-left: 1.5rem;
+.available_Gems_Title {
+  text-align: center;
+  background-color: white;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #82c3f9;
 }
+
+.gemsAvailable {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* unlock cards */
 
 .unlockRewardsDiv {
   display: grid;
@@ -61,7 +57,7 @@
 }
 
 .unlockRewards_title {
-  background-color: blue;
+  background-color: #82c3f9;
   border-radius: 0.6rem 0.6rem 0 0;
   display: flex;
   justify-content: center;

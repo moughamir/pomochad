@@ -3,10 +3,10 @@
 import { userScore, userCards } from "../index.js";
 import { saveUserData_toDB } from "./userAuth.js";
 
-let available_Gems_Div = document.querySelector(".available_Gems_Div");
+let gemsAvailable = document.querySelector(".gemsAvailable");
 
 export const showRemaining_Gems = (gems) => {
-  available_Gems_Div.textContent = gems;
+  gemsAvailable.textContent = gems;
 };
 
 let unlockRewardsDiv = document.querySelector(".unlockRewardsDiv");
