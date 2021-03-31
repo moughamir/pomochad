@@ -24,7 +24,7 @@
 .remainingGems_Div {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  background-color: #bcdcf7;
+  background-color: white;
   font-size: 1.4rem;
   border-radius: 0.6rem;
 }
@@ -37,6 +37,10 @@
   justify-content: center;
   align-items: center;
   color: #82c3f9;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: pink;
+  border-radius: 0.5rem;
 }
 
 .gemsAvailable {
