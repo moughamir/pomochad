@@ -54,7 +54,15 @@ export const update_Gallery = (n) => {
 };
 
 galleryBtn.addEventListener("click", () => {
+  // remove any exisiting waifu cards
+  let sampleWaifuCard = document.querySelectorAll(".sampleWaifuCard");
+
+  sampleWaifuCard.forEach((t) => {
+    t.remove();
+  });
+
   imagePreviewer.style.display = "grid";
   default_WaifuCard_Div.style.display = "none";
+
   update_Gallery(userCards);
 });
