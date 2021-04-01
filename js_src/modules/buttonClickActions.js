@@ -44,6 +44,8 @@ import {
   setCircleProgress,
 } from "./miscFuncs";
 
+import { clear_Gallery } from "./rewardsPage.js";
+
 let auth_Div = document.querySelector(".auth_Div"); // to hide auth_div when other navlinks are clicked
 let rewardsLink = document.querySelector(".rewardsLink");
 let rewardsPage = document.querySelector(".rewardsPage");
@@ -132,6 +134,8 @@ settingsBtn.addEventListener("click", () => {
     auth_Div,
   ].forEach((temp) => (temp.style.display = "none"));
   settingsPage.style.display = "flex";
+
+  clear_Gallery();
 });
 
 /* Home Page */
@@ -147,6 +151,8 @@ const jumpToHomePage = () => {
     auth_Div,
     rewardsPage,
   ].forEach((temp) => (temp.style.display = "none"));
+
+  clear_Gallery();
 };
 
 const jumptoAboutPage = () => {
@@ -164,6 +170,8 @@ const jumptoAboutPage = () => {
     temp.style.display = "none";
   });
   aboutPage.style.display = "block";
+
+  clear_Gallery();
 };
 
 const jumptoModesPage = () => {
@@ -181,6 +189,8 @@ const jumptoModesPage = () => {
     temp.style.display = "none";
   });
   modesDiv.style.display = "block";
+
+  clear_Gallery();
 };
 
 const jumptoDashBoard = () => {
@@ -198,6 +208,8 @@ const jumptoDashBoard = () => {
     temp.style.display = "none";
   });
   dashboardPage.style.display = "grid";
+
+  clear_Gallery();
 };
 
 const jumptoRewardsPage = () => {
@@ -215,6 +227,8 @@ const jumptoRewardsPage = () => {
     temp.style.display = "none";
   });
   rewardsPage.style.display = "grid";
+
+  clear_Gallery();
 };
 
 homePage.addEventListener("click", () => jumpToHomePage());
