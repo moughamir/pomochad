@@ -65,7 +65,7 @@
 }
 
 .unlockRewards_title {
-  background-color: lavenderblush;
+  background-color: #e6e6fa;
   border-radius: 0.6rem 0.6rem 0 0;
   display: flex;
   justify-content: center;
@@ -73,7 +73,7 @@
   padding: 0.7rem;
   margin-bottom: 0rem;
   border-radius: 0.4rem 0.4rem 0 0;
-  color: #9b8c91;
+  color: #9696aa;
 }
 
 .buyWaifusBtn {
@@ -81,6 +81,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s;
+}
+
+.buyWaifusBtn:hover {
+  background-color: #545e6a;
+  color: white;
 }
 
 .ph-diamond-fill {
@@ -105,7 +111,6 @@
   grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
   background-color: white;
   border-radius: 0.4rem;
-  border: 2px solid #d0e8f2;
 }
 
 .unlockRewardsDiv:hover,
@@ -131,4 +136,11 @@
 .sampleWaifuCard {
   width: 100%;
   height: auto;
+  transition: transform 0.3s;
+  border-radius: 0.4rem;
+}
+
+.sampleWaifuCard:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
