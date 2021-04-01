@@ -120,13 +120,13 @@
 
 .default_WaifuCard_Div {
   display: flex;
-  width: 15vw;
-  height: 15wh;
+  width: 16vw;
+  height: 16wh;
 }
 
 .default_WaifuCard_Img {
-  width: 15vw;
-  height: 15wh;
+  width: 16vw;
+  height: 16wh;
   border-radius: 0.4rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 1rem;

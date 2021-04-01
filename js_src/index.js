@@ -39,7 +39,7 @@ const checkTimer = (temp) => {
       setLevel_Progress();
 
       score.innerText =
-        parseInt(`${userScore}`) + parseInt(`${userCards}` * 2000); // shows the actual score (with purchases points included )
+        parseInt(`${userScore}`) + parseInt(`${userCards}` * 2000); // shows  actual score (purchases points included )
 
       showRemaining_Gems(userScore);
       saveUserData_toDB();
