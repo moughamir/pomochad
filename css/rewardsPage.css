@@ -123,6 +123,7 @@
   display: flex;
   width: 16vw;
   height: 16wh;
+  transition: all 0.5s;
 }
 
 .default_WaifuCard_Img {
@@ -132,13 +133,18 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 1rem;
   border: 2px solid #d0e8f2;
+  transition: all 0.5s;
+}
+
+.eek {
+  animation: wobble 10s;
 }
 
 .sampleWaifuCard {
   width: 100%;
   height: auto;
-  transition: transform 0.3s;
   border-radius: 0.4rem;
+  transition: all 0.5s;
 }
 
 .sampleWaifuCard:hover {

@@ -5,6 +5,7 @@ let dbUrl =
 
 import { userScore, userCards } from "../index.js";
 import { saveUserData_toDB } from "./userAuth.js";
+import { add_loadingAnimation } from "./miscFuncs.js";
 
 let gemsAvailable = document.querySelector(".gemsAvailable");
 
@@ -19,6 +20,7 @@ export const create_ImageLink = (n) => {
 let galleryBtn = document.querySelector(".showCollection");
 let imagePreviewer = document.querySelector(".imagePreviewer");
 let default_WaifuCard_Div = document.querySelector(".default_WaifuCard_Div");
+let default_WaifuCard_Img = document.querySelector(".default_WaifuCard_Img");
 
 export const clear_Gallery = () => {
   imagePreviewer.style.display = "flex";
@@ -35,7 +37,7 @@ unlockRewardsDiv.addEventListener("click", () => {
   imagePreviewer.style.display = "flex";
   default_WaifuCard_Div.style.display = "grid";
 
-  default_WaifuCard_Div.setAttribute("src", "");
+  // sets recently purchased waifu card
 
   clear_Gallery();
 
@@ -46,9 +48,14 @@ unlockRewardsDiv.addEventListener("click", () => {
     // sync scores
     showRemaining_Gems(userScore);
     saveUserData_toDB();
-  } else {
-    alert("not enough gems!");
+
+    add_loadingAnimation(default_WaifuCard_Div);
+
+    default_WaifuCard_Img.setAttribute("src", create_ImageLink(userCards));
+
+    return;
   }
+  alert("not enough gems!");
 });
 
 export const create_WaifuCard = (n) => {

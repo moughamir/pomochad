@@ -122,6 +122,13 @@ export const create_LighterShade = () => {
   aboutCaption.style.backgroundColor = adjustColor(finalCol, 10);
 };
 
+export const add_loadingAnimation = (n) => {
+  n.animate([{ transform: "rotate(0deg)" }, { transform: "rotate(360deg)" }], {
+    duration: 1000,
+    iterations: 1,
+  });
+};
+
 export {
   timerSound,
   setBoxText,
