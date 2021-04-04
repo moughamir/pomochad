@@ -131,6 +131,7 @@ const reset = document.querySelector(".reset");
 const squareBox = document.querySelector(".squareBox");
 const sessionBtns = document.querySelector(".sessionBtns");
 const mainFlex = document.querySelector(".flexMain");
+const rewardsPage = document.querySelector(".rewardsPage");
 
 const jumpto_UserStatusPage = () => {
   [
@@ -142,6 +143,7 @@ const jumpto_UserStatusPage = () => {
     dashboardPage,
     mainFlex,
     modesDiv,
+    rewardsPage,
   ].forEach((temp) => {
     temp.style.display = "none";
   });
