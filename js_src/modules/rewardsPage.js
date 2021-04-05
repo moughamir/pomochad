@@ -1,7 +1,7 @@
 // update score == remaining gems
 
 let dbUrl =
-  "https://media.githubusercontent.com/media/eek13/mywaifus/master/sfw/";
+  "https://raw.githubusercontent.com/eek13/mywaifus/master/sfw/";
 
 import { userScore, userCards } from "../index.js";
 import { saveUserData_toDB } from "./userAuth.js";
