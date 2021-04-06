@@ -1,7 +1,6 @@
 // update score == remaining gems
 
-let dbUrl =
-  "https://raw.githubusercontent.com/eek13/mywaifus/master/sfw/";
+let dbUrl = "https://raw.githubusercontent.com/eek13/mywaifus/master/sfw/";
 
 import { userScore, userCards } from "../index.js";
 import { saveUserData_toDB } from "./userAuth.js";
@@ -63,6 +62,7 @@ export const create_WaifuCard = (n) => {
   cardImg.classList.add("sampleWaifuCard");
 
   cardImg.setAttribute("src", create_ImageLink(n));
+  cardImg.setAttribute("loading", "lazy");
 
   imagePreviewer.appendChild(cardImg);
 };
