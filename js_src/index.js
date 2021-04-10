@@ -35,7 +35,7 @@ const checkTimer = (temp) => {
 
     if (userMode == "default") {
       userScore = parseInt(userScore);
-      userScore += totalTime * 4;
+      userScore += totalTime * 10;
       setLevel_Progress();
 
       score.innerText =
