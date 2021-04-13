@@ -26,8 +26,6 @@ const signUp = () => {
   );
 
   promise.catch((e) => alert(e.message));
-
-  alert("Signed Up");
 };
 
 const signIn = () => {
