@@ -58,10 +58,10 @@ unlockRewardsDiv.addEventListener("click", () => {
 });
 
 export const create_WaifuCard = (n) => {
-  let cardImg = document.createElement("img");
-  cardImg.classList.add("sampleWaifuCard");
+  const cardImg = new Image();
 
-  cardImg.setAttribute("src", create_ImageLink(n));
+  cardImg.src = create_ImageLink(n);
+  cardImg.classList.add("sampleWaifuCard");
   cardImg.setAttribute("loading", "lazy");
 
   imagePreviewer.appendChild(cardImg);
