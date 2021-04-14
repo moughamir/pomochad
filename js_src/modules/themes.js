@@ -31,7 +31,6 @@ let whichTheme = 0;
 const createTheme = (() => {
   const saveThisTheme = (name) => {
     userTheme = name;
-    //    localStorage.savedTheme = name;
     saveUserData_toDB();
   };
 
@@ -327,6 +326,41 @@ const createTheme = (() => {
     signOutBtn.style.color = signOutBtnFG;
   };
 
+  const rewardsPageDiv = (
+    wholeBg,
+    remainingGemsBg,
+    waifuPriceFG,
+    unlockRewardsDivBg,
+    unlockRewards_titleBg,
+    unlockRewards_titleFg,
+    showCollectionBg,
+    showCollectionFg,
+    galleryBg
+  ) => {
+    const rewardsPage = document.querySelector(".rewardsPage");
+    rewardsPage.style.backgroundColor = wholeBg;
+
+    const remainingGems_Div = document.querySelector(".remainingGems_Div");
+    remainingGems_Div.style.backgroundColor = remainingGemsBg;
+
+    const waifuPrice = document.querySelector(".waifuPrice");
+    waifuPrice.style.color = waifuPriceFG;
+
+    const unlockRewardsDiv = document.querySelector(".unlockRewardsDiv");
+    unlockRewardsDiv.style.backgroundColor = unlockRewardsDivBg;
+
+    const unlockRewards_title = document.querySelector(".unlockRewards_title");
+    unlockRewards_title.style.backgroundColor = unlockRewards_titleBg;
+    unlockRewards_title.style.color = unlockRewards_titleFg;
+
+    const showCollection = document.querySelector(".showCollection");
+    showCollection.style.backgroundColor = showCollectionBg;
+    showCollection.style.color = showCollectionFg;
+
+    const gallery = document.querySelector(".imagePreviewer");
+    gallery.style.backgroundColor = galleryBg;
+  };
+
   return {
     saveThisTheme,
     bodyCol,
@@ -344,6 +378,7 @@ const createTheme = (() => {
     levelProgress,
     soundsSection,
     auth_Section,
+    rewardsPageDiv,
   };
 })();
 
@@ -439,6 +474,18 @@ export const useDarkTheme = () => {
   );
 
   create_LighterShade();
+
+  createTheme.rewardsPageDiv(
+    "#23272f",
+    "#292d35",
+    "#23272F",
+    "#a3b8ef",
+    "#2a2e36",
+    "#FF6E67",
+    "#23272f",
+    "#7ed491",
+    "#1E222A"
+  );
 };
 
 export const toggleTheme = () => {
