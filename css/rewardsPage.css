@@ -86,8 +86,7 @@
 }
 
 .buyWaifusBtn:hover {
-  background-color: #545e6a;
-  color: white;
+  transform: scale(1.2);
 }
 
 .ph-diamond-fill {
@@ -110,7 +109,7 @@
   align-items: center;
   overflow: auto;
   grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
-  background-color: white;
+  background-color: #545e6a;
   border-radius: 0.4rem;
 }
 

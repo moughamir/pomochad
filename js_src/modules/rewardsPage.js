@@ -1,6 +1,6 @@
 // update score == remaining gems
 
-let dbUrl = "https://raw.githubusercontent.com/eek13/mywaifus/master/sfw/";
+let dbUrl = "https://gitlab.com/siduck761/ezli/-/raw/master/sfw/";
 
 import { userScore, userCards } from "../index.js";
 import { saveUserData_toDB } from "./userAuth.js";
@@ -58,10 +58,10 @@ unlockRewardsDiv.addEventListener("click", () => {
 });
 
 export const create_WaifuCard = (n) => {
-  let cardImg = document.createElement("img");
-  cardImg.classList.add("sampleWaifuCard");
+  const cardImg = new Image();
 
-  cardImg.setAttribute("src", create_ImageLink(n));
+  cardImg.src = create_ImageLink(n);
+  cardImg.classList.add("sampleWaifuCard");
   cardImg.setAttribute("loading", "lazy");
 
   imagePreviewer.appendChild(cardImg);

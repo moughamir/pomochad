@@ -132,6 +132,7 @@ settingsBtn.addEventListener("click", () => {
     dashboardPage,
     mainFlex,
     auth_Div,
+    rewardsPage,
   ].forEach((temp) => (temp.style.display = "none"));
   settingsPage.style.display = "flex";
 
