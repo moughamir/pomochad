@@ -68,7 +68,7 @@ export const startPomodoro = () => {
   timer = setInterval(updatePomodoro, 1000);
 };
 
-toggleTheme();
+toggleTheme(); // enables theme toggle with  dark/light
 
 export const update_CurrentMode = () => {
   let c = document.querySelector(".current_Mode");

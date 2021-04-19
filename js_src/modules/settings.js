@@ -24,6 +24,7 @@ export const all_sounds = [
   "piano",
   "vasco_shot",
   "pizzaro",
+  "white_beard"
 ];
 
 export const add_Audios = () => {
