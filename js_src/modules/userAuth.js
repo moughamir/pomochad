@@ -182,22 +182,24 @@ export const getUserData_fromDB = () => {
 
       let ref = firebase.database().ref("users");
       ref.child(user_Name).on("value", function (snapshot) {
-        // sync theme
-        userTheme = snapshot.val().theme;
-        userTheme == "light" ? useLightTheme() : useDarkTheme();
 
-        // sync score and lvl
-        userScore = snapshot.val().score;
-        showRemaining_Gems(userScore);
+        if (snapshot.val().theme) {
+          userTheme = snapshot.val().theme;
+          userTheme == "light" ? useLightTheme() : useDarkTheme();
+        }
 
-        // sync saved usersound!
-        userSound = snapshot.val().sound;
+        if (snapshot.val().sound) userSound = snapshot.val().sound;
 
         // sync n.o of purchased user cards
+        if (snapshot.val().cards) userCards = snapshot.val().cards;
 
-        userCards = snapshot.val().cards ? snapshot.val().cards : 0;
+        // sync score and lvl
+        if (snapshot.val().score) userScore = snapshot.val().score;
+        showRemaining_Gems(userScore);
+
         score.innerText =
           parseInt(`${userScore}`) + parseInt(`${userCards}` * 2000);
+
         setLevel_Progress();
       });
     }

@@ -1,5 +1,5 @@
-import { userScore, userTheme, userSound, totalTime, pomoTime } from "../index";
-import { modeCurrentTime, score } from "./divSelectors";
+import { userTheme, userSound, totalTime, pomoTime } from "../index";
+import { modeCurrentTime } from "./divSelectors";
 
 import {} from "./settings";
 

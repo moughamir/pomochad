@@ -1,4 +1,4 @@
-import {} from "./modules/buttonClickActions";
+import "./modules/buttonClickActions";
 import { score } from "./modules/divSelectors";
 import {
   setBoxText,
