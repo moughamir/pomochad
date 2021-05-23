@@ -32,7 +32,7 @@ import {
   dashboardLink,
   dashboardPage,
   mainFlex,
-  themeToggle,
+//  themeToggle,
 } from "./divSelectors";
 
 import {
