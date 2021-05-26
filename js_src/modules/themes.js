@@ -405,7 +405,7 @@ export const useLightTheme = () => {
 
   createTheme.aboutContext("#545e6a", "#545e6a");
   createTheme.circularStrokes("#f0f0f0", "#C0E4FE", "#545e6a");
-  createTheme.dashScore("#82868E", "#ffffff", "#545e6a", "#ffffff", "#f6f6f6");
+  createTheme.dashScore("#82868E", "#ffffff", "#545e6a", "#ffffff", "#fafafa");
   createTheme.levelProgress("#8deeb9", "#f0f0f0", "#82868E", "#ffffff");
 
   createTheme.soundsSection(
@@ -438,6 +438,7 @@ export const useLightTheme = () => {
     "#545e6a",
     "#fafafa"
   );
+
 };
 
 export const useDarkTheme = () => {
