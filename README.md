@@ -13,10 +13,10 @@ A very simple pomodoro web app based on a reward system made with vanilla HTML/C
 - [ ] custom timer sound
 - [ ] better design
 - [x] save user data to firebase rdb
-- [ ] add about/wiki page
+- [x] add about/wiki page
 - [x] break mode\*
-- [ ] dashboard\*
-- [ ] rewards stuff\*
+- [x] dashboard\*
+- [x] rewards stuff\*
 - [x] settings page
 - [x] add more themes
 
