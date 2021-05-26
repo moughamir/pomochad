@@ -207,6 +207,7 @@ svg {
   height: 2rem;
   padding: 10%;
   border-radius: 50%;
+  color: #668AA4;
   background-color: #c0e4fe;
   animation: loadUp 0.5s;
   position: relative;

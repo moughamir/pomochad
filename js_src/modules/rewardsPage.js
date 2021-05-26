@@ -77,5 +77,7 @@ galleryBtn.addEventListener("click", () => {
   imagePreviewer.style.display = "grid";
   default_WaifuCard_Div.style.display = "none";
 
-  update_Gallery(userCards);
+  userCards > 0
+    ? update_Gallery(userCards)
+    : alert("YOU DIDNT PURCHASE ANY CARD YET BRUH");
 });
