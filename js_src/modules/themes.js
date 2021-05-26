@@ -387,9 +387,9 @@ const createTheme = (() => {
 export const useLightTheme = () => {
   createTheme.saveThisTheme("light");
   createTheme.bodyCol("#545E6A", "#ffffff");
-  createTheme.squareBoxCol("#ffffff", "#fafafa");
+  createTheme.squareBoxCol("#ffffff", "#f6f6f6");
   createTheme.currentMode_Div("#527f6b", "#caf7e3");
-  createTheme.sessionAreaBG("#ffffff", "#fafafa");
+  createTheme.sessionAreaBG("#ffffff", "#f6f6f6");
   createTheme.sessionBtnCol("#668aa4", "#C0E4FE", "#668aa4");
   createTheme.resetCol("#FD8A89", "#FFD9D8", "#ffffff");
   createTheme.settingsbtnCol("white", "#545E6A");
@@ -405,7 +405,7 @@ export const useLightTheme = () => {
 
   createTheme.aboutContext("#545e6a", "#545e6a");
   createTheme.circularStrokes("#f0f0f0", "#C0E4FE", "#545e6a");
-  createTheme.dashScore("#82868E", "#ffffff", "#545e6a", "#ffffff", "#fafafa");
+  createTheme.dashScore("#82868E", "#ffffff", "#545e6a", "#ffffff", "#f6f6f6");
   createTheme.levelProgress("#8deeb9", "#f0f0f0", "#82868E", "#ffffff");
 
   createTheme.soundsSection(
@@ -426,6 +426,18 @@ export const useLightTheme = () => {
   );
 
   create_LighterShade();
+
+  createTheme.rewardsPageDiv(
+    "#ffffff",
+    "#ffffff",
+    "#545e6a",
+    "#ffffff",
+    "#E6E6FA",
+    "#545e6a",
+    "#ffffff",
+    "#545e6a",
+    "#fafafa"
+  );
 };
 
 export const useDarkTheme = () => {
