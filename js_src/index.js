@@ -64,8 +64,10 @@ const updatePomodoro = () => {
 };
 
 export const startPomodoro = () => {
-  if(currentClick != undefined)
-    currentClick == "pause" ? (pomoTime = saveMin) : (pomoTime = totalTime * 60);
+  if (currentClick != undefined)
+    currentClick == "pause"
+      ? (pomoTime = saveMin)
+      : (pomoTime = totalTime * 60);
 
   timer = setInterval(updatePomodoro, 1000);
 };

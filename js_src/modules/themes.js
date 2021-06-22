@@ -391,7 +391,7 @@ export const useLightTheme = () => {
   createTheme.currentMode_Div("#527f6b", "#caf7e3");
   createTheme.sessionAreaBG("#ffffff", "#f6f6f6");
   createTheme.sessionBtnCol("#668aa4", "#C0E4FE", "#668aa4");
-  createTheme.resetCol("#FD8A89", "#FFD9D8", "#ffffff");
+  createTheme.resetCol("#FD8A89", "#FFD9D8", "#545E6A");
   createTheme.settingsbtnCol("white", "#545E6A");
 
   createTheme.modesPageCol(
@@ -438,7 +438,6 @@ export const useLightTheme = () => {
     "#545e6a",
     "#fafafa"
   );
-
 };
 
 export const useDarkTheme = () => {
@@ -447,10 +446,10 @@ export const useDarkTheme = () => {
   createTheme.squareBoxCol("#23272f", "#23272f");
   createTheme.currentMode_Div("#878b93", "#2d3139");
   createTheme.sessionAreaBG("#2a2e36", "#2a2e36");
-  createTheme.sessionBtnCol("#E78992", "#1E222A", "#E78992");
+  createTheme.sessionBtnCol("#D08770", "#1E222A", "#D08770");
   createTheme.sessionAreaBG("#2a2e36", "#2a2e36");
-  createTheme.sessionBtnCol("#E78992", "#1E222A", "#E78992");
-  createTheme.resetCol("#a4aeba", "#1E222A", "#61afef");
+  createTheme.sessionBtnCol("#D08770", "#1E222A", "#D08770");
+  createTheme.resetCol("#23272f", "#D08770", "#8deeb9");
   createTheme.settingsbtnCol("#8deeb9", "#23272f");
 
   createTheme.modesPageCol(
@@ -458,12 +457,12 @@ export const useDarkTheme = () => {
     "#2C323B",
     "#4a5460",
     "#40464F",
-    "#61afef",
+    "#81A1C1",
     "#2C323B"
   );
 
   createTheme.aboutContext("#C3C7CF", "#AAAEB6");
-  createTheme.circularStrokes("#1E222A", "#61afef", "#61afef");
+  createTheme.circularStrokes("#1E222A", "#81A1C1", "#81A1C1");
 
   createTheme.dashScore("#787C84", "#1E222A", "#FF6E67", "#1E222A", "#23272f");
   createTheme.levelProgress("#A3BE8C", "#23272f", "#787C84", "#1E222A");
