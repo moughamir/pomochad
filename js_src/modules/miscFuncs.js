@@ -58,19 +58,6 @@ const addShakeAnimation = () => {
   svgCirc.style.animation = "wobble 5s";
 };
 
-export const setLevel_Progress = () => {
-  let score = document.querySelector(".score");
-
-  let usrScore = parseInt(score.textContent);
-  let percent = (usrScore / 50000) * 100;
-  let progressCircle = document.querySelector(".scoreInnerCircle");
-  let radius = progressCircle.r.baseVal.value;
-
-  let circum = radius * 2 * Math.PI;
-  progressCircle.style.strokeDasharray = circum;
-  progressCircle.style.strokeDashoffset = circum - (percent / 100) * circum;
-};
-
 /* show mode's time value */
 
 const displayModeTime = (min) => {

@@ -1,47 +1,31 @@
 import "./modules/buttonClickActions";
-import { score } from "./modules/divSelectors";
+
 import {
   setBoxText,
-  timerSound,
   setCircleProgress,
-  setLevel_Progress,
+  timerSound,
 } from "./modules/miscFuncs";
 
-import { makeSessionBtns } from "./modules/sessionButtons";
-import { toggleTheme } from "./modules/themes";
-import { saveUserData_toDB, getUserData_fromDB } from "./modules/userAuth.js";
-
-import { showRemaining_Gems } from "./modules/rewardsPage.js";
+import {makeSessionBtns} from "./modules/sessionButtons";
+import {toggleTheme} from "./modules/themes";
+import {getUserData_fromDB, saveUserData_toDB} from "./modules/userAuth.js";
 
 // user info
-export let userScore = 0,
-  userTheme = "light",
-  userSound = "piano",
-  userMode = "default",
-  userCards = 0;
+export let userTheme = "light", userSound = "piano", userMode = "default";
 
-//sync user data
+// sync user data
 getUserData_fromDB();
 makeSessionBtns();
 
 // saveMin saves values when timer paused
 export let saveMin, timer, currentClick;
-export let totalTime = 25,
-  pomoTime = totalTime * 60;
+export let totalTime = 25, pomoTime = totalTime * 60;
 
 const checkTimer = (temp) => {
   if (pomoTime == 0) {
     clearInterval(temp), timerSound();
 
     if (userMode == "default") {
-      userScore = parseInt(userScore);
-      userScore += totalTime * 10;
-      setLevel_Progress();
-
-      score.innerText =
-        parseInt(`${userScore}`) + parseInt(`${userCards}` * 2000); // shows  actual score (purchases points included )
-
-      showRemaining_Gems(userScore);
       saveUserData_toDB();
     }
   }
@@ -65,9 +49,8 @@ const updatePomodoro = () => {
 
 export const startPomodoro = () => {
   if (currentClick != undefined)
-    currentClick == "pause"
-      ? (pomoTime = saveMin)
-      : (pomoTime = totalTime * 60);
+    currentClick == "pause" ? (pomoTime = saveMin)
+                            : (pomoTime = totalTime * 60);
 
   timer = setInterval(updatePomodoro, 1000);
 };
@@ -80,7 +63,3 @@ export const update_CurrentMode = () => {
 };
 
 update_CurrentMode();
-
-score.innerText = parseInt(`${userScore}`) + parseInt(`${userCards}` * 2000);
-
-showRemaining_Gems(userScore);

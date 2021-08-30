@@ -4,6 +4,7 @@
   .flexMain {
     margin: 4% 38% 0% 38%;
   }
+
   .sessionBtns {
     margin: 0% 38% 3% 38%;
     padding: 2rem;
@@ -27,12 +28,6 @@
   }
 }
 
-@media screen and (min-width: 900px) and (max-width: 5000px) {
-  .aboutPage {
-    padding: 2rem 15rem 2rem 15rem;
-  }
-}
-
 @media screen and (max-width: 1199) {
   .flexMain {
     margin: 2% 29% 0% 29%;
@@ -44,7 +39,8 @@
     padding-left: 3%;
   }
 
-  .modesDiv , .auth_Div  {
+  .modesDiv,
+  .auth_Div {
     margin: 6% 25% 0% 25%;
   }
 
@@ -98,7 +94,8 @@
     flex-direction: column;
   }
 
-  .modesDiv , .auth_Div {
+  .modesDiv,
+  .auth_Div {
     margin: 4% 26% 0% 26%;
   }
 
@@ -106,25 +103,16 @@
     margin: 4rem;
   }
 
-  .aboutPage {
-    padding: 3rem;
-  }
-
   .score {
     margin: 0rem;
   }
 
-  h2,
-  .aboutHeaders {
+  h2 {
     margin: 2rem 0rem 2rem 0rem;
   }
 
   .settingsPage {
     margin: 2% 0% 0% 0%;
-  }
-
-  .dashboardPage {
-    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -157,20 +145,16 @@
     padding: 10 rem;
   }
 
-  .modesDiv , .auth_Div {
+  .modesDiv,
+  .auth_Div {
     margin: 3% 15% 0% 15%;
-  }
-
-  .aboutPage {
-    padding: 2rem;
   }
 
   .score {
     margin: 0rem;
   }
 
-  h2,
-  .aboutHeaders {
+  h2 {
     margin: 2rem 0rem 2rem 0rem;
   }
 
@@ -180,11 +164,6 @@
 
   .sound_Settings {
     grid-template-columns: 1fr;
-  }
-
-  .dashboardPage {
-    grid-template-columns: 1fr;
-    margin: 1rem 2rem 3rem 2rem;
   }
 }
 
@@ -224,12 +203,9 @@
     justify-content: space-between;
   }
 
-  .modesDiv , .auth_Div {
+  .modesDiv,
+  .auth_Div {
     margin: 2% 4% 0% 4%;
-  }
-
-  .aboutPage {
-    padding: 1rem;
   }
 
   .settingsPage {
@@ -239,8 +215,7 @@
     padding: 3rem;
   }
 
-  h2,
-  .aboutHeaders {
+  h2 {
     margin: 2rem 0rem 2rem 0rem;
   }
 
@@ -257,11 +232,6 @@
 
   .Themes {
     grid-template-columns: 1fr;
-  }
-
-  .dashboardPage {
-    grid-template-columns: 1fr;
-    margin: 1rem 2rem 3rem 2rem;
   }
 }
 
@@ -301,7 +271,8 @@
     justify-content: space-between;
   }
 
-  .modesDiv , .auth_Div{
+  .modesDiv,
+  .auth_Div {
     margin: 2% 4% 0% 4%;
   }
 
@@ -309,16 +280,11 @@
     margin: 0rem;
   }
 
-  .aboutPage {
-    padding: 0.5rem;
-  }
-
   .score {
     margin: 0rem;
   }
 
-  h2,
-  .aboutHeaders {
+  h2 {
     margin: 2rem 0rem 2rem 0rem;
   }
 
@@ -329,10 +295,5 @@
   .sound_Settings {
     grid-template-columns: 1fr;
     margin: 0px;
-  }
-
-  .dashboardPage {
-    grid-template-columns: 1fr;
-    margin: 1rem 2rem 3rem 2rem;
   }
 }

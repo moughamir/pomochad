@@ -15,8 +15,6 @@ A very simple pomodoro web app based on a reward system made with vanilla HTML/C
 - [x] save user data to firebase rdb
 - [x] add about/wiki page
 - [x] break mode\*
-- [x] dashboard\*
-- [x] rewards stuff\*
 - [x] settings page
 - [x] add more themes
 

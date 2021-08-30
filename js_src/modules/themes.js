@@ -1,30 +1,29 @@
-import { userTheme } from "../index";
-import { all_sounds } from "./settings";
-import { create_LighterShade } from "./miscFuncs";
+import {userTheme} from "../index";
 
 import {
   automaticMode,
   body,
   breakMode,
+  decreaseTimeArrow,
   defaultDark,
   defaultLight,
   defaultMode,
+  increaseTimeArrow,
+  increaseTimeChevron,
   modeCurrentTime,
   modeSettings,
-  increaseTimeChevron,
-  increaseTimeArrow,
-  decreaseTimeArrow,
-  saveBtnFLex,
   pause,
   reset,
+  saveBtnFLex,
   sessionBtns,
   squareBox,
   start,
   themeToggle,
   timerModes,
 } from "./divSelectors";
-
-import { saveUserData_toDB } from "./userAuth.js";
+import {create_LighterShade} from "./miscFuncs";
+import {all_sounds} from "./settings";
+import {saveUserData_toDB} from "./userAuth.js";
 
 let whichTheme = 0;
 
@@ -70,105 +69,91 @@ const createTheme = (() => {
     reset.style.backgroundColor = bg;
     reset.style.color = fg;
 
-    reset.addEventListener("mouseover", () => {
-      reset.style.backgroundColor = hoverBg;
-    });
-    reset.addEventListener("mouseout", () => {
-      reset.style.backgroundColor = bg;
-    });
+    reset.addEventListener("mouseover",
+                           () => { reset.style.backgroundColor = hoverBg; });
+    reset.addEventListener("mouseout",
+                           () => { reset.style.backgroundColor = bg; });
   };
 
-  const modesPageCol = (
-    headingFg,
-    headingBg,
-    activeModeBg,
-    boxBg,
-    innerTimeFg,
-    innerTimeBg
-  ) => {
-    timerModes.style.backgroundColor = headingBg;
+  const modesPageCol =
+      (headingFg, headingBg, activeModeBg, boxBg, innerTimeFg, innerTimeBg) => {
+        timerModes.style.backgroundColor = headingBg;
 
-    /* timer modes
-     let timer_Modes = [defaultMode, breakMode, automaticMode]; */
+        /* timer modes
+         let timer_Modes = [defaultMode, breakMode, automaticMode]; */
 
-    [defaultMode, breakMode, automaticMode].forEach((temp) => {
-      temp.style.color = headingFg;
+        [defaultMode, breakMode, automaticMode].forEach((temp) => {
+          temp.style.color = headingFg;
 
-      temp.style.backgroundColor = headingBg;
+          temp.style.backgroundColor = headingBg;
 
-      temp.addEventListener("click", () => {});
-    });
+          temp.addEventListener("click", () => {});
+        });
 
-    defaultMode.addEventListener("click", () => {
-      [breakMode, automaticMode].forEach((temp) => {
-        temp.style.backgroundColor = headingBg;
-      });
+        defaultMode.addEventListener("click", () => {
+          [breakMode, automaticMode].forEach(
+              (temp) => { temp.style.backgroundColor = headingBg; });
 
-      defaultMode.style.backgroundColor = activeModeBg;
-    });
+          defaultMode.style.backgroundColor = activeModeBg;
+        });
 
-    breakMode.addEventListener("click", () => {
-      [defaultMode, automaticMode].forEach((temp) => {
-        temp.style.backgroundColor = headingBg;
-      });
+        breakMode.addEventListener("click", () => {
+          [defaultMode, automaticMode].forEach(
+              (temp) => { temp.style.backgroundColor = headingBg; });
 
-      breakMode.style.backgroundColor = activeModeBg;
-    });
+          breakMode.style.backgroundColor = activeModeBg;
+        });
 
-    automaticMode.addEventListener("click", () => {
-      [defaultMode, breakMode].forEach((temp) => {
-        temp.style.backgroundColor = headingBg;
-      });
+        automaticMode.addEventListener("click", () => {
+          [defaultMode, breakMode].forEach(
+              (temp) => { temp.style.backgroundColor = headingBg; });
 
-      automaticMode.style.backgroundColor = activeModeBg;
-    });
+          automaticMode.style.backgroundColor = activeModeBg;
+        });
 
-    modeSettings.style.backgroundColor = boxBg;
-    modeCurrentTime.style.color = innerTimeFg;
-    modeCurrentTime.style.backgroundColor = innerTimeBg;
+        modeSettings.style.backgroundColor = boxBg;
+        modeCurrentTime.style.color = innerTimeFg;
+        modeCurrentTime.style.backgroundColor = innerTimeBg;
 
-    [increaseTimeArrow, decreaseTimeArrow, increaseTimeChevron].forEach(
-      (temp) => {
-        temp.style.backgroundColor = innerTimeBg;
-        temp.style.color = innerTimeFg;
+        [increaseTimeArrow, decreaseTimeArrow, increaseTimeChevron].forEach(
+            (temp) => {
+              temp.style.backgroundColor = innerTimeBg;
+              temp.style.color = innerTimeFg;
 
-        if (temp != increaseTimeChevron) {
-          temp.addEventListener("mouseover", () => {
-            temp.style.backgroundColor = innerTimeFg;
-            temp.style.color = innerTimeBg;
-          });
+              if (temp != increaseTimeChevron) {
+                temp.addEventListener("mouseover", () => {
+                  temp.style.backgroundColor = innerTimeFg;
+                  temp.style.color = innerTimeBg;
+                });
 
-          temp.addEventListener("mouseout", () => {
-            temp.style.backgroundColor = innerTimeBg;
-            temp.style.color = innerTimeFg;
-          });
-        }
-      }
-    );
+                temp.addEventListener("mouseout", () => {
+                  temp.style.backgroundColor = innerTimeBg;
+                  temp.style.color = innerTimeFg;
+                });
+              }
+            });
 
-    defaultMode.style.backgroundColor = activeModeBg;
-    // score
+        defaultMode.style.backgroundColor = activeModeBg;
+        // score
 
-    // save timer mode
-    saveBtnFLex.style.backgroundColor = headingBg;
-    saveBtnFLex.style.color = headingFg;
+        // save timer mode
+        saveBtnFLex.style.backgroundColor = headingBg;
+        saveBtnFLex.style.color = headingFg;
 
-    saveBtnFLex.addEventListener("mouseover", () => {
-      saveBtnFLex.style.backgroundColor = activeModeBg;
-      saveBtnFLex.style.color = headingFg;
-    });
-    saveBtnFLex.addEventListener("mouseout", () => {
-      saveBtnFLex.style.backgroundColor = headingBg;
-      saveBtnFLex.style.color = headingFg;
-    });
-  };
+        saveBtnFLex.addEventListener("mouseover", () => {
+          saveBtnFLex.style.backgroundColor = activeModeBg;
+          saveBtnFLex.style.color = headingFg;
+        });
+        saveBtnFLex.addEventListener("mouseout", () => {
+          saveBtnFLex.style.backgroundColor = headingBg;
+          saveBtnFLex.style.color = headingFg;
+        });
+      };
 
   const aboutContext = (fg, headingFg) => {
     let temps = document.querySelectorAll("li");
 
-    temps.forEach((temps) => {
-      temps.style.color = fg;
-    });
+    temps.forEach((temps) => { temps.style.color = fg; });
 
     let headers = document.querySelectorAll("h2");
 
@@ -196,36 +181,6 @@ const createTheme = (() => {
     textTmp.style.fill = svgText;
   };
 
-  // dashboard stuff!
-
-  const dashScore = (fg, bg, scorebg, scorefg, wholeBG) => {
-    let dashMainBg = document.querySelector(".dashboardPage");
-    dashMainBg.style.backgroundColor = wholeBG;
-
-    let currentScore = document.querySelectorAll(".currentScore");
-
-    currentScore.forEach((temp) => {
-      temp.style.color = fg;
-      temp.style.backgroundColor = bg;
-    });
-
-    let score = document.querySelector(".score");
-    score.style.backgroundColor = scorebg;
-    score.style.color = scorefg;
-  };
-
-  const levelProgress = (innerC_stroke, outerC_stroke, scoreFg, wholeDivBg) => {
-    let scoreProgress = document.querySelector(".scoreProgress");
-    let innerC = document.querySelector(".scoreInnerCircle");
-    let outerC = document.querySelector(".scoreOuterCircle");
-    let scoreText = document.querySelector(".scoreCircle");
-
-    innerC.style.stroke = innerC_stroke;
-    outerC.style.stroke = outerC_stroke;
-    scoreText.style.fill = scoreFg;
-    scoreProgress.style.backgroundColor = wholeDivBg;
-  };
-
   // settings stuff
 
   const settingsbtnCol = (fg, bg) => {
@@ -234,47 +189,42 @@ const createTheme = (() => {
     btn.style.backgroundColor = bg;
   };
 
-  const soundsSection = (
-    activefg,
-    activebg,
-    inactivefg,
-    inactivebg,
-    parentDivBg
-  ) => {
-    let parentDiv = document.querySelector(".sound_Settings");
+  const soundsSection =
+      (activefg, activebg, inactivefg, inactivebg, parentDivBg) => {
+        let parentDiv = document.querySelector(".sound_Settings");
 
-    parentDiv.style.backgroundColor = parentDivBg;
-    parentDiv.style.color = inactivefg;
+        parentDiv.style.backgroundColor = parentDivBg;
+        parentDiv.style.color = inactivefg;
 
-    let mp3files = document.querySelectorAll(".timer_audio");
+        let mp3files = document.querySelectorAll(".timer_audio");
 
-    mp3files.forEach((temp) => {
-      temp.style.backgroundColor = inactivebg;
+        mp3files.forEach((temp) => {
+          temp.style.backgroundColor = inactivebg;
 
-      temp.addEventListener("mouseover", () => {
-        temp.style.backgroundColor = activebg;
-        temp.style.color = activefg;
-      });
+          temp.addEventListener("mouseover", () => {
+            temp.style.backgroundColor = activebg;
+            temp.style.color = activefg;
+          });
 
-      temp.addEventListener("mouseout", () => {
-        temp.style.backgroundColor = inactivebg;
-        temp.style.color = inactivefg;
-      });
+          temp.addEventListener("mouseout", () => {
+            temp.style.backgroundColor = inactivebg;
+            temp.style.color = inactivefg;
+          });
 
-      temp.addEventListener("click", () => {
-        for (let i = 0; i < all_sounds.length; i++) {
-          mp3files[i].style.color = inactivefg;
-          mp3files[i].style.textDecoration = "line-through";
-          mp3files[i].style.backgroundColor = inactivebg;
-          mp3files[i].style.border = "none";
-        }
+          temp.addEventListener("click", () => {
+            for (let i = 0; i < all_sounds.length; i++) {
+              mp3files[i].style.color = inactivefg;
+              mp3files[i].style.textDecoration = "line-through";
+              mp3files[i].style.backgroundColor = inactivebg;
+              mp3files[i].style.border = "none";
+            }
 
-        temp.style.textDecoration = "none";
-        temp.style.backgroundColor = "red";
-        temp.style.color = "blue";
-      });
-    });
-  };
+            temp.style.textDecoration = "none";
+            temp.style.backgroundColor = "red";
+            temp.style.color = "blue";
+          });
+        });
+      };
 
   const currentMode_Div = (fg, bg) => {
     let tempDiv = document.querySelector(".current_Mode");
@@ -283,14 +233,8 @@ const createTheme = (() => {
     tempDiv.style.backgroundColor = bg;
   };
 
-  const auth_Section = (
-    bg,
-    authIconsBG,
-    inputDivsFG,
-    authBtnsFG,
-    signOutBtnFG,
-    signOutBtnBG
-  ) => {
+  const auth_Section = (bg, authIconsBG, inputDivsFG, authBtnsFG, signOutBtnFG,
+                        signOutBtnBG) => {
     let authDiv = document.querySelector(".auth_Div");
     authDiv.style.backgroundColor = bg;
 
@@ -303,13 +247,12 @@ const createTheme = (() => {
     let userAvatarDiv = document.querySelector(".userAvatar_Div");
 
     [passwdIcon, emailIcon, emailInputDiv, passInputDiv, userAvatarDiv].forEach(
-      (t) => {
-        t.style.backgroundColor = authIconsBG;
+        (t) => {
+          t.style.backgroundColor = authIconsBG;
 
-        if (t == emailInputDiv || t == passInputDiv)
-          t.style.color = inputDivsFG;
-      }
-    );
+          if (t == emailInputDiv || t == passInputDiv)
+            t.style.color = inputDivsFG;
+        });
 
     // auth buttons
 
@@ -325,42 +268,6 @@ const createTheme = (() => {
     signOutBtn.style.backgroundColor = signOutBtnBG;
     signOutBtn.style.color = signOutBtnFG;
   };
-
-  const rewardsPageDiv = (
-    wholeBg,
-    remainingGemsBg,
-    waifuPriceFG,
-    unlockRewardsDivBg,
-    unlockRewards_titleBg,
-    unlockRewards_titleFg,
-    showCollectionBg,
-    showCollectionFg,
-    galleryBg
-  ) => {
-    const rewardsPage = document.querySelector(".rewardsPage");
-    rewardsPage.style.backgroundColor = wholeBg;
-
-    const remainingGems_Div = document.querySelector(".remainingGems_Div");
-    remainingGems_Div.style.backgroundColor = remainingGemsBg;
-
-    const waifuPrice = document.querySelector(".waifuPrice");
-    waifuPrice.style.color = waifuPriceFG;
-
-    const unlockRewardsDiv = document.querySelector(".unlockRewardsDiv");
-    unlockRewardsDiv.style.backgroundColor = unlockRewardsDivBg;
-
-    const unlockRewards_title = document.querySelector(".unlockRewards_title");
-    unlockRewards_title.style.backgroundColor = unlockRewards_titleBg;
-    unlockRewards_title.style.color = unlockRewards_titleFg;
-
-    const showCollection = document.querySelector(".showCollection");
-    showCollection.style.backgroundColor = showCollectionBg;
-    showCollection.style.color = showCollectionFg;
-
-    const gallery = document.querySelector(".imagePreviewer");
-    gallery.style.backgroundColor = galleryBg;
-  };
-
   return {
     saveThisTheme,
     bodyCol,
@@ -374,11 +281,8 @@ const createTheme = (() => {
     aboutContext,
     start_Pause,
     settingsbtnCol,
-    dashScore,
-    levelProgress,
     soundsSection,
     auth_Section,
-    rewardsPageDiv,
   };
 })();
 
@@ -394,50 +298,19 @@ export const useLightTheme = () => {
   createTheme.resetCol("#FD8A89", "#FFD9D8", "#545E6A");
   createTheme.settingsbtnCol("white", "#545E6A");
 
-  createTheme.modesPageCol(
-    "#ffffff",
-    "#545E6A",
-    "#4a5460",
-    "#C0E4FE",
-    "#545E6A",
-    "#ffffff"
-  );
+  createTheme.modesPageCol("#ffffff", "#545E6A", "#4a5460", "#C0E4FE",
+                           "#545E6A", "#ffffff");
 
   createTheme.aboutContext("#545e6a", "#545e6a");
   createTheme.circularStrokes("#f0f0f0", "#C0E4FE", "#545e6a");
-  createTheme.dashScore("#82868E", "#ffffff", "#545e6a", "#ffffff", "#fafafa");
-  createTheme.levelProgress("#8deeb9", "#f0f0f0", "#82868E", "#ffffff");
 
-  createTheme.soundsSection(
-    "#545e6a",
-    "#ffffff",
-    "#545e6a",
-    "#8deeb9",
-    "#8deeb9"
-  );
+  createTheme.soundsSection("#545e6a", "#ffffff", "#545e6a", "#8deeb9",
+                            "#8deeb9");
 
-  createTheme.auth_Section(
-    "#CAEEFF",
-    "white",
-    "#545e6a",
-    "#545e6a",
-    "white",
-    "#545e6a"
-  );
+  createTheme.auth_Section("#CAEEFF", "white", "#545e6a", "#545e6a", "white",
+                           "#545e6a");
 
   create_LighterShade();
-
-  createTheme.rewardsPageDiv(
-    "#ffffff",
-    "#ffffff",
-    "#545e6a",
-    "#ffffff",
-    "#E6E6FA",
-    "#545e6a",
-    "#ffffff",
-    "#545e6a",
-    "#fafafa"
-  );
 };
 
 export const useDarkTheme = () => {
@@ -452,52 +325,19 @@ export const useDarkTheme = () => {
   createTheme.resetCol("#23272f", "#D08770", "#8deeb9");
   createTheme.settingsbtnCol("#8deeb9", "#23272f");
 
-  createTheme.modesPageCol(
-    "#a4aeba",
-    "#2C323B",
-    "#4a5460",
-    "#40464F",
-    "#81A1C1",
-    "#2C323B"
-  );
+  createTheme.modesPageCol("#a4aeba", "#2C323B", "#4a5460", "#40464F",
+                           "#81A1C1", "#2C323B");
 
   createTheme.aboutContext("#C3C7CF", "#AAAEB6");
   createTheme.circularStrokes("#1E222A", "#81A1C1", "#81A1C1");
 
-  createTheme.dashScore("#787C84", "#1E222A", "#FF6E67", "#1E222A", "#23272f");
-  createTheme.levelProgress("#A3BE8C", "#23272f", "#787C84", "#1E222A");
+  createTheme.soundsSection("#FF6E67", "#1E222A", "#787C84", "#2a2e36",
+                            "#2a2e36", "#1E222A");
 
-  createTheme.soundsSection(
-    "#FF6E67",
-    "#1E222A",
-    "#787C84",
-    "#2a2e36",
-    "#2a2e36",
-    "#1E222A"
-  );
-
-  createTheme.auth_Section(
-    "#23272F",
-    "#2D3139",
-    "#C3C7CF",
-    "#C3C7CF",
-    "#FF6E67",
-    "#2D3139"
-  );
+  createTheme.auth_Section("#23272F", "#2D3139", "#C3C7CF", "#C3C7CF",
+                           "#FF6E67", "#2D3139");
 
   create_LighterShade();
-
-  createTheme.rewardsPageDiv(
-    "#23272f",
-    "#292d35",
-    "#23272F",
-    "#a3b8ef",
-    "#2a2e36",
-    "#FF6E67",
-    "#23272f",
-    "#7ed491",
-    "#1E222A"
-  );
 };
 
 export const toggleTheme = () => {

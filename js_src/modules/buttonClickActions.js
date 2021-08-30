@@ -5,19 +5,18 @@ import {
   startPomodoro,
   timer,
   totalTime,
-  userMode,
+  // userMode,
   update_CurrentMode,
 } from "../index";
 
 import {
-  aboutBtn,
-  aboutPage,
   automaticMode,
   breakMode,
   decreaseTimeArrow,
   defaultMode,
   homePage,
   increaseTimeArrow,
+  mainFlex,
   menuLink_toggle,
   modesDiv,
   modesLink,
@@ -29,26 +28,19 @@ import {
   settingsPage,
   squareBox,
   start,
-  dashboardLink,
-  dashboardPage,
-  mainFlex,
-//  themeToggle,
+  //  themeToggle,
 } from "./divSelectors";
-
 import {
   addTortureAnimation,
   displayModeTime,
   playTickSound,
   setBoxText,
-  stopTortureAnimation,
   setCircleProgress,
+  stopTortureAnimation,
 } from "./miscFuncs";
 
-import { clear_Gallery } from "./rewardsPage.js";
-
-let auth_Div = document.querySelector(".auth_Div"); // to hide auth_div when other navlinks are clicked
-let rewardsLink = document.querySelector(".rewardsLink");
-let rewardsPage = document.querySelector(".rewardsPage");
+let auth_Div = document.querySelector(
+    ".auth_Div"); // to hide auth_div when other navlinks are clicked
 
 // Session button click actions
 
@@ -85,7 +77,8 @@ let rewardsPage = document.querySelector(".rewardsPage");
 let pauseOrResume = 0;
 
 const pauseTimer = () => {
-  if (pomoTime === totalTime * 60 || pomoTime === 0) addTortureAnimation();
+  if (pomoTime === totalTime * 60 || pomoTime === 0)
+    addTortureAnimation();
 
   currentClick = "pause";
   saveMin = pomoTime;
@@ -98,10 +91,12 @@ const pauseTimer = () => {
 };
 
 const resumeTimer = () => {
-  if (pomoTime === totalTime * 60 || pomoTime === 0) addTortureAnimation();
+  if (pomoTime === totalTime * 60 || pomoTime === 0)
+    addTortureAnimation();
   currentClick = "pause";
 
-  if (pomoTime != totalTime * 60) startPomodoro();
+  if (pomoTime != totalTime * 60)
+    startPomodoro();
 };
 
 pause.addEventListener("click", () => {
@@ -112,27 +107,19 @@ pause.addEventListener("click", () => {
 
 /* settings */
 settingsBtn.addEventListener(
-  "mouseover",
-  () => (settingsBtn.style.textDecoration = "underline")
-);
-settingsBtn.addEventListener(
-  "mouseout",
-  () => (settingsBtn.style.textDecoration = "none")
-);
+    "mouseover", () => (settingsBtn.style.textDecoration = "underline"));
+settingsBtn.addEventListener("mouseout",
+                             () => (settingsBtn.style.textDecoration = "none"));
 
 /* navlinks actions*/
 
 settingsBtn.addEventListener("click", () => {
-  [
-    squareBox,
-    sessionBtns,
-    reset,
-    aboutPage,
-    modesDiv,
-    dashboardPage,
-    mainFlex,
-    auth_Div,
-    rewardsPage,
+  [squareBox,
+   sessionBtns,
+   reset,
+   modesDiv,
+   mainFlex,
+   auth_Div,
   ].forEach((temp) => (temp.style.display = "none"));
   settingsPage.style.display = "flex";
 
@@ -141,102 +128,31 @@ settingsBtn.addEventListener("click", () => {
 
 /* Home Page */
 const jumpToHomePage = () => {
-  [squareBox, sessionBtns, reset, mainFlex].forEach((temp) => {
-    temp.style.display = "";
-  });
-  [
-    settingsPage,
-    aboutPage,
-    modesDiv,
-    dashboardPage,
-    auth_Div,
-    rewardsPage,
+  [squareBox, sessionBtns, reset, mainFlex].forEach(
+      (temp) => { temp.style.display = ""; });
+  [settingsPage,
+   modesDiv,
+   auth_Div,
   ].forEach((temp) => (temp.style.display = "none"));
 
   clear_Gallery();
 };
 
-const jumptoAboutPage = () => {
-  [
-    squareBox,
-    sessionBtns,
-    reset,
-    settingsPage,
-    modesDiv,
-    dashboardPage,
-    mainFlex,
-    auth_Div,
-    rewardsPage,
-  ].forEach((temp) => {
-    temp.style.display = "none";
-  });
-  aboutPage.style.display = "block";
-
-  clear_Gallery();
-};
-
 const jumptoModesPage = () => {
-  [
-    settingsPage,
-    aboutPage,
-    squareBox,
-    sessionBtns,
-    reset,
-    dashboardPage,
-    mainFlex,
-    auth_Div,
-    rewardsPage,
-  ].forEach((temp) => {
-    temp.style.display = "none";
-  });
+  [settingsPage,
+   squareBox,
+   sessionBtns,
+   reset,
+   mainFlex,
+   auth_Div,
+  ].forEach((temp) => { temp.style.display = "none"; });
   modesDiv.style.display = "block";
 
   clear_Gallery();
 };
 
-const jumptoDashBoard = () => {
-  [
-    squareBox,
-    sessionBtns,
-    reset,
-    settingsPage,
-    modesDiv,
-    aboutPage,
-    mainFlex,
-    auth_Div,
-    rewardsPage,
-  ].forEach((temp) => {
-    temp.style.display = "none";
-  });
-  dashboardPage.style.display = "grid";
-
-  clear_Gallery();
-};
-
-const jumptoRewardsPage = () => {
-  [
-    squareBox,
-    sessionBtns,
-    reset,
-    settingsPage,
-    modesDiv,
-    aboutPage,
-    mainFlex,
-    auth_Div,
-    dashboardPage,
-  ].forEach((temp) => {
-    temp.style.display = "none";
-  });
-  rewardsPage.style.display = "grid";
-
-  clear_Gallery();
-};
-
 homePage.addEventListener("click", () => jumpToHomePage());
-aboutBtn.addEventListener("click", () => jumptoAboutPage());
 modesLink.addEventListener("click", () => jumptoModesPage());
-dashboardLink.addEventListener("click", () => jumptoDashBoard());
-rewardsLink.addEventListener("click", () => jumptoRewardsPage());
 
 increaseTimeArrow.addEventListener("click", () => {
   totalTime++;
@@ -253,9 +169,8 @@ decreaseTimeArrow.addEventListener("click", () => {
 });
 
 defaultMode.addEventListener("click", () => {
-  [breakMode, automaticMode].forEach((temp) => {
-    temp.style.backgroundColor = "#36404c";
-  });
+  [breakMode, automaticMode].forEach(
+      (temp) => { temp.style.backgroundColor = "#36404c"; });
 
   totalTime = 25;
   displayModeTime(totalTime);
@@ -267,9 +182,8 @@ defaultMode.addEventListener("click", () => {
 });
 
 breakMode.addEventListener("click", () => {
-  [defaultMode, automaticMode].forEach((temp) => {
-    temp.style.backgroundColor = "#36404c";
-  });
+  [defaultMode, automaticMode].forEach(
+      (temp) => { temp.style.backgroundColor = "#36404c"; });
 
   totalTime = 5;
   displayModeTime(totalTime);
@@ -281,9 +195,8 @@ breakMode.addEventListener("click", () => {
 });
 
 automaticMode.addEventListener("click", () => {
-  [breakMode, defaultMode].forEach((temp) => {
-    temp.style.backgroundColor = "#36404c";
-  });
+  [breakMode, defaultMode].forEach(
+      (temp) => { temp.style.backgroundColor = "#36404c"; });
 
   totalTime = 25;
   displayModeTime(totalTime);
@@ -299,6 +212,5 @@ saveBtnFLex.addEventListener("click", () => jumpToHomePage());
 /* toggle navbar */
 
 let navBarLinks = document.querySelector(".navBarLinks");
-menuLink_toggle.addEventListener("click", () =>
-  navBarLinks.classList.toggle("show")
-);
+menuLink_toggle.addEventListener("click",
+                                 () => navBarLinks.classList.toggle("show"));

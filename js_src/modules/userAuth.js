@@ -1,15 +1,13 @@
-import { userScore, userTheme, userSound, userCards } from "../index.js";
-import { showRemaining_Gems } from "./rewardsPage.js";
+import {userSound, userTheme} from "../index.js";
 
-let score = document.querySelector(".score"); // score div in dashboard page
 
 let firebaseConfig = {
-  apiKey: "AIzaSyAk8kebOX8MDqtYYyy7sAdd4fsZa4R8M0s",
-  authDomain: "pomoreward.firebaseapp.com",
-  projectId: "pomoreward",
-  storageBucket: "pomoreward.appspot.com",
-  messagingSenderId: "319256565665",
-  appId: "1:319256565665:web:62d73e7fb1a493d51d5de0",
+  apiKey : "AIzaSyAk8kebOX8MDqtYYyy7sAdd4fsZa4R8M0s",
+  authDomain : "pomoreward.firebaseapp.com",
+  projectId : "pomoreward",
+  storageBucket : "pomoreward.appspot.com",
+  messagingSenderId : "319256565665",
+  appId : "1:319256565665:web:62d73e7fb1a493d51d5de0",
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -20,10 +18,8 @@ const signUp = () => {
   let email = document.getElementById("userEmail");
   let password = document.getElementById("userPassword");
 
-  const promise = auth.createUserWithEmailAndPassword(
-    email.value,
-    password.value
-  );
+  const promise =
+      auth.createUserWithEmailAndPassword(email.value, password.value);
 
   promise.catch((e) => alert(e.message));
 };
@@ -75,14 +71,15 @@ const createUserName_fromEmail = (email) => {
   let result = "";
 
   for (let i = 0; i < email.length; i++) {
-    if (email[i] == "@") break;
+    if (email[i] == "@")
+      break;
 
     result += email[i];
   }
   return result;
 };
 
-auth.onAuthStateChanged(function (user) {
+auth.onAuthStateChanged(function(user) {
   if (user) {
     let email = user.email;
     usrname_Div.innerText = createUserName_fromEmail(email);
@@ -100,19 +97,11 @@ auth.onAuthStateChanged(function (user) {
   }
 });
 
-signUpBtn.addEventListener("click", () => {
-  signUp();
-});
-
-signInBtn.addEventListener("click", () => {
-  signIn();
-});
+signUpBtn.addEventListener("click", () => { signUp(); });
+signInBtn.addEventListener("click", () => { signIn(); });
 
 signOutBtn.addEventListener("click", () => {
   signOut();
-
-  // clear previous score
-  score.innerText = 0;
   showRemaining_Gems(0);
 });
 
@@ -122,85 +111,55 @@ let userStatus = document.querySelector(".userStatus");
 let auth_Div = document.querySelector(".auth_Div");
 
 const settingsPage = document.querySelector(".settingsPage");
-const dashboardPage = document.querySelector(".dashboardPage");
 const modesDiv = document.querySelector(".modesDiv");
-const aboutPage = document.querySelector(".aboutPage");
 const reset = document.querySelector(".reset");
 const squareBox = document.querySelector(".squareBox");
 const sessionBtns = document.querySelector(".sessionBtns");
 const mainFlex = document.querySelector(".flexMain");
-const rewardsPage = document.querySelector(".rewardsPage");
 
 const jumpto_UserStatusPage = () => {
-  [
-    settingsPage,
-    aboutPage,
-    squareBox,
-    sessionBtns,
-    reset,
-    dashboardPage,
-    mainFlex,
-    modesDiv,
-    rewardsPage,
-  ].forEach((temp) => {
-    temp.style.display = "none";
-  });
+  [settingsPage,
+   squareBox,
+   sessionBtns,
+   reset,
+   mainFlex,
+   modesDiv,
+  ].forEach((temp) => { temp.style.display = "none"; });
 
   auth_Div.style.display = "flex";
 };
 
-userStatus.addEventListener("click", () => {
-  jumpto_UserStatusPage();
-});
+userStatus.addEventListener("click", () => { jumpto_UserStatusPage(); });
 
 export const saveUserData_toDB = () => {
-  auth.onAuthStateChanged(function (user) {
+  auth.onAuthStateChanged(function(user) {
     if (user) {
       let user_Name = createUserName_fromEmail(user.email);
 
-      firebase
-        .database()
-        .ref(`users/${user_Name}`)
-        .set({
-          score: `${userScore}`,
-          theme: `${userTheme}`,
-          sound: `${userSound}`,
-          cards: `${userCards}`,
-        });
+      firebase.database().ref(`users/${user_Name}`).set({
+        theme : `${userTheme}`,
+        sound : `${userSound}`,
+      });
     }
   });
 };
 
-import { setLevel_Progress } from "./miscFuncs";
-
-import { useLightTheme, useDarkTheme } from "./themes.js";
+import {useLightTheme, useDarkTheme} from "./themes.js";
 
 export const getUserData_fromDB = () => {
-  auth.onAuthStateChanged(function (user) {
+  auth.onAuthStateChanged(function(user) {
     if (user) {
       let user_Name = createUserName_fromEmail(user.email);
 
       let ref = firebase.database().ref("users");
-      ref.child(user_Name).on("value", function (snapshot) {
-
+      ref.child(user_Name).on("value", function(snapshot) {
         if (snapshot.val().theme) {
           userTheme = snapshot.val().theme;
           userTheme == "light" ? useLightTheme() : useDarkTheme();
         }
 
-        if (snapshot.val().sound) userSound = snapshot.val().sound;
-
-        // sync n.o of purchased user cards
-        if (snapshot.val().cards) userCards = snapshot.val().cards;
-
-        // sync score and lvl
-        if (snapshot.val().score) userScore = snapshot.val().score;
-        showRemaining_Gems(userScore);
-
-        score.innerText =
-          parseInt(`${userScore}`) + parseInt(`${userCards}` * 2000);
-
-        setLevel_Progress();
+        if (snapshot.val().sound)
+          userSound = snapshot.val().sound;
       });
     }
   });
