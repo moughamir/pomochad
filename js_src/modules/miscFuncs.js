@@ -1,4 +1,4 @@
-import { userTheme, userSound, totalTime, pomoTime } from "../index";
+import { pomoTime, totalTime, userSound, userTheme } from "../index";
 import { modeCurrentTime } from "./divSelectors";
 
 import {} from "./settings";
@@ -86,28 +86,9 @@ function adjustColor(color, amount) {
         (
           "0" +
           Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)
-        ).substr(-2)
-      )
+        ).substr(-2))
   );
 }
-
-export const create_LighterShade = () => {
-  let b = document.querySelector("body");
-  let tmpBg = b.style.backgroundColor;
-
-  let rgb2hex = (c) =>
-    "#" + c.match(/\d+/g).map((x) => (+x).toString(16).padStart(2, 0)).join``;
-  let finalCol = rgb2hex(tmpBg);
-
-  let aboutCaption = document.querySelector(".aboutCaption");
-
-  if (userTheme == "light") {
-    aboutCaption.style.backgroundColor = adjustColor(finalCol, -7);
-    return;
-  }
-
-  aboutCaption.style.backgroundColor = adjustColor(finalCol, 10);
-};
 
 export const add_loadingAnimation = (n) => {
   n.animate([{ transform: "rotate(0deg)" }, { transform: "rotate(360deg)" }], {
@@ -117,13 +98,13 @@ export const add_loadingAnimation = (n) => {
 };
 
 export {
-  timerSound,
-  setBoxText,
-  displayError,
-  showWarnings,
-  addTortureAnimation,
-  stopTortureAnimation,
   addShakeAnimation,
-  playTickSound,
+  addTortureAnimation,
+  displayError,
   displayModeTime,
+  playTickSound,
+  setBoxText,
+  showWarnings,
+  stopTortureAnimation,
+  timerSound,
 };

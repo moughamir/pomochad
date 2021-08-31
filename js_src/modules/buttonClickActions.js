@@ -40,7 +40,8 @@ import {
 } from "./miscFuncs";
 
 let auth_Div = document.querySelector(
-    ".auth_Div"); // to hide auth_div when other navlinks are clicked
+  ".auth_Div",
+); // to hide auth_div when other navlinks are clicked
 
 // Session button click actions
 
@@ -59,9 +60,7 @@ let auth_Div = document.querySelector(
       setCircleProgress(0);
 
       return;
-    }
-
-    // restarts time
+    } // restarts time
     else {
       currentClick = "start";
 
@@ -77,8 +76,9 @@ let auth_Div = document.querySelector(
 let pauseOrResume = 0;
 
 const pauseTimer = () => {
-  if (pomoTime === totalTime * 60 || pomoTime === 0)
+  if (pomoTime === totalTime * 60 || pomoTime === 0) {
     addTortureAnimation();
+  }
 
   currentClick = "pause";
   saveMin = pomoTime;
@@ -91,12 +91,14 @@ const pauseTimer = () => {
 };
 
 const resumeTimer = () => {
-  if (pomoTime === totalTime * 60 || pomoTime === 0)
+  if (pomoTime === totalTime * 60 || pomoTime === 0) {
     addTortureAnimation();
+  }
   currentClick = "pause";
 
-  if (pomoTime != totalTime * 60)
+  if (pomoTime != totalTime * 60) {
     startPomodoro();
+  }
 };
 
 pause.addEventListener("click", () => {
@@ -107,48 +109,42 @@ pause.addEventListener("click", () => {
 
 /* settings */
 settingsBtn.addEventListener(
-    "mouseover", () => (settingsBtn.style.textDecoration = "underline"));
-settingsBtn.addEventListener("mouseout",
-                             () => (settingsBtn.style.textDecoration = "none"));
+  "mouseover",
+  () => (settingsBtn.style.textDecoration = "underline"),
+);
+settingsBtn.addEventListener(
+  "mouseout",
+  () => (settingsBtn.style.textDecoration = "none"),
+);
 
 /* navlinks actions*/
 
 settingsBtn.addEventListener("click", () => {
-  [squareBox,
-   sessionBtns,
-   reset,
-   modesDiv,
-   mainFlex,
-   auth_Div,
-  ].forEach((temp) => (temp.style.display = "none"));
+  [squareBox, sessionBtns, reset, modesDiv, mainFlex, auth_Div].forEach((
+    temp,
+  ) => (temp.style.display = "none"));
   settingsPage.style.display = "flex";
-
-  clear_Gallery();
 });
 
 /* Home Page */
 const jumpToHomePage = () => {
   [squareBox, sessionBtns, reset, mainFlex].forEach(
-      (temp) => { temp.style.display = ""; });
-  [settingsPage,
-   modesDiv,
-   auth_Div,
-  ].forEach((temp) => (temp.style.display = "none"));
-
-  clear_Gallery();
+    (temp) => {
+      temp.style.display = "";
+    },
+  );
+  [settingsPage, modesDiv, auth_Div].forEach((
+    temp,
+  ) => (temp.style.display = "none"));
 };
 
 const jumptoModesPage = () => {
-  [settingsPage,
-   squareBox,
-   sessionBtns,
-   reset,
-   mainFlex,
-   auth_Div,
-  ].forEach((temp) => { temp.style.display = "none"; });
+  [settingsPage, squareBox, sessionBtns, reset, mainFlex, auth_Div].forEach(
+    (temp) => {
+      temp.style.display = "none";
+    },
+  );
   modesDiv.style.display = "block";
-
-  clear_Gallery();
 };
 
 homePage.addEventListener("click", () => jumpToHomePage());
@@ -170,7 +166,10 @@ decreaseTimeArrow.addEventListener("click", () => {
 
 defaultMode.addEventListener("click", () => {
   [breakMode, automaticMode].forEach(
-      (temp) => { temp.style.backgroundColor = "#36404c"; });
+    (temp) => {
+      temp.style.backgroundColor = "#36404c";
+    },
+  );
 
   totalTime = 25;
   displayModeTime(totalTime);
@@ -183,7 +182,10 @@ defaultMode.addEventListener("click", () => {
 
 breakMode.addEventListener("click", () => {
   [defaultMode, automaticMode].forEach(
-      (temp) => { temp.style.backgroundColor = "#36404c"; });
+    (temp) => {
+      temp.style.backgroundColor = "#36404c";
+    },
+  );
 
   totalTime = 5;
   displayModeTime(totalTime);
@@ -196,7 +198,10 @@ breakMode.addEventListener("click", () => {
 
 automaticMode.addEventListener("click", () => {
   [breakMode, defaultMode].forEach(
-      (temp) => { temp.style.backgroundColor = "#36404c"; });
+    (temp) => {
+      temp.style.backgroundColor = "#36404c";
+    },
+  );
 
   totalTime = 25;
   displayModeTime(totalTime);
@@ -212,5 +217,7 @@ saveBtnFLex.addEventListener("click", () => jumpToHomePage());
 /* toggle navbar */
 
 let navBarLinks = document.querySelector(".navBarLinks");
-menuLink_toggle.addEventListener("click",
-                                 () => navBarLinks.classList.toggle("show"));
+menuLink_toggle.addEventListener(
+  "click",
+  () => navBarLinks.classList.toggle("show"),
+);
