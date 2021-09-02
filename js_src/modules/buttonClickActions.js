@@ -5,8 +5,8 @@ import {
   startPomodoro,
   timer,
   totalTime,
-  // userMode,
   update_CurrentMode,
+  userMode,
 } from "../index";
 
 import {
