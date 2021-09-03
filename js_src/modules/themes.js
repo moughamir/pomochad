@@ -22,13 +22,15 @@ import {
   timerModes,
 } from "./divSelectors";
 import { all_sounds } from "./settings";
-import { saveUserData_toDB } from "./userAuth.js";
+import { saveUserData_toDB } from "./userAuth";
+import { saveto_localStorage } from "./miscFuncs";
 
 let whichTheme = 0;
 
 const createTheme = (() => {
   const saveThisTheme = (name) => {
     userTheme = name;
+    saveto_localStorage();
     saveUserData_toDB();
   };
 

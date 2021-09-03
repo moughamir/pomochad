@@ -1,6 +1,6 @@
 import { pomoTime, totalTime, userSound, userTheme } from "../index";
 import { modeCurrentTime } from "./divSelectors";
-
+import { useDarkTheme, useLightTheme } from "./themes";
 import {} from "./settings";
 
 import { saveUserData_toDB } from "./userAuth.js";
@@ -77,24 +77,20 @@ export const setCircleProgress = () => {
   progressCircle.style.strokeDashoffset = circum - (percent / 100) * circum;
 };
 
-function adjustColor(color, amount) {
-  return (
-    "#" +
-    color
-      .replace(/^#/, "")
-      .replace(/../g, (color) =>
-        (
-          "0" +
-          Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)
-        ).substr(-2))
-  );
-}
-
 export const add_loadingAnimation = (n) => {
   n.animate([{ transform: "rotate(0deg)" }, { transform: "rotate(360deg)" }], {
     duration: 1000,
     iterations: 1,
   });
+};
+
+export const saveto_localStorage = () => {
+  localStorage.setItem("savedTheme", userTheme);
+};
+
+export const get_localStorage = () => {
+  userTheme = localStorage.getItem("savedTheme");
+  userTheme == "light" ? useLightTheme() : useDarkTheme();
 };
 
 export {

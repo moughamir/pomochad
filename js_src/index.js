@@ -1,19 +1,20 @@
 import "./modules/buttonClickActions";
 
 import {
+  get_localStorage,
   setBoxText,
   setCircleProgress,
   timerSound,
 } from "./modules/miscFuncs";
 
-import {makeSessionBtns} from "./modules/sessionButtons";
-import {toggleTheme} from "./modules/themes";
-import {getUserData_fromDB, saveUserData_toDB} from "./modules/userAuth.js";
+import { makeSessionBtns } from "./modules/sessionButtons";
+import { toggleTheme } from "./modules/themes";
+import { getUserData_fromDB } from "./modules/userAuth.js";
 
 // user info
 export let userTheme = "light", userSound = "piano", userMode = "default";
 
-// sync user data
+get_localStorage();
 getUserData_fromDB();
 makeSessionBtns();
 
@@ -24,10 +25,6 @@ export let totalTime = 25, pomoTime = totalTime * 60;
 const checkTimer = (temp) => {
   if (pomoTime == 0) {
     clearInterval(temp), timerSound();
-
-    if (userMode == "default") {
-      saveUserData_toDB();
-    }
   }
 };
 
@@ -48,9 +45,11 @@ const updatePomodoro = () => {
 };
 
 export const startPomodoro = () => {
-  if (currentClick != undefined)
-    currentClick == "pause" ? (pomoTime = saveMin)
-                            : (pomoTime = totalTime * 60);
+  if (currentClick != undefined) {
+    currentClick == "pause"
+      ? (pomoTime = saveMin)
+      : (pomoTime = totalTime * 60);
+  }
 
   timer = setInterval(updatePomodoro, 1000);
 };
