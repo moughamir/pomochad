@@ -50,7 +50,7 @@ export const startPomodoro = () => {
                             : (pomoTime = totalTime * 60);
   }
 
-  timer = setInterval(updatePomodoro, 0);
+  timer = setInterval(updatePomodoro, 1000);
 };
 
 toggleTheme(); // enables theme toggle with  dark/light
