@@ -7,9 +7,9 @@ import {
   timerSound,
 } from "./modules/miscFuncs";
 
-import {makeSessionBtns} from "./modules/sessionButtons";
-import {toggleTheme} from "./modules/themes";
-import {getUserData_fromDB} from "./modules/userAuth.js";
+import { makeSessionBtns } from "./modules/sessionButtons";
+import { toggleTheme } from "./modules/themes";
+import { getUserData_fromDB } from "./modules/userAuth.js";
 
 // user info
 export let userTheme = "light", userSound = "pikachuu", userMode = "default";
@@ -46,8 +46,9 @@ const updatePomodoro = () => {
 
 export const startPomodoro = () => {
   if (currentClick != undefined) {
-    currentClick == "pause" ? (pomoTime = saveMin)
-                            : (pomoTime = totalTime * 60);
+    currentClick == "pause"
+      ? (pomoTime = saveMin)
+      : (pomoTime = totalTime * 60);
   }
 
   timer = setInterval(updatePomodoro, 1000);

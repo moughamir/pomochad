@@ -102,7 +102,6 @@ signInBtn.addEventListener("click", () => { signIn(); });
 
 signOutBtn.addEventListener("click", () => {
   signOut();
-  showRemaining_Gems(0);
 });
 
 // button click actions userstatus button
