@@ -16,9 +16,6 @@ function setProgressValue(ogTime, newTime) {
   return timeProgres;
 }
 
-export let tickSound = "../../assets/tick.mp3",
-  timerSound = "../../assets/pikachu.mp3";
-
 const playSound = (sound) => new Audio(sound).play();
 
 export function switchTheme(name) {

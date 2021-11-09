@@ -5,13 +5,10 @@ import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "../css/timer.css";
 
-import {
-  numToText,
-  playSound,
-  setProgressValue,
-  tickSound,
-  timerSound,
-} from "../utils";
+import { numToText, playSound, setProgressValue } from "../utils";
+
+let tickSound = "../../assets/tick.mp3",
+  timerSound = "../../assets/pikachu.mp3";
 
 export let timer, pausedTime, currentClick;
 export let totalTime = 25,
