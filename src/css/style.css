@@ -4,8 +4,8 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--fgcol);
-  background-color: var(--bgcol);
+  color: var(--fg);
+  background-color: var(--bg);
   font-family: "Quicksand", sans-serif;
   transition: 0.2s;
   padding: 0;

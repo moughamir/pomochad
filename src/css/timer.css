@@ -13,16 +13,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: var(--shadow);
   padding: 1rem;
+  background-color: var(--bg-alt);
 }
 
 .CircularProgressbar .CircularProgressbar-trail {
-  stroke: var(--fgcol);
+  stroke: var(--inactiveStroke);
 }
 
 .CircularProgressbar .CircularProgressbar-text {
-  fill: var(--fgcol);
+  fill: var(--timerfg);
 }
 
 .CircularProgressbar .CircularProgressbar-path {
@@ -40,12 +41,12 @@
   transform: translate(-50%, -50%);
   background-color: var(--accent);
   padding: 0.6rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: var(--shadow);
   border-radius: 5rem;
 }
 
 .playBtn {
-  background-color: var(--fgcol);
+  background-color: var(--fg);
   color: var(--accent);
   padding: 0.3rem;
   border-radius: 5rem;

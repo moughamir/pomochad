@@ -35,15 +35,20 @@
   background-color: var(--accent);
   padding: 0.6rem;
   border-radius: 5rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: var(--shadow);
 }
 
 .themeToggle,
 .userIcon {
   border-radius: 50%;
-  background-color: var(--fgcol);
-  color: white;
+  background-color: var(--btnBg);
+  color: var(--btnFg);
   padding: 0.6rem;
+}
+
+.themeToggle {
+  background-color: var(--btnBg2);
+  color: var(--btnFg2);
 }
 
 .settingsBtn {
