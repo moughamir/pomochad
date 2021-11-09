@@ -1,0 +1,13 @@
+[data-theme="light"] {
+  --fgcol: #36404c;
+  --bgcol: #ffffff;
+  --accent: #c0e4fe;
+  --activeStroke: #ff8787;
+}
+
+[data-theme="dark"] {
+  --fgcol: #b5bcc9;
+  --bgcol: #1a2128;
+  --accent: #2a3138;
+  --activeStroke: #fca2af;
+}

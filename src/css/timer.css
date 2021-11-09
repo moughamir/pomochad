@@ -1,0 +1,64 @@
+/* radial bar  */
+
+.MainCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 1rem;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: var(--fgcol);
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: var(--fgcol);
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: var(--activeStroke);
+}
+
+/* SESSION BTNS like play , reset */
+
+.sessionBtns {
+  position: absolute;
+  top: 83%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: var(--accent);
+  padding: 0.6rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5rem;
+}
+
+.playBtn {
+  background-color: var(--fgcol);
+  color: var(--accent);
+  padding: 0.3rem;
+  border-radius: 5rem;
+}
+
+.playBtn:hover {
+  cursor: pointer;
+}
+.restartBtn {
+  padding: 0.4rem;
+  border-radius: 5rem;
+}
+
+.restartBtn:hover {
+  cursor: pointer;
+}
