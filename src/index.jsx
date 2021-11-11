@@ -1,15 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "preact";
 import App from "./App";
 
 import "./css/themes.css";
 
 import { switchTheme } from "./utils";
-switchTheme("light");
+switchTheme("dark");
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+render(
+  <App />,
   document.getElementById("root"),
 );

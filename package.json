@@ -1,5 +1,5 @@
 {
-  "name": "pomoreward",
+  "name": "preact",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -8,13 +8,11 @@
   },
   "dependencies": {
     "phosphor-react": "^1.3.1",
-    "react": "^17.0.0",
-    "react-circular-progressbar": "^2.0.4",
-    "react-dom": "^17.0.0",
-    "react-ridge-state": "^4.2.2"
+    "preact": "^10.5.13",
+    "react-circular-progressbar": "^2.0.4"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^1.0.0",
+    "@preact/preset-vite": "^2.0.0",
     "vite": "^2.6.4"
   }
 }
