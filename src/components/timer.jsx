@@ -8,9 +8,9 @@ import "../css/timer.css";
 import { numToText, playSound, setProgressValue } from "../utils";
 
 let tickSound =
-    "https://github.com/siduck/pomoreward/blob/main/assets/tick.mp3",
+    "https://github.com/siduck/pomoreward/blob/main/assets/sounds/tick.wav",
   timerSound =
-    "https://github.com/siduck/pomoreward/blob/main/assets/pikachu.mp3";
+    "https://github.com/siduck/pomoreward/blob/main/assets/sounds/pikachu.wav";
 
 export let timer, pausedTime, currentClick;
 export let totalTime = 25,
