@@ -1,0 +1,71 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 4rem;
+  padding: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.brand,
+.navbarLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brandTitle {
+  font-size: 1.2rem;
+  padding-left: 0.6rem;
+}
+
+.navBtns {
+  display: flex;
+  align-items: center;
+}
+
+.themeToggle {
+  margin-right: 1rem;
+}
+
+.themeToggle:hover {
+  cursor: pointer;
+}
+
+.navbarLinks {
+  background-color: var(--accent);
+  padding: 0.6rem;
+  border-radius: 5rem;
+  box-shadow: var(--shadow);
+}
+
+.themeToggle,
+.userIcon {
+  border-radius: 50%;
+  background-color: var(--btnBg);
+  color: var(--btnFg);
+  padding: 0.6rem;
+}
+
+.themeToggle {
+  background-color: var(--btnBg2);
+  color: var(--btnFg2);
+}
+
+.settingsBtn {
+  padding: 0.6rem;
+}
+
+@media screen and (max-width: 540px) {
+  .navbar {
+    margin: 0rem;
+    padding: 1rem;
+    font-family: "Open Sans", sans-serif;
+  }
+
+
+  .themeToggle {
+    margin-right: .3rem;
+  }
+
+ 
+}

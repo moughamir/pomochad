@@ -1,26 +1,19 @@
 {
-  "name": "pomodoro",
-  "version": "1.0.0",
-  "description": "basic pomodoro timer made for my personal use",
-  "main": "index.js",
+  "name": "preact",
+  "version": "0.0.0",
+  "proxy":"https://pomo-reward.vercel.app/",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "roll": "webpack --mode production --watch",
-    "build": "webpack --mode production"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/siduck76/pomodoro.git"
+  "dependencies": {
+    "phosphor-react": "^1.3.1",
+    "preact": "^10.5.13",
+    "react-circular-progressbar": "^2.0.4"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/siduck76/pomodoro/issues"
-  },
-  "homepage": "https://github.com/siduck76/pomodoro#readme",
   "devDependencies": {
-    "webpack": "^5.15.0",
-    "webpack-cli": "^4.3.1"
+    "@preact/preset-vite": "^2.0.0",
+    "vite": "^2.6.4"
   }
 }
