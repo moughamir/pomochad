@@ -7,10 +7,8 @@ import "../css/timer.css";
 
 import { numToText, playSound, setProgressValue } from "../utils";
 
-let tickSound =
-    "https://github.com/siduck/pomoReward/blob/preact-rewrite/assets/tick.mp3",
-  timerSound =
-    "https://github.com/siduck/pomoReward/blob/preact-rewrite/assets/pikachu.mp3";
+let tickSound = "../../assets/tick.mp3",
+  timerSound = "../../assets/pikachu.mp3";
 
 export let timer, pausedTime, currentClick;
 export let totalTime = 25,
