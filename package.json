@@ -1,6 +1,7 @@
 {
   "name": "preact",
   "version": "0.0.0",
+  "proxy":"https://pomo-reward.vercel.app/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
