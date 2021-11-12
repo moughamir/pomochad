@@ -16,9 +16,7 @@ function setProgressValue(ogTime, newTime) {
   return timeProgres;
 }
 
-async function playSound(path) {
-  new Audio(path).play()
-}
+const playSound = (path) => new Audio(path).play();
 
 export function switchTheme(name) {
   let body = document.querySelector("body");
