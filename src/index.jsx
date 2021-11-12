@@ -4,7 +4,7 @@ import App from "./App";
 import "./css/themes.css";
 
 import { switchTheme } from "./utils";
-switchTheme("light");
+switchTheme("dark");
 
 render(
   <App />,

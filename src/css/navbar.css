@@ -54,3 +54,18 @@
 .settingsBtn {
   padding: 0.6rem;
 }
+
+@media screen and (max-width: 540px) {
+  .navbar {
+    margin: 0rem;
+    padding: 1rem;
+    font-family: "Open Sans", sans-serif;
+  }
+
+
+  .themeToggle {
+    margin-right: .3rem;
+  }
+
+ 
+}
