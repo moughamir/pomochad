@@ -46,7 +46,7 @@ function Timer() {
 
   function run(action) {
     currentClick = action;
-    timer = setInterval(update, 10);
+    timer = setInterval(update, 1000);
 
     if (action == "start" || action == "resume") setplayMode(false);
 

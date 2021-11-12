@@ -1,4 +1,5 @@
 # pomoReward
-minimal pomodoro timer (WIP)
 
-https://pomo-reward.vercel.app/
+minimal pomodoro timer made using preact and vite (WIP)
+
+https://pomoreward.vercel.app/
