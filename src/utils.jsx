@@ -16,13 +16,11 @@ function setProgressValue(ogTime, newTime) {
   return timeProgres;
 }
 
-const playSound = (path) =>
-  new Audio(path).play().then(() => {
-    // Audio is playing.
-  })
-    .catch((error) => {
-      console.log(error);
-    });
+function playSound(path) {
+  const audio = document.getElementById("audio");
+  audio.setAttribute("src", path);
+  audio.play();
+}
 
 export function switchTheme(name) {
   let body = document.querySelector("body");
