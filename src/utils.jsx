@@ -16,7 +16,12 @@ function setProgressValue(ogTime, newTime) {
   return timeProgres;
 }
 
-const playSound = (path) => new Audio(path).play();
+const playSound = (path) => {
+  let n = document.querySelector("audio");
+  n.setAttribute("src", path);
+  n.volume = 0.1;
+  n.play();
+};
 
 export function switchTheme(name) {
   let body = document.querySelector("body");

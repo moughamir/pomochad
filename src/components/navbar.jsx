@@ -1,4 +1,5 @@
 import { useState } from "preact/hooks";
+import { Link } from "wouter-preact";
 import { switchTheme } from "../utils";
 
 import {
@@ -15,7 +16,9 @@ function BrandInfo() {
   return (
     <div className="brand">
       <Target className="brandLogo" size={30} weight="fill" />
-      <div className="brandTitle">PomoReward</div>
+      <Link href="/">
+        <div className="brandTitle">PomoReward</div>
+      </Link>
     </div>
   );
 }
@@ -52,7 +55,9 @@ function NavbarLinks() {
 
       <div className="navbarLinks">
         <User className="userIcon" size={20} />
-        <SlidersHorizontal className="settingsBtn" size={20} />
+        <Link href="/settings">
+          <SlidersHorizontal className="settingsBtn" size={20} />
+        </Link>
       </div>
     </div>
   );
