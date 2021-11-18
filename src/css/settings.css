@@ -97,3 +97,15 @@ h1 {
 ::-ms-tooltip {
   display: none;
 }
+
+@media screen and (max-width: 450px) {
+  .settings {
+    grid-template-columns: 1fr;
+    margin: 0rem;
+    padding: 2rem;
+  }
+
+  #volumeContainer {
+    padding: 0.5rem 2rem 2rem 2rem;
+  }
+}

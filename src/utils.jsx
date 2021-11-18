@@ -1,4 +1,4 @@
-import { volume } from "./components/settings";
+import { volume } from "./components/options/volumeSlider";
 
 function numToText(min, sec) {
   let temp;
@@ -21,7 +21,7 @@ function setProgressValue(ogTime, newTime) {
 const playSound = (path) => {
   let n = document.querySelector("audio");
   n.setAttribute("src", path);
-  n.volume = volume;
+  n.volume = volume.value / 100;
   n.play();
 };
 
