@@ -30,4 +30,11 @@ export function switchTheme(name) {
   body.setAttribute("data-theme", name);
 }
 
-export { numToText, playSound, setProgressValue };
+let progressBar = {
+  rotation: 0.25,
+  strokeLinecap: "butt",
+  textSize: "1.2rem",
+  pathTransitionDuration: 0.3,
+};
+
+export { numToText, playSound, progressBar, setProgressValue };

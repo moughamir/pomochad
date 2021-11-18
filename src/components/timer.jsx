@@ -1,128 +1,115 @@
-import { useState } from "preact/hooks";
+import { store, view } from "@risingstack/react-easy-state";
 import { ArrowClockwise, Pause, Play } from "phosphor-react";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 
 import "react-circular-progressbar/dist/styles.css";
 import "../css/timer.css";
 
-import { numToText, playSound, setProgressValue } from "../utils";
+import { numToText, playSound, progressBar, setProgressValue } from "../utils";
 
 import tickSound from "../../assets/audio/tick.mp3";
 import timerSound from "../../assets/audio/pikachu.mp3";
 
-export let timer, pausedTime, currentClick;
-export let totalTime = 25,
-  pomoTime = totalTime * 60;
+const timer = store({
+  timeInText: "25 : 00",
+  progress: 0,
+  playBtn: true,
+});
 
-let progressBar = {
-  rotation: 0.25,
-  strokeLinecap: "butt",
-  textSize: "1.2rem",
-  pathTransitionDuration: 0.3,
-};
+export let interval, pausedTime, currentClick;
+export let totalTime = 25, pomoTime = totalTime * 60;
 
-function Timer() {
-  let [time, setTime] = useState("25 : 00");
-  let [progress, setProgress] = useState(0);
-  let [playMode, setplayMode] = useState(true);
-
-  function update() {
-    if (pomoTime === 0) {
-      clearInterval(timer);
-      playSound(timerSound);
-      setTime(numToText(0, 0));
-      setProgress(100);
-      setplayMode(true);
-      return;
-    }
-
-    const min = Math.floor(pomoTime / 60);
-    const sec = pomoTime % 60;
-
-    setTime(numToText(min, sec));
-    setProgress(setProgressValue(totalTime, pomoTime));
-    pomoTime--;
+function update() {
+  if (pomoTime === 0) {
+    clearInterval(interval);
+    playSound(timerSound);
+    timer.timeInText = numToText(0, 0);
+    timer.progress = 100;
+    timer.playBtn = true;
+    return;
   }
 
-  function run(action) {
-    currentClick = action;
-    timer = setInterval(update, 1000);
+  const min = Math.floor(pomoTime / 60);
+  const sec = pomoTime % 60;
 
-    if (action == "start" || action == "resume") setplayMode(false);
-
-    action == "start" ? playSound(tickSound) : (pomoTime = pausedTime);
-  }
-
-  function start() {
-    switch (currentClick) {
-      // start
-      case undefined:
-      case "reset":
-        run("start");
-        break;
-
-      // pause timer
-
-      case "start":
-      case "resume":
-        currentClick = "pause";
-        pausedTime = pomoTime;
-
-        setProgress(setProgressValue(totalTime, pausedTime));
-
-        const min = Math.floor(pausedTime / 60);
-        const sec = pausedTime % 60;
-
-        setTime(numToText(min, sec));
-        pomoTime = 0;
-        clearInterval(timer);
-        setplayMode(true);
-
-        break;
-
-      // resume
-
-      default:
-        run("resume");
-    }
-  }
-
-  function reset() {
-    currentClick = "reset";
-
-    setplayMode(true);
-    clearInterval(timer);
-
-    setProgress(0);
-    setTime(`${totalTime} : 00`);
-    pomoTime = totalTime * 60;
-  }
-
-  return (
-    <div className="timer">
-      <div className="MainCircle">
-        <CircularProgressbar
-          value={progress}
-          text={time}
-          styles={buildStyles(progressBar)}
-        />
-      </div>
-      <div className="sessionBtns">
-        {playMode && (
-          <Play onClick={() => start()} className="playBtn" size={24} />
-        )}
-        {!playMode && (
-          <Pause onClick={() => start()} className="playBtn" size={24} />
-        )}
-
-        <ArrowClockwise
-          onClick={() => reset()}
-          className="restartBtn"
-          size={24}
-        />
-      </div>
-    </div>
-  );
+  timer.timeInText = numToText(min, sec);
+  timer.progress = (setProgressValue(totalTime, pomoTime));
+  pomoTime--;
 }
 
-export default Timer;
+function run(action) {
+  currentClick = action;
+  interval = setInterval(update, 1000);
+
+  if (action == "start" || action == "resume") timer.playBtn = false;
+  action == "start" ? playSound(tickSound) : (pomoTime = pausedTime);
+}
+
+function start() {
+  switch (currentClick) {
+    // start
+    case undefined:
+    case "reset":
+      run("start");
+      break;
+
+    // resume
+
+    default:
+      run("resume");
+  }
+}
+
+function pause() {
+  currentClick = "pause";
+  pausedTime = pomoTime;
+
+  timer.progress = (setProgressValue(totalTime, pausedTime));
+
+  const min = Math.floor(pausedTime / 60);
+  const sec = pausedTime % 60;
+
+  timer.timeInText = numToText(min, sec);
+
+  pomoTime = 0;
+  clearInterval(interval);
+  timer.playBtn = true;
+}
+
+function reset() {
+  clearInterval(interval);
+  currentClick = "reset";
+
+  timer.progress = 0;
+  timer.timeInText = `${totalTime} : 00`;
+
+  pomoTime = totalTime * 60;
+  timer.playBtn = true;
+}
+
+// Timer
+
+export default view(() => (
+  <div className="timer">
+    <div className="MainCircle">
+      <CircularProgressbar
+        value={timer.progress}
+        text={timer.timeInText}
+        styles={buildStyles(progressBar)}
+      />
+    </div>
+
+    <div className="sessionBtns">
+      {timer.playBtn &&
+        <Play onClick={start} className="playBtn" size={24} />}
+      {!timer.playBtn &&
+        <Pause onClick={pause} className="playBtn" size={24} />}
+
+      <ArrowClockwise
+        onClick={reset}
+        className="restartBtn"
+        size={24}
+      />
+    </div>
+  </div>
+));

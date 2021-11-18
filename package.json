@@ -12,8 +12,8 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.0.0",
+    "@risingstack/react-easy-state": "^6.3.0",
     "react-circular-progressbar": "^2.0.4",
-    "react-ridge-state": "^4.2.2",
     "vite": "^2.6.4",
     "wouter-preact": "^2.8.0-alpha.2"
   }
