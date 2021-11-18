@@ -5,6 +5,7 @@
   --volumebg: #cbefff;
   --inactiveStroke: #414b57;
   --activeStroke: #ff8787;
+  --activeBar: #414b57;
   --timerfg: #414b57;
   --bg-alt: #ffffff;
   --btnBg: #414b57;
@@ -17,10 +18,12 @@
 [data-theme="dark"] {
   --fg: #e1e8f5;
   --bg: #1a1a24;
-  --bg-alt: #171721;
+  --bg-alt: #12121c;
   --accent: #25252f;
+  --volumebg: #22222c;
   --inactiveStroke: #1a1a24;
   --activeStroke: #8398cf;
+  --activeBar: #8398cf;
   --timerfg: #8398cf;
   --btnBg: #92dbb6;
   --btnFg: #1a1a24;

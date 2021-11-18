@@ -1,7 +1,6 @@
 .settings {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   margin: 0.5rem 4rem;
   padding: 2rem;
   height: 100%;
@@ -56,7 +55,7 @@ h1 {
   -webkit-appearance: none;
   width: 0px;
   height: 2.5rem;
-  box-shadow: -100vw 0 0 100vw var(--fg);
+  box-shadow: -100vw 0 0 100vw var(--activeBar);
 }
 
 ::-moz-range-track {
