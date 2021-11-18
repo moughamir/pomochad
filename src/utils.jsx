@@ -1,3 +1,5 @@
+import { volume } from "./components/settings";
+
 function numToText(min, sec) {
   let temp;
 
@@ -19,7 +21,7 @@ function setProgressValue(ogTime, newTime) {
 const playSound = (path) => {
   let n = document.querySelector("audio");
   n.setAttribute("src", path);
-  n.volume = 0.1;
+  n.volume = volume;
   n.play();
 };
 

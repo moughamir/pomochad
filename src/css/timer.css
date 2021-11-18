@@ -24,6 +24,7 @@
 
 .CircularProgressbar .CircularProgressbar-text {
   fill: var(--timerfg);
+  font-family: "Quicksand", sans-serif;
 }
 
 .CircularProgressbar .CircularProgressbar-path {

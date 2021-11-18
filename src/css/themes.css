@@ -1,14 +1,15 @@
 [data-theme="light"] {
-  --fg: #36404c;
+  --fg: #414b57;
   --bg: #ffffff;
   --accent: #c0e4fe;
-  --inactiveStroke: #36404c;
+  --volumebg: #cbefff;
+  --inactiveStroke: #414b57;
   --activeStroke: #ff8787;
-  --timerfg: #36404c;
+  --timerfg: #414b57;
   --bg-alt: #ffffff;
-  --btnBg: #36404c;
+  --btnBg: #414b57;
   --btnFg: #ffffff;
-  --btnBg2: #36404c;
+  --btnBg2: #414b57;
   --btnFg2: #ffffff;
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
