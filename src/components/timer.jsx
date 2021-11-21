@@ -107,7 +107,7 @@ export default view(() => (
 
       <ArrowClockwise
         onClick={reset}
-        className="restartBtn"
+        className="resetBtn"
         size={24}
       />
     </div>

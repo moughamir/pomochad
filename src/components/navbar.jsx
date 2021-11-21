@@ -17,7 +17,7 @@ function BrandInfo() {
     <div className="brand">
       <Target className="brandLogo" size={30} weight="fill" />
       <Link href="/">
-        <div className="brandTitle">PomoReward</div>
+        <div className="brandTitle">Pomochad</div>
       </Link>
     </div>
   );
@@ -42,16 +42,14 @@ function NavbarLinks() {
 
   return (
     <div className="navBtns">
-      {theme == "light" && (
+      {theme == "light" &&
         <Lightning
           className="themeToggle"
           size={26}
           onClick={() => addTheme()}
-        />
-      )}
-      {theme == "dark" && (
-        <Moon className="themeToggle" size={26} onClick={() => addTheme()} />
-      )}
+        />}
+      {theme == "dark" &&
+        <Moon className="themeToggle" size={26} onClick={() => addTheme()} />}
 
       <div className="navbarLinks">
         <User className="userIcon" size={20} />

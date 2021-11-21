@@ -30,7 +30,7 @@ h1 {
 
 .volumePercentage {
   padding: 0.6rem;
-  background: var(--fg);
+  background: var(--activeBar);
   color: var(--bg);
   border-radius: 0.5rem;
   margin-left: 1rem;
