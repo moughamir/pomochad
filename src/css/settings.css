@@ -4,6 +4,7 @@
   margin: 0.5rem 4rem;
   padding: 2rem;
   height: 100%;
+  animation: smoothLoad 0.3s;
 }
 
 h1 {

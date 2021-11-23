@@ -1,4 +1,5 @@
 import "./css/style.css";
+import "./css/animations.css";
 
 import { Route } from "wouter-preact";
 import Navbar from "./components/navbar";
