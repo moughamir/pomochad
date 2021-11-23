@@ -33,6 +33,7 @@ function update() {
   const sec = pomoTime % 60;
 
   timer.timeInText = numToText(min, sec);
+  document.title = numToText(min, sec);
   timer.progress = (setProgressValue(totalTime, pomoTime));
   pomoTime--;
 }
