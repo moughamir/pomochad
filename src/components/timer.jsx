@@ -78,6 +78,7 @@ function pause() {
 }
 
 function reset() {
+  document.title = "Pomochad";
   clearInterval(interval);
   currentClick = "reset";
 
