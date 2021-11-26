@@ -1,33 +1,89 @@
 [data-theme="light"] {
   --fg: #414b57;
-  --bg: #ffffff;
+  --bg: #fff;
   --accent: #c0e4fe;
   --volumebg: #cbefff;
   --inactiveStroke: #414b57;
   --activeStroke: #ff8787;
   --activeBar: #414b57;
   --timerfg: #414b57;
-  --bg-alt: #ffffff;
+  --bg-alt: #fff;
   --btnBg: #414b57;
-  --btnFg: #ffffff;
+  --btnFg: #fff;
   --btnBg2: #414b57;
-  --btnFg2: #ffffff;
+  --btnFg2: #fff;
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --themeSwitcherBg: #fff;
 }
 
 [data-theme="dark"] {
   --fg: #e1e8f5;
-  --bg: #1a1a24;
-  --bg-alt: #12121c;
-  --accent: #25252f;
-  --volumebg: #22222c;
-  --inactiveStroke: #1a1a24;
-  --activeStroke: #8398cf;
-  --activeBar: #8398cf;
-  --timerfg: #8398cf;
+  --bg: #12121c;
+  --bg-alt: #1a1a24;
+  --accent: #1b1b25;
+  --volumebg: #181822;
+  --inactiveStroke: #12121c;
+  --activeStroke: #7d92c9;
+  --activeBar: #7d92c9;
+  --timerfg: #7d92c9;
   --btnBg: #92dbb6;
   --btnFg: #1a1a24;
   --btnBg2: #25252f;
   --btnFg2: #ef8891;
   --shadow: none;
+  --themeSwitcherBg: #181822;
+}
+
+[data-theme="nord"] {
+  --fg: #e1e8f5;
+  --bg: #272d39;
+  --bg-alt: #343a46;
+  --accent: #343a46;
+  --volumebg: #343a46;
+  --inactiveStroke: #272d39;
+  --activeStroke: #81a1c1;
+  --activeBar: #81a1c1;
+  --timerfg: #81a1c1;
+  --btnBg: #a3be8c;
+  --btnFg: #272d39;
+  --btnBg2: #373d49;
+  --btnFg2: #bf616a;
+  --shadow: none;
+  --themeSwitcherBg: #2e3440;
+}
+
+[data-theme="dracula"] {
+  --fg: #f8f8f2;
+  --bg: #282a36;
+  --bg-alt: #2f313d;
+  --accent: #373945;
+  --volumebg: #2f313d;
+  --inactiveStroke: #282a36;
+  --activeStroke: #bd93f9;
+  --activeBar: #bd93f9;
+  --timerfg: #bd93f9;
+  --btnBg: #ffb86c;
+  --btnFg: #282a36;
+  --btnBg2: #2f313d;
+  --btnFg2: #ff5555;
+  --shadow: none;
+  --themeSwitcherBg: #2f313d;
+}
+
+[data-theme="gruvchad"] {
+  --fg: #c7b89d;
+  --bg: #222526;
+  --bg-alt: #2b2e2f;
+  --accent: #313435;
+  --volumebg: #2b2e2f;
+  --inactiveStroke: #222526;
+  --activeStroke: #749689;
+  --activeBar: #749689;
+  --timerfg: #749689;
+  --btnBg: #6d8dad;
+  --btnFg: #3b3e3f;
+  --btnBg2: #3b3e3f;
+  --btnFg2: #ec6b64;
+  --shadow: none;
+  --themeSwitcherBg: #2b2e2f;
 }

@@ -21,11 +21,14 @@ export let totalTime = 25, pomoTime = totalTime * 60;
 
 function update() {
   if (pomoTime === 0) {
-    clearInterval(interval);
     playSound(timerSound);
+    clearInterval(interval);
+
     timer.timeInText = numToText(0, 0);
     timer.progress = 100;
     timer.playBtn = true;
+
+    document.title = "Pomochad";
     return;
   }
 
@@ -49,6 +52,7 @@ function run(action) {
 function start() {
   switch (currentClick) {
     // start
+
     case undefined:
     case "reset":
       run("start");
@@ -79,6 +83,7 @@ function pause() {
 
 function reset() {
   document.title = "Pomochad";
+
   clearInterval(interval);
   currentClick = "reset";
 
