@@ -28,6 +28,7 @@ const playSound = (path) => {
 export function switchTheme(name) {
   let body = document.querySelector("body");
   body.setAttribute("data-theme", name);
+  localStorage.setItem("theme", name);
 }
 
 let progressBar = {

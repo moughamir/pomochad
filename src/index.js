@@ -4,7 +4,10 @@ import App from "./App";
 import "./css/themes.css";
 
 import { switchTheme } from "./utils";
-switchTheme("dark");
+
+(localStorage.length === 0)
+  ? switchTheme("light")
+  : switchTheme(localStorage.theme);
 
 render(
   <App />,
