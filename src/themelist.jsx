@@ -22,6 +22,10 @@ let themelist = {
     fg: "#89b482",
     bg: "#222526",
   },
+  amoled: {
+    fg: "#41a7fc",
+    bg: "#000",
+  },
 };
 
 export default themelist;

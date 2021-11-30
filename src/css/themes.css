@@ -87,3 +87,21 @@
   --shadow: none;
   --themeSwitcherBg: #2b2e2f;
 }
+
+[data-theme="amoled"] {
+  --fg: #fff;
+  --bg: #000;
+  --bg-alt: #121212;
+  --accent: #121212;
+  --volumebg: #121212;
+  --inactiveStroke: #000;
+  --activeStroke: #7aa2f7;
+  --activeBar: #7aa2f7;
+  --timerfg: #7aa2f7;
+  --btnBg: #bb9af7;
+  --btnFg: #000;
+  --btnBg2: #121212;
+  --btnFg2: #f7768e;
+  --shadow: none;
+  --themeSwitcherBg: #121212;
+}
