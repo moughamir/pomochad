@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis&family=Quicksand&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Quicksand&display=swap');
 body {
   margin: 0;
+  padding: 0;
+  transition: 0.2s;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--fg);
   background-color: var(--bg);
   font-family: "Dosis", sans-serif;
-  transition: 0.2s;
-  padding: 0;
 }

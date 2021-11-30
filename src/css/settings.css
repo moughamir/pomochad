@@ -3,7 +3,6 @@
   grid-gap: 2rem;
   margin: 0.5rem 4rem;
   padding: 2rem;
-  height: 100%;
   animation: smoothLoad 0.3s;
   gap: 1rem;
 }
@@ -120,17 +119,19 @@ h1 {
 @media screen and (max-width: 540px) {
   .settings {
     grid-template-columns: 1fr;
-    margin: 0rem;
+    margin: 0.4rem;
     padding: 0.5rem;
+    gap: 0.3rem;
   }
 
   #volumeContainer {
-    padding: 0.5rem 2rem 2rem 2rem;
+    padding: 0.5rem repeat(3, 2rem);
   }
 
   .miscWidgets {
     grid-template-columns: 1fr 1fr;
     margin: 0rem;
+    gap: 0.3rem;
   }
 
   .themeList {
