@@ -17,15 +17,46 @@ h1 {
   gap: 1rem;
 }
 
-.dummyWidget {
+.goalWidgets {
+  display: flex;
+  color: var(--activeBar);
+}
+
+.projectedGoal {
+  background-color: var(--volumebg);
+  border-radius: 0.5rem;
+}
+
+.projectedGoal h3 {
+  text-align: center;
+  background-color: var(--activeBar);
+  color: var(--bg);
+}
+
+.based {
+  background: var(--volumebg);
+  color: var(--activeBar);
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+}
+
+.projectedGoalText {
+  font-size: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.3rem;
-  background-color: var(--volumebg);
-  color: var(--activeBar);
-  padding: 2rem;
+}
+
+.projectedGoal .adjustGoal {
+  display: flex;
+  font-size: 2rem;
+  background-color: var(--bg);
+  padding: 0.5rem;
+  margin: 0.5rem;
   border-radius: 0.5rem;
+  gap: 1rem;
+  color: var(--fg);
+  align-items: center;
 }
 
 /* Adjust volume */
@@ -170,7 +201,7 @@ h1 {
     grid-template-columns: 1fr;
     margin: 0rem;
     padding: 0.5rem;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
   #volumeContainer {

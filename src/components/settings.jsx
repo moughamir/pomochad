@@ -1,7 +1,7 @@
 import VolumeSlider from "./options/volumeSlider";
 import Themes from "./options/themeSwitcher";
 
-import DummyWidget from "./options/dummyWidget";
+import GoalCounter from "./widgets/goals";
 
 function Settings() {
   return (
@@ -11,7 +11,7 @@ function Settings() {
       <div className="settings">
         <div className="miscWidgets">
           <VolumeSlider />
-          <DummyWidget />
+          <GoalCounter />
         </div>
 
         <Themes />
