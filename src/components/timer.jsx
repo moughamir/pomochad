@@ -103,6 +103,7 @@ export default view(() => (
         value={timer.progress}
         text={timer.timeInText}
         styles={buildStyles(progressBar)}
+        strokeWidth={6}
       />
     </div>
 

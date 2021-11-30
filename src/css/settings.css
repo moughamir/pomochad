@@ -117,15 +117,24 @@ h1 {
   display: none;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 540px) {
   .settings {
     grid-template-columns: 1fr;
     margin: 0rem;
-    padding: 2rem;
+    padding: 0.5rem;
   }
 
   #volumeContainer {
     padding: 0.5rem 2rem 2rem 2rem;
+  }
+
+  .miscWidgets {
+    grid-template-columns: 1fr 1fr;
+    margin: 0rem;
+  }
+
+  .themeList {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -157,7 +166,7 @@ h1 {
 
 .themeList {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
   margin: 1.3rem;
 }
