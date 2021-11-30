@@ -116,29 +116,6 @@ h1 {
   display: none;
 }
 
-@media screen and (max-width: 540px) {
-  .settings {
-    grid-template-columns: 1fr;
-    margin: 0.4rem;
-    padding: 0.5rem;
-    gap: 0.3rem;
-  }
-
-  #volumeContainer {
-    padding: 0.5rem repeat(3, 2rem);
-  }
-
-  .miscWidgets {
-    grid-template-columns: 1fr 1fr;
-    margin: 0rem;
-    gap: 0.3rem;
-  }
-
-  .themeList {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 /* Themes */
 
 .themeSwitcher {
@@ -186,4 +163,27 @@ h1 {
 .aTheme:hover {
   cursor: pointer;
   transform: scaleY(1.2);
+}
+
+@media screen and (max-width: 540px) {
+  .settings {
+    grid-template-columns: 1fr;
+    margin: 0rem;
+    padding: 0.5rem;
+    gap: .5rem;
+  }
+
+  #volumeContainer {
+    padding: 0.5rem repeat(3, 2rem);
+  }
+
+  .miscWidgets {
+    grid-template-columns: 1fr 1fr;
+    margin: 0rem;
+    gap: 0.5rem;
+  }
+
+  .themeList {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

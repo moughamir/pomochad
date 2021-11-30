@@ -6,7 +6,7 @@ import Navbar from "./components/navbar";
 import Timer from "./components/timer";
 import Settings from "./components/settings";
 
-function App() {
+export default () => {
   return (
     <>
       <Navbar />
@@ -20,6 +20,4 @@ function App() {
       </Route>
     </>
   );
-}
-
-export default App;
+};
