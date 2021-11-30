@@ -1,33 +1,46 @@
 import { CaretCircleDown, CaretCircleUp } from "phosphor-react";
+import { store, view } from "@risingstack/react-easy-state";
 
 // Desired goal i.e number of hours the user wants to be productive per day
-let hours = 8;
+const targetHours = store({
+  val: 5,
+});
 
-function ProjectedGoal() {
+// btns to increase and decrease hours
+function ChangeHrsBtns() {
+  return (
+    <div className="adjustGoal">
+      <CaretCircleUp
+        className="changeHrsBtn"
+        weight="fill"
+        onClick={() => targetHours.val++}
+      />
+      <CaretCircleDown
+        className="changeHrsBtn"
+        weight="fill"
+        onClick={() => targetHours.val--}
+      />
+    </div>
+  );
+}
+
+function ProjectedGoal(props) {
   return (
     <div className="projectedGoal">
       <h3>Target Goal</h3>
 
-      <div className="based">
+      <div className="projectedGoalContent">
         <div className="projectedGoalText">
-          {hours}
+          {props.hours} hrs
         </div>
-
-        <div className="adjustGoal">
-          <CaretCircleUp weight="fill" />
-          <CaretCircleDown weight="fill" />
-        </div>
+        <ChangeHrsBtns />
       </div>
     </div>
   );
 }
 
-function GoalCounter() {
-  return (
-    <div className="goalWidgets">
-      <ProjectedGoal />
-    </div>
-  );
-}
-
-export default GoalCounter;
+export default view(() => (
+  <div className="goalWidgets">
+    <ProjectedGoal hours={targetHours.val} />
+  </div>
+));
