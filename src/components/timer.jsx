@@ -94,12 +94,23 @@ function reset() {
   timer.playBtn = true;
 }
 
+export function RadialProgress(props) {
+  return (
+    <CircularProgressbar
+      value={props.value}
+      text={props.text}
+      styles={buildStyles(progressBar)}
+      strokeWidth={props.strokeWidth}
+    />
+  );
+}
+
 // Timer
 
 export default view(() => (
   <div className="timer">
     <div className="MainCircle">
-      <CircularProgressbar
+      <RadialProgress
         value={timer.progress}
         text={timer.timeInText}
         styles={buildStyles(progressBar)}
