@@ -19,7 +19,9 @@ export const timer = store({
   productivityProgress: 0,
 });
 
-if (localStorage.date) timer.productivityProgress = parseInt(localStorage.currentProgress);
+if (localStorage.date && localStorage.currentProgress) {
+  timer.productivityProgress = parseInt(localStorage.currentProgress);
+}
 
 export let interval, pausedTime, currentClick;
 export let totalTime = 25, pomoTime = totalTime * 60;
