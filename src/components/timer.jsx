@@ -10,11 +10,16 @@ import { numToText, playSound, progressBar, setProgressValue } from "../utils";
 import tickSound from "../../assets/audio/tick.mp3";
 import timerSound from "../../assets/audio/pikachu.mp3";
 
-const timer = store({
+const utc = new Date().toJSON().slice(0, 10).replace(/-/g, "/");
+
+export const timer = store({
   timeInText: "25 : 00",
   progress: 0,
   playBtn: true,
+  productivityProgress: 0,
 });
+
+if (localStorage.date) timer.productivityProgress = parseInt(localStorage.currentProgress);
 
 export let interval, pausedTime, currentClick;
 export let totalTime = 25, pomoTime = totalTime * 60;
@@ -29,6 +34,12 @@ function update() {
     timer.playBtn = true;
 
     document.title = "Pomochad";
+
+    if (utc === localStorage.date) {
+      timer.productivityProgress += totalTime;
+      localStorage.currentProgress = timer.productivityProgress;
+    }
+
     return;
   }
 
@@ -43,7 +54,7 @@ function update() {
 
 function run(action) {
   currentClick = action;
-  interval = setInterval(update, 1000);
+  interval = setInterval(update, -10);
 
   if (action == "start" || action == "resume") timer.playBtn = false;
   action == "start" ? playSound(tickSound) : (pomoTime = pausedTime);

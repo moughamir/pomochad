@@ -1,25 +1,32 @@
 import { CaretCircleDown, CaretCircleUp } from "phosphor-react";
 import { store, view } from "@risingstack/react-easy-state";
-import { RadialProgress } from "../timer";
+import { RadialProgress, timer } from "../timer";
 
 // Desired goal i.e number of hours the user wants to be productive per day
 const targetHours = store({
   val: 5,
 });
 
+if (localStorage.targetGoal) targetHours.val = localStorage.targetGoal;
+
 // btns to increase and decrease hours
 function ChangeHrsBtns() {
+  function alterValues(a) {
+    a == "add" ? targetHours.val++ : targetHours.val--;
+    localStorage.targetGoal = targetHours.val;
+  }
+
   return (
     <div className="adjustGoal">
       <CaretCircleUp
         className="changeHrsBtn"
         weight="fill"
-        onClick={() => targetHours.val++}
+        onClick={() => alterValues("add")}
       />
       <CaretCircleDown
         className="changeHrsBtn"
         weight="fill"
-        onClick={() => targetHours.val--}
+        onClick={() => alterValues("min")}
       />
     </div>
   );
@@ -39,11 +46,22 @@ function ProjectedGoal(props) {
     </div>
   );
 }
+function getCurrentGoal() {
+  return parseFloat(
+    timer.productivityProgress /
+      60,
+  );
+}
 
-let currentProgress = 2;
+function minToHrs(num, fixed) {
+  let re = new RegExp("^-?\\d+(?:\.\\d{0," + (fixed || -1) + "})?");
+  return num.toString().match(re)[0];
+}
 
 function getCurrentProgress() {
-  let progress = parseFloat(currentProgress / targetHours.val);
+  let progress = parseFloat(
+    getCurrentGoal() / targetHours.val,
+  );
   return Math.floor(progress * 100);
 }
 
@@ -52,8 +70,8 @@ function CurrentProgress() {
     <div className="currentProgress">
       <RadialProgress
         value={getCurrentProgress()}
-        text={`${currentProgress} hrs`}
-        strokeWidth={6}
+        text={`${minToHrs(getCurrentGoal(), 2)} hrs`}
+        strokeWidth={5}
       />
     </div>
   );

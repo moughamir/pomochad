@@ -13,3 +13,6 @@ render(
   <App />,
   document.getElementById("root"),
 );
+
+const utc = new Date().toJSON().slice(0, 10).replace(/-/g, "/");
+localStorage.setItem("date", utc);
