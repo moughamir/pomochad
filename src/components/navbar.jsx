@@ -2,13 +2,7 @@ import { useState } from "preact/hooks";
 import { Link } from "wouter-preact";
 import { switchTheme } from "../utils";
 
-import {
-  Lightning,
-  Moon,
-  SlidersHorizontal,
-  Target,
-  User,
-} from "phosphor-react";
+import { Lightning, SlidersHorizontal, Target, User } from "phosphor-react";
 
 import "../css/navbar.css";
 
@@ -42,14 +36,11 @@ function NavbarLinks() {
 
   return (
     <div className="navBtns">
-      {theme == "light" &&
-        <Lightning
-          className="themeToggle"
-          size={26}
-          onClick={() => addTheme()}
-        />}
-      {theme == "dark" &&
-        <Moon className="themeToggle" size={26} onClick={() => addTheme()} />}
+      <Lightning
+        className="themeToggle"
+        size={26}
+        onClick={() => addTheme()}
+      />
 
       <div className="navbarLinks">
         <User className="userIcon" size={20} />
