@@ -8,7 +8,7 @@ import "../css/timer.css";
 import { numToText, playSound, progressBar, setProgressValue } from "../utils";
 
 import tickSound from "../../assets/audio/tick.mp3";
-import timerSound from "../../assets/audio/pikachu.mp3";
+import timerSound from "../../assets/audio/timerSound.mp3";
 
 const utc = new Date().toJSON().slice(0, 10).replace(/-/g, "/");
 
