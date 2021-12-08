@@ -19,7 +19,7 @@ export const timer = store({
   productivityProgress: 0,
 });
 
-if (localStorage.date && localStorage.currentProgress) {
+if (localStorage.date === utc && localStorage.currentProgress) {
   timer.productivityProgress = parseInt(localStorage.currentProgress);
 }
 
