@@ -90,6 +90,17 @@
   .navbar {
     margin: 0rem;
     padding: 1rem;
+    align-items: flex-start;
+  }
+
+  .brand {
+    margin-top: .6rem;
+  }
+
+  .navBtns {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    align-items: flex-end;
   }
   .themeToggle {
     margin-right: 0.2rem;
