@@ -101,9 +101,9 @@
 [data-theme="amoled"] {
   --fg: #fff;
   --bg: #000;
-  --bg-alt: #090909;
+  --bg-alt: #111111;
   --accent: #111111;
-  --volumebg: #090909;
+  --volumebg: #111111;
   --inactiveStroke: #000;
   --activeStroke: #7aa2f7;
   --activeBar: #7aa2f7;
@@ -115,5 +115,5 @@
   --shadow: none;
   --themeToggleBg: #111111;
   --themeToggleFg: #749689;
-  --themeSwitcherBg: #090909;
+  --themeSwitcherBg: #111111;
 }
