@@ -2,7 +2,7 @@ import { useState } from "preact/hooks";
 import { Link } from "wouter-preact";
 import { switchTheme } from "../utils";
 
-import { Lightning, SlidersHorizontal, Target, User } from "phosphor-react";
+import { Nut, Ghost, Lightning, Target, User } from "phosphor-react";
 
 import "../css/navbar.css";
 
@@ -43,9 +43,14 @@ function NavbarLinks() {
       />
 
       <div className="navbarLinks">
-        <User className="userIcon" size={20} />
+        <div className="todosBtn">
+          <Ghost className="todosIcon" size={23} />
+          Todos
+        </div>
+
+        <User className="userIcon" size={23} />
         <Link href="/settings">
-          <SlidersHorizontal className="settingsBtn" size={20} />
+          <Nut className="settingsBtn" size={25} />
         </Link>
       </div>
     </div>

@@ -50,7 +50,7 @@ function update() {
 
   timer.timeInText = numToText(min, sec);
   document.title = numToText(min, sec);
-  timer.progress = (setProgressValue(totalTime, pomoTime));
+  timer.progress = setProgressValue(totalTime, pomoTime);
   pomoTime--;
 }
 
@@ -82,7 +82,7 @@ function pause() {
   currentClick = "pause";
   pausedTime = pomoTime;
 
-  timer.progress = (setProgressValue(totalTime, pausedTime));
+  timer.progress = setProgressValue(totalTime, pausedTime);
 
   const min = Math.floor(pausedTime / 60);
   const sec = pausedTime % 60;

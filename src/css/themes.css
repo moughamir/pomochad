@@ -10,8 +10,10 @@
   --bg-alt: #fff;
   --btnBg: #414b57;
   --btnFg: #fff;
-  --btnBg2: #414b57;
-  --btnFg2: #fff;
+  --btnBg2: #9fc3dd;
+  --btnFg2: #414b57;
+  --themeToggleBg: #414b57;
+  --themeToggleFg: #fff;
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   --themeSwitcherBg: #fff;
 }
@@ -26,11 +28,13 @@
   --activeStroke: #7d92c9;
   --activeBar: #7d92c9;
   --timerfg: #7d92c9;
-  --btnBg: #92dbb6;
+  --btnBg: #71ba95;
   --btnFg: #1a1a24;
-  --btnBg2: #25252f;
+  --btnBg2: #2b2b35;
   --btnFg2: #ef8891;
   --shadow: none;
+  --themeToggleBg: #1b1b25;
+  --themeToggleFg: #7d92c9;
   --themeSwitcherBg: #181822;
 }
 
@@ -46,9 +50,11 @@
   --timerfg: #81a1c1;
   --btnBg: #a3be8c;
   --btnFg: #272d39;
-  --btnBg2: #373d49;
-  --btnFg2: #bf616a;
+  --btnBg2: #3f4551;
+  --btnFg2: #ef8891;
   --shadow: none;
+  --themeToggleBg: #343a46;
+  --themeToggleFg: #81a1c1;
   --themeSwitcherBg: #2e3440;
 }
 
@@ -64,9 +70,11 @@
   --timerfg: #bd93f9;
   --btnBg: #ffb86c;
   --btnFg: #282a36;
-  --btnBg2: #2f313d;
+  --btnBg2: #41434f;
   --btnFg2: #ff5555;
   --shadow: none;
+  --themeToggleBg: #373945;
+  --themeToggleFg: #bd93f9;
   --themeSwitcherBg: #2f313d;
 }
 
@@ -80,28 +88,32 @@
   --activeStroke: #749689;
   --activeBar: #749689;
   --timerfg: #749689;
-  --btnBg: #6d8dad;
+  --btnBg: #89b482;
   --btnFg: #3b3e3f;
-  --btnBg2: #3b3e3f;
+  --btnBg2: #3f4243;
   --btnFg2: #ec6b64;
   --shadow: none;
+  --themeToggleBg: #313435;
+  --themeToggleFg: #749689;
   --themeSwitcherBg: #2b2e2f;
 }
 
 [data-theme="amoled"] {
   --fg: #fff;
   --bg: #000;
-  --bg-alt: #121212;
-  --accent: #121212;
-  --volumebg: #121212;
+  --bg-alt: #090909;
+  --accent: #111111;
+  --volumebg: #090909;
   --inactiveStroke: #000;
   --activeStroke: #7aa2f7;
   --activeBar: #7aa2f7;
   --timerfg: #7aa2f7;
-  --btnBg: #bb9af7;
+  --btnBg: #ff6363;
   --btnFg: #000;
-  --btnBg2: #121212;
-  --btnFg2: #f7768e;
+  --btnBg2: #1d1d1d;
+  --btnFg2: #ff6363;
   --shadow: none;
-  --themeSwitcherBg: #121212;
+  --themeToggleBg: #111111;
+  --themeToggleFg: #749689;
+  --themeSwitcherBg: #090909;
 }
