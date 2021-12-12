@@ -2,7 +2,7 @@ import { useState } from "preact/hooks";
 import { Link } from "wouter-preact";
 import { switchTheme } from "../utils";
 
-import { Nut, Ghost, Lightning, Target, User } from "phosphor-react";
+import { Ghost, Lightning, Nut, Target, User } from "phosphor-react";
 
 import "../css/navbar.css";
 
@@ -43,12 +43,15 @@ function NavbarLinks() {
       />
 
       <div className="navbarLinks">
-        <div className="todosBtn">
-          <Ghost className="todosIcon" size={23} />
-          Todos
-        </div>
+        <Link href="/todos">
+          <div className="todosBtn">
+            <Ghost className="todosIcon" size={23} />
+            Todos
+          </div>
+        </Link>
 
         <User className="userIcon" size={23} />
+
         <Link href="/settings">
           <Nut className="settingsBtn" size={25} />
         </Link>
