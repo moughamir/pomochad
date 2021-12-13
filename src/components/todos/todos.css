@@ -1,0 +1,49 @@
+.todosPage {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  background-color: var(--todoBg);
+  height: 80vh;
+  margin: 0 4.5rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+}
+
+.sidebar {
+  background-color: var(--bg-alt);
+  padding: 1rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid var(--sidebarBorder);
+}
+
+.newProjectBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  padding: 0.7rem 0;
+  outline: none;
+  border: none;
+  background: var(--btnBg);
+  color: var(--btnFg);
+  width: 100%;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+
+.todoProject {
+  background-color: var(--bg-alt);
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  padding: 0.7rem;
+  outline: none;
+  border: none;
+  color: var(--fg);
+  width: 100%;
+  border-radius: 0.5rem;
+}

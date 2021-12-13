@@ -16,6 +16,10 @@
   --themeToggleFg: #fff;
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   --themeSwitcherBg: #fff;
+  --todoBg: #fff;
+  --red: #f47575;
+  --blue: #90b4ce;
+  --sidebarBorder: #9c9c9c;
 }
 
 [data-theme="dark"] {
@@ -36,6 +40,9 @@
   --themeToggleBg: #1b1b25;
   --themeToggleFg: #7d92c9;
   --themeSwitcherBg: #181822;
+  --todoBg: #181822;
+  --red: #ff8080;
+  --blue: #7d92c9;
 }
 
 [data-theme="nord"] {
