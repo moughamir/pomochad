@@ -63,6 +63,9 @@
   --themeToggleBg: #343a46;
   --themeToggleFg: #81a1c1;
   --themeSwitcherBg: #2e3440;
+  --todoBg: #2f3541;
+  --red: #bf616a;
+  --blue: #81a1c1;
 }
 
 [data-theme="dracula"] {
@@ -83,6 +86,9 @@
   --themeToggleBg: #373945;
   --themeToggleFg: #bd93f9;
   --themeSwitcherBg: #2f313d;
+  --todoBg: #343642;
+  --red: #ff5555;
+  --blue: #6272a4;
 }
 
 [data-theme="gruvchad"] {
@@ -103,6 +109,9 @@
   --themeToggleBg: #313435;
   --themeToggleFg: #749689;
   --themeSwitcherBg: #2b2e2f;
+  --todoBg: #303334;
+  --red: #ec6b64;
+  --blue: #6f8faf;
 }
 
 [data-theme="amoled"] {
@@ -123,4 +132,7 @@
   --themeToggleBg: #111111;
   --themeToggleFg: #749689;
   --themeSwitcherBg: #111111;
+  --todoBg: #161616;
+  --red: #ff6363;
+  --blue: #7aa2f7;
 }

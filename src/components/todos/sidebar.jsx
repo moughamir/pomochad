@@ -1,3 +1,5 @@
+import "./sidebar.css";
+
 import { Fire, FireSimple, Notepad, PlusCircle, XCircle } from "phosphor-react";
 import { store, view } from "@risingstack/react-easy-state";
 
@@ -89,7 +91,7 @@ export default view(() => (
       )}
 
       <button className="newProjectBtn" onClick={() => showInput(true)}>
-        <PlusCircle size={24} /> new project
+        <PlusCircle size={24} /> add project
       </button>
     </div>
   </div>

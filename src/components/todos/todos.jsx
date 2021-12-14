@@ -8,11 +8,21 @@ function TodoList() {
   );
 }
 
+function TodoSection() {
+  return (
+    <div className="todoSection">
+      <TodoList />
+      <div className="todoFooter">
+      </div>
+    </div>
+  );
+}
+
 export default () => {
   return (
     <div className="todosPage">
       <Sidebar />
-      <TodoList />
+      <TodoSection />
     </div>
   );
 };
