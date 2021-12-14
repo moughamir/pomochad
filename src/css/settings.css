@@ -2,7 +2,7 @@
   display: grid;
   margin: 0.5rem 4rem;
   padding: 2rem;
-  animation: smoothLoad 0.3s;
+  animation: slideDown 0.2s ease 0s 1 normal forwards;
   gap: 1rem;
 }
 
