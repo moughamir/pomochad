@@ -102,3 +102,23 @@
   width: 100%;
   border-radius: 0.5rem;
 }
+
+.todoProjectClicked {
+  background-color: var(--todoBg);
+}
+.todoProject .projectName {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.todoProject:hover {
+  cursor: pointer;
+  background-color: var(--todoBg);
+  border: var(--sidebarBorder);
+}
+
+.activeBtn {
+  background-color: var(--todoBg);
+}

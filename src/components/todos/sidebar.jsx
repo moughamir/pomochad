@@ -1,5 +1,7 @@
 import "./sidebar.css";
 
+import { useState } from "preact/hooks";
+
 import { Fire, FireSimple, Notepad, PlusCircle, XCircle } from "phosphor-react";
 import { store, view } from "@risingstack/react-easy-state";
 
@@ -60,12 +62,23 @@ function DefaultProjects() {
 }
 
 function Project(props) {
+  let [activeBtn, setActiveBtn] = useState("None");
+
   return (
-    <button className="todoProject">
-      <FireSimple
-        size={20}
-      />
-      {props.name}
+    <button
+      className={activeBtn == props.name
+        ? "todoProject todoProjectClicked"
+        : "todoProject"}
+      onClick={() => setActiveBtn(props.name)}
+    >
+      <div className="projectName">
+        <FireSimple
+          size={20}
+        />
+        {props.name}
+      </div>
+
+      <XCircle size={20} weight="fill" style={{ color: "var(--red)" }} />
     </button>
   );
 }
