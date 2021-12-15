@@ -1,6 +1,6 @@
 import "./sidebar.css";
 
-import { useState } from "preact/hooks";
+import Project from "./project";
 
 import { Fire, FireSimple, Notepad, PlusCircle, XCircle } from "phosphor-react";
 import { store, view } from "@risingstack/react-easy-state";
@@ -50,43 +50,16 @@ function ProjectInput() {
 function DefaultProjects() {
   return (
     <div className="DefaultProjects">
-      <button className="todoProject">
-        <Notepad size={20} style={{ color: "var(--blue)" }} />Today
-      </button>
-
-      <button className="todoProject">
-        <Fire size={20} style={{ color: "var(--red)" }} />Important
-      </button>
+      <Project name="Today" icon={Notepad} color="blue" />
+      <Project name="Important" icon={Fire} color="red" />
     </div>
-  );
-}
-
-function Project(props) {
-  let [activeBtn, setActiveBtn] = useState("None");
-
-  return (
-    <button
-      className={activeBtn == props.name
-        ? "todoProject todoProjectClicked"
-        : "todoProject"}
-      onClick={() => setActiveBtn(props.name)}
-    >
-      <div className="projectName">
-        <FireSimple
-          size={20}
-        />
-        {props.name}
-      </div>
-
-      <XCircle size={20} weight="fill" style={{ color: "var(--red)" }} />
-    </button>
   );
 }
 
 function ProjectLists() {
   return (
     <div className="projectLists">
-      {projects.list.map((item) => <Project name={item} />)}
+      {projects.list.map((item) => <Project name={item} icon={FireSimple} />)}
     </div>
   );
 }

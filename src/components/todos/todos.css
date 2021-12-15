@@ -9,18 +9,3 @@
   box-shadow: var(--shadow);
   animation: slideLeft 0.2s ease 0s 1 normal forwards;
 }
-
-.todoheader {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.todoheader h2 {
-  text-align: center;
-}
-
-.todoheader h2 span {
-  background-color: var(--bg-alt);
-  border-radius: 0.5rem;
-  padding: 1rem;
-}

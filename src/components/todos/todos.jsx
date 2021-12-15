@@ -8,20 +8,9 @@ function TodoList() {
   );
 }
 
-function TodoHeader() {
-  return (
-    <div className="todoheader">
-      <h2>
-        <span>Today</span>
-      </h2>
-    </div>
-  );
-}
-
 function TodoSection() {
   return (
     <div className="todoSection">
-      <TodoHeader />
       <TodoList />
       <div className="todoFooter">
       </div>
