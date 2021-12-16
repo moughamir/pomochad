@@ -15,6 +15,11 @@ function ProjectInput() {
   let tmpProject;
 
   function addProject() {
+    if (!tmpProject || projects.list.includes(tmpProject)) {
+      alert("invalid project name!");
+      return;
+    }
+
     projects.list.push(tmpProject);
     showInput(false);
   }
