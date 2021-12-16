@@ -10,3 +10,27 @@
   animation: slideLeft 0.2s ease 0s 1 normal forwards;
   border: 2px solid var(--sidebarBorder);
 }
+
+.todoSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.todoFooter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.todoFooter button {
+  background: var(--red);
+  padding: 0.5rem;
+  width: auto;
+}
+
+.todoFooter button:hover {
+  cursor: pointer;
+  background-color: var(--fg);
+  color: var(--bg);
+}

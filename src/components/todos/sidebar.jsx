@@ -59,7 +59,7 @@ export default view(() => (
         <ProjectInput closeInput={() => showInput(false)} />}
 
       <button className="newProjectBtn" onClick={() => showInput(true)}>
-        <PlusCircle size={24} /> add project
+        <PlusCircle size={24} weight="fill" /> add project
       </button>
     </div>
   </div>

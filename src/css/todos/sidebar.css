@@ -68,12 +68,13 @@
   color: var(--bg);
 }
 
-.newProjectBtn {
+.newProjectBtn,
+.todoFooter button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 1rem;
-  padding: 0.7rem 0;
+  padding: 0.5rem 0;
   outline: none;
   border: none;
   background: var(--btnBg);
