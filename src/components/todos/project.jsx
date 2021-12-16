@@ -2,6 +2,7 @@
 
 import { XCircle } from "phosphor-react";
 import { store, view } from "@risingstack/react-easy-state";
+import { projects } from "../../store";
 
 const project = store({
   name: "",
@@ -9,6 +10,11 @@ const project = store({
 
 function getColor(x) {
   return `var(--${x})`;
+}
+
+function removeProject(item) {
+  const index = projects.list.indexOf(item);
+  projects.list.splice(index, 1);
 }
 
 export default view((props) => (
@@ -26,11 +32,17 @@ export default view((props) => (
       {props.name}
     </div>
 
-    {/*show delete icon on non default todos only!*/}
+    {/*show delete icon on user added todos only!*/}
 
     {(project.name == props.name && props.name != "Today" &&
-      props.name != "Important") && (
-      <XCircle size={20} weight="fill" style={{ color: "var(--red)" }} />
-    )}
+      props.name != "Important") &&
+      (
+        <XCircle
+          size={20}
+          weight="fill"
+          style={{ color: "var(--red)" }}
+          onClick={() => removeProject(props.name)}
+        />
+      )}
   </button>
 ));

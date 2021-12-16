@@ -1,6 +1,6 @@
 /* animations :D */
 
-@keyframes slideUp {
+@keyframes smoothPopup {
   0% {
     transform: scale(0.5);
     transform-origin: 50% 100%;

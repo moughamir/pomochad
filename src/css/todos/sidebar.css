@@ -19,7 +19,7 @@
   border: 2px solid var(--sidebarBorder);
   padding: 1rem;
   margin-bottom: 37%;
-  animation: slideUp 0.2s ease 0s 1 normal forwards;
+  animation: smoothPopup 0.2s ease 0s 1 normal forwards;
 }
 
 .projectInputBtns {

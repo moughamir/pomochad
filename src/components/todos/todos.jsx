@@ -1,4 +1,4 @@
-import "./todos.css";
+import "../../css/todos/todos.css";
 import Sidebar from "./sidebar";
 
 function TodoList() {

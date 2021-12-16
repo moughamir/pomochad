@@ -1,14 +1,10 @@
-import "./sidebar.css";
+import "../../css/todos/sidebar.css";
 
-import Project from "./project";
+import { PlusCircle, XCircle } from "phosphor-react";
+import { view } from "@risingstack/react-easy-state";
 
-import { Fire, FireSimple, Notepad, PlusCircle, XCircle } from "phosphor-react";
-import { store, view } from "@risingstack/react-easy-state";
-
-export const projects = store({
-  showInputBox: false,
-  list: [],
-});
+import { projects } from "../../store";
+import ProjectLists from "./projectList";
 
 function showInput(tmp) {
   projects.showInputBox = (tmp) ? true : false;
@@ -47,34 +43,15 @@ function ProjectInput() {
   );
 }
 
-function DefaultProjects() {
-  return (
-    <div className="DefaultProjects">
-      <Project name="Today" icon={Notepad} color="blue" />
-      <Project name="Important" icon={Fire} color="red" />
-    </div>
-  );
-}
-
-function ProjectLists() {
-  return (
-    <div className="projectLists">
-      {projects.list.map((item) => <Project name={item} icon={FireSimple} />)}
-    </div>
-  );
-}
-
 export default view(() => (
   <div className="sidebar">
     <div className="projects">
-      <DefaultProjects />
       <ProjectLists />
     </div>
 
     <div style={{ position: "relative" }}>
-      {projects.showInputBox && (
-        <ProjectInput closeInput={() => showInput(false)} />
-      )}
+      {projects.showInputBox &&
+        <ProjectInput closeInput={() => showInput(false)} />}
 
       <button className="newProjectBtn" onClick={() => showInput(true)}>
         <PlusCircle size={24} /> add project
