@@ -2,13 +2,11 @@ import { store, view } from "@risingstack/react-easy-state";
 import { CheckCircle, Circle, PlusCircle } from "phosphor-react";
 import { useState } from "preact/hooks";
 
+import { todos } from "../../store";
+
 const inputbox = store({
   show: false,
   priority: "low",
-});
-
-const todos = store({
-  list: [],
 });
 
 function NewTodoBtn() {
@@ -22,20 +20,21 @@ function NewTodoBtn() {
   );
 }
 
+let todo = { name: "", note: "", priority: "" };
+
 function TodoInput() {
   const [priority, setPriority] = useState("low");
-
-  let todo = { name: "", note: "", priority: "" };
 
   function changePriority(val) {
     setPriority(val);
     todo.priority = val;
-    console.log(todo.priority);
   }
 
   function saveTodo(todo) {
+    todo.priority = priority;
     todos.list.push(todo);
     inputbox.show = false;
+
     console.log(todos.list);
   }
 

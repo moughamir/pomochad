@@ -1,11 +1,11 @@
+import { switchTheme } from "./utils";
 import { render } from "preact";
+
 import App from "./App";
 
 import "./css/themes.css";
 
-import { switchTheme } from "./utils";
-
-(localStorage.theme == 'undefined' || !localStorage.theme)
+(localStorage.theme == "undefined" || !localStorage.theme)
   ? switchTheme("light")
   : switchTheme(localStorage.theme);
 
