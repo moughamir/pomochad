@@ -25,7 +25,8 @@
 
 .todoFooter button {
   padding: 0.5rem;
-  width: auto;
+  width: 100%;
+  border-radius:0.5rem;
 }
 
 .todoFooter button:hover {
@@ -76,13 +77,25 @@
   gap: 0.5rem;
   justify-content: center;
   border-radius: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .todoInput button {
-  width: 100%;
-  background-color: var("--fg");
+  background-color: var(--btnBg);
 }
 
-.checkBtn:hover {
+.todoPriority select {
+  border: none;
+  outline: none;
+  background-color: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.todoPriority select option {
+  background-color: var(--bg);
+  color: var(--fg);
   cursor: pointer;
 }

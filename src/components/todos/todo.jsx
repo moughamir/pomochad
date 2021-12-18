@@ -1,7 +1,5 @@
 import { store, view } from "@risingstack/react-easy-state";
-import { CheckCircle, Circle, PlusCircle } from "phosphor-react";
-import { useState } from "preact/hooks";
-
+import { PlusCircle } from "phosphor-react";
 import { todos } from "../../store";
 
 const inputbox = store({
@@ -20,22 +18,12 @@ function NewTodoBtn() {
   );
 }
 
-let todo = { name: "", note: "", priority: "" };
-
 function TodoInput() {
-  const [priority, setPriority] = useState("low");
-
-  function changePriority(val) {
-    setPriority(val);
-    todo.priority = val;
-  }
+  let todo = { name: "", note: "", priority: "low" };
 
   function saveTodo(todo) {
-    todo.priority = priority;
     todos.list.push(todo);
     inputbox.show = false;
-
-    console.log(todos.list);
   }
 
   return (
@@ -45,26 +33,15 @@ function TodoInput() {
       </textarea>
 
       <div style={{ display: "flex", gap: "1rem" }}>
-        <div className="todoPriority">
-          Important
+        <div class="todoPriority">
+          <label for="priority">priority</label>
 
-          {priority == "low"
-            ? (
-              <Circle
-                size={24}
-                onClick={() => changePriority("high")}
-                className="checkBtn"
-              />
-            )
-            : (
-              <CheckCircle
-                size={24}
-                onClick={() => changePriority("low")}
-                weight="fill"
-                className="checkBtn"
-              />
-            )}
+          <select id="priority" onClick={(e) => todo.priority = e.target.value}>
+            <option value="low">low</option>
+            <option value="high">high</option>
+          </select>
         </div>
+
         <button onClick={() => saveTodo(todo)}>
           save
         </button>
