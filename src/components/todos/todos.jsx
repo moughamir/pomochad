@@ -1,7 +1,7 @@
 import Sidebar from "./sidebar";
+import TodoCreator from "./todo";
 
 import "../../css/todos/todos.css";
-import { PlusCircle } from "phosphor-react";
 
 function TodoList() {
   return (
@@ -15,9 +15,7 @@ function TodoSection() {
     <div className="todoSection">
       <TodoList />
       <div className="todoFooter">
-        <button>
-          <PlusCircle size={24} weight="fill" /> todo
-        </button>
+        <TodoCreator />
       </div>
     </div>
   );
