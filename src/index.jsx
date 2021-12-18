@@ -5,7 +5,7 @@ import "./css/themes.css";
 
 import { switchTheme } from "./utils";
 
-(localStorage.length === 0)
+(localStorage.theme == 'undefined' || !localStorage.theme)
   ? switchTheme("light")
   : switchTheme(localStorage.theme);
 
