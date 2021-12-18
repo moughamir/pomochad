@@ -10,14 +10,18 @@ import { numToText, playSound, progressBar, setProgressValue } from "../utils";
 import tickSound from "../../assets/audio/tick.mp3";
 import timerSound from "../../assets/audio/timerSound.mp3";
 
-const utc = new Date().toJSON().slice(0, 10).replace(/-/g, "/");
-
 export const timer = store({
   timeInText: "25 : 00",
   progress: 0,
   playBtn: true,
   productivityProgress: 0,
 });
+
+const utc = new Date().toJSON().slice(0, 10).replace(/-/g, "/");
+
+if (!localStorage.date) {
+  localStorage.setItem("date", utc);
+}
 
 if (localStorage.date === utc && localStorage.currentProgress) {
   timer.productivityProgress = parseInt(localStorage.currentProgress);
