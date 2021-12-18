@@ -7,6 +7,10 @@ const inputbox = store({
   priority: "low",
 });
 
+const todos = store({
+  list: [],
+});
+
 function NewTodoBtn() {
   return (
     <button
@@ -21,10 +25,25 @@ function NewTodoBtn() {
 function TodoInput() {
   const [priority, setPriority] = useState("low");
 
+  let todo = { name: "", note: "", priority: "" };
+
+  function changePriority(val) {
+    setPriority(val);
+    todo.priority = val;
+    console.log(todo.priority);
+  }
+
+  function saveTodo(todo) {
+    todos.list.push(todo);
+    inputbox.show = false;
+    console.log(todos.list);
+  }
+
   return (
     <div className="todoInput">
-      <input placeholder="name" />
-      <textarea placeholder="note"></textarea>
+      <input placeholder="name" onChange={(e) => todo.name = e.target.value} />
+      <textarea placeholder="note" onChange={(e) => todo.note = e.target.value}>
+      </textarea>
 
       <div style={{ display: "flex", gap: "1rem" }}>
         <div className="todoPriority">
@@ -34,20 +53,20 @@ function TodoInput() {
             ? (
               <Circle
                 size={24}
-                onClick={() => setPriority("high")}
+                onClick={() => changePriority("high")}
                 className="checkBtn"
               />
             )
             : (
               <CheckCircle
                 size={24}
-                onClick={() => setPriority("low")}
+                onClick={() => changePriority("low")}
                 weight="fill"
                 className="checkBtn"
               />
             )}
         </div>
-        <button onClick={() => inputbox.show = false}>
+        <button onClick={() => saveTodo(todo)}>
           save
         </button>
       </div>
