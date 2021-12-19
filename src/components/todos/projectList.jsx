@@ -8,6 +8,8 @@ export default view(() => (
   <div className="projectLists">
     <Project name="Today" icon={Notepad} color="blue" />
     <Project name="Important" icon={Fire} color="red" />
+
+    {/* user added projects*/}
     {projects.list.map((item) => <Project name={item} icon={FireSimple} />)}
   </div>
 ));

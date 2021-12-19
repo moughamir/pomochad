@@ -1,12 +1,8 @@
 // basically project name on the sidebar
 
 import { XCircle } from "phosphor-react";
-import { store, view } from "@risingstack/react-easy-state";
+import { view } from "@risingstack/react-easy-state";
 import { projects } from "../../store";
-
-const project = store({
-  name: "",
-});
 
 function getColor(x) {
   return `var(--${x})`;
@@ -18,11 +14,11 @@ function removeProject(item) {
 }
 
 export default view((props) => (
-  <button
-    className={project.name == props.name
+  <div
+    className={projects.clickedProject == props.name
       ? "todoProject todoProjectClicked"
       : "todoProject"}
-    onClick={() => project.name = props.name}
+    onClick={() => projects.clickedProject = props.name}
   >
     <div className="projectName">
       <props.icon
@@ -34,7 +30,7 @@ export default view((props) => (
 
     {/*show delete icon on user added todos only!*/}
 
-    {(project.name == props.name && props.name != "Today" &&
+    {(projects.clickedProject == props.name && props.name != "Today" &&
       props.name != "Important") &&
       (
         <XCircle
@@ -44,5 +40,5 @@ export default view((props) => (
           onClick={() => removeProject(props.name)}
         />
       )}
-  </button>
+  </div>
 ));
