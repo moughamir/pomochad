@@ -5,7 +5,7 @@ import { Route } from "wouter-preact";
 import Navbar from "./components/navbar";
 import Timer from "./components/timer";
 import Settings from "./components/settings";
-import Todos from "./components/todos/todos.jsx"
+import TodoPage from "./components/todos/todoPage.jsx"
 
 export default () => {
   return (
@@ -17,7 +17,7 @@ export default () => {
       </Route>
 
       <Route path="/todos">
-        <Todos />
+        <TodoPage />
       </Route>
 
       <Route path="/settings">

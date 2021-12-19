@@ -52,16 +52,16 @@ function TodoInput() {
   );
 }
 
-export function Todo() {
+export function Todo(props) {
   const [checked, setChecked] = useState(false);
 
   return (
     <div className="todo">
       <div className={checked ? "todoTitle checkedTodo" : "todoTitle"}>
-        NvChad
+        {props.name}
       </div>
       <div className={checked ? "todoNote checkedTodo" : "todoNote"}>
-        fm do some stuff xd bsdfdsf
+        {props.note}
       </div>
 
       <div className="todoBtns">
@@ -82,7 +82,7 @@ export function Todo() {
               className="checked"
             />
           )}
-        <XCircle weight="fill" size={20} className='closeTodoBtn'/>
+        <XCircle weight="fill" size={20} className="closeTodoBtn" />
       </div>
     </div>
   );
