@@ -16,10 +16,13 @@
   --themeToggleFg: #fff;
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   --themeSwitcherBg: #fff;
-  --todoBg: #f9f9f9;
+  --todoBg: #fff;
   --red: #f47575;
   --blue: #90b4ce;
+  --sidebarSelected: #f5f5f5;
   --sidebarBorder: #9c9c9c;
+  --todoInputBox: #c0e4fe;
+  --todoInputBg: #fff;
 }
 
 [data-theme="dark"] {
@@ -43,6 +46,9 @@
   --todoBg: #1f1f29;
   --red: #ff8080;
   --blue: #7d92c9;
+  --sidebarSelected: #23232d;
+  --todoInputBox: #262630;
+  --todoInputBg: #1f1f29;
 }
 
 [data-theme="nord"] {
@@ -63,9 +69,12 @@
   --themeToggleBg: #343a46;
   --themeToggleFg: #81a1c1;
   --themeSwitcherBg: #2e3440;
-  --todoBg: #2f3541;
+  --todoBg: #3a404c;
   --red: #bf616a;
   --blue: #81a1c1;
+  --sidebarSelected: #414753;
+  --todoInputBox: #404652;
+  --todoInputBg: #3a404c;
 }
 
 [data-theme="dracula"] {
@@ -89,6 +98,9 @@
   --todoBg: #343642;
   --red: #ff5555;
   --blue: #6272a4;
+  --sidebarSelected: #383a46;
+  --todoInputBox: #3b3d49;
+  --todoInputBg: #343642;
 }
 
 [data-theme="gruvchad"] {
@@ -112,27 +124,7 @@
   --todoBg: #303334;
   --red: #ec6b64;
   --blue: #6f8faf;
-}
-
-[data-theme="amoled"] {
-  --fg: #fff;
-  --bg: #000;
-  --bg-alt: #111111;
-  --accent: #111111;
-  --volumebg: #111111;
-  --inactiveStroke: #000;
-  --activeStroke: #7aa2f7;
-  --activeBar: #7aa2f7;
-  --timerfg: #7aa2f7;
-  --btnBg: #ff6363;
-  --btnFg: #000;
-  --btnBg2: #1d1d1d;
-  --btnFg2: #ff6363;
-  --shadow: none;
-  --themeToggleBg: #111111;
-  --themeToggleFg: #749689;
-  --themeSwitcherBg: #111111;
-  --todoBg: #161616;
-  --red: #ff6363;
-  --blue: #7aa2f7;
+  --sidebarSelected: #343738;
+  --todoInputBox: #373a3b;
+  --todoInputBg: #303334;
 }

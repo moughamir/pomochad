@@ -105,7 +105,7 @@
 }
 
 .todoProjectClicked {
-  background-color: var(--todoBg);
+  background-color: var(--sidebarSelected);
 }
 
 .todoProject .projectName {
@@ -117,7 +117,7 @@
 
 .todoProject:hover {
   cursor: pointer;
-  background-color: var(--todoBg);
+  background-color: var(--sidebarSelected);
   border: var(--sidebarBorder);
 }
 

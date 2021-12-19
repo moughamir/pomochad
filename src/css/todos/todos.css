@@ -26,7 +26,7 @@
 .todoFooter button {
   padding: 0.5rem;
   width: 100%;
-  border-radius:0.5rem;
+  border-radius: 0.5rem;
 }
 
 .todoFooter button:hover {
@@ -49,7 +49,7 @@
   display: grid;
   margin: 5rem 1rem;
   gap: 1rem;
-  background-color: var(--accent);
+  background-color: var(--todoInputBox);
   padding: 1rem;
   border-radius: 0.5rem;
   animation: smoothPopup 0.2s ease 0s 1 normal forwards;
@@ -60,7 +60,7 @@
   outline: none;
   border: none;
   padding: 1rem;
-  background-color: var(--todoBg);
+  background-color: var(--todoInputBg);
   color: var(--fg);
   border-radius: 0.5rem;
 }
