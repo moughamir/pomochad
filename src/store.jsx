@@ -1,11 +1,18 @@
 import { store } from "@risingstack/react-easy-state";
 
-export const projects = store({
+const projects = store({
   clickedProject: "Today",
   showInputBox: false,
   list: [],
 });
 
-export const todos = store({
+if (localStorage.projects) {
+  let tmp = localStorage.projects;
+  projects.list = tmp.split(",");
+}
+
+const todos = store({
   list: [],
 });
+
+export { projects, todos };

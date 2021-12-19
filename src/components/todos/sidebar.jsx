@@ -21,6 +21,7 @@ function ProjectInput() {
     }
 
     projects.list.push(tmpProject);
+    localStorage.setItem("projects", projects.list);
     showInput(false);
   }
 

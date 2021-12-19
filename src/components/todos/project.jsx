@@ -11,6 +11,7 @@ function getColor(x) {
 function removeProject(item) {
   const index = projects.list.indexOf(item);
   projects.list.splice(index, 1);
+  localStorage.setItem("projects", projects.list);
 }
 
 export default view((props) => (
