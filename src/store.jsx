@@ -15,4 +15,8 @@ const todos = store({
   list: [],
 });
 
+if (localStorage.todos) {
+  todos.list = JSON.parse(localStorage.todos);
+}
+
 export { projects, todos };

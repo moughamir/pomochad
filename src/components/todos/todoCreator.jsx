@@ -30,6 +30,7 @@ function TodoInput() {
   function saveTodo(todo) {
     todo.project = projects.clickedProject;
     todos.list.push(todo);
+    localStorage.setItem("todos", JSON.stringify(todos.list));
     inputbox.show = false;
   }
 

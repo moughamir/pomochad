@@ -7,9 +7,20 @@ const FinishedStatus = (todoname, action, val) => {
     if (todos.list[i].name == todoname) {
       if (action == "set") {
         todos.list[i].finished = val;
+        localStorage.setItem("todos", JSON.stringify(todos.list));
         break;
       }
       return todos.list[i].finished;
+    }
+  }
+};
+
+const removeTodo = (name) => {
+  for (let i = 0; i < todos.list.length; i++) {
+    if (todos.list[i].name == name) {
+      let index = i;
+      todos.list.splice(index, 1);
+      localStorage.setItem("todos", JSON.stringify(todos.list));
     }
   }
 };
@@ -24,9 +35,8 @@ export default view((props) => (
       {props.name}
     </div>
     <div
-      className={FinishedStatus(props.name, "get")
-        ? "todoNote checkedTodo"
-        : "todoNote"}
+      className={FinishedStatus(props.name, "get") ? "todoNote checkedTodo"
+      : "todoNote"}
     >
       {props.note}
     </div>
@@ -49,7 +59,12 @@ export default view((props) => (
             className="checked"
           />
         )}
-      <XCircle weight="fill" size={20} className="closeTodoBtn" />
+      <XCircle
+        weight="fill"
+        size={20}
+        className="closeTodoBtn"
+        onClick={() => removeTodo(props.name)}
+      />
     </div>
   </div>
 ));
