@@ -1,6 +1,6 @@
 import { store, view } from "@risingstack/react-easy-state";
-import { CheckCircle, Circle, PlusCircle, XCircle } from "phosphor-react";
-import { todos } from "../../store";
+import { PlusCircle } from "phosphor-react";
+import { projects, todos } from "../../store";
 
 const inputbox = store({
   show: false,
@@ -19,12 +19,18 @@ function NewTodoBtn() {
 }
 
 function TodoInput() {
-  let todo = { name: "", note: "", priority: "low", finished: false };
+  let todo = {
+    name: "",
+    note: "",
+    priority: "low",
+    finished: false,
+    project: "Today",
+  };
 
   function saveTodo(todo) {
+    todo.project = projects.clickedProject;
     todos.list.push(todo);
     inputbox.show = false;
-    console.log(todos.list)
   }
 
   return (
