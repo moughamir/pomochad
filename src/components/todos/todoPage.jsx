@@ -1,5 +1,5 @@
 import Sidebar from "./sidebar";
-import TodoCreator, { Todo } from "./todo";
+import TodoCreator from "./todoCreator";
 import TodoList from "./todoList";
 import "../../css/todos/todos.css";
 

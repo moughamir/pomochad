@@ -1,6 +1,6 @@
 import { view } from "@risingstack/react-easy-state";
 import { todos } from "../../store";
-import { Todo } from "./todo";
+import Todo from "./todo";
 
 export default view(() => (
   <div className="todolist">
