@@ -1,11 +1,15 @@
 import Sidebar from "./sidebar";
-import TodoCreator from "./todo";
-
+import TodoCreator, { Todo } from "./todo";
 import "../../css/todos/todos.css";
 
 function TodoList() {
   return (
-    <div className="todoslist">
+    <div className="todolist">
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
     </div>
   );
 }

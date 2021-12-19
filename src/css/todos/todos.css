@@ -1,14 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
 .todosPage {
+  font-family: "Source Sans Pro", sans-serif;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  background-color: var(--todoBg);
+  background-color: var(--todolistBg);
   height: 80vh;
   max-height: 80vh;
   margin: 0 4.5rem;
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
   animation: slideLeft 0.2s ease 0s 1 normal forwards;
-  border: 2px solid var(--sidebarBorder);
 }
 
 .todoSection {
@@ -70,14 +72,13 @@
 }
 
 .todoInput .todoPriority {
-  background-color: var(--todoBg);
+  background-color: var(--todolistBg);
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
   gap: 0.5rem;
   justify-content: center;
   border-radius: 0.5rem;
-  font-size: 1.2rem;
 }
 
 .todoInput button {
@@ -98,4 +99,53 @@
   background-color: var(--bg);
   color: var(--fg);
   cursor: pointer;
+}
+
+/* todo */
+
+.todolist {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.todo {
+  display: grid;
+  gap: 1rem;
+  background-color: var(--todoBg);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.todoTitle {
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.todoNote {
+  display: flex;
+}
+
+.checked {
+  color: var(--grey);
+}
+.checkedTodo {
+  color: var(--grey);
+  text-decoration: line-through;
+}
+
+.unchecked:hover {
+  cursor: pointer;
+  color: var(--red);
+}
+
+.checked:hover {
+  cursor: pointer;
+  color: var(--red);
+}
+
+.closeTodoBtn {
+  cursor: pointer;
+  color: var(--btnFg2);
 }

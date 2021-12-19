@@ -1,6 +1,8 @@
 import { store, view } from "@risingstack/react-easy-state";
-import { PlusCircle } from "phosphor-react";
+import { CheckCircle, Circle, PlusCircle, XCircle } from "phosphor-react";
 import { todos } from "../../store";
+
+import { useState } from "preact/hooks";
 
 const inputbox = store({
   show: false,
@@ -50,6 +52,41 @@ function TodoInput() {
   );
 }
 
+export function Todo() {
+  const [checked, setChecked] = useState(false);
+
+  return (
+    <div className="todo">
+      <div className={checked ? "todoTitle checkedTodo" : "todoTitle"}>
+        NvChad
+      </div>
+      <div className={checked ? "todoNote checkedTodo" : "todoNote"}>
+        fm do some stuff xd bsdfdsf
+      </div>
+
+      <div className="todoBtns">
+        {!checked
+          ? (
+            <Circle
+              weight="bold"
+              size={20}
+              onClick={() => setChecked(true)}
+              className="unchecked"
+            />
+          )
+          : (
+            <CheckCircle
+              weight="fill"
+              size={20}
+              onClick={() => setChecked(false)}
+              className="checked"
+            />
+          )}
+        <XCircle weight="fill" size={20} className='closeTodoBtn'/>
+      </div>
+    </div>
+  );
+}
 export default view(() => (
   <div className="todoCreator">
     {inputbox.show &&
