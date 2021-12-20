@@ -57,7 +57,7 @@ function update() {
 
 function run(action) {
   currentClick = action;
-  interval = setInterval(update, 0);
+  interval = setInterval(update, 1000);
 
   if (action == "start" || action == "resume") timer.playBtn = false;
   action == "start" ? playSound(tickSound) : (pomoTime = pausedTime);
