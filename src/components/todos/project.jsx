@@ -32,7 +32,7 @@ export default view((props) => (
     {/*show delete icon on user added todos only!*/}
 
     {(projects.clickedProject == props.name && props.name != "Today" &&
-      props.name != "Important") &&
+      props.name != "Important" && props.name != "Low priority") &&
       (
         <XCircle
           size={20}

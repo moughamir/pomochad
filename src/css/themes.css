@@ -21,6 +21,7 @@
   --red: #f27373;
   --blue: #90b4ce;
   --grey: #b6b6b6;
+  --green: #85cea9;
   --sidebarSelected: #f5f5f5;
   --sidebarBorder: #9c9c9c;
   --todoInputBox: #c0e4fe;
@@ -50,6 +51,7 @@
   --red: #ff8080;
   --blue: #7d92c9;
   --grey: #5d5d67;
+  --green: #85cea9;
   --sidebarSelected: #23232d;
   --todoInputBox: #262630;
   --todoInputBg: #1f1f29;
@@ -78,6 +80,7 @@
   --red: #bf616a;
   --blue: #81a1c1;
   --grey: #666c78;
+  --green: #a3be8c;
   --sidebarSelected: #414753;
   --todoInputBox: #404652;
   --todoInputBg: #3a404c;
@@ -104,8 +107,9 @@
   --todolistBg: #343642;
   --todoBg: #3b3d49;
   --red: #ff5555;
-  --blue: #6272a4;
+  --blue: #95a5d7;
   --grey: #636571;
+  --green: #50fa7b;
   --sidebarSelected: #383a46;
   --todoInputBox: #3b3d49;
   --todoInputBg: #343642;
@@ -134,6 +138,7 @@
   --red: #ec6b64;
   --blue: #6f8faf;
   --grey: #686b6c;
+  --green: #89b482;
   --sidebarSelected: #343738;
   --todoInputBox: #373a3b;
   --todoInputBg: #303334;
