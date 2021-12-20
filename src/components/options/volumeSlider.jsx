@@ -1,13 +1,10 @@
 import "../../css/settings.css";
-
-import { store, view } from "@risingstack/react-easy-state";
-
-export const volume = store({
-  value: 90,
-});
+import { view } from "@risingstack/react-easy-state";
+import { volume } from "../../store";
 
 function handleRange(e) {
   volume.value = e.target.value;
+  localStorage.setItem("volume", volume.value);
 }
 
 export default view(() => (

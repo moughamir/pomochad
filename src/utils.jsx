@@ -1,4 +1,4 @@
-import { volume } from "./components/options/volumeSlider";
+import { volume } from "./store";
 
 function numToText(min, sec) {
   let temp;
