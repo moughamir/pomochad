@@ -2,17 +2,30 @@
 
 import { XCircle } from "phosphor-react";
 import { view } from "@risingstack/react-easy-state";
-import { projects } from "../../store";
+import { projects, todos } from "../../store";
 
 function getColor(x) {
   return `var(--${x})`;
 }
 
-function removeProject(item) {
+const removeProjectTodos = (project) => {
+  for (let i = 0; i < todos.list.length; i++) {
+    if (todos.list[i].project == project) {
+      todos.list.splice(i, 1);
+    }
+  }
+
+  localStorage.setItem("todos", JSON.stringify(todos.list));
+};
+
+const removeProject = (item) => {
   const index = projects.list.indexOf(item);
+
   projects.list.splice(index, 1);
   localStorage.setItem("projects", projects.list);
-}
+
+  removeProjectTodos(item);
+};
 
 export default view((props) => (
   <div
