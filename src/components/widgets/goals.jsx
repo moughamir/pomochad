@@ -48,7 +48,7 @@ function ProjectedGoal(props) {
 }
 function getCurrentGoal() {
   return parseFloat(
-    timer.productivityProgress /
+    timer.todaysProgress /
       60,
   );
 }

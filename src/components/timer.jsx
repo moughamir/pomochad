@@ -14,17 +14,18 @@ export const timer = store({
   timeInText: "25 : 00",
   progress: 0,
   playBtn: true,
-  productivityProgress: 0,
+  todaysProgress: 0,
 });
 
 const utc = new Date().toJSON().slice(0, 10).replace(/-/g, "/");
 
-if (!localStorage.date) {
+if (!localStorage.date || localStorage.date != utc) {
   localStorage.setItem("date", utc);
+  localStorage.setItem("todaysProgress", 0);
 }
 
-if (localStorage.date === utc && localStorage.currentProgress) {
-  timer.productivityProgress = parseInt(localStorage.currentProgress);
+if (localStorage.date == utc && localStorage.todaysProgress) {
+  timer.todaysProgress = parseInt(localStorage.todaysProgress);
 }
 
 export let interval, pausedTime, currentClick;
@@ -41,12 +42,8 @@ function update() {
 
     document.title = "Pomochad";
 
-    if (utc === localStorage.date) {
-      timer.productivityProgress += totalTime;
-      localStorage.currentProgress = timer.productivityProgress;
-    }
-
-    return;
+    timer.todaysProgress += totalTime;
+    localStorage.setItem("todaysProgress", timer.todaysProgress);
   }
 
   const min = Math.floor(pomoTime / 60);
@@ -60,7 +57,7 @@ function update() {
 
 function run(action) {
   currentClick = action;
-  interval = setInterval(update, 1000);
+  interval = setInterval(update, 0);
 
   if (action == "start" || action == "resume") timer.playBtn = false;
   action == "start" ? playSound(tickSound) : (pomoTime = pausedTime);
