@@ -1,5 +1,5 @@
 import { view } from "@risingstack/react-easy-state";
-import { CheckCircle, Circle, XCircle } from "phosphor-react";
+import { BookmarkSimple, CheckCircle, Circle, XCircle } from "phosphor-react";
 import { todos } from "../../store";
 
 const FinishedStatus = (todoname, action, val) => {
@@ -41,30 +41,35 @@ export default view((props) => (
       {props.note}
     </div>
 
-    <div className="todoBtns">
-      {!FinishedStatus(props.name, "get")
-        ? (
-          <Circle
-            weight="bold"
-            size={20}
-            onClick={() => FinishedStatus(props.name, "set", true)}
-            className="unchecked"
-          />
-        )
-        : (
-          <CheckCircle
-            weight="fill"
-            size={20}
-            onClick={() => FinishedStatus(props.name, "set", false)}
-            className="checked"
-          />
-        )}
-      <XCircle
-        weight="fill"
-        size={20}
-        className="closeTodoBtn"
-        onClick={() => removeTodo(props.name)}
-      />
+    <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div>
+        {!FinishedStatus(props.name, "get")
+          ? (
+            <Circle
+              weight="bold"
+              size={20}
+              onClick={() => FinishedStatus(props.name, "set", true)}
+              className="unchecked"
+            />
+          )
+          : (
+            <CheckCircle
+              weight="fill"
+              size={20}
+              onClick={() => FinishedStatus(props.name, "set", false)}
+              className="checked"
+            />
+          )}
+        <XCircle
+          weight="fill"
+          size={20}
+          className="closeTodoBtn"
+          onClick={() => removeTodo(props.name)}
+        />
+      </div>
+
+      {(props.priority == "high") &&
+        <BookmarkSimple weight="fill" size={20} />}
     </div>
   </div>
 ));
