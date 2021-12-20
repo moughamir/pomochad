@@ -8,8 +8,8 @@ function Settings() {
     <>
       <h1>Settings</h1>
 
-      <div className="settings">
-        <div className="miscWidgets">
+      <div class="settings">
+        <div class="miscWidgets">
           <VolumeSlider />
           <GoalCounter />
         </div>

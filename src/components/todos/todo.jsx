@@ -26,16 +26,16 @@ const removeTodo = (name) => {
 };
 
 export default view((props) => (
-  <div className="todo">
+  <div class="todo">
     <div
-      className={FinishedStatus(props.name, "get")
+      class={FinishedStatus(props.name, "get")
         ? "todoTitle checkedTodo"
         : "todoTitle"}
     >
       {props.name}
     </div>
     <div
-      className={FinishedStatus(props.name, "get") ? "todoNote checkedTodo"
+      class={FinishedStatus(props.name, "get") ? "todoNote checkedTodo"
       : "todoNote"}
     >
       {props.note}
@@ -49,7 +49,7 @@ export default view((props) => (
               weight="bold"
               size={20}
               onClick={() => FinishedStatus(props.name, "set", true)}
-              className="unchecked"
+              class="unchecked"
             />
           )
           : (
@@ -57,19 +57,25 @@ export default view((props) => (
               weight="fill"
               size={20}
               onClick={() => FinishedStatus(props.name, "set", false)}
-              className="checked"
+              class="checked"
             />
           )}
         <XCircle
           weight="fill"
           size={20}
-          className="closeTodoBtn"
+          class="closeTodoBtn"
           onClick={() => removeTodo(props.name)}
         />
       </div>
 
       {(props.priority == "high") &&
-        <BookmarkSimple weight="fill" size={20} />}
+        (
+          <BookmarkSimple
+            weight="fill"
+            size={20}
+            style={{ color: "var(--green)" }}
+          />
+        )}
     </div>
   </div>
 ));

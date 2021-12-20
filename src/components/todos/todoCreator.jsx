@@ -35,7 +35,7 @@ function TodoInput() {
   }
 
   return (
-    <div className="todoInput">
+    <div class="todoInput">
       <input placeholder="name" onChange={(e) => todo.name = e.target.value} />
       <textarea placeholder="note" onChange={(e) => todo.note = e.target.value}>
       </textarea>
@@ -59,7 +59,7 @@ function TodoInput() {
 }
 
 export default view(() => (
-  <div className="todoCreator">
+  <div class="todoCreator">
     {inputbox.show &&
       <TodoInput />}
     <NewTodoBtn />

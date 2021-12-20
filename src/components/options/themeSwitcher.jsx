@@ -4,7 +4,7 @@ import { switchTheme } from "../../utils";
 function Theme(props) {
   return (
     <div
-      className="aTheme"
+      class="aTheme"
       style={{
         background: props.bg,
         color: props.fg,
@@ -27,12 +27,12 @@ let themeNames = Object.keys(themelist);
 
 export default () => {
   return (
-    <div className="themeSwitcher">
+    <div class="themeSwitcher">
       <h3>
         <span>Themes</span>
       </h3>
 
-      <div className="themeList">
+      <div class="themeList">
         {themeNames.map((item) => (
           <Theme
             name={item}

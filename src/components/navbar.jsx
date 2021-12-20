@@ -8,10 +8,10 @@ import "../css/navbar.css";
 
 function BrandInfo() {
   return (
-    <div className="brand">
-      <Target className="brandLogo" size={30} weight="fill" />
+    <div class="brand">
+      <Target class="brandLogo" size={30} weight="fill" />
       <Link href="/">
-        <div className="brandTitle">Pomochad</div>
+        <div class="brandTitle">Pomochad</div>
       </Link>
     </div>
   );
@@ -35,25 +35,25 @@ function NavbarLinks() {
   }
 
   return (
-    <div className="navBtns">
+    <div class="navBtns">
       <Lightning
-        className="themeToggle"
+        class="themeToggle"
         size={26}
         onClick={() => addTheme()}
       />
 
-      <div className="navbarLinks">
+      <div class="navbarLinks">
         <Link href="/todos">
-          <div className="todosBtn">
-            <Ghost className="todosIcon" size={23} />
+          <div class="todosBtn">
+            <Ghost class="todosIcon" size={23} />
             Todos
           </div>
         </Link>
 
-        <User className="userIcon" size={23} />
+        <User class="userIcon" size={23} />
 
         <Link href="/settings">
-          <Nut className="settingsBtn" size={25} />
+          <Nut class="settingsBtn" size={25} />
         </Link>
       </div>
     </div>
@@ -62,7 +62,7 @@ function NavbarLinks() {
 
 function Navbar() {
   return (
-    <div className="navbar">
+    <div class="navbar">
       <BrandInfo />
       <NavbarLinks />
     </div>

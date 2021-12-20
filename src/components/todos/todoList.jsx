@@ -3,7 +3,7 @@ import { projects, todos } from "../../store";
 import Todo from "./todo";
 
 export default view(() => (
-  <div className="todolist">
+  <div class="todolist">
     {todos.list.map((item) => {
       // show all important todos
       if (projects.clickedProject == "Important") {

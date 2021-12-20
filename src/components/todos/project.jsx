@@ -12,6 +12,7 @@ const removeProjectTodos = (project) => {
   for (let i = 0; i < todos.list.length; i++) {
     if (todos.list[i].project == project) {
       todos.list.splice(i, 1);
+      i--;
     }
   }
 
@@ -29,12 +30,12 @@ const removeProject = (item) => {
 
 export default view((props) => (
   <div
-    className={projects.clickedProject == props.name
+    class={projects.clickedProject == props.name
       ? "todoProject todoProjectClicked"
       : "todoProject"}
     onClick={() => projects.clickedProject = props.name}
   >
-    <div className="projectName">
+    <div class="projectName">
       <props.icon
         size={20}
         style={{ color: getColor(props.color) }}

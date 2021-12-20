@@ -5,7 +5,7 @@ import { projects } from "../../store";
 import Project from "./project";
 
 export default view(() => (
-  <div className="projectLists">
+  <div class="projectLists">
     <Project name="Today" icon={Notepad} color="blue" />
     <Project name="Important" icon={Fire} color="red" />
     <Project name="Low priority" icon={Fire} color="green" />

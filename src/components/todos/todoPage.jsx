@@ -5,9 +5,9 @@ import "../../css/todos/todos.css";
 
 function TodoSection() {
   return (
-    <div className="todoSection">
+    <div class="todoSection">
       <TodoList />
-      <div className="todoFooter">
+      <div class="todoFooter">
         <TodoCreator />
       </div>
     </div>
@@ -16,7 +16,7 @@ function TodoSection() {
 
 export default () => {
   return (
-    <div className="todosPage">
+    <div class="todosPage">
       <Sidebar />
       <TodoSection />
     </div>
