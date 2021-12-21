@@ -5,9 +5,8 @@
   display: grid;
   grid-template-columns: 1fr 5fr;
   background-color: var(--todolistBg);
-  height: 80vh;
-  max-height: 80vh;
-  margin: 0 4.5rem;
+  min-height: 80vh;
+  margin: 0 4.5rem 2rem 4.5rem;
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
   animation: slideLeft 0.2s ease 0s 1 normal forwards;
@@ -26,6 +25,7 @@
 }
 
 .todoFooter button {
+  margin-top: 1rem;
   padding: 0.5rem;
   width: 100%;
   border-radius: 0.5rem;
