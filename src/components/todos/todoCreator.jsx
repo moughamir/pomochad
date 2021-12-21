@@ -28,9 +28,17 @@ function TodoInput() {
   };
 
   function saveTodo(todo) {
+    let checkDuplicateTodo = todos.list.some((i) => i.name.includes(todo.name));
+
+    if (checkDuplicateTodo) {
+      alert("duplicate todo!!");
+      return;
+    }
+
     todo.project = projects.clickedProject;
     todos.list.push(todo);
     localStorage.setItem("todos", JSON.stringify(todos.list));
+
     inputbox.show = false;
   }
 
