@@ -149,3 +149,15 @@
   cursor: pointer;
   color: var(--btnFg2);
 }
+
+@media screen and (max-width: 540px) {
+  .todolist {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .todosPage {
+    margin: 0;
+  }
+}
