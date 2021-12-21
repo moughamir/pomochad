@@ -69,7 +69,8 @@
 }
 
 .newProjectBtn,
-.todoFooter button {
+.newTodoBtn,
+.removeTodosBtn {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -78,9 +79,13 @@
   border: none;
   background: var(--btnBg);
   color: var(--btnFg);
-  width: 100%;
   justify-content: center;
   border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.newProjectBtn {
+  width: 100%;
 }
 
 .newProjectBtn:hover {

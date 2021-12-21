@@ -57,3 +57,5 @@ export default view((props) => (
       )}
   </div>
 ));
+
+export { removeProjectTodos };

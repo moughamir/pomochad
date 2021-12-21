@@ -26,6 +26,8 @@
   --sidebarBorder: #9c9c9c;
   --todoInputBox: #c0e4fe;
   --todoInputBg: #fff;
+  --delTodosBtnBg: #414b57;
+  --delTodosBtnFg: #fff;
 }
 
 [data-theme="dark"] {
@@ -55,6 +57,8 @@
   --sidebarSelected: #23232d;
   --todoInputBox: #262630;
   --todoInputBg: #1f1f29;
+  --delTodosBtnBg: #31313b;
+  --delTodosBtnFg: #7d92c9;
 }
 
 [data-theme="nord"] {
@@ -84,6 +88,8 @@
   --sidebarSelected: #414753;
   --todoInputBox: #404652;
   --todoInputBg: #3a404c;
+  --delTodosBtnBg: #4b515d;
+  --delTodosBtnFg: #81a1c1;
 }
 
 [data-theme="dracula"] {
@@ -113,6 +119,8 @@
   --sidebarSelected: #383a46;
   --todoInputBox: #3b3d49;
   --todoInputBg: #343642;
+  --delTodosBtnBg: #454753;
+  --delTodosBtnFg: #bd93f9;
 }
 
 [data-theme="gruvchad"] {
@@ -142,4 +150,6 @@
   --sidebarSelected: #343738;
   --todoInputBox: #373a3b;
   --todoInputBg: #303334;
+  --delTodosBtnBg: #414445;
+  --delTodosBtnFg: #89b482;
 }

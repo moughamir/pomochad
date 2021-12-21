@@ -10,10 +10,10 @@ const inputbox = store({
 function NewTodoBtn() {
   return (
     <button
-      style={{ background: "var(--red)" }}
+      class="newTodoBtn"
       onClick={() => inputbox.show = true}
     >
-      <PlusCircle size={24} weight="fill" /> todo
+      <PlusCircle size={21} weight="fill" /> Todo
     </button>
   );
 }
@@ -50,7 +50,7 @@ function TodoInput() {
           </select>
         </div>
 
-        <button onClick={() => saveTodo(todo)}>
+        <button class="newProjectBtn" onClick={() => saveTodo(todo)}>
           save
         </button>
       </div>
