@@ -8,7 +8,6 @@ const FinishedStatus = (todoname, action, val) => {
       if (action == "set") {
         todos.list[i].finished = val;
         localStorage.setItem("todos", JSON.stringify(todos.list));
-        break;
       }
       return todos.list[i].finished;
     }
@@ -16,13 +15,12 @@ const FinishedStatus = (todoname, action, val) => {
 };
 
 const removeTodo = (name) => {
-  for (let i = 0; i < todos.list.length; i++) {
-    if (todos.list[i].name == name) {
-      let index = i;
-      todos.list.splice(index, 1);
+  todos.list.forEach((todo, i) => {
+    if (todo.name == name) {
+      todos.list.splice(i, 1);
       localStorage.setItem("todos", JSON.stringify(todos.list));
     }
-  }
+  });
 };
 
 export default view((props) => (
