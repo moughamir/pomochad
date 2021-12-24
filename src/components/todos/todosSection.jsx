@@ -9,8 +9,6 @@ export default view(() => (
     <TodoList />
 
     <div class="todoFooter">
-
-  
       {(projects.clickedProject != "Important" &&
         projects.clickedProject != "Low priority") &&
         (

@@ -5,7 +5,7 @@ import { Route } from "wouter-preact";
 import Navbar from "./components/navbar";
 import Timer from "./components/timer";
 import Settings from "./components/settings";
-import TodoPage from "./components/todos/todoPage.jsx"
+import TodoPage from "./components/todoPage.jsx"
 
 export default () => {
   return (
