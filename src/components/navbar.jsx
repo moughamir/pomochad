@@ -50,7 +50,7 @@ function NavbarLinks() {
           </div>
         </Link>
 
-        <User class="userIcon" size={23} />
+        <User class="userIcon" size={23} onClick={() => alert('WIP! the data will be stored in localstorage for now')} />
 
         <Link href="/settings">
           <Nut class="settingsBtn" size={25} />

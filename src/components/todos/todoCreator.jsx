@@ -28,16 +28,16 @@ function TodoInput() {
   };
 
   function saveTodo(todo) {
-    let duplicateTodo = false;
+    let invalidTodo = false;
 
     todos.list.forEach((i) => {
-      if (i.name == todo.name) {
-        duplicateTodo = true;
-        alert("duplicate todo!");
+      if (i.name == todo.name.trim() || todo.name.trim().length == 0) {
+        invalidTodo = true;
+        alert("avoid making duplicate or empty todos!");
       }
     });
 
-    if (duplicateTodo) return;
+    if (invalidTodo) return;
 
     todo.project = projects.clickedProject;
     todos.list.push(todo);
