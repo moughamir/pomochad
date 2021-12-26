@@ -56,7 +56,10 @@ function TodoInput() {
         <div class="todoPriority">
           <label for="priority">priority</label>
 
-          <select id="priority" onClick={(e) => todo.priority = e.target.value}>
+          <select
+            id="priority"
+            onClick={(e) => todo.priority = e.target.value}
+          >
             <option value="low">low</option>
             <option value="high">high</option>
           </select>
