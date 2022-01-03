@@ -66,3 +66,11 @@
 .resetBtn:hover {
   cursor: pointer;
 }
+
+
+@media screen and (min-width: 1460px) {
+ .MainCircle {
+   width: 16rem;
+   height: 16rem;
+ }  
+}
