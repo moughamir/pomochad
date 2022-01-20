@@ -20,7 +20,7 @@ let themelist = {
   },
   gruvchad: {
     fg: "#89b482",
-    bg: "#222526",
+    bg: "#1e2122",
   },
 };
 

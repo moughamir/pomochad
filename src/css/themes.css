@@ -48,8 +48,8 @@
   --themeToggleBg: #1b1b25;
   --themeToggleFg: #7d92c9;
   --themeSwitcherBg: #181822;
-  --todolistBg: #1f1f29;
-  --todoBg: #262630;
+  --todolistBg: #1e1e28;
+  --todoBg: #25252f;
   --red: #ff8080;
   --blue: #7d92c9;
   --grey: #5d5d67;
@@ -79,7 +79,7 @@
   --themeToggleBg: #343a46;
   --themeToggleFg: #81a1c1;
   --themeSwitcherBg: #2e3440;
-  --todolistBg: #3a404c;
+  --todolistBg: #393f4b;
   --todoBg: #414753;
   --red: #bf616a;
   --blue: #81a1c1;
@@ -110,7 +110,7 @@
   --themeToggleBg: #373945;
   --themeToggleFg: #bd93f9;
   --themeSwitcherBg: #2f313d;
-  --todolistBg: #343642;
+  --todolistBg: #333541;
   --todoBg: #3b3d49;
   --red: #ff5555;
   --blue: #95a5d7;
@@ -125,29 +125,29 @@
 
 [data-theme="gruvchad"] {
   --fg: #c7b89d;
-  --bg: #222526;
-  --bg-alt: #2b2e2f;
-  --accent: #313435;
+  --bg: #1e2122;
+  --bg-alt: #242728;
+  --accent: #26292a;
   --volumebg: #2b2e2f;
-  --inactiveStroke: #222526;
+  --inactiveStroke: #1e2122;
   --activeStroke: #749689;
   --activeBar: #749689;
   --timerfg: #749689;
   --btnBg: #89b482;
-  --btnFg: #3b3e3f;
-  --btnBg2: #3f4243;
+  --btnFg: #1e2122;
+  --btnBg2: #343738;
   --btnFg2: #ec6b64;
   --shadow: none;
-  --themeToggleBg: #313435;
+  --themeToggleBg: #26292a;
   --themeToggleFg: #749689;
   --themeSwitcherBg: #2b2e2f;
-  --todolistBg: #303334;
-  --todoBg: #373a3b;
+  --todolistBg: #282b2c;
+  --todoBg: #2f3233;
   --red: #ec6b64;
   --blue: #6f8faf;
   --grey: #686b6c;
   --green: #89b482;
-  --sidebarSelected: #343738;
+  --sidebarSelected: #2b2e2f;
   --todoInputBox: #373a3b;
   --todoInputBg: #303334;
   --delTodosBtnBg: #414445;
