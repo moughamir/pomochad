@@ -29,15 +29,30 @@ function TodoInput() {
 
   function saveTodo(todo) {
     let invalidTodo = false;
+    let errMessage;
+
+    if (todo.name.trim().length == 0 || todo.note.trim().length == 0) {
+      invalidTodo = true;
+      errMessage = "no empty input fields please!";
+    }
 
     todos.list.forEach((i) => {
-      if (i.name == todo.name.trim() || todo.name.trim().length == 0) {
+      if (i.name == todo.name.trim()) {
         invalidTodo = true;
-        alert("avoid making duplicate or empty todos!");
+        errMessage = "avoid making duplicate!";
+        return;
       }
     });
 
-    if (invalidTodo) return;
+    if (todo.name.length > 25) {
+      invalidTodo = true;
+      errMessage = "do not exceed todo title characters by 20";
+    }
+
+    if (invalidTodo) {
+      alert(errMessage);
+      return;
+    }
 
     todo.project = projects.clickedProject;
     todos.list.push(todo);

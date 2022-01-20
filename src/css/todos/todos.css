@@ -98,7 +98,8 @@
 
 .todolist {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  grid-auto-rows: 9rem;
   gap: 1rem;
 }
 
@@ -118,6 +119,7 @@
 
 .todoNote {
   display: flex;
+  overflow-y: auto;
 }
 
 .checked {
