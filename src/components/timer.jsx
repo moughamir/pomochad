@@ -122,7 +122,7 @@ export function RadialProgress(props) {
 // Timer
 
 export default view(() => (
-  <div class="timer">
+  <main class="timer">
     <div class="MainCircle">
       <RadialProgress
         value={timer.progress}
@@ -144,5 +144,5 @@ export default view(() => (
         size={24}
       />
     </div>
-  </div>
+  </main>
 ));

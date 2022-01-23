@@ -50,7 +50,11 @@ function NavbarLinks() {
           </div>
         </Link>
 
-        <User class="userIcon" size={23} onClick={() => alert('WIP! the data will be stored in localstorage for now')} />
+        <User
+          class="userIcon"
+          size={23}
+          onClick={() => alert("WIP! data stored in localstorage for now")}
+        />
 
         <Link href="/settings">
           <Nut class="settingsBtn" size={25} />
@@ -62,10 +66,10 @@ function NavbarLinks() {
 
 function Navbar() {
   return (
-    <div class="navbar">
+    <nav class="navbar">
       <BrandInfo />
       <NavbarLinks />
-    </div>
+    </nav>
   );
 }
 

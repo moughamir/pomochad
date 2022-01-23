@@ -5,7 +5,7 @@ import { projects } from "../../store";
 import { view } from "@risingstack/react-easy-state";
 
 export default view(() => (
-  <div class="todoSection">
+  <main class="todoSection">
     <TodoList />
 
     <div class="todoFooter">
@@ -18,5 +18,5 @@ export default view(() => (
           </>
         )}
     </div>
-  </div>
+  </main>
 ));
