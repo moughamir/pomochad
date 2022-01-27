@@ -1,5 +1,5 @@
 import { store, view } from "@risingstack/react-easy-state";
-import { PlusCircle } from "phosphor-react";
+import { PlusCircle, XCircle } from "phosphor-react";
 import { projects, todos } from "../../store";
 
 const inputbox = store({
@@ -63,11 +63,18 @@ function TodoInput() {
 
   return (
     <div class="todoInput">
+      <XCircle
+        size={20}
+        weight="fill"
+        class="closeTodoInput"
+        onClick={() => inputbox.show = false}
+      />
+
       <input placeholder="name" onChange={(e) => todo.name = e.target.value} />
       <textarea placeholder="note" onChange={(e) => todo.note = e.target.value}>
       </textarea>
 
-      <div style={{ display: "flex", gap: "1rem" }}>
+      <div style={{ display: "flex", gap: ".5rem" }}>
         <div class="todoPriority">
           <label for="priority">priority</label>
 

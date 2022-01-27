@@ -94,6 +94,15 @@
   cursor: pointer;
 }
 
+.closeTodoInput {
+  color: var(--red);
+  justify-self: end;
+}
+
+.closeTodoInput:hover {
+  cursor: pointer;
+}
+
 /* todo */
 
 .todolist {
