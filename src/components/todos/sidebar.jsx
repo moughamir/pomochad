@@ -26,10 +26,11 @@ function ProjectInput() {
   }
 
   return (
-    <div class="projectInput">
+    <form action="" method="get" class="projectInput">
       <input
         type="text"
         placeholder="project name"
+        maxLength={17}
         onChange={(e) => tmpProject = e.target.value}
       />
 
@@ -45,7 +46,7 @@ function ProjectInput() {
           onClick={() => showInput(false)}
         />
       </div>
-    </div>
+    </form>
   );
 }
 

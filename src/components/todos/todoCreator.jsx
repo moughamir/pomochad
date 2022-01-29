@@ -31,11 +31,6 @@ function TodoInput() {
     let invalidTodo = false;
     let errMessage;
 
-    if (todo.name.trim().length == 0 || todo.note.trim().length == 0) {
-      invalidTodo = true;
-      errMessage = "no empty input fields please!";
-    }
-
     todos.list.forEach((i) => {
       if (i.name == todo.name.trim()) {
         invalidTodo = true;
@@ -43,11 +38,6 @@ function TodoInput() {
         return;
       }
     });
-
-    if (todo.name.length > 25) {
-      invalidTodo = true;
-      errMessage = "do not exceed todo title characters by 20";
-    }
 
     if (invalidTodo) {
       alert(errMessage);
@@ -62,7 +52,7 @@ function TodoInput() {
   }
 
   return (
-    <div class="todoInput">
+    <form action="" method="get" class="todoInput">
       <XCircle
         size={20}
         weight="fill"
@@ -70,8 +60,21 @@ function TodoInput() {
         onClick={() => inputbox.show = false}
       />
 
-      <input placeholder="name" onChange={(e) => todo.name = e.target.value} />
-      <textarea placeholder="note" onChange={(e) => todo.note = e.target.value}>
+      <label for="todo-name" style={{ display: "none" }}></label>
+      <input
+        id="todo-name"
+        name="todo-name"
+        placeholder="name"
+        onChange={(e) => todo.name = e.target.value}
+      />
+
+      <label for="todo-note"  style={{ display: "none" }}></label>
+      <textarea
+        id="todo-note"
+        name="todo-note"
+        placeholder="note"
+        onChange={(e) => todo.note = e.target.value}
+      >
       </textarea>
 
       <div style={{ display: "flex", gap: ".5rem" }}>
@@ -80,6 +83,7 @@ function TodoInput() {
 
           <select
             id="priority"
+            name="priority"
             onClick={(e) => todo.priority = e.target.value}
           >
             <option value="low">low</option>
@@ -91,7 +95,7 @@ function TodoInput() {
           save
         </button>
       </div>
-    </div>
+    </form>
   );
 }
 
