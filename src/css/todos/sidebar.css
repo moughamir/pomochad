@@ -6,6 +6,11 @@
   flex-direction: column;
   justify-content: space-between;
   border-right: 2px solid var(--sidebarBorder);
+  max-height: 80vh;
+}
+
+.projects {
+  overflow: auto;
 }
 
 .projectInput {

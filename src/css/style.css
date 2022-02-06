@@ -7,4 +7,26 @@ body {
   color: var(--fg);
   background-color: var(--bg);
   font-family: "Dosis", sans-serif;
+  overflow: hidden;
+}
+
+/* ===== Scrollbar ==== */
+
+* {
+  scrollbar-width: 0.3rem;
+  scrollbar-color: var(--blue) var(--sidebarSelected);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--todoBg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--btnBg);
+  border-radius: 5px;
 }
