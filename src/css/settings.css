@@ -2,7 +2,7 @@
   display: grid;
   margin: 0.5rem 4rem;
   padding: 2rem;
-  animation: slideLeft 0.2s ease 0s 1 normal forwards;
+  animation: slideIn 0.2s ease 0s 1 normal forwards;
   gap: 1rem;
 }
 
@@ -63,7 +63,7 @@ h1 {
 }
 
 .changeHrsBtn {
-  transition: 0.2s;
+  transition: color 0.2s ease-in;
   color: var(--activeBar);
 }
 
@@ -116,6 +116,7 @@ h1 {
   position: relative;
   overflow: hidden;
   width: 100%;
+  height: 100%;
   outline: none;
   cursor: pointer;
   border-radius: 0.5rem;
@@ -142,8 +143,12 @@ h1 {
   box-shadow: -100vw 0 0 100vw var(--fg);
 }
 
+::-moz-range-progress {
+  background-color: var(--activeBar);
+}
+
 ::-ms-fill-lower {
-  background: dodgerblue;
+  background: var(--activeBar);
 }
 
 ::-ms-thumb {
@@ -162,7 +167,7 @@ h1 {
 }
 
 ::-ms-track {
-  background: #ddd;
+  background: var(--activeBar);
   color: transparent;
   height: 40px;
   border: none;
@@ -218,7 +223,7 @@ h1 {
 
 .aTheme:hover {
   cursor: pointer;
-  transform: scaleY(1.2);
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 540px) {

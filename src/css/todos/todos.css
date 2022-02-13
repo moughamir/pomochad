@@ -7,7 +7,7 @@
   margin: 0 4.5rem 2rem 4.5rem;
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
-  animation: slideLeft 0.2s ease 0s 1 normal forwards;
+  animation: slideIn 0.2s ease 0s 1 normal forwards;
   overflow: auto;
 }
 
