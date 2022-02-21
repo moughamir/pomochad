@@ -30,31 +30,31 @@
 }
 
 [data-theme="dark"] {
-  --fg: #e1e8f5;
-  --bg: #12121c;
-  --bg-alt: #1a1a24;
-  --accent: #1b1b25;
-  --volumebg: #181822;
-  --inactiveStroke: #12121c;
-  --activeStroke: #7d92c9;
-  --activeBar: #7d92c9;
-  --timerfg: #7d92c9;
-  --btnBg: #71ba95;
-  --btnFg: #1a1a24;
-  --btnBg2: #2b2b35;
-  --btnFg2: #ef8891;
+  --fg: #dadada;
+  --bg: #181f21;
+  --bg-alt: #1d2426;
+  --accent: #22292b;
+  --volumebg: #22292b;
+  --inactiveStroke: #181f21;
+  --activeStroke: #77aed7;
+  --activeBar: #77aed7;
+  --timerfg: #77aed7;
+  --btnBg: #32393b;
+  --btnFg: #dadada;
+  --btnBg2: #32393b;
+  --btnFg2: #ef7d7d;
   --shadow: none;
-  --themeToggleBg: #1b1b25;
-  --themeToggleFg: #7d92c9;
-  --todolistBg: #1e1e28;
-  --todoBg: #25252f;
-  --red: #ff8080;
-  --blue: #7d92c9;
+  --themeToggleBg: #293032;
+  --themeToggleFg: #77aed7;
+  --todolistBg: #22292b;
+  --todoBg: #293032;
+  --red: #ef7d7d;
+  --blue: #77aed7;
   --grey: #5d5d67;
-  --green: #85cea9;
-  --sidebarSelected: #23232d;
-  --todoInputBox: #262630;
-  --todoInputBg: #1f1f29;
+  --green: #9bdead;
+  --sidebarSelected: #252c2e;
+  --todoInputBox: #1d2426;
+  --todoInputBg: #293032;
   --delTodosBtnBg: #31313b;
-  --delTodosBtnFg: #7d92c9;
+  --delTodosBtnFg: #77aed7;
 }
