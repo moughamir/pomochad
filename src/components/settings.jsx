@@ -1,6 +1,4 @@
 import VolumeSlider from "./options/volumeSlider";
-import Themes from "./options/themeSwitcher";
-
 import GoalCounter from "./widgets/goals";
 
 function Settings() {
@@ -13,8 +11,6 @@ function Settings() {
           <VolumeSlider />
           <GoalCounter />
         </div>
-
-        <Themes />
       </main>
     </>
   );

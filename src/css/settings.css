@@ -177,55 +177,6 @@ h1 {
   display: none;
 }
 
-/* Themes */
-
-.themeSwitcher {
-  display: grid;
-  padding: 0 0.8rem;
-  border-radius: 0.5rem;
-  background-color: var(--themeSwitcherBg);
-}
-
-.themeSwitcher h3 {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-
-.themeSwitcher h3 span {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--accent);
-  padding: 1rem 4rem;
-  border-radius: 0.5rem;
-  margin: 1rem;
-  margin-top: 0rem;
-}
-
-.themeList {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
-  gap: 1rem;
-  margin: 1.3rem;
-}
-
-.aTheme {
-  padding: 1rem;
-  border-radius: 0.5rem;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  box-shadow: var(--shadow);
-  transition: 0.2s ease;
-}
-
-.aTheme:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
 @media screen and (max-width: 540px) {
   .settings {
     grid-template-columns: 1fr;
