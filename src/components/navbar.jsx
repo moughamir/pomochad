@@ -2,7 +2,7 @@ import { useState } from "preact/hooks";
 import { Link } from "wouter-preact";
 import { switchTheme } from "../utils";
 
-import { Ghost, Lightning, Nut, Target, User } from "phosphor-react";
+import { Ghost, MoonStars, Nut, Target, User } from "phosphor-react";
 
 import "../css/navbar.css";
 
@@ -36,7 +36,7 @@ function NavbarLinks() {
 
   return (
     <div class="navBtns">
-      <Lightning
+      <MoonStars
         class="themeToggle"
         size={26}
         onClick={() => addTheme()}
